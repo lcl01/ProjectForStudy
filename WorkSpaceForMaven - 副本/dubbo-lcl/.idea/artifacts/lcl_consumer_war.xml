@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="lcl-consumer:war">
+    <output-path>$PROJECT_DIR$/lcl-consumer/target</output-path>
+    <root id="archive" name="lcl-consumer.war">
+      <element id="artifact" artifact-name="lcl-consumer:war exploded" />
+    </root>
+  </artifact>
+</component>

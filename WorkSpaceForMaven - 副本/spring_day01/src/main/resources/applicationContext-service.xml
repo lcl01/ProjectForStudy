@@ -1,0 +1,15 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+    <!--<bean id="accountDao" class="com.lcl.dao.impl.AccountDaoImpl"></bean>-->
+    <!--<bean id="accountService" class="com.lcl.service.impl.AccountServiceImpl">-->
+    <!--<property name="accountDao" ref="accountDao"></property>-->
+    <!--</bean>-->
+<bean name="accountService" class="com.lcl.service.impl.AccountServiceImpl1">
+    <property name="accountDao" ref="accountDao"></property>
+    <!--<property name="txManager" ref="txManager"></property>-->
+</bean>
+
+</beans>

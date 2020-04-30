@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>v-bind</title>
+    <script src="js/vuejs-2.5.16.js"></script>
+</head>
+<body>
+<div id="app">
+<font size="5" v-bind:color="ys1">传智播客</font>
+<font size="5" color="ys2">黑马程序员</font>
+<hr>
+<a v-bind={href:"http://www.itcast.cn/"+info}>itcast</a>
+</div>
+</body>
+<script>
+    new Vue({
+        el:'#app', //表示当前vue对象接管了div区域
+        data:{
+            ys1:"red",
+            ys2:"green",
+            info:"subject/javaeezly/index.shtml"
+        }
+    });
+</script>
+</html>

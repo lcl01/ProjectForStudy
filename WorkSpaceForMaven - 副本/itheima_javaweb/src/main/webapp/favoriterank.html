@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>收藏排行榜</title>
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/ranking-list.css">
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/getParameter.js"></script>
+</head>
+<body>
+<!--引入头部-->
+<div id="header"></div>
+<div class="contant">
+    <div class="shaixuan">
+        <span>线路名称</span>
+        <input type="text" id="rNameId">
+        <span>金额</span>
+        <input type="text" id="startPriceId">~<input type="text" id="endPriceId">
+        <button onclick="findByConditions()">搜索</button>
+    </div>
+    <div class="list clearfix">
+        <ul id="listUlId">
+            <li>
+                <span class="num one">1</span>
+                <a href="route_detail.html"><img src="images/jiangxuan_4.jpg" alt=""></a>
+                <h4><a href="route_detail.html">【尾单特卖】全国-曼谷6-7天自由行 泰国出境旅游 特价往6-7天自由行 泰国出境旅游 特价往..</a></h4>
+                <p>
+                    <b class="price">&yen;<span>899</span>起</b>
+                    <span class="shouchang">已收藏450次</span>
+                </p>
+            </li>
+            <li>
+                <span class="num two">2</span>
+                <a href="route_detail.html"><img src="images/jiangxuan_4.jpg" alt=""></a>
+                <h4><a href="route_detail.html">【尾单特卖】全国-曼谷6-7天自由行 泰国出境旅游 特价往6-7天自由行 泰国出境旅游 特价往..</a></h4>
+                <p>
+                    <b class="price">&yen;<span>899</span>起</b>
+                    <span class="shouchang">已收藏450次</span>
+                </p>
+            </li>
+            <li>
+                <span class="num">3</span>
+                <a href="route_detail.html"><img src="images/jiangxuan_4.jpg" alt=""></a>
+                <h4><a href="route_detail.html">【尾单特卖】全国-曼谷6-7天自由行 泰国出境旅游 特价往6-7天自由行 泰国出境旅游 特价往..</a></h4>
+                <p>
+                    <b class="price">&yen;<span>899</span>起</b>
+                    <span class="shouchang">已收藏450次</span>
+                </p>
+            </li>
+            <li>
+                <span class="num">4</span>
+                <a href="route_detail.html"><img src="images/jiangxuan_4.jpg" alt=""></a>
+                <h4><a href="route_detail.html">【尾单特卖】全国-曼谷6-7天自由行 泰国出境旅游 特价往6-7天自由行 泰国出境旅游 特价往..</a></h4>
+                <p>
+                    <b class="price">&yen;<span>899</span>起</b>
+                    <span class="shouchang">已收藏450次</span>
+                </p>
+            </li>
+            <li>
+                <span class="num">5</span>
+                <a href="route_detail.html"><img src="images/jiangxuan_4.jpg" alt=""></a>
+                <h4><a href="route_detail.html">【尾单特卖】全国-曼谷6-7天自由行 泰国出境旅游 特价往6-7天自由行 泰国出境旅游 特价往..</a></h4>
+                <p>
+                    <b class="price">&yen;<span>899</span>起</b>
+                    <span class="shouchang">已收藏450次</span>
+                </p>
+            </li>
+            <li>
+                <span class="num">6</span>
+                <a href="route_detail.html"><img src="images/jiangxuan_4.jpg" alt=""></a>
+                <h4><a href="route_detail.html">【尾单特卖】全国-曼谷6-7天自由行 泰国出境旅游 特价往6-7天自由行 泰国出境旅游 特价往..</a></h4>
+                <p>
+                    <b class="price">&yen;<span>899</span>起</b>
+                    <span class="shouchang">已收藏450次</span>
+                </p>
+            </li>
+            <li>
+                <span class="num">7</span>
+                <a href="route_detail.html"><img src="images/jiangxuan_4.jpg" alt=""></a>
+                <h4><a href="route_detail.html">【尾单特卖】全国-曼谷6-7天自由行 泰国出境旅游 特价往6-7天自由行 泰国出境旅游 特价往..</a></h4>
+                <p>
+                    <b class="price">&yen;<span>899</span>起</b>
+                    <span class="shouchang">已收藏450次</span>
+                </p>
+            </li>
+            <li>
+                <span class="num">8</span>
+                <a href="route_detail.html"><img src="images/jiangxuan_4.jpg" alt=""></a>
+                <h4><a href="route_detail.html">【尾单特卖】全国-曼谷6-7天自由行 泰国出境旅游 特价往6-7天自由行 泰国出境旅游 特价往..</a></h4>
+                <p>
+                    <b class="price">&yen;<span>899</span>起</b>
+                    <span class="shouchang">已收藏450次</span>
+                </p>
+            </li>
+        </ul>
+    </div>
+    <div class="pageNum">
+        <ul id="pageUlId">
+            <li><a href="">首页</a></li>
+            <li class="threeword"><a href="#">上一页</a></li>
+            <li class="curPage"><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">6</a></li>
+            <li><a href="#">7</a></li>
+            <li><a href="#">8</a></li>
+            <li><a href="#">9</a></li>
+            <li><a href="#">10</a></li>
+            <li class="threeword"><a href="javascript:;">下一页</a></li>
+            <li class="threeword"><a href="javascript:;">末页</a></li>
+        </ul>
+    </div>
+</div>
+
+<!--导入底部-->
+<div id="footer"></div>
+<!--导入布局js，共享header和footer-->
+<script type="text/javascript" src="js/include.js"></script>
+</body>
+<script>
+    var curPage = getParameter("curPage");
+    console.log("curpage"+curPage);
+    $.post("favorite",{method:"findRankByPage",curPage:curPage},function(result){
+        if (result.flag) {
+            var pageBean = result.data;
+            //a.更新旅游线路列表
+            var listHtml = "";
+            var list =   pageBean.list;
+            for(var i = 0; i < list.length;i++){
+                var route =  list[i];
+
+                //是第一页第一个
+                if (i == 0 && pageBean.curPage ==1){
+                    listHtml += " <li>\n" +
+                        "                <span class=\"num one\">1</span>\n" +
+                        "                <a href=\"route_detail.html\"><img src=\""+route.rimage+"\" alt=\"\"></a>\n" +
+                        "                <h4><a href=\"route_detail.html？rid=1\">"+route.rname+"</a></h4>\n" +
+                        "                <p>\n" +
+                        "                    <b class=\"price\">&yen;<span>"+route.price+"</span>起</b>\n" +
+                        "                    <span class=\"shouchang\">"+route.count+"</span>\n" +
+                        "                </p>\n" +
+                        "            </li>";
+                }else if (i == 1 && pageBean.curPage ==1){//第一页第二个
+                    listHtml += " <li>\n" +
+                        "                <span class=\"num two\">2</span>\n" +
+                        "                <a href=\"route_detail.html\"><img src=\""+route.rimage+"\" alt=\"\"></a>\n" +
+                        "                <h4><a href=\"route_detail.html\">"+route.rname+"</a></h4>\n" +
+                        "                <p>\n" +
+                        "                    <b class=\"price\">&yen;<span>"+route.price+"</span>起</b>\n" +
+                        "                    <span class=\"shouchang\">"+route.count+"</span>\n" +
+                        "                </p>\n" +
+                        "            </li>";
+                }else{
+                    var pageNo = (pageBean.curPage-1)*pageBean.curSize+(i+1);
+                    listHtml += " <li>\n" +
+                        "                <span class=\"num\">"+pageNo+"</span>\n" +
+                        "                <a href=\"route_detail.html\"><img src=\""+route.rimage+"\" alt=\"\"></a>\n" +
+                        "                <h4><a href=\"route_detail.html\">"+route.rname+"</a></h4>\n" +
+                        "                <p>\n" +
+                        "                    <b class=\"price\">&yen;<span>"+route.price+"</span>起</b>\n" +
+                        "                    <span class=\"shouchang\">"+route.count+"</span>\n" +
+                        "                </p>\n" +
+                        "            </li>";
+                }
+
+            }
+
+            $("#listUlId").html(listHtml);
+
+            //b.更新分页组件
+            //首页
+            var pageHtml = "<li><a class='threeword' href='favoriterank.html?curPage=1'>首页</a></li>";
+            //上一页(如果当前页码>1,才显示)
+            if (pageBean.curPage > 1){
+                pageHtml+=" <li class='threeword'><a href='favoriterank.html?curPage="+(pageBean.curPage-1)+"'>上一页</a></li>";
+            }
+
+            var begin;
+            var end;
+            if (pageBean.sumPage < 10){
+                begin = 1;
+                end = pageBean.sumPage;
+            }else{
+                begin=pageBean.curPage-5;
+                end=pageBean.curPage+4;
+
+                if (begin<1){
+                    begin=1;
+                    end=10;
+                }
+
+                if (end > pageBean.sumPage){
+                    end = pageBean.sumPage;
+                    begin=pageBean.sumPage-9;
+                }
+            }
+
+            //中间的页码
+            for(var i = begin; i <= end;i++){
+                if (i ==  pageBean.curPage){
+                    pageHtml += "<li class='curPage'><a href='JavaScript:void(0)'>"+i+"</a></li>";
+                }else{
+                    pageHtml += "<li><a href='favoriterank.html?curPage="+i+"'>"+i+"</a></li>";
+                }
+            }
+
+            //下一页(如果当前页码<总页码,才显示)
+            if (pageBean.curPage < pageBean.sumPage){
+                pageHtml +="<li class='threeword'><a href='favoriterank.html?curPage="+(pageBean.curPage+1)+"'>下一页</a></li>";
+            }
+            //末页
+            pageHtml +="<li class='threeword'><a href='favoriterank.html?curPage="+pageBean.sumPage+"'>末页</a></li>";
+
+            //添加到ul
+            $("#pageUlId").html(pageHtml);
+
+
+        } else {
+            alert(result.msg);
+        }
+
+    },"json");
+    function  findByConditions() {
+        //获得线路的名称,startPrice,endPrice
+        var rname = $("#rNameId").val();
+        if (rname != null && rname != ""){
+            rname = decodeURI(rname);
+        }
+        $("#rNameId").val(rname);
+        var startPrice = $("#startPriceId").val();
+        $("#startPriceId").val(startPrice);
+        var endPrice = $("#endPriceId").val();
+        $("#endPriceId").val(endPrice);
+
+        //调用findByPage()
+        findByPage(rname,startPrice,endPrice);
+        // findByConditions();
+    }
+    function findByPage(rname,startPrice,endPrice) {
+
+        var curPage = getParameter("curPage");
+        //发送Ajax请求服务器
+        $.post("favorite", {method: "findFavoriteRank", curPage: curPage,rname:rname,startPrice:startPrice,endPrice:endPrice}, function (result) {
+            if (result.flag) {
+                var pageBean = result.data;
+                //a.更新旅游线路列表
+                var listHtml = "";
+                var list =   pageBean.list;
+                for(var i = 0; i < list.length;i++){
+                    var route =  list[i];
+
+                    //是第一页第一个
+                    if (i == 0 && pageBean.curPage ==1){
+                        listHtml += " <li>\n" +
+                            "                <span class=\"num one\">1</span>\n" +
+                            "                <a href=\"route_detail.html\"><img src=\""+route.rimage+"\" alt=\"\"></a>\n" +
+                            "                <h4><a href=\"route_detail.html\">"+route.rname+"</a></h4>\n" +
+                            "                <p>\n" +
+                            "                    <b class=\"price\">&yen;<span>"+route.price+"</span>起</b>\n" +
+                            "                    <span class=\"shouchang\">"+route.count+"</span>\n" +
+                            "                </p>\n" +
+                            "            </li>";
+                    }else if (i == 1 && pageBean.curPage ==1){//第一页第二个
+                        listHtml += " <li>\n" +
+                            "                <span class=\"num two\">2</span>\n" +
+                            "                <a href=\"route_detail.html\"><img src=\""+route.rimage+"\" alt=\"\"></a>\n" +
+                            "                <h4><a href=\"route_detail.html\">"+route.rname+"</a></h4>\n" +
+                            "                <p>\n" +
+                            "                    <b class=\"price\">&yen;<span>"+route.price+"</span>起</b>\n" +
+                            "                    <span class=\"shouchang\">"+route.count+"</span>\n" +
+                            "                </p>\n" +
+                            "            </li>";
+                    }else{
+                        var pageNo = (pageBean.curPage-1)*pageBean.curSize+(i+1);
+                        listHtml += " <li>\n" +
+                            "                <span class=\"num\">"+pageNo+"</span>\n" +
+                            "                <a href=\"route_detail.html\"><img src=\""+route.rimage+"\" alt=\"\"></a>\n" +
+                            "                <h4><a href=\"route_detail.html\">"+route.rname+"</a></h4>\n" +
+                            "                <p>\n" +
+                            "                    <b class=\"price\">&yen;<span>"+route.price+"</span>起</b>\n" +
+                            "                    <span class=\"shouchang\">"+route.count+"</span>\n" +
+                            "                </p>\n" +
+                            "            </li>";
+                    }
+
+                }
+
+                $("#listUlId").html(listHtml);
+
+                //b.更新分页组件
+                //首页
+                var pageHtml = "<li><a class='threeword' href='favoriterank.html?curPage=1&rname="+rname+"&startPrice="+startPrice+"&endPrice="+endPrice+"'>首页</a></li>";
+                //上一页(如果当前页码>1,才显示)
+                if (pageBean.curPage > 1){
+                    pageHtml+=" <li class='threeword'><a href='favoriterank.html?curPage="+(pageBean.curPage-1)+"&rname="+rname+"&startPrice="+startPrice+"&endPrice="+endPrice+"'>上一页</a></li>";
+                }
+
+                var begin;
+                var end;
+                if (pageBean.sumPage < 10){
+                    begin = 1;
+                    end = pageBean.sumPage;
+                }else{
+                    begin=pageBean.curPage-5;
+                    end=pageBean.curPage+4;
+
+                    if (begin<1){
+                        begin=1;
+                        end=10;
+                    }
+
+                    if (end > pageBean.sumPage){
+                        end = pageBean.sumPage;
+                        begin=pageBean.sumPage-9;
+                    }
+                }
+
+                //中间的页码
+                for(var i = begin; i <= end;i++){
+                    if (i ==  pageBean.curPage){
+                        pageHtml += "<li class='curPage'><a href='JavaScript:void(0)'>"+i+"</a></li>";
+                    }else{
+                        pageHtml += "<li><a href='favoriterank.html?curPage="+i+"&rname="+rname+"&startPrice="+startPrice+"&endPrice="+endPrice+"'>"+i+"</a></li>";
+                    }
+                }
+
+                //下一页(如果当前页码<总页码,才显示)
+                if (pageBean.curPage < pageBean.sumPage){
+                    pageHtml +="<li class='threeword'><a href='favoriterank.html?curPage="+(pageBean.curPage+1)+"&rname="+rname+"&startPrice="+startPrice+"&endPrice="+endPrice+"'>下一页</a></li>";
+                }
+                //末页
+                pageHtml +="<li class='threeword'><a href='favoriterank.html?curPage="+pageBean.sumPage+"&rname="+rname+"&startPrice="+startPrice+"&endPrice="+endPrice+"'>末页</a></li>";
+
+                //添加到ul
+                $("#pageUlId").html(pageHtml);
+
+
+            } else {
+                alert(result.msg);
+            }
+
+        }, "json");
+    }
+</script>
+</html>

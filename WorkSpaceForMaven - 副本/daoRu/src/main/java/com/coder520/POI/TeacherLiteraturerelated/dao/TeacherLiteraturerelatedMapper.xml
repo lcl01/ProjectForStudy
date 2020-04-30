@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coder520.POI.TeacherLiteraturerelated.dao.TeacherLiteraturerelatedMapper" >
+  <resultMap id="BaseResultMap" type="com.coder520.POI.TeacherLiteraturerelated.entity.TeacherLiteraturerelated" >
+    <id column="TEACHERSEQNO" property="teacherseqno" jdbcType="DECIMAL" />
+    <id column="LITERATURESEQNO" property="literatureseqno" jdbcType="DECIMAL" />
+    <id column="LABSEQNO" property="labseqno" jdbcType="DECIMAL" />
+    <result column="RELATEDLAB" property="relatedlab" jdbcType="VARCHAR" />
+    <result column="CONTRIBUTION" property="contribution" jdbcType="VARCHAR" />
+    <result column="LITERATUREUUID" property="literatureuuid" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    TEACHERSEQNO, LITERATURESEQNO, LABSEQNO, RELATEDLAB, CONTRIBUTION, LITERATUREUUID
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="com.coder520.POI.TeacherLiteraturerelated.entity.TeacherLiteraturerelatedKey" >
+    select 
+    <include refid="Base_Column_List" />
+    from TEACHER_LITERATURERELATED
+    where TEACHERSEQNO = #{teacherseqno,jdbcType=DECIMAL}
+      and LITERATURESEQNO = #{literatureseqno,jdbcType=DECIMAL}
+      and LABSEQNO = #{labseqno,jdbcType=DECIMAL}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="com.coder520.POI.TeacherLiteraturerelated.entity.TeacherLiteraturerelatedKey" >
+    delete from TEACHER_LITERATURERELATED
+    where TEACHERSEQNO = #{teacherseqno,jdbcType=DECIMAL}
+      and LITERATURESEQNO = #{literatureseqno,jdbcType=DECIMAL}
+      and LABSEQNO = #{labseqno,jdbcType=DECIMAL}
+  </delete>
+  <insert id="insert" parameterType="com.coder520.POI.TeacherLiteraturerelated.entity.TeacherLiteraturerelated" >
+    insert into TEACHER_LITERATURERELATED (TEACHERSEQNO, LITERATURESEQNO, LABSEQNO, 
+      RELATEDLAB, CONTRIBUTION, LITERATUREUUID
+      )
+    values (#{teacherseqno,jdbcType=DECIMAL}, #{literatureseqno,jdbcType=DECIMAL}, #{labseqno,jdbcType=DECIMAL}, 
+      #{relatedlab,jdbcType=VARCHAR}, #{contribution,jdbcType=VARCHAR}, #{literatureuuid,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.coder520.POI.TeacherLiteraturerelated.entity.TeacherLiteraturerelated" >
+    insert into TEACHER_LITERATURERELATED
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="teacherseqno != null" >
+        TEACHERSEQNO,
+      </if>
+      <if test="literatureseqno != null" >
+        LITERATURESEQNO,
+      </if>
+      <if test="labseqno != null" >
+        LABSEQNO,
+      </if>
+      <if test="relatedlab != null" >
+        RELATEDLAB,
+      </if>
+      <if test="contribution != null" >
+        CONTRIBUTION,
+      </if>
+      <if test="literatureuuid != null" >
+        LITERATUREUUID,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="teacherseqno != null" >
+        #{teacherseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="literatureseqno != null" >
+        #{literatureseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="labseqno != null" >
+        #{labseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="relatedlab != null" >
+        #{relatedlab,jdbcType=VARCHAR},
+      </if>
+      <if test="contribution != null" >
+        #{contribution,jdbcType=VARCHAR},
+      </if>
+      <if test="literatureuuid != null" >
+        #{literatureuuid,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.coder520.POI.TeacherLiteraturerelated.entity.TeacherLiteraturerelated" >
+    update TEACHER_LITERATURERELATED
+    <set >
+      <if test="relatedlab != null" >
+        RELATEDLAB = #{relatedlab,jdbcType=VARCHAR},
+      </if>
+      <if test="contribution != null" >
+        CONTRIBUTION = #{contribution,jdbcType=VARCHAR},
+      </if>
+      <if test="literatureuuid != null" >
+        LITERATUREUUID = #{literatureuuid,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where TEACHERSEQNO = #{teacherseqno,jdbcType=DECIMAL}
+      and LITERATURESEQNO = #{literatureseqno,jdbcType=DECIMAL}
+      and LABSEQNO = #{labseqno,jdbcType=DECIMAL}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.coder520.POI.TeacherLiteraturerelated.entity.TeacherLiteraturerelated" >
+    update TEACHER_LITERATURERELATED
+    set RELATEDLAB = #{relatedlab,jdbcType=VARCHAR},
+      CONTRIBUTION = #{contribution,jdbcType=VARCHAR},
+      LITERATUREUUID = #{literatureuuid,jdbcType=VARCHAR}
+    where TEACHERSEQNO = #{teacherseqno,jdbcType=DECIMAL}
+      and LITERATURESEQNO = #{literatureseqno,jdbcType=DECIMAL}
+      and LABSEQNO = #{labseqno,jdbcType=DECIMAL}
+  </update>
+</mapper>

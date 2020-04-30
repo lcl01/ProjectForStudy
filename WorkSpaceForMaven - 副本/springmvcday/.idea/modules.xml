@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../maven_day/maven_day.iml" filepath="$PROJECT_DIR$/../maven_day/maven_day.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../springmvc_register/springmvc_register.iml" filepath="$PROJECT_DIR$/../springmvc_register/springmvc_register.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springmvcday.iml" filepath="$PROJECT_DIR$/springmvcday.iml" />
+    </modules>
+  </component>
+</project>

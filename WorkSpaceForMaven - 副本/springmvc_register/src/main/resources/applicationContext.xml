@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans.xsd
+   http://www.springframework.org/schema/context
+   http://www.springframework.org/schema/context/spring-context.xsd
+   http://www.springframework.org/schema/aop
+   http://www.springframework.org/schema/aop/spring-aop.xsd
+   http://www.springframework.org/schema/tx
+   http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+
+    <!--spring整合mybatis的配置-->
+    <!--1：数据源-->
+    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+        <property name="driverClass" value="com.mysql.jdbc.Driver"></property>
+        <property name="jdbcUrl" value="jdbc:mysql:///itcastspringmvc"></property>
+        <property name="user" value="root"></property>
+        <property name="password" value="199656"></property>
+    </bean>
+
+    <!--2：创建SqlSessionFactoryBean，这是spring整合mybatis的核心-->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"></property>
+    </bean>
+
+    <!--3：创建MapperScannerConfigurer：表示com.itheima.ssm.dao包下的所有接口，被spring管理-->
+    <bean id="mapperScannerConfigurer" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com.lcl.ssm.dao"></property>
+    </bean>
+
+    <!--spring的声明式事务处理-->
+    <!--1：配置事务管理器-->
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"></property>
+    </bean>
+    <!--xml-->
+    <!--2：切入点方法的细化-->
+    <tx:advice id="myAdvice" transaction-manager="transactionManager">
+        <tx:attributes>
+            <tx:method name="save*" read-only="false" propagation="REQUIRED" isolation="DEFAULT"/>
+            <tx:method name="insert*" read-only="false" propagation="REQUIRED" isolation="DEFAULT"/>
+            <tx:method name="update*" read-only="false" propagation="REQUIRED" isolation="DEFAULT"/>
+            <tx:method name="edit*" read-only="false" propagation="REQUIRED" isolation="DEFAULT"/>
+            <tx:method name="delete*" read-only="false" propagation="REQUIRED" isolation="DEFAULT"/>
+            <tx:method name="*" read-only="true"></tx:method>
+        </tx:attributes>
+    </tx:advice>
+    <!--3：aop，通知关联切入点-->
+    <aop:config>
+        <aop:pointcut id="myPointcut" expression="execution(* com.lcl.ssm.service..*.*(..))"></aop:pointcut>
+        <aop:advisor advice-ref="myAdvice" pointcut-ref="myPointcut"></aop:advisor>
+    </aop:config>
+
+</beans>

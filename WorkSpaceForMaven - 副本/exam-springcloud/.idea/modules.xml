@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/exam-eureka/exam-eureka.iml" filepath="$PROJECT_DIR$/exam-eureka/exam-eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/exam-gateway/exam-gateway.iml" filepath="$PROJECT_DIR$/exam-gateway/exam-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/exam-item/exam-item.iml" filepath="$PROJECT_DIR$/exam-item/exam-item.iml" />
+      <module fileurl="file://$PROJECT_DIR$/exam-page/exam-page.iml" filepath="$PROJECT_DIR$/exam-page/exam-page.iml" />
+      <module fileurl="file://$PROJECT_DIR$/exam-springcloud.iml" filepath="$PROJECT_DIR$/exam-springcloud.iml" />
+    </modules>
+  </component>
+</project>

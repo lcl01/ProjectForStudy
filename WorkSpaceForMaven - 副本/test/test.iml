@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+    </content>
+    <orderEntry type="jdk" jdkName="1.8" jdkType="JavaSDK" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/mysql-connector-java-5.1.39-bin.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://E:/czbkE/JavaWeb/day17-JDBC/day17-JDBC/代码/day17_jdbc/lib/mysql-connector-java-5.1.39-bin.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="JUnit4">
+        <CLASSES>
+          <root url="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/" />
+          <root url="jar://$MAVEN_REPOSITORY$/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="library" name="Maven: com.alibaba:druid:1.0.28" level="project" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://E:/czbkE/JavaWeb/day18-连接池/day18-连接池/资料/01_jar包/01_c3p0-0.9.1.2/c3p0-0.9.1.2.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://E:/czbkE/JavaWeb/day18-连接池/day18-连接池/资料/01_jar包/02_druid-1.0.9/druid-1.0.9.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://E:/czbkE/JavaWeb/day19-JdbcTemplate/资料/今天课程需要用到的所有的jar/spring-beans-5.0.0.RELEASE.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://E:/czbkE/JavaWeb/day19-JdbcTemplate/资料/今天课程需要用到的所有的jar/spring-core-5.0.0.RELEASE.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <ANNOTATIONS>
+          <root url="file://$MODULE_DIR$/.." />
+        </ANNOTATIONS>
+        <CLASSES>
+          <root url="jar://E:/czbkE/JavaWeb/day19-JdbcTemplate/资料/今天课程需要用到的所有的jar/spring-jdbc-5.0.0.RELEASE.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://E:/czbkE/JavaWeb/day19-JdbcTemplate/资料/今天课程需要用到的所有的jar/spring-tx-5.0.0.RELEASE.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://E:/czbkE/JavaWeb/day19-JdbcTemplate/资料/今天课程需要用到的所有的jar/c3p0-0.9.5.2.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://E:/czbkE/JavaWeb/day19-JdbcTemplate/资料/今天课程需要用到的所有的jar/commons-logging-1.2.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://E:/czbkE/JavaWeb/day19-JdbcTemplate/资料/今天课程需要用到的所有的jar/mchange-commons-java-0.2.12.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://E:/czbkE/JavaWeb/day19-JdbcTemplate/资料/今天课程需要用到的所有的jar/mysql-connector-java-5.1.37-bin.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <ANNOTATIONS>
+          <root url="file://$MODULE_DIR$/.." />
+        </ANNOTATIONS>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/web/lib/commons-beanutils-1.8.3.jar!/" />
+          <root url="jar://$MODULE_DIR$/web/lib/commons-beanutils-bean-collections-1.8.3.jar!/" />
+          <root url="jar://$MODULE_DIR$/web/lib/commons-logging-1.1.1.jar!/" />
+          <root url="file://$MODULE_DIR$/.." />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/../SpringDataElasticSearch-demo/src/main/java" />
+          <root url="file://$MODULE_DIR$/../SpringDataElasticSearch-demo/src/test/java" />
+          <root url="file://$MODULE_DIR$/../changgou_parent/changgou_common/src/main/java" />
+          <root url="file://$MODULE_DIR$/../changgou_parent/changgou_common/src/test/java" />
+          <root url="file://$MODULE_DIR$/../changgou_parent/changgou_eureka/src/main/java" />
+          <root url="file://$MODULE_DIR$/../changgou_parent/changgou_gateway/changgou_gateway_web/src/main/java" />
+          <root url="file://$MODULE_DIR$/../changgou_parent/changgou_service/changgou-service-rabbitmq/src/main/java" />
+          <root url="file://$MODULE_DIR$/../changgou_parent/changgou_service/changgou_service_canal/src/main/java" />
+          <root url="file://$MODULE_DIR$/../changgou_parent/changgou_service/changgou_service_file/src/main/java" />
+          <root url="file://$MODULE_DIR$/../changgou_parent/changgou_service/changgou_service_goods/src/main/java" />
+          <root url="file://$MODULE_DIR$/../changgou_parent/changgou_service/changgou_service_order/src/main/java" />
+          <root url="file://$MODULE_DIR$/../changgou_parent/changgou_service/changgou_service_pay/src/main/java" />
+          <root url="file://$MODULE_DIR$/../changgou_parent/changgou_service/changgou_service_search/src/main/java" />
+          <root url="file://$MODULE_DIR$/../changgou_parent/changgou_service/changgou_service_seckill/src/main/java" />
+          <root url="file://$MODULE_DIR$/../changgou_parent/changgou_service/changgou_service_user/src/main/java" />
+          <root url="file://$MODULE_DIR$/../changgou_parent/changgou_service_api/changgou-web-item-api/src/main/java" />
+          <root url="file://$MODULE_DIR$/../changgou_parent/changgou_service_api/changgou_service_goods_api/src/main/java" />
+          <root url="file://$MODULE_DIR$/../changgou_parent/changgou_service_api/changgou_service_order_api/src/main/java" />
+          <root url="file://$MODULE_DIR$/../changgou_parent/changgou_service_api/changgou_service_search_api/src/main/java" />
+          <root url="file://$MODULE_DIR$/../changgou_parent/changgou_service_api/changgou_service_seckill_api/src/main/java" />
+          <root url="file://$MODULE_DIR$/../changgou_parent/changgou_service_api/changgou_service_user_api/src/main/java" />
+          <root url="file://$MODULE_DIR$/../changgou_parent/changgou_user_oauth/src/main/java" />
+          <root url="file://$MODULE_DIR$/../changgou_parent/changgou_user_oauth/src/test/java" />
+          <root url="file://$MODULE_DIR$/../changgou_parent/changgou_web/changgou_web_item/src/main/java" />
+          <root url="file://$MODULE_DIR$/../changgou_parent/changgou_web/changgou_web_search/src/main/java" />
+          <root url="file://$MODULE_DIR$/../code-generator/src/main/java" />
+          <root url="file://$MODULE_DIR$/../code-generator/src/test/java" />
+          <root url="file://$MODULE_DIR$/../crawler/src/main/java" />
+          <root url="file://$MODULE_DIR$/../crawler/src/test/java" />
+          <root url="file://$MODULE_DIR$/../cz-health/health-parrent/health-common/src/main/java" />
+          <root url="file://$MODULE_DIR$/../cz-health/health-parrent/health-dao/src/main/java" />
+          <root url="file://$MODULE_DIR$/../cz-health/health-parrent/health-interface/src/main/java" />
+          <root url="file://$MODULE_DIR$/../cz-health/health-parrent/health-pojo/src/main/java" />
+          <root url="file://$MODULE_DIR$/../cz-health/health-parrent/health-service/src/main/java" />
+          <root url="file://$MODULE_DIR$/../cz-health/health-parrent/health-web/src/main/java" />
+          <root url="file://$MODULE_DIR$/../daoRu/src/main/java" />
+          <root url="file://$MODULE_DIR$/../daoRu/target/classes" />
+          <root url="file://$MODULE_DIR$/../dubbo-lcl/lcl-consumer/src/main/java" />
+          <root url="file://$MODULE_DIR$/../dubbo-lcl/lcl-provider/src/main/java" />
+          <root url="file://$MODULE_DIR$/../dubbo/dubbo_consumer/src/main/java" />
+          <root url="file://$MODULE_DIR$/../dubbo/dubbo_consumer/target/tomcat/work/Tomcat/localhost/_" />
+          <root url="file://$MODULE_DIR$/../dubbo/dubboday/src/main/java" />
+          <root url="file://$MODULE_DIR$/../elasticsearch-demo/src/main/java" />
+          <root url="file://$MODULE_DIR$/../elasticsearch-demo/src/test/java" />
+          <root url="file://$MODULE_DIR$/../exam-springcloud/exam-eureka/src/main/java" />
+          <root url="file://$MODULE_DIR$/../exam-springcloud/exam-gateway/src/main/java" />
+          <root url="file://$MODULE_DIR$/../exam-springcloud/exam-item/src/main/java" />
+          <root url="file://$MODULE_DIR$/../exam-springcloud/exam-page/src/main/java" />
+          <root url="file://$MODULE_DIR$/../fescar_parent/fescar_api/src/main/java" />
+          <root url="file://$MODULE_DIR$/../fescar_parent/fescar_business/src/main/java" />
+          <root url="file://$MODULE_DIR$/../fescar_parent/fescar_item/src/main/java" />
+          <root url="file://$MODULE_DIR$/../fescar_parent/fescar_order/src/main/java" />
+          <root url="file://$MODULE_DIR$/../fescar_parent/fescar_user/src/main/java" />
+          <root url="file://$MODULE_DIR$/../health_parent/health-dao/src/main/java" />
+          <root url="file://$MODULE_DIR$/../health_parent/health_common/src/main/java" />
+          <root url="file://$MODULE_DIR$/../health_parent/health_dao/src/main/java" />
+          <root url="file://$MODULE_DIR$/../health_parent/health_interface/src/main/java" />
+          <root url="file://$MODULE_DIR$/../health_parent/health_pojo/src/main/java" />
+          <root url="file://$MODULE_DIR$/../health_parent/health_service/src/main/java" />
+          <root url="file://$MODULE_DIR$/../health_parent/health_web/src/main/java" />
+          <root url="file://$MODULE_DIR$/../lcl-health/health-parrent/health-common/src/main/java" />
+          <root url="file://$MODULE_DIR$/../lcl-health/health-parrent/health-common/src/test/java" />
+          <root url="file://$MODULE_DIR$/../lcl-health/health-parrent/health-dao/src/main/java" />
+          <root url="file://$MODULE_DIR$/../lcl-health/health-parrent/health-interface/src/main/java" />
+          <root url="file://$MODULE_DIR$/../lcl-health/health-parrent/health-jobs/src/main/java" />
+          <root url="file://$MODULE_DIR$/../lcl-health/health-parrent/health-jobs/src/test/java" />
+          <root url="file://$MODULE_DIR$/../lcl-health/health-parrent/health-pojo/src/main/java" />
+          <root url="file://$MODULE_DIR$/../lcl-health/health-parrent/health-service/src/main/java" />
+          <root url="file://$MODULE_DIR$/../lcl-health/health-parrent/health-web/src/main/java" />
+          <root url="file://$MODULE_DIR$/../lcl-health/health-parrent/healthmobile-web/src/main/java" />
+          <root url="file://$MODULE_DIR$/../lcl-health/health-parrent/springsecurity-demo/src/main/java" />
+          <root url="file://$MODULE_DIR$/../lucence/src/main/java" />
+          <root url="file://$MODULE_DIR$/../lucence/src/test/java" />
+          <root url="file://$MODULE_DIR$/../mybatis_day02/src/main/java" />
+          <root url="file://$MODULE_DIR$/../mybatis_day02/src/test/java" />
+          <root url="file://$MODULE_DIR$/../poi-excel/src" />
+          <root url="file://$MODULE_DIR$/../poi/src/main/java" />
+          <root url="file://$MODULE_DIR$/../rabbitMQ/rabbitmq-demo/rabbitmq-consumer/src/main/java" />
+          <root url="file://$MODULE_DIR$/../rabbitMQ/rabbitmq-demo/rabibit-provider/src/main/java" />
+          <root url="file://$MODULE_DIR$/../rabbitMQ/rabbitmq-demo/src/main/java" />
+          <root url="file://$MODULE_DIR$/../sprinbootdemo1/springdemo-demo/.mvn/wrapper" />
+          <root url="file://$MODULE_DIR$/../sprinbootdemo1/springdemo-demo/src/main/java" />
+          <root url="file://$MODULE_DIR$/../sprinbootdemo1/springdemo-demo/src/test/java" />
+          <root url="file://$MODULE_DIR$/../sprinbootdemo1/src/main/java" />
+          <root url="file://$MODULE_DIR$/../spring_day01/src/main/java" />
+          <root url="file://$MODULE_DIR$/../spring_day01/src/test/java" />
+          <root url="file://$MODULE_DIR$/../springboot-jpa/.mvn/wrapper" />
+          <root url="file://$MODULE_DIR$/../springboot-jpa/src/main/java" />
+          <root url="file://$MODULE_DIR$/../springboot-jpa/src/test/java" />
+          <root url="file://$MODULE_DIR$/../springboot-mybatis/.mvn/wrapper" />
+          <root url="file://$MODULE_DIR$/../springboot-mybatis/src/main/java" />
+          <root url="file://$MODULE_DIR$/../springboot-mybatis/src/test/java" />
+          <root url="file://$MODULE_DIR$/../springboot_rabbitmq_delay/src/main/java" />
+          <root url="file://$MODULE_DIR$/../springboot_rabbitmq_delay/src/test/java" />
+          <root url="file://$MODULE_DIR$/../springboot_thymeleaf/src/main/java" />
+          <root url="file://$MODULE_DIR$/../springcloud-day1-resttemplate/.mvn/wrapper" />
+          <root url="file://$MODULE_DIR$/../springcloud-day1-resttemplate/src/main/java" />
+          <root url="file://$MODULE_DIR$/../springcloud-day1-resttemplate/src/test/java" />
+          <root url="file://$MODULE_DIR$/../springcloud/springcloud-parent/conf-server/src/main/java" />
+          <root url="file://$MODULE_DIR$/../springcloud/springcloud-parent/eureka-server/src/main/java" />
+          <root url="file://$MODULE_DIR$/../springcloud/springcloud-parent/gateway-service/src/main/java" />
+          <root url="file://$MODULE_DIR$/../springcloud/springcloud-parent/user-consumer/src/main/java" />
+          <root url="file://$MODULE_DIR$/../springcloud/springcloud-parent/user-provider-demo1/src/main/java" />
+          <root url="file://$MODULE_DIR$/../springcloud/springcloud-parent/user-provider/src/main/java" />
+          <root url="file://$MODULE_DIR$/../springmvc_register/src/main/java" />
+          <root url="file://$MODULE_DIR$/../springmvcday/src/main/java" />
+          <root url="file://$MODULE_DIR$/../springmvcday/src/test/java" />
+          <root url="file://$MODULE_DIR$/../ssm_parent/ssm_dao/src/main/java" />
+          <root url="file://$MODULE_DIR$/../ssm_parent/ssm_model/src/main/java" />
+          <root url="file://$MODULE_DIR$/../ssm_parent/ssm_service/src/main/java" />
+          <root url="file://$MODULE_DIR$/../ssm_parent/ssm_web/src/main/java" />
+          <root url="file://$MODULE_DIR$/../ssm_parent/ssm_web/target/tomcat/work/Tomcat/localhost/_" />
+          <root url="file://$MODULE_DIR$/src" />
+          <root url="file://$MODULE_DIR$/../travel/src/main/java" />
+          <root url="file://$MODULE_DIR$/../vue/src/main/java" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/src/lib/dom4j-1.6.1.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/src/lib/jaxen-1.1-beta-6.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+  </component>
+</module>

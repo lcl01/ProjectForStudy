@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="js/jquery-3.3.1.js">
+    </script>
+</head>
+<body>
+<center><h1 style="color: black">百度一下</h1>
+<input type="text" id="inputId" style="width: 500px; height: 38px;"> <input type="button" style="height: 38px;" value="搜一下"><br/>
+    <div id="divId"
+         style="width: 500px; border: 1px red solid; height: 300px; position: absolute; left: 394px;">
+        <table id="tabId" width="100%" height="100%"  border="1px">
+
+        </table>
+    </div>
+
+</center>
+</body>
+<script>
+    var tabEle = $("#tabId");
+    $("#inputId").keyup(function () {
+        var keyword=this.value;
+        if (keyword == null || keyword == "") {
+            $("#divId").hide();
+        }
+        $.post("/word",{keyword: keyword},function (result) {
+            if (result.length == 0) {  //没有
+                $("#divId").hide();
+            } else { //有数据
+                //3. 解析响应的数据, 填充页面
+                //遍历结果, 没遍历一次就是一个words对象, 就是一个json对象 说白了就是一行
+                var trHtml = "";
+                $(result).each(function (i, obj) {
+                    trHtml += "<tr><td>" + obj.word + "</td></tr>";
+                });
+                //<tr><td>all</td></tr><tr><td>after</td></tr><tr><td>app</td></tr><tr><td>apple</td></tr><tr><td>application</td></tr>
+                //显示
+                $("#divId").show(1000);
+
+                //把trHtml插入到table
+                tabEle.html(trHtml);
+            }
+        },"json");
+    });
+</script>
+</html>

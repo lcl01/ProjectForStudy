@@ -1,0 +1,3588 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="health_web:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="360f55ce-c07d-463a-9dbb-5c4dc1eb34ce" name="Default Changelist" comment="tj01">
+      <change beforePath="$PROJECT_DIR$/springboot_datajpa/src/main/java/com/itheima/springboot_datajpa/SpringbootDatajpaApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot_datajpa/src/main/java/com/changgou/springboot_datajpa/SpringbootDatajpaApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot_datajpa/src/main/java/com/itheima/springboot_datajpa/Task/TaskWork.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot_datajpa/src/main/java/com/changgou/springboot_datajpa/Task/TaskWork.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot_datajpa/src/main/java/com/itheima/springboot_datajpa/bean/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot_datajpa/src/main/java/com/changgou/springboot_datajpa/bean/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot_datajpa/src/main/java/com/itheima/springboot_datajpa/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot_datajpa/src/main/java/com/changgou/springboot_datajpa/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot_datajpa/src/main/java/com/itheima/springboot_datajpa/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot_datajpa/src/main/java/com/changgou/springboot_datajpa/dao/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot_datajpa/src/main/java/com/itheima/springboot_datajpa/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot_datajpa/src/main/java/com/changgou/springboot_datajpa/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot_datajpa/src/main/java/com/itheima/springboot_datajpa/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot_datajpa/src/main/java/com/changgou/springboot_datajpa/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot_datajpa/src/test/java/com/itheima/springboot_datajpa/SpringbootDatajpaApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot_datajpa/src/test/java/com/changgou/springboot_datajpa/SpringbootDatajpaApplicationTests.java" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="$PROJECT_DIR$/changgou_parent/changgou_service/changgou_service_canal/target/" />
+    <ignored path="$PROJECT_DIR$/changgou_parent/changgou_service_api/changgou_service_goods_api/target/" />
+    <ignored path="$PROJECT_DIR$/changgou_parent/changgou_service_api/changgou_service_order_api/target/" />
+    <ignored path="$PROJECT_DIR$/changgou_parent/changgou_user_oauth/target/" />
+    <ignored path="$PROJECT_DIR$/changgou_parent/changgou_web/changgou_web_item/target/" />
+    <ignored path="$PROJECT_DIR$/changgou_parent/changgou_gateway/changgou_gateway_web/target/" />
+    <ignored path="$PROJECT_DIR$/changgou_parent/changgou_service_api/changgou_service_search_api/target/" />
+    <ignored path="$PROJECT_DIR$/changgou_parent/changgou_web/target/" />
+    <ignored path="$PROJECT_DIR$/changgou_parent/changgou_service/changgou_service_pay/target/" />
+    <ignored path="$PROJECT_DIR$/changgou_parent/changgou_service_api/target/" />
+    <ignored path="$PROJECT_DIR$/changgou_parent/changgou_service/changgou_service_seckill/target/" />
+    <ignored path="$PROJECT_DIR$/changgou_parent/changgou_eureka/target/" />
+    <ignored path="$PROJECT_DIR$/changgou_parent/changgou_service/changgou_service_goods/target/" />
+    <ignored path="$PROJECT_DIR$/changgou_parent/changgou_service_api/changgou_service_user_api/target/" />
+    <ignored path="$PROJECT_DIR$/changgou_parent/changgou_service_api/changgou_service_seckill_api/target/" />
+    <ignored path="$PROJECT_DIR$/changgou_parent/changgou_service_api/changgou-web-item-api/target/" />
+    <ignored path="$PROJECT_DIR$/changgou_parent/changgou_web/changgou_web_search/target/" />
+    <ignored path="$PROJECT_DIR$/changgou_parent/changgou_service/changgou_service_search/target/" />
+    <ignored path="$PROJECT_DIR$/changgou_parent/changgou_service/changgou_service_file/target/" />
+    <ignored path="$PROJECT_DIR$/changgou_parent/changgou_gateway/target/" />
+    <ignored path="$PROJECT_DIR$/changgou_parent/changgou_common_db/target/" />
+    <ignored path="$PROJECT_DIR$/changgou_parent/changgou_service/changgou_service_order/target/" />
+    <ignored path="$PROJECT_DIR$/changgou_parent/target/" />
+    <ignored path="$PROJECT_DIR$/changgou_parent/changgou_service/changgou_service_user/target/" />
+    <ignored path="$PROJECT_DIR$/changgou_parent/changgou_service/changgou-service-rabbitmq/target/" />
+    <ignored path="$PROJECT_DIR$/changgou_parent/changgou_common/target/" />
+    <ignored path="$PROJECT_DIR$/changgou_parent/changgou_service/target/" />
+    <ignored path="$PROJECT_DIR$/crawler/target/" />
+    <ignored path="$PROJECT_DIR$/code-generator/target/" />
+    <ignored path="$PROJECT_DIR$/daoRu/target/" />
+    <ignored path="$PROJECT_DIR$/itheima_javaweb/target/" />
+    <ignored path="$PROJECT_DIR$/test01/target/" />
+    <ignored path="$PROJECT_DIR$/itheim-adubbo-provider/target/" />
+    <ignored path="$PROJECT_DIR$/itheima-dubbo-consumer/target/" />
+    <ignored path="$PROJECT_DIR$/itheima-dubbo-provider/target/" />
+    <ignored path="$PROJECT_DIR$/mybaits_day01_quick/target/" />
+    <ignored path="$PROJECT_DIR$/mybatis_day02_dao/target/" />
+    <ignored path="$PROJECT_DIR$/mybatis_lazy/target/" />
+    <ignored path="$PROJECT_DIR$/mybatis_annotation/target/" />
+    <ignored path="$PROJECT_DIR$/spring_day/target/" />
+    <ignored path="$PROJECT_DIR$/spring_ioc/target/" />
+    <ignored path="$PROJECT_DIR$/spring_annotation_ioc/target/" />
+    <ignored path="$PROJECT_DIR$/spring_account/target/" />
+    <ignored path="$PROJECT_DIR$/spring_annotation_account/target/" />
+    <ignored path="$PROJECT_DIR$/spring_account_withoutxml/target/" />
+    <ignored path="$PROJECT_DIR$/spring_day03_account/target/" />
+    <ignored path="$PROJECT_DIR$/spring_proxy/target/" />
+    <ignored path="$PROJECT_DIR$/spring_day03_aop/target/" />
+    <ignored path="$PROJECT_DIR$/spring_aop_advice/target/" />
+    <ignored path="$PROJECT_DIR$/spring_annotation_aop/target/" />
+    <ignored path="$PROJECT_DIR$/spring_account_aopxml/target/" />
+    <ignored path="$PROJECT_DIR$/spring_annotation_day04_aop/target/" />
+    <ignored path="$PROJECT_DIR$/spring_jdbctemplate/target/" />
+    <ignored path="$PROJECT_DIR$/spring_tx_day04/target/" />
+    <ignored path="$PROJECT_DIR$/spring_tx_smssw/target/" />
+    <ignored path="$PROJECT_DIR$/spring_smssw_annotation/target/" />
+    <ignored path="$PROJECT_DIR$/springmvc_quickStart/target/" />
+    <ignored path="$PROJECT_DIR$/springmvc_quickly/target/" />
+    <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
+    <ignored path="$PROJECT_DIR$/springmvc_day02_responce/target/" />
+    <ignored path="$PROJECT_DIR$/springmvc_response02/target/" />
+    <ignored path="$PROJECT_DIR$/springmvc_day03_ssm/target/" />
+    <ignored path="$PROJECT_DIR$/springmvc_ssm_regist/target/" />
+    <ignored path="$PROJECT_DIR$/ssm_parentFU/target/" />
+    <ignored path="$PROJECT_DIR$/ssm_parentFU/ssm_model/target/" />
+    <ignored path="$PROJECT_DIR$/ssm_parentFU/ssm_modelzi/target/" />
+    <ignored path="$PROJECT_DIR$/ssm_parentFU/ssm_dao/target/" />
+    <ignored path="$PROJECT_DIR$/ssm_parentFU/ssm_service/target/" />
+    <ignored path="$PROJECT_DIR$/ssm_parentFU/ssm_web/target/" />
+    <ignored path="$PROJECT_DIR$/ssm_parentFU/ssm_pojo/target/" />
+    <ignored path="$PROJECT_DIR$/vue_demo/target/" />
+    <ignored path="$PROJECT_DIR$/vue_user/target/" />
+    <ignored path="F:/sz74/java-web/day57_vue/03.代码/vueDemo/day57_vue_01/target/" />
+    <ignored path="$PROJECT_DIR$/health_parent/target/" />
+    <ignored path="$PROJECT_DIR$/health_parent/health_common/target/" />
+    <ignored path="$PROJECT_DIR$/health_parent/health_pojo/target/" />
+    <ignored path="$PROJECT_DIR$/health_parent/health_dao/target/" />
+    <ignored path="$PROJECT_DIR$/health_parent/health_interface/target/" />
+    <ignored path="$PROJECT_DIR$/health_parent/health_service/target/" />
+    <ignored path="$PROJECT_DIR$/health_parent/health_web/target/" />
+    <ignored path="F:/sz61/传智健康/day02/代码/health_parent/health_dao/target/" />
+    <ignored path="F:/sz61/传智健康/day02/代码/health_parent/health_pojo/target/" />
+    <ignored path="F:/sz61/传智健康/day02/代码/health_parent/health_web/target/" />
+    <ignored path="F:/sz61/传智健康/day02/代码/health_parent/health_service/target/" />
+    <ignored path="F:/sz61/传智健康/day02/代码/health_parent/health_interface/target/" />
+    <ignored path="F:/sz61/传智健康/day02/代码/health_parent/health_common/target/" />
+    <ignored path="F:/sz61/传智健康/day02/代码/health_parent/target/" />
+    <ignored path="$PROJECT_DIR$/health_parent/health_jobs/target/" />
+    <ignored path="$PROJECT_DIR$/health_parent/health_daoru/target/" />
+    <ignored path="$PROJECT_DIR$/health_parent/healthmobile_web/target/" />
+    <ignored path="$PROJECT_DIR$/health_parent/springsecurity_demo/target/" />
+    <ignored path="$PROJECT_DIR$/springboot_helloworld/target/" />
+    <ignored path="$PROJECT_DIR$/springboot_demo001/target/" />
+    <ignored path="$PROJECT_DIR$/springboot_mysql/target/" />
+    <ignored path="$PROJECT_DIR$/springboot_datajpa/target/" />
+    <ignored path="$PROJECT_DIR$/springboot_rabbitmq/target/" />
+    <ignored path="$PROJECT_DIR$/springboot_rabbitmq_producer/target/" />
+    <ignored path="$PROJECT_DIR$/springboot_rabbitmq_consumer/target/" />
+    <ignored path="$PROJECT_DIR$/springboot_cloud/target/" />
+    <ignored path="$PROJECT_DIR$/sptingboot_cloud_resttemplate/target/" />
+    <ignored path="$PROJECT_DIR$/springboot_cloud_resttemplate/target/" />
+    <ignored path="$PROJECT_DIR$/springcloud_parent/target/" />
+    <ignored path="$PROJECT_DIR$/springcloud_parent/user_provider/target/" />
+    <ignored path="$PROJECT_DIR$/springcloud_parent/springcloud-parent-user_provider/target/" />
+    <ignored path="$PROJECT_DIR$/springcloud_parent/springcloud_parent_User_consumer/target/" />
+    <ignored path="$PROJECT_DIR$/springcloud_parent/springcloud_parent_eureka_server/target/" />
+    <ignored path="$PROJECT_DIR$/springcloud_parent/springcloud_parent_user_provider_demo/target/" />
+    <ignored path="$PROJECT_DIR$/springcloud_parent/springcloud_paren_gateway_service/target/" />
+    <ignored path="$PROJECT_DIR$/springcloud_parent/conf_server/target/" />
+    <ignored path="$PROJECT_DIR$/springboot-mybatis/target/" />
+    <ignored path="$PROJECT_DIR$/springboot-jpa/target/" />
+    <ignored path="$PROJECT_DIR$/lucene_demo/target/" />
+    <ignored path="H:/辛老师/4.Lucene_课后资料/代码/lucene_demo01/target/" />
+    <ignored path="$PROJECT_DIR$/elasticsearch_demo/target/" />
+    <ignored path="$PROJECT_DIR$/elasticsearch_demo01/target/" />
+    <ignored path="$PROJECT_DIR$/springdata_elasticsearch_demo/target/" />
+    <ignored path="$PROJECT_DIR$/Changgouparent/target/" />
+    <ignored path="$PROJECT_DIR$/Changgou-parent/target/" />
+    <ignored path="$PROJECT_DIR$/Changgou-parent/changgou-gateway/target/" />
+    <ignored path="$PROJECT_DIR$/Changgou-parent/changgou-service/target/" />
+    <ignored path="$PROJECT_DIR$/Changgou-parent/changgou-service-api/target/" />
+    <ignored path="$PROJECT_DIR$/Changgou-parent/changgou-web/target/" />
+    <ignored path="$PROJECT_DIR$/Changgou-parent/changgou-eureka/target/" />
+    <ignored path="$PROJECT_DIR$/Changgou-parent/changgou-common/target/" />
+    <ignored path="$PROJECT_DIR$/Changgou-parent/changgou-common-db/target/" />
+    <ignored path="$PROJECT_DIR$/Changgou-parent/changgou-service-api/changgou-service-goods-api/target/" />
+    <ignored path="$PROJECT_DIR$/Changgou-parent/changgou-service/changgou-service-goods/target/" />
+    <ignored path="$PROJECT_DIR$/Changgou-parent/changgou-service/changgou-service-file/target/" />
+    <ignored path="$PROJECT_DIR$/code-template/target/" />
+    <ignored path="$PROJECT_DIR$/Changgou-parent/changgou-service/changgou-service-canal/target/" />
+    <ignored path="$PROJECT_DIR$/Changgou-parent/changgou-service-api/changgou-service-content-api/target/" />
+    <ignored path="$PROJECT_DIR$/Changgou-parent/changgou-service/changgou-service-content/target/" />
+    <ignored path="$PROJECT_DIR$/Changgou-parent/changgou-service-api/changgou-service-search-api/target/" />
+    <ignored path="$PROJECT_DIR$/Changgou-parent/changgou-service/changgou-service-search/target/" />
+    <ignored path="$PROJECT_DIR$/springboot-thymeleaf/target/" />
+    <ignored path="$PROJECT_DIR$/thymelef/target/" />
+    <ignored path="$PROJECT_DIR$/Changgou-parent/changgou-web/changgou-web-search/target/" />
+    <ignored path="$PROJECT_DIR$/Changgou-parent/changgou-web/changgou-web-item/target/" />
+    <ignored path="$PROJECT_DIR$/Changgou-parent/changgou-service/changgou-service-rabbitmq/target/" />
+    <ignored path="$PROJECT_DIR$/Changgou-parent/changgou-service-api/changgou-web-item-api/target/" />
+    <ignored path="$PROJECT_DIR$/Changgou-parent/changgou-gateway/ changgou-gateway-web/target/" />
+    <ignored path="$PROJECT_DIR$/Changgou-parent/changgou-gateway/changgou-gateway-web/target/" />
+    <ignored path="$PROJECT_DIR$/Changgou-parent/changgou-service-api/changgou-service-user-api/target/" />
+    <ignored path="$PROJECT_DIR$/Changgou-parent/changgou-service/changgou-service-user/target/" />
+    <ignored path="$PROJECT_DIR$/Changgou-parent/changgou-user-oauth/target/" />
+    <ignored path="$PROJECT_DIR$/Changgou-parent/changgou-service-api/changgou-service-order-api/target/" />
+    <ignored path="$PROJECT_DIR$/Changgou-parent/changgou-service/changgou-service-order/target/" />
+    <ignored path="$PROJECT_DIR$/Changgou-parent/changgou-service/changgou-service-pay/target/" />
+    <ignored path="$PROJECT_DIR$/Changgou-parent/changgou-service-api/changgou-service-seckill-api/target/" />
+    <ignored path="$PROJECT_DIR$/Changgou-parent/changgou-service/changgou-service-seckill/target/" />
+    <ignored path="$PROJECT_DIR$/Changgou-parent/springboot_rabbitmq_delay/target/" />
+    <ignored path="$PROJECT_DIR$/Changgou-parent/changgou-service-api/changgou-service-pay-api/target/" />
+    <ignored path="$PROJECT_DIR$/tensquare_parent/target/" />
+    <ignored path="$PROJECT_DIR$/tensquare_parent/tensquare_common/target/" />
+    <ignored path="$PROJECT_DIR$/tensquare_parent/tensquare_article/target/" />
+    <ignored path="$PROJECT_DIR$/tensquare_parent/mongodb/target/" />
+    <ignored path="$PROJECT_DIR$/tensquare_parent/tensquare_user/target/" />
+    <ignored path="$PROJECT_DIR$/tensquare_parent/tensquare_eureka/target/" />
+    <ignored path="$PROJECT_DIR$/tensquare_parent/tensquare_encrypt/target/" />
+    <ignored path="$PROJECT_DIR$/tensquare_parent/tensquare_notice/target/" />
+    <ignored path="$PROJECT_DIR$/poi/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/Test$Test.ic" NAME="Test Coverage Results" MODIFIED="1580615521512" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>code.*</FILTER>
+    </SUITE>
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="ExecutionTargetDialog">
+    <checked>
+      <node key="c8e89d11-d18b-4a37-b558-b301e854f292" />
+    </checked>
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="469563410">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="122" />
+          <entry key="project.open.time.1" value="3" />
+          <entry key="project.open.time.100" value="1" />
+          <entry key="project.open.time.101" value="1" />
+          <entry key="project.open.time.103" value="3" />
+          <entry key="project.open.time.104" value="1" />
+          <entry key="project.open.time.105" value="2" />
+          <entry key="project.open.time.106" value="3" />
+          <entry key="project.open.time.107" value="2" />
+          <entry key="project.open.time.109" value="2" />
+          <entry key="project.open.time.114" value="2" />
+          <entry key="project.open.time.115" value="1" />
+          <entry key="project.open.time.116" value="1" />
+          <entry key="project.open.time.118" value="1" />
+          <entry key="project.open.time.12" value="1" />
+          <entry key="project.open.time.120" value="1" />
+          <entry key="project.open.time.124" value="3" />
+          <entry key="project.open.time.13" value="1" />
+          <entry key="project.open.time.131" value="1" />
+          <entry key="project.open.time.132" value="1" />
+          <entry key="project.open.time.14" value="1" />
+          <entry key="project.open.time.15" value="1" />
+          <entry key="project.open.time.1549" value="1" />
+          <entry key="project.open.time.157" value="1" />
+          <entry key="project.open.time.16" value="1" />
+          <entry key="project.open.time.163" value="1" />
+          <entry key="project.open.time.19" value="1" />
+          <entry key="project.open.time.201" value="1" />
+          <entry key="project.open.time.32" value="2" />
+          <entry key="project.open.time.4" value="1" />
+          <entry key="project.open.time.44" value="1" />
+          <entry key="project.open.time.45" value="1" />
+          <entry key="project.open.time.48" value="3" />
+          <entry key="project.open.time.50" value="1" />
+          <entry key="project.open.time.51" value="1" />
+          <entry key="project.open.time.53" value="2" />
+          <entry key="project.open.time.535" value="1" />
+          <entry key="project.open.time.55" value="3" />
+          <entry key="project.open.time.57" value="2" />
+          <entry key="project.open.time.58" value="3" />
+          <entry key="project.open.time.59" value="4" />
+          <entry key="project.open.time.60" value="2" />
+          <entry key="project.open.time.61" value="4" />
+          <entry key="project.open.time.62" value="1" />
+          <entry key="project.open.time.63" value="4" />
+          <entry key="project.open.time.64" value="2" />
+          <entry key="project.open.time.65" value="2" />
+          <entry key="project.open.time.66" value="3" />
+          <entry key="project.open.time.67" value="4" />
+          <entry key="project.open.time.68" value="3" />
+          <entry key="project.open.time.69" value="1" />
+          <entry key="project.open.time.6908" value="1" />
+          <entry key="project.open.time.70" value="4" />
+          <entry key="project.open.time.71" value="1" />
+          <entry key="project.open.time.72" value="1" />
+          <entry key="project.open.time.73" value="1" />
+          <entry key="project.open.time.76" value="1" />
+          <entry key="project.open.time.77" value="3" />
+          <entry key="project.open.time.78" value="2" />
+          <entry key="project.open.time.79" value="1" />
+          <entry key="project.open.time.80" value="2" />
+          <entry key="project.open.time.81" value="2" />
+          <entry key="project.open.time.83" value="3" />
+          <entry key="project.open.time.84" value="1" />
+          <entry key="project.open.time.86" value="1" />
+          <entry key="project.open.time.87" value="2" />
+          <entry key="project.open.time.89" value="1" />
+          <entry key="project.open.time.90" value="3" />
+          <entry key="project.open.time.91" value="2" />
+          <entry key="project.open.time.92" value="7" />
+          <entry key="project.open.time.93" value="1" />
+          <entry key="project.open.time.94" value="1" />
+          <entry key="project.open.time.97" value="1" />
+          <entry key="project.open.time.99" value="2" />
+          <entry key="project.opened" value="134" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="0-SNAPSHOT" value="3" />
+          <entry key="DATABASE/74d6ddfc-4a3d-4d71-adc4-86da3e2588a0" value="1" />
+          <entry key="JAVA/spring_proxy" value="1" />
+          <entry key="JAVA/springmvc_response02" value="1" />
+          <entry key="JAVA/springmvc_ssm_regist" value="4" />
+          <entry key="JavaScript-modules-diagram/D:/WorkSpaceForMaven/springmvc_response02" value="1" />
+          <entry key="JavaScript-modules-diagram/D:/WorkSpaceForMaven/springmvc_ssm_regist" value="3" />
+          <entry key="MODULES/mdl-crawler" value="2" />
+          <entry key="applicationContext_service" value="1" />
+          <entry key="changgou-common" value="1" />
+          <entry key="class" value="271" />
+          <entry key="classpath" value="1" />
+          <entry key="cmd" value="1" />
+          <entry key="conf" value="1" />
+          <entry key="courses" value="3" />
+          <entry key="css" value="5" />
+          <entry key="dic" value="2" />
+          <entry key="dtd" value="1" />
+          <entry key="es" value="1" />
+          <entry key="gif" value="2" />
+          <entry key="html" value="239" />
+          <entry key="ico" value="1" />
+          <entry key="iml" value="21" />
+          <entry key="java" value="2787" />
+          <entry key="jpg" value="2" />
+          <entry key="js" value="48" />
+          <entry key="json" value="6" />
+          <entry key="jsp" value="129" />
+          <entry key="key" value="9" />
+          <entry key="log" value="1" />
+          <entry key="md" value="3" />
+          <entry key="png" value="2" />
+          <entry key="pom" value="4" />
+          <entry key="pro" value="1" />
+          <entry key="properties" value="132" />
+          <entry key="shengshibiao" value="3" />
+          <entry key="sql" value="25" />
+          <entry key="t_member" value="1" />
+          <entry key="t_role_menu" value="1" />
+          <entry key="t_user" value="2" />
+          <entry key="t_user_role" value="2" />
+          <entry key="tb_album" value="2" />
+          <entry key="tb_brand" value="5" />
+          <entry key="tb_category_brand" value="1" />
+          <entry key="tb_content" value="10" />
+          <entry key="tb_content_category" value="4" />
+          <entry key="tb_sku" value="2" />
+          <entry key="tb_spec" value="1" />
+          <entry key="tb_spu" value="5" />
+          <entry key="tld" value="1" />
+          <entry key="txt" value="4" />
+          <entry key="uml" value="1" />
+          <entry key="xml" value="1072" />
+          <entry key="yaml" value="3" />
+          <entry key="yml" value="167" />
+          <entry key="使用说明" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="ActionScript" value="1" />
+          <entry key="CLASS" value="271" />
+          <entry key="CSS" value="5" />
+          <entry key="DTD" value="1" />
+          <entry key="Database Element" value="42" />
+          <entry key="Dictionary" value="2" />
+          <entry key="Eclipse" value="1" />
+          <entry key="HTML" value="239" />
+          <entry key="IDEA_MODULE" value="21" />
+          <entry key="Image" value="7" />
+          <entry key="JAVA" value="2787" />
+          <entry key="JSON" value="6" />
+          <entry key="JSP" value="129" />
+          <entry key="JavaScript" value="48" />
+          <entry key="Markdown" value="3" />
+          <entry key="PLAIN_TEXT" value="19" />
+          <entry key="ProGuard File" value="1" />
+          <entry key="Properties" value="132" />
+          <entry key="SQL" value="4" />
+          <entry key="Scratch" value="21" />
+          <entry key="UML" value="18" />
+          <entry key="XML" value="1078" />
+          <entry key="YAML" value="170" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="cell" value="13" />
+          <entry key="class" value="25" />
+          <entry key="dummy" value="12" />
+          <entry key="html" value="10028" />
+          <entry key="java" value="68053" />
+          <entry key="js" value="427" />
+          <entry key="jsp" value="1587" />
+          <entry key="properties" value="1012" />
+          <entry key="sql" value="506" />
+          <entry key="txt" value="213" />
+          <entry key="xml" value="14914" />
+          <entry key="yaml" value="337" />
+          <entry key="yml" value="2198" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="CLASS" value="25" />
+          <entry key="CSS" value="5" />
+          <entry key="HTML" value="10022" />
+          <entry key="JAVA" value="68053" />
+          <entry key="JSP" value="1587" />
+          <entry key="JavaScript" value="427" />
+          <entry key="PLAIN_TEXT" value="225" />
+          <entry key="Properties" value="1012" />
+          <entry key="SQL" value="57" />
+          <entry key="Scratch" value="501" />
+          <entry key="ThymeleafExpressions" value="1" />
+          <entry key="XML" value="14875" />
+          <entry key="YAML" value="2535" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.vcs.git.usages">
+        <counts>
+          <entry key="git.branch.create.new" value="1" />
+          <entry key="git.branch.merge" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="ssm_parent" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tensquare_parent/src/test/java/ShellSort.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="125">
+              <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tensquare_parent/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="700">
+              <caret line="49" selection-start-line="49" selection-end-line="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="AnnotationType" />
+        <option value="Jsp File" />
+        <option value="Singleton" />
+        <option value="FxmlFile" />
+        <option value="HTML File" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>conten</find>
+      <find>/css</find>
+      <find>/img</find>
+      <find>/js</find>
+      <find>搜索</find>
+      <find>加入</find>
+      <find>人评价</find>
+      <find>yui3-u Center navArea</find>
+      <find>img</find>
+      <find>js</find>
+      <find>css</find>
+      <find>收藏</find>
+      <find>sele</find>
+      <find>selector</find>
+      <find>select</find>
+      <find>全部结果</find>
+      <find>价格</find>
+      <find>fr pa</find>
+      <find>price</find>
+      <find>点击</find>
+      <find>categoryBrandMapper</find>
+      <find>itheima</find>
+      <find>content</find>
+      <find>Auto</find>
+      <find>user</find>
+      <find>app</find>
+      <find>sui-form</find>
+      <find>order</find>
+      <find>@PathVariable</find>
+      <find>create</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>Str</replace>
+      <replace>str</replace>
+      <replace>Student</replace>
+      <replace>../dist</replace>
+      <replace>../img/</replace>
+      <replace>../../</replace>
+      <replace>../../img</replace>
+      <replace>resp</replace>
+      <replace>user01</replace>
+      <replace>public</replace>
+      <replace>col-md-3</replace>
+      <replace>col-md-3 col-sm-3 col-xs-12</replace>
+      <replace>req</replace>
+      <replace>.</replace>
+      <replace>super.getJdbcTemplate</replace>
+      <replace>5.3.0</replace>
+      <replace>5.3.1</replace>
+      <replace>conten</replace>
+      <replace>categoryMapper</replace>
+      <replace>changgou</replace>
+      <replace>user</replace>
+      <replace>order</replace>
+      <replace>seckill</replace>
+      <replace>@PathVariable (value = &quot;id&quot;)</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/springboot_datajpa" value="master" />
+      </map>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/tensquare_parent/tensquare_eureka/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/tensquare_parent/tensquare_eureka/src/main/java/com/tensquare/EurekaApplication.java" />
+        <option value="$PROJECT_DIR$/tensquare_parent/tensquare_encrypt/pom.xml" />
+        <option value="$PROJECT_DIR$/tensquare_parent/tensquare_encrypt/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/tensquare_parent/tensquare_encrypt/src/main/java/com/tensquare/encrypt/EncryptApplication.java" />
+        <option value="$PROJECT_DIR$/tensquare_parent/tensquare_encrypt/src/test/java/com/tensquare/encrypt/test/EncryptTest.java" />
+        <option value="$PROJECT_DIR$/tensquare_parent/tensquare_encrypt/src/main/java/com/tensquare/encrypt/filter/RSARequestFilter.java" />
+        <option value="$PROJECT_DIR$/tensquare_parent/tensquare_notice/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/tensquare_parent/tensquare_notice/src/main/java/com/tensquare/notice/NoticeApplication.java" />
+        <option value="$PROJECT_DIR$/tensquare_parent/tensquare_notice/src/main/java/com/tensquare/notice/pojo/Notice.java" />
+        <option value="$PROJECT_DIR$/tensquare_parent/tensquare_notice/src/main/java/com/tensquare/notice/config/MyBatisPlusConfig.java" />
+        <option value="$PROJECT_DIR$/tensquare_parent/tensquare_notice/src/main/java/com/tensquare/notice/dao/NoticeDao.java" />
+        <option value="$PROJECT_DIR$/tensquare_parent/tensquare_notice/src/main/java/com/tensquare/notice/pojo/NoticeFresh.java" />
+        <option value="$PROJECT_DIR$/tensquare_parent/tensquare_notice/src/main/java/com/tensquare/notice/dao/NoticeFreshDao.java" />
+        <option value="$PROJECT_DIR$/tensquare_parent/tensquare_notice/src/main/java/com/tensquare/notice/contrller/NoticeController.java" />
+        <option value="$PROJECT_DIR$/tensquare_parent/tensquare_user/pom.xml" />
+        <option value="$PROJECT_DIR$/tensquare_parent/tensquare_user/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/tensquare_parent/tensquare_user/src/main/java/com/tensquare/user/UserApplication.java" />
+        <option value="$PROJECT_DIR$/tensquare_parent/tensquare_notice/src/main/java/com/tensquare/notice/feign/ArticleClient.java" />
+        <option value="$PROJECT_DIR$/tensquare_parent/tensquare_notice/src/main/java/com/tensquare/notice/feign/UserClient.java" />
+        <option value="$PROJECT_DIR$/tensquare_parent/tensquare_article/src/main/java/com/tensquare/article/ArticleApplication.java" />
+        <option value="$PROJECT_DIR$/tensquare_parent/tensquare_article/src/main/java/com/tensquare/article/client/NoticeClient.java" />
+        <option value="$PROJECT_DIR$/tensquare_parent/tensquare_article/src/main/java/com/tensquare/article/controller/ArticleController.java" />
+        <option value="$PROJECT_DIR$/tensquare_parent/tensquare_article/pom.xml" />
+        <option value="$PROJECT_DIR$/tensquare_parent/tensquare_article/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/tensquare_parent/tensquare_notice/pom.xml" />
+        <option value="$PROJECT_DIR$/tensquare_parent/tensquare_notice/src/main/java/com/tensquare/notice/service/NoticeService.java" />
+        <option value="$PROJECT_DIR$/tensquare_parent/tensquare_article/src/main/java/com/tensquare/article/service/ArticleService.java" />
+        <option value="$PROJECT_DIR$/tensquare_parent/tensquare_article/src/main/java/com/tensquare/article/config/RabbitmqConfig.java" />
+        <option value="$PROJECT_DIR$/tensquare_parent/tensquare_notice/src/main/java/com/tensquare/notice/config/RabbitmqConfig.java" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/332bd902-a3e6-44b2-bbfe-6f873d6a35ad/console.sql" />
+        <option value="$PROJECT_DIR$/tensquare_parent/src/test/java/Test.java" />
+        <option value="$PROJECT_DIR$/health_parent/health_dao/src/main/java/com/changgou/dao/PermissionDao.java" />
+        <option value="$PROJECT_DIR$/health_parent/health_dao/src/main/java/com/changgou/dao/RoleDao.java" />
+        <option value="$PROJECT_DIR$/health_parent/health_dao/src/main/java/com/changgou/dao/SetmealDao.java" />
+        <option value="$PROJECT_DIR$/health_parent/health_dao/src/main/java/com/changgou/dao/UserDao.java" />
+        <option value="$PROJECT_DIR$/health_parent/health_service/src/main/java/com/changgou/service/impl/MemberServiceImpl.java" />
+        <option value="$PROJECT_DIR$/health_parent/health_service/src/main/java/com/changgou/service/impl/ReportServiceImpl.java" />
+        <option value="$PROJECT_DIR$/health_parent/health_service/src/main/java/com/changgou/service/impl/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/health_parent/health_service/src/main/java/com/changgou/service/impl/SetmealServiceImpl.java" />
+        <option value="$PROJECT_DIR$/health_parent/health_service/src/main/java/com/health/service/impl/SetmealServiceImpl.java" />
+        <option value="$PROJECT_DIR$/mybaits_day01_quick/src/main/java/com/health/test/Test.java" />
+        <option value="$PROJECT_DIR$/code-template/src/main/java/com/changgou/code/build/TemplateBuilder.java" />
+        <option value="$PROJECT_DIR$/tensquare_parent/src/test/java/Digui.java" />
+        <option value="$PROJECT_DIR$/tensquare_parent/src/test/java/Test02.java" />
+        <option value="$PROJECT_DIR$/tensquare_parent/src/test/java/Test01.java" />
+        <option value="$PROJECT_DIR$/poi/src/main/resources/servlet-context.xml" />
+        <option value="$PROJECT_DIR$/code-generator/pom.xml" />
+        <option value="$PROJECT_DIR$/tensquare_parent/src/test/java/ShellSort.java" />
+        <option value="$PROJECT_DIR$/tensquare_parent/pom.xml" />
+        <option value="$PROJECT_DIR$/tensquare_parent/src/test/java/TestJsoup.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="JsbtTreeLayoutManager">
+    <layout place="tools.popupGrunt">
+      <scroll-view-position x="0" y="0" />
+    </layout>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\maven\myRepository\repository" />
+        <option name="mavenHome" value="D:/maven/apache-maven-3.3.9" />
+        <option name="userSettingsFile" value="D:\maven\apache-maven-3.3.9\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="poi" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="POI" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="POI" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="renren-generator" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="renren-generator" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="MavenRunner">
+    <option name="skipTests" value="true" />
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/springmvc_ssm_regist/src/main/webapp/plugins/select2/package.json" />
+      <path value="$PROJECT_DIR$/tensquare_parent/tensquare_user/src/main/resources/static/webim/demo/package.json" />
+      <path value="$PROJECT_DIR$/vue_user/src/main/resources/static/plugins/bootstrap-markdown/package.json" />
+    </packageJsonPaths>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="953" />
+    <option name="width" value="974" />
+    <option name="height" value="1047" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State />
+          <State>
+            <id>CodeSpring CoreSpring</id>
+          </State>
+          <State>
+            <id>Maven</id>
+          </State>
+          <State>
+            <id>Spring</id>
+          </State>
+          <State>
+            <id>Spring CoreSpring</id>
+          </State>
+          <State>
+            <id>XML</id>
+          </State>
+          <State>
+            <id>XMLSpring CoreSpring</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>SpringJavaInjectionPointsAutowiringInspection</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="Scope" currentSubView="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope" proportions="" version="1">
+      <flattenPackages Scope="false" />
+      <showMembers Scope="true" ProjectPane="true" />
+      <showModules Scope="false" />
+      <hideEmptyPackages Scope="true" />
+      <compactDirectories Scope="false" />
+      <autoscrollToSource Scope="true" />
+      <autoscrollFromSource Scope="false" />
+      <sortByType Scope="false" />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Test" type="58d84e3e:PackageViewProjectNode" />
+              <item name="com" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="Test" type="58d84e3e:PackageViewProjectNode" />
+              <item name="com" type="1f31426a:PackageElementNode" />
+              <item name="changgou" type="1f31426a:PackageElementNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Changgou-parent" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springboot_rabbitmq_consumer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springcloud_parent" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="Test" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+            <path>
+              <item name="Test" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="tensquare_parent" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="Test" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="tensquare_parent" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="Test" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="tensquare_parent" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="test" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="Test" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="tensquare_parent" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="test" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql&#10;oracle" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
+    <property name="LombokPluginEnabledInProject" value="true" />
+    <property name="LombokPluginIS_ANNOTATION_PROCESSING_CHECK_Enabled" value="true" />
+    <property name="LombokPluginIS_BUILDER_Enabled" value="true" />
+    <property name="LombokPluginIS_CONSTRUCTOR_Enabled" value="true" />
+    <property name="LombokPluginIS_DELEGATE_Enabled" value="true" />
+    <property name="LombokPluginIS_LOG_Enabled" value="true" />
+    <property name="LombokPluginIS_LOMBOK_VERSION_CHECK_Enabled" value="true" />
+    <property name="LombokPluginIS_MISSING_LOMBOK_CHECK_Enabled" value="true" />
+    <property name="LombokPluginIS_VAL_Enabled" value="true" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelOrder2" value="2" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RequestMappingsPanelWidth2" value="75" />
+    <property name="SearchEverywhereHistoryKey" value="DateUtil&#9;PSI&#9;JAVA://com.changgou.entity.DateUtil&#10;org.springframework.security.oauth2.provider.client.JdbcClientDetailsService&#9;PSI&#9;JAVA://org.springframework.security.oauth2.provider.client.JdbcClientDetailsService&#10;User&#9;FILE&#9;file://D:/WorkSpaceForMaven/Changgou-parent/changgou-service/changgou-service-user/src/main/java/com/changgou/user/controller/UserController.java&#10;para&#9;FILE&#9;file://D:/WorkSpaceForMaven/Changgou-parent/changgou-service-api/changgou-service-goods-api/src/main/java/com/changgou/goods/pojo/Para.java&#10;SpecMapper&#9;null&#9;null&#10;inter&#9;PSI&#9;JAVA://com.itheima.interceptor.MyInterceptor1&#10;SimpleDateFormat&#9;PSI&#9;JAVA://org.springframework.http.converter.json.Jackson2ObjectMapperBuilder#simpleDateFormat&#10;yyyy-MM-dd&#9;null&#9;null&#10;Forma&#9;PSI&#9;JAVA://io.renren.utils.DateUtils#format&#10;YYYY-&#9;null&#9;null&#10;birthday&#9;PSI&#9;JAVA://com.itheima.beans.User03#setUserbirthday&#10;index&#9;FILE&#9;file://D:/WorkSpaceForMaven/springmvc_ssm_regist/src/main/webapp/WEB-INF/pages/index.html&#10;application&#9;FILE&#9;file://D:/WorkSpaceForMaven/spring_ioc/src/main/resources/applicationContext.xml&#10;test&#9;FILE&#9;file://D:/WorkSpaceForMaven/mybaits_day01_quick/src/main/java/com/itheima/test/Test.java&#10;TextSqlNode&#9;PSI&#9;JAVA://org.apache.ibatis.scripting.xmltags.TextSqlNode&#10;web.xml&#9;FILE&#9;file://D:/WorkSpaceForMaven/weblogin/web/WEB-INF/web.xml" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1588215063607" />
+    <property name="database.console.LAST_STATE" value="true" />
+    <property name="jdk.selected.JAVA_MODULE" value="1.8" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/tensquare_parent/tensquare_user/src/main/java" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/code-generator" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.26299694" />
+    <property name="project.structure.side.proportion" value="0.3476454" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.tensquare.article.service" />
+      <recent name="com.itheima.domain.User" />
+      <recent name="com.itheima.service" />
+      <recent name="com.itheima.dao" />
+      <recent name="com.itheima.constant" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.itheima.application" />
+      <recent name="com.itheima.ssm" />
+      <recent name="" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\WorkSpaceForMaven\tensquare_parent\tensquare_article\src\main\java\com\tensquare\article\config" />
+      <recent name="D:\WorkSpaceForMaven\tensquare_parent\tensquare_notice\src\main\java\com\tensquare\notice\config" />
+      <recent name="D:\WorkSpaceForMaven\tensquare_parent\tensquare_encrypt\src\main\java\com\tensquare\encrypt" />
+      <recent name="D:\WorkSpaceForMaven\tensquare_parent\tensquare_user\src\main\resources\static\js" />
+      <recent name="D:\WorkSpaceForMaven\tensquare_parent\tensquare_user\src\main\resources\static" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.tensquare.article.pojo" />
+      <recent name="com.tensquare.article.repository" />
+      <recent name="com.tensquare.user.interapter" />
+      <recent name="com.tensquare.user.controller" />
+      <recent name="com.changgou.entity" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\WorkSpaceForMaven\health_parent\healthmobile_web\src\main\resources" />
+      <recent name="D:\WorkSpaceForMaven\vue_user\src\main\resources\static\js" />
+      <recent name="D:\WorkSpaceForMaven\vue_demo\src\main\webapp" />
+      <recent name="D:\WorkSpaceForMaven\ssm_parentFU\ssm_dao\src\main\resources" />
+      <recent name="D:\WorkSpaceForMaven\springmvc_ssm_regist\src\main\webapp" />
+    </key>
+  </component>
+  <component name="RestClientSettings">
+    <option name="REQUEST_HISTORY">
+      <list>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="JSESSIONID" />
+                <option name="path" value="/" />
+                <option name="value" value="93F43DBDA24FA330CF42DDB09F014765" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080" />
+          <option name="urlPath" value="/param/testRequestHeader" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="username" />
+                <option name="value" value="张三" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="JSESSIONID" />
+                <option name="path" value="/" />
+                <option name="value" value="93F43DBDA24FA330CF42DDB09F014765" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="PUT" />
+          <option name="urlBase" value="http://localhost:8080" />
+          <option name="urlPath" value="/param/testPathVariable" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="username" />
+                <option name="value" value="张三" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="JSESSIONID" />
+                <option name="path" value="/" />
+                <option name="value" value="93F43DBDA24FA330CF42DDB09F014765" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8080" />
+          <option name="urlPath" value="/param/testPathVariable" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="username" />
+                <option name="value" value="张三" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="JSESSIONID" />
+                <option name="path" value="/" />
+                <option name="value" value="93F43DBDA24FA330CF42DDB09F014765" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="DELETE" />
+          <option name="urlBase" value="http://localhost:8080" />
+          <option name="urlPath" value="/param/testPathVariable/1" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080" />
+          <option name="urlPath" value="/param/testPathVariable/1" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+      </list>
+    </option>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.TestJsoup">
+    <configuration name="Digui" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Digui" />
+      <module name="tensquare_parent" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JdbcService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.itheima.service.impl.JdbcService" />
+      <module name="spring_day" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.itheima.service.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.lee.demo.Main" />
+      <module name="poi-excel" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.lee.demo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ShellSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ShellSort" />
+      <module name="tensquare_parent" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestJsoup" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="TestJsoup" />
+      <module name="tensquare_parent" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Dom4JDemo.fun01" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
+      <module name="test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="code.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="code" />
+      <option name="MAIN_CLASS_NAME" value="code.Dom4JDemo" />
+      <option name="METHOD_NAME" value="fun01" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test01.fun" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tensquare_parent" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Test01" />
+      <option name="METHOD_NAME" value="fun" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <module name="ssm_parent" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <module name="ssm_parent" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="mavenTomcat" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="tomcat7:run" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/itheima_javaweb" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="MyApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="poi" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.poi.MyApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RenrenApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="renren-generator" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="io.renren.RenrenApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringbootCloudApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="springboot_cloud" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.itheima.springboot_cloud.SpringbootCloudApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringbootCloudResttemplateApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="springboot_cloud_resttemplate" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.itheima.springboot_cloud_resttemplate.SpringbootCloudResttemplateApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringbootDatajpaApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="springboot_datajpa" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.changgou.springboot_datajpa.SpringbootDatajpaApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringbootDatajpaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="springboot_datajpa" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.itheima.springboot_datajpa.SpringbootDatajpaApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringbootDemo001Application (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="springboot_demo001" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.changgou.application.SpringbootDemo001Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringbootDemo001Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="springboot_demo001" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.itheima.application.SpringbootDemo001Application" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringbootJpaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="springboot-jpa" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.lcl.SpringbootJpaApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringbootMybatisApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="springboot-mybatis" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.lcl.SpringbootMybatisApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringbootMysqlApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="springboot_mysql" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.changgou.springboot_mysql.SpringbootMysqlApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringbootMysqlApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="springboot_mysql" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.itheima.springboot_mysql.SpringbootMysqlApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringbootRabbitmqConsumerApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="springboot_rabbitmq_consumer" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.changgou.springboot_rabbitmq_consumer.SpringbootRabbitmqConsumerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringbootRabbitmqConsumerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="springboot_rabbitmq_consumer" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.itheima.springboot_rabbitmq_consumer.SpringbootRabbitmqConsumerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringbootRabbitmqProducerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="springboot_rabbitmq_producer" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ithema.springboot_rabbitmq_producer.SpringbootRabbitmqProducerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SptingbootCloudResttemplateApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="springboot_cloud_resttemplate" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.itheima.springboot_cloud_resttemplate.SptingbootCloudResttemplateApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ThymelefApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="thymelef" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.itheima.thymelef.ThymelefApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringSecurity_demo" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.27" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:85/" />
+      <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="springsecurity_demo:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_Test_15" />
+        <option name="HTTP_PORT" value="85" />
+        <option name="JNDI_PORT" value="1108" />
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="52459" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="springsecurity_demo:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <configuration name="Tomcat 8.5.27" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.27" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="weblogin:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="_ssm_parent" />
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="52459" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="weblogin:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <configuration name="Vude_demo" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.27" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="vue_demo:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_Test_11" />
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="52459" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="vue_demo:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.27" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment />
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="_ssm_parent" />
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="52459" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="consumer" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.27" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="itheima-dubbo-consumer:war">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_Test_3" />
+        <option name="HTTP_PORT" value="8081" />
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="52459" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="itheima-dubbo-consumer:war" />
+        </option>
+      </method>
+    </configuration>
+    <configuration name="health_consumer" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.27" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="health_web:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_Test_13" />
+        <option name="HTTP_PORT" value="82" />
+        <option name="JNDI_PORT" value="1102" />
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="52459" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="health_web:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <configuration name="health_service" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.27" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:81/" />
+      <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="health_service:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_Test_12" />
+        <option name="HTTP_PORT" value="81" />
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="52459" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="health_service:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <configuration name="healthmobile_web" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.27" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="healthmobile_web:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_Test_14" />
+        <option name="HTTP_PORT" value="80" />
+        <option name="JNDI_PORT" value="1101" />
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="52459" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="healthmobile_web:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <configuration name="hl_consumer" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.27" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="health_web (1):war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_Test_15" />
+        <option name="HTTP_PORT" value="82" />
+        <option name="JNDI_PORT" value="1100" />
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="52459" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="health_web (1):war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <configuration name="hl_service" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.27" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:81/" />
+      <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="health_service (1):war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_Test_14" />
+        <option name="HTTP_PORT" value="81" />
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="52459" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="health_service (1):war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <configuration name="maven-tomcat" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.27" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="itheima_javaweb:war">
+          <settings>
+            <option name="CONTEXT_PATH" value="/itheima_javaweb" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_Test_2" />
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="52459" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="itheima_javaweb:war" />
+        </option>
+      </method>
+    </configuration>
+    <configuration name="provider" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.27" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="itheim-adubbo-provider:war">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_Test_4" />
+        <option name="JNDI_PORT" value="1100" />
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="52459" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="itheim-adubbo-provider:war" />
+        </option>
+      </method>
+    </configuration>
+    <configuration name="springmvc" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.27" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="springmvc_quickly:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_Test_6" />
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="52459" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="springmvc_quickly:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <configuration name="springmvc_response" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.27" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="springmvc_day02_responce:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_Test_5" />
+        <option name="JNDI_PORT" value="1101" />
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="52459" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="springmvc_day02_responce:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <configuration name="springmvc_response02" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.27" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="springmvc_response02:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/springmvc_response02" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_Test_7" />
+        <option name="HTTP_PORT" value="9090" />
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="52459" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="springmvc_response02:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <configuration name="ssm_regist" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.27" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="springmvc_ssm_regist:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_Test_9" />
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="52459" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="springmvc_ssm_regist:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <configuration name="ssm_springmvc" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.27" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="1.8">
+      <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="springmvc_day03_ssm:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_Test_8" />
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="52459" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="springmvc_day03_ssm:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <configuration name="ssm_web" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.27" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="ssm_web:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_Test_10" />
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="52459" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="ssm_web:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <configuration name="tomcat" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.27" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <file path="$PROJECT_DIR$/poi-excel">
+          <settings>
+            <option name="CONTEXT_PATH" value="/index" />
+          </settings>
+        </file>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_ssm_parent" />
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="52459" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="tomcat8" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.27" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="1.8">
+      <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="day32_user:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_Test" />
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="52459" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="day32_user:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="JUnit.Dom4JDemo.fun01" />
+      <item itemvalue="Maven.mavenTomcat" />
+      <item itemvalue="Spring Boot.RenrenApplication" />
+      <item itemvalue="Spring Boot.SpringbootDemo001Application" />
+      <item itemvalue="Tomcat Server.health_service" />
+      <item itemvalue="Tomcat Server.health_consumer" />
+      <item itemvalue="Tomcat Server.healthmobile_web" />
+      <item itemvalue="Tomcat Server.SpringSecurity_demo" />
+      <item itemvalue="Tomcat Server.hl_service" />
+      <item itemvalue="Tomcat Server.hl_consumer" />
+      <item itemvalue="Tomcat Server.ssm_regist" />
+      <item itemvalue="Tomcat Server.ssm_web" />
+      <item itemvalue="Tomcat Server.Vude_demo" />
+      <item itemvalue="Tomcat Server.ssm_springmvc" />
+      <item itemvalue="Tomcat Server.springmvc" />
+      <item itemvalue="Tomcat Server.springmvc_response" />
+      <item itemvalue="Tomcat Server.springmvc_response02" />
+      <item itemvalue="Tomcat Server.maven-tomcat" />
+      <item itemvalue="Tomcat Server.consumer" />
+      <item itemvalue="Tomcat Server.provider" />
+      <item itemvalue="Tomcat Server.tomcat" />
+      <item itemvalue="Tomcat Server.tomcat8" />
+      <item itemvalue="Tomcat Server.Tomcat 8.5.27" />
+      <item itemvalue="Spring Boot.SpringbootMysqlApplication" />
+      <item itemvalue="Spring Boot.SpringbootDatajpaApplication" />
+      <item itemvalue="Spring Boot.SpringbootRabbitmqProducerApplication" />
+      <item itemvalue="Spring Boot.SpringbootRabbitmqConsumerApplication" />
+      <item itemvalue="Spring Boot.SpringbootCloudApplication" />
+      <item itemvalue="Spring Boot.SptingbootCloudResttemplateApplication" />
+      <item itemvalue="Spring Boot.SpringbootCloudResttemplateApplication" />
+      <item itemvalue="Spring Boot.SpringbootMybatisApplication" />
+      <item itemvalue="Spring Boot.SpringbootJpaApplication" />
+      <item itemvalue="Spring Boot.ThymelefApplication" />
+      <item itemvalue="Spring Boot.SpringbootRabbitmqConsumerApplication (1)" />
+      <item itemvalue="Spring Boot.MyApplication" />
+      <item itemvalue="Spring Boot.SpringbootDemo001Application (1)" />
+      <item itemvalue="Spring Boot.SpringbootDatajpaApplication (1)" />
+      <item itemvalue="Spring Boot.SpringbootMysqlApplication (1)" />
+      <item itemvalue="Application.Digui" />
+      <item itemvalue="JUnit.Test01.fun" />
+      <item itemvalue="Application.JdbcService" />
+      <item itemvalue="Application.ShellSort" />
+      <item itemvalue="Application.TestJsoup" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.TestJsoup" />
+        <item itemvalue="Application.ShellSort" />
+        <item itemvalue="JUnit.Test01.fun" />
+        <item itemvalue="Application.Digui" />
+        <item itemvalue="Application.JdbcService" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpringBeansView">
+    <option name="beanDetailsProportion" value="0.3" />
+  </component>
+  <component name="SpringMvcView">
+    <option name="showControllers" value="false" />
+  </component>
+  <component name="StructureViewFactory">
+    <option name="ACTIVE_ACTIONS" value=",VISIBILITY_SORTER" />
+  </component>
+  <component name="SvnConfiguration" cleanupOnStartRun="true">
+    <configuration>C:\Users\lilon\AppData\Roaming\Subversion</configuration>
+    <supportedVersion>125</supportedVersion>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="360f55ce-c07d-463a-9dbb-5c4dc1eb34ce" name="Default Changelist" comment="" />
+      <created>1578222430104</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1578222430104</updated>
+      <workItem from="1578222433272" duration="3449000" />
+      <workItem from="1578313579598" duration="1921000" />
+      <workItem from="1578315609142" duration="32000" />
+      <workItem from="1578476075586" duration="4216000" />
+      <workItem from="1578481365571" duration="1575000" />
+      <workItem from="1578830673250" duration="11261000" />
+      <workItem from="1578843465746" duration="2813000" />
+      <workItem from="1578987091877" duration="3323000" />
+      <workItem from="1579079953854" duration="1625000" />
+      <workItem from="1579082868800" duration="242000" />
+      <workItem from="1579083327113" duration="1049000" />
+      <workItem from="1579227155654" duration="942000" />
+      <workItem from="1579664065738" duration="4961000" />
+      <workItem from="1580012170761" duration="302000" />
+      <workItem from="1580012516506" duration="854000" />
+      <workItem from="1580092651119" duration="4265000" />
+      <workItem from="1580177567362" duration="10528000" />
+      <workItem from="1580261320147" duration="7879000" />
+      <workItem from="1580353862868" duration="8728000" />
+      <workItem from="1580439746994" duration="586000" />
+      <workItem from="1580536920279" duration="5272000" />
+      <workItem from="1580608399576" duration="9731000" />
+      <workItem from="1580698136221" duration="9711000" />
+      <workItem from="1580979837897" duration="7549000" />
+      <workItem from="1581138947764" duration="13539000" />
+      <workItem from="1581217649643" duration="13716000" />
+      <workItem from="1581297070861" duration="22840000" />
+      <workItem from="1581389651949" duration="9810000" />
+      <workItem from="1581561008452" duration="18302000" />
+      <workItem from="1581647013994" duration="9883000" />
+      <workItem from="1581739242614" duration="6714000" />
+      <workItem from="1581754467858" duration="3943000" />
+      <workItem from="1581823218023" duration="9797000" />
+      <workItem from="1581903486881" duration="9677000" />
+      <workItem from="1581931164817" duration="239000" />
+      <workItem from="1581931494755" duration="5787000" />
+      <workItem from="1581990809948" duration="13079000" />
+      <workItem from="1582076196750" duration="16127000" />
+      <workItem from="1582163648442" duration="21359000" />
+      <workItem from="1582216917123" duration="589000" />
+      <workItem from="1582265479033" duration="10644000" />
+      <workItem from="1582300694290" duration="442000" />
+      <workItem from="1582338116116" duration="6543000" />
+      <workItem from="1582505883043" duration="14736000" />
+      <workItem from="1582591711649" duration="23851000" />
+      <workItem from="1582680427490" duration="28685000" />
+      <workItem from="1582767228889" duration="16884000" />
+      <workItem from="1582850277778" duration="496000" />
+      <workItem from="1582870153176" duration="1436000" />
+      <workItem from="1582953380421" duration="1805000" />
+      <workItem from="1583027698206" duration="4351000" />
+      <workItem from="1583035789342" duration="17444000" />
+      <workItem from="1583111765654" duration="19321000" />
+      <workItem from="1583193003723" duration="23634000" />
+      <workItem from="1583233621888" duration="10420000" />
+      <workItem from="1583284940626" duration="21099000" />
+      <workItem from="1583373174754" duration="23970000" />
+      <workItem from="1583458823532" duration="11279000" />
+      <workItem from="1583491086351" duration="434000" />
+      <workItem from="1583494718864" duration="4075000" />
+      <workItem from="1583506944637" duration="6973000" />
+      <workItem from="1583565992784" duration="9075000" />
+      <workItem from="1583596463466" duration="5757000" />
+      <workItem from="1583632371887" duration="20487000" />
+      <workItem from="1583681838586" duration="4498000" />
+      <workItem from="1583714461152" duration="6464000" />
+      <workItem from="1583731123603" duration="8471000" />
+      <workItem from="1583739782261" duration="4655000" />
+      <workItem from="1583805252918" duration="24997000" />
+      <workItem from="1583891119248" duration="25227000" />
+      <workItem from="1583982478480" duration="24373000" />
+      <workItem from="1584021561494" duration="162000" />
+      <workItem from="1584077515827" duration="28926000" />
+      <workItem from="1584154197676" duration="12624000" />
+      <workItem from="1584251225060" duration="18194000" />
+      <workItem from="1584324026248" duration="28222000" />
+      <workItem from="1584414673446" duration="15606000" />
+      <workItem from="1584497788444" duration="15689000" />
+      <workItem from="1584581810883" duration="15128000" />
+      <workItem from="1584666831033" duration="9470000" />
+      <workItem from="1584680792197" duration="5564000" />
+      <workItem from="1584710961132" duration="7624000" />
+      <workItem from="1584758047158" duration="17787000" />
+      <workItem from="1584797948020" duration="3363000" />
+      <workItem from="1584859718337" duration="1282000" />
+      <workItem from="1584866739774" duration="9173000" />
+      <workItem from="1584931954242" duration="4092000" />
+      <workItem from="1584941291827" duration="23003000" />
+      <workItem from="1585008865897" duration="34100000" />
+      <workItem from="1585099432138" duration="20163000" />
+      <workItem from="1585291986362" duration="7520000" />
+      <workItem from="1585404895674" duration="10531000" />
+      <workItem from="1585467163432" duration="1447000" />
+      <workItem from="1585502739680" duration="1019000" />
+      <workItem from="1585530189518" duration="1243000" />
+      <workItem from="1585532102378" duration="8958000" />
+      <workItem from="1585553029072" duration="3313000" />
+      <workItem from="1585556754675" duration="17577000" />
+      <workItem from="1585662653404" duration="3512000" />
+      <workItem from="1585704249188" duration="1532000" />
+      <workItem from="1585706473767" duration="17187000" />
+      <workItem from="1585788420261" duration="15259000" />
+      <workItem from="1585878675075" duration="2873000" />
+      <workItem from="1585886747302" duration="7019000" />
+      <workItem from="1586055685118" duration="694000" />
+      <workItem from="1586068428834" duration="1341000" />
+      <workItem from="1586089697740" duration="4918000" />
+      <workItem from="1586138966026" duration="12169000" />
+      <workItem from="1586164716384" duration="18263000" />
+      <workItem from="1586222236458" duration="7110000" />
+      <workItem from="1586235613810" duration="27210000" />
+      <workItem from="1586271905175" duration="1794000" />
+      <workItem from="1586300790999" duration="10706000" />
+      <workItem from="1586321761630" duration="9825000" />
+      <workItem from="1586390594347" duration="33388000" />
+      <workItem from="1586484384748" duration="8752000" />
+      <workItem from="1586577325224" duration="20159000" />
+      <workItem from="1586740588650" duration="4302000" />
+      <workItem from="1587169374982" duration="1150000" />
+      <workItem from="1587174676581" duration="1257000" />
+      <workItem from="1587190536451" duration="1092000" />
+      <workItem from="1587196774854" duration="6210000" />
+      <workItem from="1587280838751" duration="13202000" />
+      <workItem from="1587379995314" duration="875000" />
+      <workItem from="1587400556717" duration="1926000" />
+      <workItem from="1587435599217" duration="17718000" />
+      <workItem from="1587629856335" duration="634000" />
+      <workItem from="1587630843163" duration="671000" />
+      <workItem from="1587717230536" duration="4911000" />
+      <workItem from="1587778060946" duration="13839000" />
+      <workItem from="1587829853355" duration="684000" />
+      <workItem from="1587886017796" duration="6705000" />
+      <workItem from="1587948074545" duration="5573000" />
+      <workItem from="1588204679098" duration="1150000" />
+    </task>
+    <task id="LOCAL-00001" summary="tj">
+      <created>1584972328294</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1584972328294</updated>
+    </task>
+    <task id="LOCAL-00002" summary="changgou">
+      <created>1586741872732</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1586741872732</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="Test_test - 2020.04.21 at 12h 11m 52s.xml">
+      <configuration name="Test.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Test_test - 2020.04.21 at 12h 13m 56s.xml">
+      <configuration name="Test.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Test01_fun - 2020.04.25 at 12h 17m 45s.xml">
+      <configuration name="Test01.fun" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Test01_fun - 2020.04.25 at 12h 18m 48s.xml">
+      <configuration name="Test01.fun" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Test01_fun - 2020.04.25 at 12h 19m 59s.xml">
+      <configuration name="Test01.fun" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Test01_fun - 2020.04.26 at 00h 00m 15s.xml">
+      <configuration name="Test01.fun" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Test01_fun - 2020.04.26 at 00h 01m 30s.xml">
+      <configuration name="Test01.fun" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Test01_fun - 2020.04.26 at 00h 01m 52s.xml">
+      <configuration name="Test01.fun" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Test01_fun - 2020.04.26 at 00h 02m 14s.xml">
+      <configuration name="Test01.fun" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Test01_fun - 2020.04.26 at 00h 02m 27s.xml">
+      <configuration name="Test01.fun" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="1268131000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" x="1081" y="177" width="243" height="513" id="Project" order="0" sideWeight="0.4925575" visible="true" weight="0.1722103" />
+      <window_info id="Structure" order="1" weight="0.18443497" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Web" order="6" sideWeight="0.5074425" side_tool="true" weight="0.28533685" />
+      <window_info id="Favorites" order="7" sideWeight="0.5035294" weight="0.21296297" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.4677778" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.542382" visible="true" weight="0.19555555" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.42666668" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32352942" />
+      <window_info anchor="bottom" id="Spring" order="7" sideWeight="0.53608245" weight="0.23128343" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49896908" weight="0.32486632" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.45761803" side_tool="true" weight="0.24" />
+      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.5525773" weight="0.29444444" />
+      <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.32352942" />
+      <window_info anchor="bottom" id="Database Changes" order="12" weight="0.32746956" />
+      <window_info anchor="bottom" id="Version Control" order="13" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Application Servers" order="14" weight="0.3275401" />
+      <window_info active="true" anchor="bottom" id="Database Console" order="15" sideWeight="0.49935898" visible="true" weight="0.30639732" />
+      <window_info anchor="bottom" id="REST Client" order="16" weight="0.37077132" />
+      <window_info anchor="bottom" id="Problems" order="17" weight="0.328877" />
+      <window_info anchor="bottom" id="Thumbnails" order="18" weight="0.32882273" />
+      <window_info active="true" anchor="bottom" id="SVN Repositories" order="19" sideWeight="0.5301282" visible="true" weight="0.328877" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.24944568" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Maven Projects" order="5" weight="0.31759655" />
+      <window_info anchor="right" id="Database" order="6" weight="0.15343347" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" weight="0.32922536" />
+      <window_info anchor="right" id="Coverage" order="10" side_tool="true" weight="0.32868525" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" x="1081" y="177" width="243" height="513" id="Project" order="0" sideWeight="0.4925575" visible="true" weight="0.30709535" />
+      <window_info id="Structure" order="1" weight="0.18443497" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Web" order="6" sideWeight="0.5074425" side_tool="true" weight="0.28533685" />
+      <window_info id="Favorites" order="7" sideWeight="0.5035294" weight="0.21296297" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.46791443" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.542382" weight="0.41975307" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.42666668" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32352942" />
+      <window_info anchor="bottom" id="Spring" order="7" sideWeight="0.53608245" weight="0.23128343" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49896908" weight="0.32486632" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.45761803" side_tool="true" weight="0.39666668" />
+      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.5525773" weight="0.29679143" />
+      <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.32352942" />
+      <window_info anchor="bottom" id="Database Changes" order="12" weight="0.32746956" />
+      <window_info anchor="bottom" id="Version Control" order="13" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Application Servers" order="14" weight="0.3275401" />
+      <window_info anchor="bottom" id="Database Console" order="15" sideWeight="0.49935898" weight="0.30748662" />
+      <window_info anchor="bottom" id="REST Client" order="16" weight="0.37077132" />
+      <window_info anchor="bottom" id="Problems" order="17" weight="0.328877" />
+      <window_info anchor="bottom" id="Thumbnails" order="18" weight="0.32882273" />
+      <window_info active="true" anchor="bottom" id="SVN Repositories" order="19" sideWeight="0.5301282" visible="true" weight="0.328877" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.24944568" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Maven Projects" order="5" weight="0.19955654" />
+      <window_info anchor="right" id="Database" order="6" weight="0.40987125" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" weight="0.32922536" />
+      <window_info anchor="right" id="Coverage" order="10" side_tool="true" weight="0.32868525" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="D:\WorkSpaceForMaven\luke" />
+    </ignored-roots>
+    <MESSAGE value="tj" />
+    <MESSAGE value="changgou" />
+    <option name="LAST_COMMIT_MESSAGE" value="changgou" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="JUnit">
+        <watch expression="x1" />
+      </configuration>
+      <configuration name="Application">
+        <watch expression="s" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/daoRu/src/main/java/com/coder520/POI/TeacherLiterature/Utils/LiteratureTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/poi/src/main/resources/servlet-context.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/poi/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/poi/README.en.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/daoRu/src/main/java/com/coder520/POI/common/poiUtils/labEquipment2Date.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10">
+          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/daoRu/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3225" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/daoRu/src/main/java/com/coder520/POI/UuserRolesMap/GetMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-245">
+          <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/poi/.classpath">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/poi/src/main/java/com/poi/exp/processor/ForeachRowProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="30" lean-forward="true" selection-start-column="30" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/daoRu/src/main/java/com/coder520/POI/common/poiUtils/Data2Excel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="31" column="11" selection-start-line="31" selection-start-column="11" selection-end-line="31" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/poi/src/main/java/com/poi/exp/PoiExporter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/poi/src/main/resources/logback.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/poi/src/main/java/com/poi/controller/PoiExcelController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-575">
+          <caret line="73" column="14" selection-start-line="73" selection-start-column="14" selection-end-line="73" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/poi/src/main/java/com/poi/controller/TEquipmentSpotCheck.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/poi/src/main/java/com/poi/controller/TSpotCheckItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/poi/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="27" column="43" lean-forward="true" selection-start-line="27" selection-start-column="43" selection-end-line="27" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/poi/src/main/java/com/poi/exception/IErrors.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/poi/src/main/java/com/poi/exception/PoiElErrorCode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/daoRu/src/main/resources/jdbc.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawler/src/main/resources/sqlMapConfig.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawler/src/main/resources/com/lcl/dao1/UserDao.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/daoRu/src/main/resources/spring-cfg.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/daoRu/src/main/resources/log4j.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/daoRu/src/main/java/com/coder520/POI/TeacherThesisrrelated/dao/TeacherThesisrrelatedMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" column="62" selection-start-line="2" selection-start-column="62" selection-end-line="2" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/daoRu/src/main/resources/generatorConfig.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1257" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/poi/src/main/java/com/poi/exp/function/FunctionRegister.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/poi/src/main/java/com/poi/exp/domain/MutiRowModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/daoRu/src/main/resources/user.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-300" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/poi-excel/src/config/props/db.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/poi-excel/src/org/lee/dao/CourseImp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/poi-excel/src/org/lee/web/FileUploadController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/poi-excel/src/org/lee/model/Course.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/poi-excel/src/org/lee/util/DBUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/poi-excel/src/org/lee/demo/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/poi/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/poi/src/main/java/com/poi/common/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/poi/src/main/java/com/poi/common/PoiUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/poi/src/main/java/com/poi/common/ReflectionUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="44" column="50" selection-start-line="44" selection-start-column="50" selection-end-line="44" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/poi/src/main/java/com/poi/config/ExcelPoi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="443">
+          <caret line="42" column="14" selection-start-line="42" selection-start-column="14" selection-end-line="42" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/poi/src/main/java/com/poi/entity/ExcelExportBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/poi/src/main/java/com/poi/entity/swai_wise/TEquipmentInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/poi/src/main/resources/ExcelPoi.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" column="15" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/poi/src/main/java/com/poi/MyApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="16" column="42" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code-template/pom.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code-template/src/main/resources/使用说明">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code-generator/src/main/java/io/renren/RenrenApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" column="31" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code-generator/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-450" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code-generator/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1150">
+          <caret line="136" column="20" lean-forward="true" selection-start-line="136" selection-start-column="20" selection-end-line="136" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tensquare_parent/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="700">
+          <caret line="49" selection-start-line="49" selection-end-line="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tensquare_parent/src/test/java/TestJsoup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="14" column="36" lean-forward="true" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tensquare_parent/src/test/java/ShellSort.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>health_service:war exploded</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.3476454" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Web (servletdemo)|Web</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.3476454" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.3476454" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>renren-generator</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.3476454" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>9</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>lib3</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.3476454" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+  <component name="mavenExecuteGoalHistory">
+    <option value="D:\WorkSpaceForMaven\health_parent\health_web" />
+    <option value="clean tomcat7:run" />
+    <option value="install" />
+    <option value="package" />
+    <option value="test" />
+    <option value="compile" />
+    <option value="clean" />
+  </component>
+</project>

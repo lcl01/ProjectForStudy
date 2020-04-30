@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue</title>
+    <script src="js/vuejs-2.5.16.js"></script>
+</head>
+<body>
+<div id="app">
+    {{message}}
+    {{flag?"true":"false"}}
+</div>
+<script>
+    new Vue(
+        {
+            el:"#app",
+            data:{
+                message:'你好！猴子鑫lclde lp',
+                flag:true
+            }
+        }
+    );
+</script>
+</body>
+</html>

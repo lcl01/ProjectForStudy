@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+    <import resource="applicationContext_dao.xml"></import>
+    <bean id="accountService" class="com.changgou.service.impl.AccountServiceImpl">
+        <property name="accountDao" ref="accountDao"></property>
+        <property name="txManager" ref="txManager"></property>
+    </bean>
+    <bean id="txManager" class="com.changgou.utils.TransactionManager">
+        <property name="connectionUtils" ref="connectionUtils"></property>
+    </bean>
+    <aop:config>
+        <aop:pointcut id="pc" expression="execution(* com.itheima.service..*.*(..))"></aop:pointcut>
+        <aop:aspect ref="txManager">
+            <aop:before method="beginTransaction" pointcut-ref="pc"></aop:before>
+            <aop:after-returning method="commit" pointcut-ref="pc"></aop:after-returning>
+            <!--配置异常通知：回滚事务-->
+            <aop:after-throwing method="rollback" pointcut-ref="pc"></aop:after-throwing>
+            <!--配置最终通知：释放连接-->
+            <aop:after method="release" pointcut-ref="pc"></aop:after>
+        </aop:aspect>
+    </aop:config>
+</beans>

@@ -1,0 +1,1261 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coder520.POI.LabEquipment.dao.LabEquipmentMapper" >
+  <resultMap id="BaseResultMap" type="com.coder520.POI.LabEquipment.entity.LabEquipment" >
+    <id column="LABSEQNO" property="labseqno" jdbcType="DECIMAL" />
+    <id column="EQUIPSEQNO" property="equipseqno" jdbcType="DECIMAL" />
+    <result column="EQUIPNO" property="equipno" jdbcType="VARCHAR" />
+    <result column="KIND" property="kind" jdbcType="VARCHAR" />
+    <result column="CHINESENAME" property="chinesename" jdbcType="VARCHAR" />
+    <result column="ENGLISHNAME" property="englishname" jdbcType="VARCHAR" />
+    <result column="WHICHLAB" property="whichlab" jdbcType="VARCHAR" />
+    <result column="WHICHBRANCH" property="whichbranch" jdbcType="VARCHAR" />
+    <result column="SPECFICATION" property="specfication" jdbcType="VARCHAR" />
+    <result column="MANUFACTORY" property="manufactory" jdbcType="VARCHAR" />
+    <result column="GAINEDWAY" property="gainedway" jdbcType="VARCHAR" />
+    <result column="ACCOUNTINGDATE" property="accountingdate" jdbcType="TIMESTAMP" />
+    <result column="RAWVALUE" property="rawvalue" jdbcType="DECIMAL" />
+    <result column="ORIGIN" property="origin" jdbcType="VARCHAR" />
+    <result column="ORIGINOFFUND" property="originoffund" jdbcType="VARCHAR" />
+    <result column="APPLIEDFIELDS" property="appliedfields" jdbcType="VARCHAR" />
+    <result column="SCIFIELDS" property="scifields" jdbcType="VARCHAR" />
+    <result column="QUALIFICATIONS" property="qualifications" jdbcType="VARCHAR" />
+    <result column="KEYFEATURE" property="keyfeature" jdbcType="VARCHAR" />
+    <result column="ATTACHMENT" property="attachment" jdbcType="VARCHAR" />
+    <result column="ACCEPTEDBYLAB" property="acceptedbylab" jdbcType="VARCHAR" />
+    <result column="MEASURING" property="measuring" jdbcType="VARCHAR" />
+    <result column="RUNNINGSTATUS" property="runningstatus" jdbcType="VARCHAR" />
+    <result column="USINGSTATUS" property="usingstatus" jdbcType="VARCHAR" />
+    <result column="SHAREMODEL" property="sharemodel" jdbcType="VARCHAR" />
+    <result column="ISSHAREFORPROV" property="isshareforprov" jdbcType="VARCHAR" />
+    <result column="ISREGISTERED" property="isregistered" jdbcType="VARCHAR" />
+    <result column="KEYTECHS" property="keytechs" jdbcType="VARCHAR" />
+    <result column="CONTACTINGMAN" property="contactingman" jdbcType="VARCHAR" />
+    <result column="CONTACTINGPHONE" property="contactingphone" jdbcType="VARCHAR" />
+    <result column="EMAIL" property="email" jdbcType="VARCHAR" />
+    <result column="TIMEOFWORKING" property="timeofworking" jdbcType="DECIMAL" />
+    <result column="TIMEOFSERVE" property="timeofserve" jdbcType="DECIMAL" />
+    <result column="CHARGEMODEL" property="chargemodel" jdbcType="VARCHAR" />
+    <result column="CHARGERATE" property="chargerate" jdbcType="DECIMAL" />
+    <result column="REMARK" property="remark" jdbcType="VARCHAR" />
+    <result column="EQUIPMEMBERS" property="equipmembers" jdbcType="VARCHAR" />
+    <result column="KIND1" property="kind1" jdbcType="VARCHAR" />
+    <result column="KIND2" property="kind2" jdbcType="VARCHAR" />
+    <result column="VALUETYPE" property="valuetype" jdbcType="VARCHAR" />
+    <result column="SERVICESZONE" property="serviceszone" jdbcType="VARCHAR" />
+    <result column="FAX" property="fax" jdbcType="VARCHAR" />
+    <result column="EQUIPLOCATION" property="equiplocation" jdbcType="VARCHAR" />
+    <result column="GOVRAWVALUE" property="govrawvalue" jdbcType="DECIMAL" />
+    <result column="OWNRAWVALUE" property="ownrawvalue" jdbcType="DECIMAL" />
+    <result column="ATTENTION" property="attention" jdbcType="VARCHAR" />
+    <result column="EXAMINESTATE" property="examinestate" jdbcType="VARCHAR" />
+    <result column="AUDITSTATE" property="auditstate" jdbcType="VARCHAR" />
+    <result column="AUDITREMARKS" property="auditremarks" jdbcType="VARCHAR" />
+    <result column="REGISTRANT" property="registrant" jdbcType="VARCHAR" />
+    <result column="SYSTIME" property="systime" jdbcType="VARCHAR" />
+    <result column="AUDITCHECKER" property="auditchecker" jdbcType="VARCHAR" />
+    <result column="AUDITCHECKTIME" property="auditchecktime" jdbcType="VARCHAR" />
+    <result column="PROPOSER" property="proposer" jdbcType="VARCHAR" />
+    <result column="APPLYTIME" property="applytime" jdbcType="VARCHAR" />
+    <result column="CHECKER" property="checker" jdbcType="VARCHAR" />
+    <result column="CHECKTIME" property="checktime" jdbcType="VARCHAR" />
+    <result column="ISAPPLY" property="isapply" jdbcType="VARCHAR" />
+    <result column="PROPOSERID" property="proposerid" jdbcType="DECIMAL" />
+    <result column="REMARKS" property="remarks" jdbcType="VARCHAR" />
+    <result column="REALCHARGEMODEL" property="realchargemodel" jdbcType="VARCHAR" />
+    <result column="REALCHARGERATE" property="realchargerate" jdbcType="DECIMAL" />
+    <result column="SHARESTATE" property="sharestate" jdbcType="VARCHAR" />
+    <result column="REQUISITION" property="requisition" jdbcType="VARCHAR" />
+    <result column="SHARETIME" property="sharetime" jdbcType="VARCHAR" />
+    <result column="ISREDEVELOPMENT" property="isredevelopment" jdbcType="VARCHAR" />
+    <result column="REQUIREDTIME" property="requiredtime" jdbcType="VARCHAR" />
+    <result column="VIDEO" property="video" jdbcType="VARCHAR" />
+    <result column="DELFLAG" property="delflag" jdbcType="VARCHAR" />
+    <result column="RUNNINGSTATE" property="runningstate" jdbcType="VARCHAR" />
+    <result column="ISSUESHARE" property="issueshare" jdbcType="VARCHAR" />
+    <result column="NOISSREASON" property="noissreason" jdbcType="VARCHAR" />
+    <result column="CONTACTINGMPHONE" property="contactingmphone" jdbcType="VARCHAR" />
+    <result column="DEPNUMBER" property="depnumber" jdbcType="VARCHAR" />
+    <result column="KEYWORDS" property="keywords" jdbcType="VARCHAR" />
+    <result column="PREDICTYPE" property="predictype" jdbcType="VARCHAR" />
+    <result column="HANDLE" property="handle" jdbcType="DECIMAL" />
+    <result column="LATITUDE" property="latitude" jdbcType="VARCHAR" />
+    <result column="LONGITUDE" property="longitude" jdbcType="VARCHAR" />
+    <result column="LBSPOIID" property="lbspoiid" jdbcType="VARCHAR" />
+    <result column="SUPPORTSCIEN" property="supportscien" jdbcType="VARCHAR" />
+    <result column="SUPPORTOTHERSCIEN" property="supportotherscien" jdbcType="VARCHAR" />
+    <result column="SUPPORTFIRMTEST" property="supportfirmtest" jdbcType="VARCHAR" />
+    <result column="OTHERRATIO" property="otherratio" jdbcType="VARCHAR" />
+    <result column="EQUPROPERTY" property="equproperty" jdbcType="VARCHAR" />
+    <result column="PRESERORGANIZATION" property="preserorganization" jdbcType="VARCHAR" />
+    <result column="ISTEMPORARY" property="istemporary" jdbcType="VARCHAR" />
+    <result column="BILLS" property="bills" jdbcType="DECIMAL" />
+  </resultMap>
+  <resultMap id="ResultMapWithBLOBs" type="com.coder520.POI.LabEquipment.entity.LabEquipment" extends="BaseResultMap" >
+    <result column="ALLINFO" property="allinfo" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    LABSEQNO, EQUIPSEQNO, EQUIPNO, KIND, CHINESENAME, ENGLISHNAME, WHICHLAB, WHICHBRANCH, 
+    SPECFICATION, MANUFACTORY, GAINEDWAY, ACCOUNTINGDATE, RAWVALUE, ORIGIN, ORIGINOFFUND, 
+    APPLIEDFIELDS, SCIFIELDS, QUALIFICATIONS, KEYFEATURE, ATTACHMENT, ACCEPTEDBYLAB, 
+    MEASURING, RUNNINGSTATUS, USINGSTATUS, SHAREMODEL, ISSHAREFORPROV, ISREGISTERED, 
+    KEYTECHS, CONTACTINGMAN, CONTACTINGPHONE, EMAIL, TIMEOFWORKING, TIMEOFSERVE, CHARGEMODEL, 
+    CHARGERATE, REMARK, EQUIPMEMBERS, KIND1, KIND2, VALUETYPE, SERVICESZONE, FAX, EQUIPLOCATION, 
+    GOVRAWVALUE, OWNRAWVALUE, ATTENTION, EXAMINESTATE, AUDITSTATE, AUDITREMARKS, REGISTRANT, 
+    SYSTIME, AUDITCHECKER, AUDITCHECKTIME, PROPOSER, APPLYTIME, CHECKER, CHECKTIME, ISAPPLY, 
+    PROPOSERID, REMARKS, REALCHARGEMODEL, REALCHARGERATE, SHARESTATE, REQUISITION, SHARETIME, 
+    ISREDEVELOPMENT, REQUIREDTIME, VIDEO, DELFLAG, RUNNINGSTATE, ISSUESHARE, NOISSREASON, 
+    CONTACTINGMPHONE, DEPNUMBER, KEYWORDS, PREDICTYPE, HANDLE, LATITUDE, LONGITUDE, LBSPOIID, 
+    SUPPORTSCIEN, SUPPORTOTHERSCIEN, SUPPORTFIRMTEST, OTHERRATIO, EQUPROPERTY, PRESERORGANIZATION, 
+    ISTEMPORARY, BILLS
+  </sql>
+  <sql id="Blob_Column_List" >
+    ALLINFO
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="com.coder520.POI.LabEquipment.entity.LabEquipmentKey" >
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from LAB_EQUIPMENT
+    where LABSEQNO = #{labseqno,jdbcType=DECIMAL}
+      and EQUIPSEQNO = #{equipseqno,jdbcType=DECIMAL}
+  </select>
+
+  <select id="selectByName" resultMap="ResultMapWithBLOBs"  >
+    select
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from LAB_EQUIPMENT
+    where CHINESENAME= #{chinesename,jdbcType=VARCHAR}
+    AND WHICHLAB=#{whichlab,jdbcType=VARCHAR}
+    AND RAWVALUE=#{rawvalue,jdbcType=DECIMAL}
+  </select>
+
+  <delete id="deleteByPrimaryKey" parameterType="com.coder520.POI.LabEquipment.entity.LabEquipmentKey" >
+    delete from LAB_EQUIPMENT
+    where LABSEQNO = #{labseqno,jdbcType=DECIMAL}
+      and EQUIPSEQNO = #{equipseqno,jdbcType=DECIMAL}
+  </delete>
+  <insert id="insert" parameterType="com.coder520.POI.LabEquipment.entity.LabEquipment" >
+    insert into LAB_EQUIPMENT (LABSEQNO, EQUIPSEQNO, EQUIPNO, 
+      KIND, CHINESENAME, ENGLISHNAME, 
+      WHICHLAB, WHICHBRANCH, SPECFICATION, 
+      MANUFACTORY, GAINEDWAY, ACCOUNTINGDATE, 
+      RAWVALUE, ORIGIN, ORIGINOFFUND, 
+      APPLIEDFIELDS, SCIFIELDS, QUALIFICATIONS, 
+      KEYFEATURE, ATTACHMENT, ACCEPTEDBYLAB, 
+      MEASURING, RUNNINGSTATUS, USINGSTATUS, 
+      SHAREMODEL, ISSHAREFORPROV, ISREGISTERED, 
+      KEYTECHS, CONTACTINGMAN, CONTACTINGPHONE, 
+      EMAIL, TIMEOFWORKING, TIMEOFSERVE, 
+      CHARGEMODEL, CHARGERATE, REMARK, 
+      EQUIPMEMBERS, KIND1, KIND2, 
+      VALUETYPE, SERVICESZONE, FAX, 
+      EQUIPLOCATION, GOVRAWVALUE, OWNRAWVALUE, 
+      ATTENTION, EXAMINESTATE, AUDITSTATE, 
+      AUDITREMARKS, REGISTRANT, SYSTIME, 
+      AUDITCHECKER, AUDITCHECKTIME, PROPOSER, 
+      APPLYTIME, CHECKER, CHECKTIME, 
+      ISAPPLY, PROPOSERID, REMARKS, 
+      REALCHARGEMODEL, REALCHARGERATE, SHARESTATE, 
+      REQUISITION, SHARETIME, ISREDEVELOPMENT, 
+      REQUIREDTIME, VIDEO, DELFLAG, 
+      RUNNINGSTATE, ISSUESHARE, NOISSREASON, 
+      CONTACTINGMPHONE, DEPNUMBER, KEYWORDS, 
+      PREDICTYPE, HANDLE, LATITUDE, 
+      LONGITUDE, LBSPOIID, SUPPORTSCIEN, 
+      SUPPORTOTHERSCIEN, SUPPORTFIRMTEST, OTHERRATIO, 
+      EQUPROPERTY, PRESERORGANIZATION, ISTEMPORARY, 
+      BILLS, ALLINFO)
+    values (#{labseqno,jdbcType=DECIMAL}, #{equipseqno,jdbcType=DECIMAL}, #{equipno,jdbcType=VARCHAR}, 
+      #{kind,jdbcType=VARCHAR}, #{chinesename,jdbcType=VARCHAR}, #{englishname,jdbcType=VARCHAR}, 
+      #{whichlab,jdbcType=VARCHAR}, #{whichbranch,jdbcType=VARCHAR}, #{specfication,jdbcType=VARCHAR}, 
+      #{manufactory,jdbcType=VARCHAR}, #{gainedway,jdbcType=VARCHAR}, #{accountingdate,jdbcType=TIMESTAMP}, 
+      #{rawvalue,jdbcType=DECIMAL}, #{origin,jdbcType=VARCHAR}, #{originoffund,jdbcType=VARCHAR}, 
+      #{appliedfields,jdbcType=VARCHAR}, #{scifields,jdbcType=VARCHAR}, #{qualifications,jdbcType=VARCHAR}, 
+      #{keyfeature,jdbcType=VARCHAR}, #{attachment,jdbcType=VARCHAR}, #{acceptedbylab,jdbcType=VARCHAR}, 
+      #{measuring,jdbcType=VARCHAR}, #{runningstatus,jdbcType=VARCHAR}, #{usingstatus,jdbcType=VARCHAR}, 
+      #{sharemodel,jdbcType=VARCHAR}, #{isshareforprov,jdbcType=VARCHAR}, #{isregistered,jdbcType=VARCHAR}, 
+      #{keytechs,jdbcType=VARCHAR}, #{contactingman,jdbcType=VARCHAR}, #{contactingphone,jdbcType=VARCHAR}, 
+      #{email,jdbcType=VARCHAR}, #{timeofworking,jdbcType=DECIMAL}, #{timeofserve,jdbcType=DECIMAL}, 
+      #{chargemodel,jdbcType=VARCHAR}, #{chargerate,jdbcType=DECIMAL}, #{remark,jdbcType=VARCHAR}, 
+      #{equipmembers,jdbcType=VARCHAR}, #{kind1,jdbcType=VARCHAR}, #{kind2,jdbcType=VARCHAR}, 
+      #{valuetype,jdbcType=VARCHAR}, #{serviceszone,jdbcType=VARCHAR}, #{fax,jdbcType=VARCHAR}, 
+      #{equiplocation,jdbcType=VARCHAR}, #{govrawvalue,jdbcType=DECIMAL}, #{ownrawvalue,jdbcType=DECIMAL}, 
+      #{attention,jdbcType=VARCHAR}, #{examinestate,jdbcType=VARCHAR}, #{auditstate,jdbcType=VARCHAR}, 
+      #{auditremarks,jdbcType=VARCHAR}, #{registrant,jdbcType=VARCHAR}, #{systime,jdbcType=VARCHAR}, 
+      #{auditchecker,jdbcType=VARCHAR}, #{auditchecktime,jdbcType=VARCHAR}, #{proposer,jdbcType=VARCHAR}, 
+      #{applytime,jdbcType=VARCHAR}, #{checker,jdbcType=VARCHAR}, #{checktime,jdbcType=VARCHAR}, 
+      #{isapply,jdbcType=VARCHAR}, #{proposerid,jdbcType=DECIMAL}, #{remarks,jdbcType=VARCHAR}, 
+      #{realchargemodel,jdbcType=VARCHAR}, #{realchargerate,jdbcType=DECIMAL}, #{sharestate,jdbcType=VARCHAR}, 
+      #{requisition,jdbcType=VARCHAR}, #{sharetime,jdbcType=VARCHAR}, #{isredevelopment,jdbcType=VARCHAR}, 
+      #{requiredtime,jdbcType=VARCHAR}, #{video,jdbcType=VARCHAR}, #{delflag,jdbcType=VARCHAR}, 
+      #{runningstate,jdbcType=VARCHAR}, #{issueshare,jdbcType=VARCHAR}, #{noissreason,jdbcType=VARCHAR}, 
+      #{contactingmphone,jdbcType=VARCHAR}, #{depnumber,jdbcType=VARCHAR}, #{keywords,jdbcType=VARCHAR}, 
+      #{predictype,jdbcType=VARCHAR}, #{handle,jdbcType=DECIMAL}, #{latitude,jdbcType=VARCHAR}, 
+      #{longitude,jdbcType=VARCHAR}, #{lbspoiid,jdbcType=VARCHAR}, #{supportscien,jdbcType=VARCHAR}, 
+      #{supportotherscien,jdbcType=VARCHAR}, #{supportfirmtest,jdbcType=VARCHAR}, #{otherratio,jdbcType=VARCHAR}, 
+      #{equproperty,jdbcType=VARCHAR}, #{preserorganization,jdbcType=VARCHAR}, #{istemporary,jdbcType=VARCHAR}, 
+      #{bills,jdbcType=DECIMAL}, #{allinfo,jdbcType=LONGVARCHAR})
+  </insert>
+
+  <insert id="insertAddKey" parameterType="com.coder520.POI.LabEquipment.entity.LabEquipment" >
+    <selectKey keyProperty="equipseqno" resultType="long" order="BEFORE">
+      select  nvl(max(EQUIPSEQNO),0)+1 from LAB_EQUIPMENT
+    </selectKey>
+    insert into LAB_EQUIPMENT (LABSEQNO, EQUIPSEQNO, EQUIPNO,
+    KIND, CHINESENAME, ENGLISHNAME,
+    WHICHLAB, WHICHBRANCH, SPECFICATION,
+    MANUFACTORY, GAINEDWAY, ACCOUNTINGDATE,
+    RAWVALUE, ORIGIN, ORIGINOFFUND,
+    APPLIEDFIELDS, SCIFIELDS, QUALIFICATIONS,
+    KEYFEATURE, ATTACHMENT, ACCEPTEDBYLAB,
+    MEASURING, RUNNINGSTATUS, USINGSTATUS,
+    SHAREMODEL, ISSHAREFORPROV, ISREGISTERED,
+    KEYTECHS, CONTACTINGMAN, CONTACTINGPHONE,
+    EMAIL, TIMEOFWORKING, TIMEOFSERVE,
+    CHARGEMODEL, CHARGERATE, REMARK,
+    EQUIPMEMBERS, KIND1, KIND2,
+    VALUETYPE, SERVICESZONE, FAX,
+    EQUIPLOCATION, GOVRAWVALUE, OWNRAWVALUE,
+    ATTENTION, EXAMINESTATE, AUDITSTATE,
+    AUDITREMARKS, REGISTRANT, SYSTIME,
+    AUDITCHECKER, AUDITCHECKTIME, PROPOSER,
+    APPLYTIME, CHECKER, CHECKTIME,
+    ISAPPLY, PROPOSERID, REMARKS,
+    REALCHARGEMODEL, REALCHARGERATE, SHARESTATE,
+    REQUISITION, SHARETIME, ISREDEVELOPMENT,
+    REQUIREDTIME, VIDEO, DELFLAG,
+    RUNNINGSTATE, ISSUESHARE, NOISSREASON,
+    CONTACTINGMPHONE, DEPNUMBER, KEYWORDS,
+    PREDICTYPE, HANDLE, LATITUDE,
+    LONGITUDE, LBSPOIID, SUPPORTSCIEN,
+    SUPPORTOTHERSCIEN, SUPPORTFIRMTEST, OTHERRATIO,
+    EQUPROPERTY, PRESERORGANIZATION, ISTEMPORARY,
+    BILLS, ALLINFO)
+    values (#{labseqno,jdbcType=DECIMAL}, #{equipseqno,jdbcType=DECIMAL}, #{equipno,jdbcType=VARCHAR},
+    #{kind,jdbcType=VARCHAR}, #{chinesename,jdbcType=VARCHAR}, #{englishname,jdbcType=VARCHAR},
+    #{whichlab,jdbcType=VARCHAR}, #{whichbranch,jdbcType=VARCHAR}, #{specfication,jdbcType=VARCHAR},
+    #{manufactory,jdbcType=VARCHAR}, #{gainedway,jdbcType=VARCHAR}, #{accountingdate,jdbcType=TIMESTAMP},
+    #{rawvalue,jdbcType=DECIMAL}, #{origin,jdbcType=VARCHAR}, #{originoffund,jdbcType=VARCHAR},
+    #{appliedfields,jdbcType=VARCHAR}, #{scifields,jdbcType=VARCHAR}, #{qualifications,jdbcType=VARCHAR},
+    #{keyfeature,jdbcType=VARCHAR}, #{attachment,jdbcType=VARCHAR}, #{acceptedbylab,jdbcType=VARCHAR},
+    #{measuring,jdbcType=VARCHAR}, #{runningstatus,jdbcType=VARCHAR}, #{usingstatus,jdbcType=VARCHAR},
+    #{sharemodel,jdbcType=VARCHAR}, #{isshareforprov,jdbcType=VARCHAR}, #{isregistered,jdbcType=VARCHAR},
+    #{keytechs,jdbcType=VARCHAR}, #{contactingman,jdbcType=VARCHAR}, #{contactingphone,jdbcType=VARCHAR},
+    #{email,jdbcType=VARCHAR}, #{timeofworking,jdbcType=DECIMAL}, #{timeofserve,jdbcType=DECIMAL},
+    #{chargemodel,jdbcType=VARCHAR}, #{chargerate,jdbcType=DECIMAL}, #{remark,jdbcType=VARCHAR},
+    #{equipmembers,jdbcType=VARCHAR}, #{kind1,jdbcType=VARCHAR}, #{kind2,jdbcType=VARCHAR},
+    #{valuetype,jdbcType=VARCHAR}, #{serviceszone,jdbcType=VARCHAR}, #{fax,jdbcType=VARCHAR},
+    #{equiplocation,jdbcType=VARCHAR}, #{govrawvalue,jdbcType=DECIMAL}, #{ownrawvalue,jdbcType=DECIMAL},
+    #{attention,jdbcType=VARCHAR}, #{examinestate,jdbcType=VARCHAR}, #{auditstate,jdbcType=VARCHAR},
+    #{auditremarks,jdbcType=VARCHAR}, #{registrant,jdbcType=VARCHAR}, #{systime,jdbcType=VARCHAR},
+    #{auditchecker,jdbcType=VARCHAR}, #{auditchecktime,jdbcType=VARCHAR}, #{proposer,jdbcType=VARCHAR},
+    #{applytime,jdbcType=VARCHAR}, #{checker,jdbcType=VARCHAR}, #{checktime,jdbcType=VARCHAR},
+    #{isapply,jdbcType=VARCHAR}, #{proposerid,jdbcType=DECIMAL}, #{remarks,jdbcType=VARCHAR},
+    #{realchargemodel,jdbcType=VARCHAR}, #{realchargerate,jdbcType=DECIMAL}, #{sharestate,jdbcType=VARCHAR},
+    #{requisition,jdbcType=VARCHAR}, #{sharetime,jdbcType=VARCHAR}, #{isredevelopment,jdbcType=VARCHAR},
+    #{requiredtime,jdbcType=VARCHAR}, #{video,jdbcType=VARCHAR}, #{delflag,jdbcType=VARCHAR},
+    #{runningstate,jdbcType=VARCHAR}, #{issueshare,jdbcType=VARCHAR}, #{noissreason,jdbcType=VARCHAR},
+    #{contactingmphone,jdbcType=VARCHAR}, #{depnumber,jdbcType=VARCHAR}, #{keywords,jdbcType=VARCHAR},
+    #{predictype,jdbcType=VARCHAR}, #{handle,jdbcType=DECIMAL}, #{latitude,jdbcType=VARCHAR},
+    #{longitude,jdbcType=VARCHAR}, #{lbspoiid,jdbcType=VARCHAR}, #{supportscien,jdbcType=VARCHAR},
+    #{supportotherscien,jdbcType=VARCHAR}, #{supportfirmtest,jdbcType=VARCHAR}, #{otherratio,jdbcType=VARCHAR},
+    #{equproperty,jdbcType=VARCHAR}, #{preserorganization,jdbcType=VARCHAR}, #{istemporary,jdbcType=VARCHAR},
+    #{bills,jdbcType=DECIMAL}, #{allinfo,jdbcType=LONGVARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.coder520.POI.LabEquipment.entity.LabEquipment" >
+    insert into LAB_EQUIPMENT
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="labseqno != null" >
+        LABSEQNO,
+      </if>
+      <if test="equipseqno != null" >
+        EQUIPSEQNO,
+      </if>
+      <if test="equipno != null" >
+        EQUIPNO,
+      </if>
+      <if test="kind != null" >
+        KIND,
+      </if>
+      <if test="chinesename != null" >
+        CHINESENAME,
+      </if>
+      <if test="englishname != null" >
+        ENGLISHNAME,
+      </if>
+      <if test="whichlab != null" >
+        WHICHLAB,
+      </if>
+      <if test="whichbranch != null" >
+        WHICHBRANCH,
+      </if>
+      <if test="specfication != null" >
+        SPECFICATION,
+      </if>
+      <if test="manufactory != null" >
+        MANUFACTORY,
+      </if>
+      <if test="gainedway != null" >
+        GAINEDWAY,
+      </if>
+      <if test="accountingdate != null" >
+        ACCOUNTINGDATE,
+      </if>
+      <if test="rawvalue != null" >
+        RAWVALUE,
+      </if>
+      <if test="origin != null" >
+        ORIGIN,
+      </if>
+      <if test="originoffund != null" >
+        ORIGINOFFUND,
+      </if>
+      <if test="appliedfields != null" >
+        APPLIEDFIELDS,
+      </if>
+      <if test="scifields != null" >
+        SCIFIELDS,
+      </if>
+      <if test="qualifications != null" >
+        QUALIFICATIONS,
+      </if>
+      <if test="keyfeature != null" >
+        KEYFEATURE,
+      </if>
+      <if test="attachment != null" >
+        ATTACHMENT,
+      </if>
+      <if test="acceptedbylab != null" >
+        ACCEPTEDBYLAB,
+      </if>
+      <if test="measuring != null" >
+        MEASURING,
+      </if>
+      <if test="runningstatus != null" >
+        RUNNINGSTATUS,
+      </if>
+      <if test="usingstatus != null" >
+        USINGSTATUS,
+      </if>
+      <if test="sharemodel != null" >
+        SHAREMODEL,
+      </if>
+      <if test="isshareforprov != null" >
+        ISSHAREFORPROV,
+      </if>
+      <if test="isregistered != null" >
+        ISREGISTERED,
+      </if>
+      <if test="keytechs != null" >
+        KEYTECHS,
+      </if>
+      <if test="contactingman != null" >
+        CONTACTINGMAN,
+      </if>
+      <if test="contactingphone != null" >
+        CONTACTINGPHONE,
+      </if>
+      <if test="email != null" >
+        EMAIL,
+      </if>
+      <if test="timeofworking != null" >
+        TIMEOFWORKING,
+      </if>
+      <if test="timeofserve != null" >
+        TIMEOFSERVE,
+      </if>
+      <if test="chargemodel != null" >
+        CHARGEMODEL,
+      </if>
+      <if test="chargerate != null" >
+        CHARGERATE,
+      </if>
+      <if test="remark != null" >
+        REMARK,
+      </if>
+      <if test="equipmembers != null" >
+        EQUIPMEMBERS,
+      </if>
+      <if test="kind1 != null" >
+        KIND1,
+      </if>
+      <if test="kind2 != null" >
+        KIND2,
+      </if>
+      <if test="valuetype != null" >
+        VALUETYPE,
+      </if>
+      <if test="serviceszone != null" >
+        SERVICESZONE,
+      </if>
+      <if test="fax != null" >
+        FAX,
+      </if>
+      <if test="equiplocation != null" >
+        EQUIPLOCATION,
+      </if>
+      <if test="govrawvalue != null" >
+        GOVRAWVALUE,
+      </if>
+      <if test="ownrawvalue != null" >
+        OWNRAWVALUE,
+      </if>
+      <if test="attention != null" >
+        ATTENTION,
+      </if>
+      <if test="examinestate != null" >
+        EXAMINESTATE,
+      </if>
+      <if test="auditstate != null" >
+        AUDITSTATE,
+      </if>
+      <if test="auditremarks != null" >
+        AUDITREMARKS,
+      </if>
+      <if test="registrant != null" >
+        REGISTRANT,
+      </if>
+      <if test="systime != null" >
+        SYSTIME,
+      </if>
+      <if test="auditchecker != null" >
+        AUDITCHECKER,
+      </if>
+      <if test="auditchecktime != null" >
+        AUDITCHECKTIME,
+      </if>
+      <if test="proposer != null" >
+        PROPOSER,
+      </if>
+      <if test="applytime != null" >
+        APPLYTIME,
+      </if>
+      <if test="checker != null" >
+        CHECKER,
+      </if>
+      <if test="checktime != null" >
+        CHECKTIME,
+      </if>
+      <if test="isapply != null" >
+        ISAPPLY,
+      </if>
+      <if test="proposerid != null" >
+        PROPOSERID,
+      </if>
+      <if test="remarks != null" >
+        REMARKS,
+      </if>
+      <if test="realchargemodel != null" >
+        REALCHARGEMODEL,
+      </if>
+      <if test="realchargerate != null" >
+        REALCHARGERATE,
+      </if>
+      <if test="sharestate != null" >
+        SHARESTATE,
+      </if>
+      <if test="requisition != null" >
+        REQUISITION,
+      </if>
+      <if test="sharetime != null" >
+        SHARETIME,
+      </if>
+      <if test="isredevelopment != null" >
+        ISREDEVELOPMENT,
+      </if>
+      <if test="requiredtime != null" >
+        REQUIREDTIME,
+      </if>
+      <if test="video != null" >
+        VIDEO,
+      </if>
+      <if test="delflag != null" >
+        DELFLAG,
+      </if>
+      <if test="runningstate != null" >
+        RUNNINGSTATE,
+      </if>
+      <if test="issueshare != null" >
+        ISSUESHARE,
+      </if>
+      <if test="noissreason != null" >
+        NOISSREASON,
+      </if>
+      <if test="contactingmphone != null" >
+        CONTACTINGMPHONE,
+      </if>
+      <if test="depnumber != null" >
+        DEPNUMBER,
+      </if>
+      <if test="keywords != null" >
+        KEYWORDS,
+      </if>
+      <if test="predictype != null" >
+        PREDICTYPE,
+      </if>
+      <if test="handle != null" >
+        HANDLE,
+      </if>
+      <if test="latitude != null" >
+        LATITUDE,
+      </if>
+      <if test="longitude != null" >
+        LONGITUDE,
+      </if>
+      <if test="lbspoiid != null" >
+        LBSPOIID,
+      </if>
+      <if test="supportscien != null" >
+        SUPPORTSCIEN,
+      </if>
+      <if test="supportotherscien != null" >
+        SUPPORTOTHERSCIEN,
+      </if>
+      <if test="supportfirmtest != null" >
+        SUPPORTFIRMTEST,
+      </if>
+      <if test="otherratio != null" >
+        OTHERRATIO,
+      </if>
+      <if test="equproperty != null" >
+        EQUPROPERTY,
+      </if>
+      <if test="preserorganization != null" >
+        PRESERORGANIZATION,
+      </if>
+      <if test="istemporary != null" >
+        ISTEMPORARY,
+      </if>
+      <if test="bills != null" >
+        BILLS,
+      </if>
+      <if test="allinfo != null" >
+        ALLINFO,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="labseqno != null" >
+        #{labseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="equipseqno != null" >
+        #{equipseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="equipno != null" >
+        #{equipno,jdbcType=VARCHAR},
+      </if>
+      <if test="kind != null" >
+        #{kind,jdbcType=VARCHAR},
+      </if>
+      <if test="chinesename != null" >
+        #{chinesename,jdbcType=VARCHAR},
+      </if>
+      <if test="englishname != null" >
+        #{englishname,jdbcType=VARCHAR},
+      </if>
+      <if test="whichlab != null" >
+        #{whichlab,jdbcType=VARCHAR},
+      </if>
+      <if test="whichbranch != null" >
+        #{whichbranch,jdbcType=VARCHAR},
+      </if>
+      <if test="specfication != null" >
+        #{specfication,jdbcType=VARCHAR},
+      </if>
+      <if test="manufactory != null" >
+        #{manufactory,jdbcType=VARCHAR},
+      </if>
+      <if test="gainedway != null" >
+        #{gainedway,jdbcType=VARCHAR},
+      </if>
+      <if test="accountingdate != null" >
+        #{accountingdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="rawvalue != null" >
+        #{rawvalue,jdbcType=DECIMAL},
+      </if>
+      <if test="origin != null" >
+        #{origin,jdbcType=VARCHAR},
+      </if>
+      <if test="originoffund != null" >
+        #{originoffund,jdbcType=VARCHAR},
+      </if>
+      <if test="appliedfields != null" >
+        #{appliedfields,jdbcType=VARCHAR},
+      </if>
+      <if test="scifields != null" >
+        #{scifields,jdbcType=VARCHAR},
+      </if>
+      <if test="qualifications != null" >
+        #{qualifications,jdbcType=VARCHAR},
+      </if>
+      <if test="keyfeature != null" >
+        #{keyfeature,jdbcType=VARCHAR},
+      </if>
+      <if test="attachment != null" >
+        #{attachment,jdbcType=VARCHAR},
+      </if>
+      <if test="acceptedbylab != null" >
+        #{acceptedbylab,jdbcType=VARCHAR},
+      </if>
+      <if test="measuring != null" >
+        #{measuring,jdbcType=VARCHAR},
+      </if>
+      <if test="runningstatus != null" >
+        #{runningstatus,jdbcType=VARCHAR},
+      </if>
+      <if test="usingstatus != null" >
+        #{usingstatus,jdbcType=VARCHAR},
+      </if>
+      <if test="sharemodel != null" >
+        #{sharemodel,jdbcType=VARCHAR},
+      </if>
+      <if test="isshareforprov != null" >
+        #{isshareforprov,jdbcType=VARCHAR},
+      </if>
+      <if test="isregistered != null" >
+        #{isregistered,jdbcType=VARCHAR},
+      </if>
+      <if test="keytechs != null" >
+        #{keytechs,jdbcType=VARCHAR},
+      </if>
+      <if test="contactingman != null" >
+        #{contactingman,jdbcType=VARCHAR},
+      </if>
+      <if test="contactingphone != null" >
+        #{contactingphone,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null" >
+        #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="timeofworking != null" >
+        #{timeofworking,jdbcType=DECIMAL},
+      </if>
+      <if test="timeofserve != null" >
+        #{timeofserve,jdbcType=DECIMAL},
+      </if>
+      <if test="chargemodel != null" >
+        #{chargemodel,jdbcType=VARCHAR},
+      </if>
+      <if test="chargerate != null" >
+        #{chargerate,jdbcType=DECIMAL},
+      </if>
+      <if test="remark != null" >
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="equipmembers != null" >
+        #{equipmembers,jdbcType=VARCHAR},
+      </if>
+      <if test="kind1 != null" >
+        #{kind1,jdbcType=VARCHAR},
+      </if>
+      <if test="kind2 != null" >
+        #{kind2,jdbcType=VARCHAR},
+      </if>
+      <if test="valuetype != null" >
+        #{valuetype,jdbcType=VARCHAR},
+      </if>
+      <if test="serviceszone != null" >
+        #{serviceszone,jdbcType=VARCHAR},
+      </if>
+      <if test="fax != null" >
+        #{fax,jdbcType=VARCHAR},
+      </if>
+      <if test="equiplocation != null" >
+        #{equiplocation,jdbcType=VARCHAR},
+      </if>
+      <if test="govrawvalue != null" >
+        #{govrawvalue,jdbcType=DECIMAL},
+      </if>
+      <if test="ownrawvalue != null" >
+        #{ownrawvalue,jdbcType=DECIMAL},
+      </if>
+      <if test="attention != null" >
+        #{attention,jdbcType=VARCHAR},
+      </if>
+      <if test="examinestate != null" >
+        #{examinestate,jdbcType=VARCHAR},
+      </if>
+      <if test="auditstate != null" >
+        #{auditstate,jdbcType=VARCHAR},
+      </if>
+      <if test="auditremarks != null" >
+        #{auditremarks,jdbcType=VARCHAR},
+      </if>
+      <if test="registrant != null" >
+        #{registrant,jdbcType=VARCHAR},
+      </if>
+      <if test="systime != null" >
+        #{systime,jdbcType=VARCHAR},
+      </if>
+      <if test="auditchecker != null" >
+        #{auditchecker,jdbcType=VARCHAR},
+      </if>
+      <if test="auditchecktime != null" >
+        #{auditchecktime,jdbcType=VARCHAR},
+      </if>
+      <if test="proposer != null" >
+        #{proposer,jdbcType=VARCHAR},
+      </if>
+      <if test="applytime != null" >
+        #{applytime,jdbcType=VARCHAR},
+      </if>
+      <if test="checker != null" >
+        #{checker,jdbcType=VARCHAR},
+      </if>
+      <if test="checktime != null" >
+        #{checktime,jdbcType=VARCHAR},
+      </if>
+      <if test="isapply != null" >
+        #{isapply,jdbcType=VARCHAR},
+      </if>
+      <if test="proposerid != null" >
+        #{proposerid,jdbcType=DECIMAL},
+      </if>
+      <if test="remarks != null" >
+        #{remarks,jdbcType=VARCHAR},
+      </if>
+      <if test="realchargemodel != null" >
+        #{realchargemodel,jdbcType=VARCHAR},
+      </if>
+      <if test="realchargerate != null" >
+        #{realchargerate,jdbcType=DECIMAL},
+      </if>
+      <if test="sharestate != null" >
+        #{sharestate,jdbcType=VARCHAR},
+      </if>
+      <if test="requisition != null" >
+        #{requisition,jdbcType=VARCHAR},
+      </if>
+      <if test="sharetime != null" >
+        #{sharetime,jdbcType=VARCHAR},
+      </if>
+      <if test="isredevelopment != null" >
+        #{isredevelopment,jdbcType=VARCHAR},
+      </if>
+      <if test="requiredtime != null" >
+        #{requiredtime,jdbcType=VARCHAR},
+      </if>
+      <if test="video != null" >
+        #{video,jdbcType=VARCHAR},
+      </if>
+      <if test="delflag != null" >
+        #{delflag,jdbcType=VARCHAR},
+      </if>
+      <if test="runningstate != null" >
+        #{runningstate,jdbcType=VARCHAR},
+      </if>
+      <if test="issueshare != null" >
+        #{issueshare,jdbcType=VARCHAR},
+      </if>
+      <if test="noissreason != null" >
+        #{noissreason,jdbcType=VARCHAR},
+      </if>
+      <if test="contactingmphone != null" >
+        #{contactingmphone,jdbcType=VARCHAR},
+      </if>
+      <if test="depnumber != null" >
+        #{depnumber,jdbcType=VARCHAR},
+      </if>
+      <if test="keywords != null" >
+        #{keywords,jdbcType=VARCHAR},
+      </if>
+      <if test="predictype != null" >
+        #{predictype,jdbcType=VARCHAR},
+      </if>
+      <if test="handle != null" >
+        #{handle,jdbcType=DECIMAL},
+      </if>
+      <if test="latitude != null" >
+        #{latitude,jdbcType=VARCHAR},
+      </if>
+      <if test="longitude != null" >
+        #{longitude,jdbcType=VARCHAR},
+      </if>
+      <if test="lbspoiid != null" >
+        #{lbspoiid,jdbcType=VARCHAR},
+      </if>
+      <if test="supportscien != null" >
+        #{supportscien,jdbcType=VARCHAR},
+      </if>
+      <if test="supportotherscien != null" >
+        #{supportotherscien,jdbcType=VARCHAR},
+      </if>
+      <if test="supportfirmtest != null" >
+        #{supportfirmtest,jdbcType=VARCHAR},
+      </if>
+      <if test="otherratio != null" >
+        #{otherratio,jdbcType=VARCHAR},
+      </if>
+      <if test="equproperty != null" >
+        #{equproperty,jdbcType=VARCHAR},
+      </if>
+      <if test="preserorganization != null" >
+        #{preserorganization,jdbcType=VARCHAR},
+      </if>
+      <if test="istemporary != null" >
+        #{istemporary,jdbcType=VARCHAR},
+      </if>
+      <if test="bills != null" >
+        #{bills,jdbcType=DECIMAL},
+      </if>
+      <if test="allinfo != null" >
+        #{allinfo,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.coder520.POI.LabEquipment.entity.LabEquipment" >
+    update LAB_EQUIPMENT
+    <set >
+      <if test="equipno != null" >
+        EQUIPNO = #{equipno,jdbcType=VARCHAR},
+      </if>
+      <if test="kind != null" >
+        KIND = #{kind,jdbcType=VARCHAR},
+      </if>
+      <if test="chinesename != null" >
+        CHINESENAME = #{chinesename,jdbcType=VARCHAR},
+      </if>
+      <if test="englishname != null" >
+        ENGLISHNAME = #{englishname,jdbcType=VARCHAR},
+      </if>
+      <if test="whichlab != null" >
+        WHICHLAB = #{whichlab,jdbcType=VARCHAR},
+      </if>
+      <if test="whichbranch != null" >
+        WHICHBRANCH = #{whichbranch,jdbcType=VARCHAR},
+      </if>
+      <if test="specfication != null" >
+        SPECFICATION = #{specfication,jdbcType=VARCHAR},
+      </if>
+      <if test="manufactory != null" >
+        MANUFACTORY = #{manufactory,jdbcType=VARCHAR},
+      </if>
+      <if test="gainedway != null" >
+        GAINEDWAY = #{gainedway,jdbcType=VARCHAR},
+      </if>
+      <if test="accountingdate != null" >
+        ACCOUNTINGDATE = #{accountingdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="rawvalue != null" >
+        RAWVALUE = #{rawvalue,jdbcType=DECIMAL},
+      </if>
+      <if test="origin != null" >
+        ORIGIN = #{origin,jdbcType=VARCHAR},
+      </if>
+      <if test="originoffund != null" >
+        ORIGINOFFUND = #{originoffund,jdbcType=VARCHAR},
+      </if>
+      <if test="appliedfields != null" >
+        APPLIEDFIELDS = #{appliedfields,jdbcType=VARCHAR},
+      </if>
+      <if test="scifields != null" >
+        SCIFIELDS = #{scifields,jdbcType=VARCHAR},
+      </if>
+      <if test="qualifications != null" >
+        QUALIFICATIONS = #{qualifications,jdbcType=VARCHAR},
+      </if>
+      <if test="keyfeature != null" >
+        KEYFEATURE = #{keyfeature,jdbcType=VARCHAR},
+      </if>
+      <if test="attachment != null" >
+        ATTACHMENT = #{attachment,jdbcType=VARCHAR},
+      </if>
+      <if test="acceptedbylab != null" >
+        ACCEPTEDBYLAB = #{acceptedbylab,jdbcType=VARCHAR},
+      </if>
+      <if test="measuring != null" >
+        MEASURING = #{measuring,jdbcType=VARCHAR},
+      </if>
+      <if test="runningstatus != null" >
+        RUNNINGSTATUS = #{runningstatus,jdbcType=VARCHAR},
+      </if>
+      <if test="usingstatus != null" >
+        USINGSTATUS = #{usingstatus,jdbcType=VARCHAR},
+      </if>
+      <if test="sharemodel != null" >
+        SHAREMODEL = #{sharemodel,jdbcType=VARCHAR},
+      </if>
+      <if test="isshareforprov != null" >
+        ISSHAREFORPROV = #{isshareforprov,jdbcType=VARCHAR},
+      </if>
+      <if test="isregistered != null" >
+        ISREGISTERED = #{isregistered,jdbcType=VARCHAR},
+      </if>
+      <if test="keytechs != null" >
+        KEYTECHS = #{keytechs,jdbcType=VARCHAR},
+      </if>
+      <if test="contactingman != null" >
+        CONTACTINGMAN = #{contactingman,jdbcType=VARCHAR},
+      </if>
+      <if test="contactingphone != null" >
+        CONTACTINGPHONE = #{contactingphone,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null" >
+        EMAIL = #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="timeofworking != null" >
+        TIMEOFWORKING = #{timeofworking,jdbcType=DECIMAL},
+      </if>
+      <if test="timeofserve != null" >
+        TIMEOFSERVE = #{timeofserve,jdbcType=DECIMAL},
+      </if>
+      <if test="chargemodel != null" >
+        CHARGEMODEL = #{chargemodel,jdbcType=VARCHAR},
+      </if>
+      <if test="chargerate != null" >
+        CHARGERATE = #{chargerate,jdbcType=DECIMAL},
+      </if>
+      <if test="remark != null" >
+        REMARK = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="equipmembers != null" >
+        EQUIPMEMBERS = #{equipmembers,jdbcType=VARCHAR},
+      </if>
+      <if test="kind1 != null" >
+        KIND1 = #{kind1,jdbcType=VARCHAR},
+      </if>
+      <if test="kind2 != null" >
+        KIND2 = #{kind2,jdbcType=VARCHAR},
+      </if>
+      <if test="valuetype != null" >
+        VALUETYPE = #{valuetype,jdbcType=VARCHAR},
+      </if>
+      <if test="serviceszone != null" >
+        SERVICESZONE = #{serviceszone,jdbcType=VARCHAR},
+      </if>
+      <if test="fax != null" >
+        FAX = #{fax,jdbcType=VARCHAR},
+      </if>
+      <if test="equiplocation != null" >
+        EQUIPLOCATION = #{equiplocation,jdbcType=VARCHAR},
+      </if>
+      <if test="govrawvalue != null" >
+        GOVRAWVALUE = #{govrawvalue,jdbcType=DECIMAL},
+      </if>
+      <if test="ownrawvalue != null" >
+        OWNRAWVALUE = #{ownrawvalue,jdbcType=DECIMAL},
+      </if>
+      <if test="attention != null" >
+        ATTENTION = #{attention,jdbcType=VARCHAR},
+      </if>
+      <if test="examinestate != null" >
+        EXAMINESTATE = #{examinestate,jdbcType=VARCHAR},
+      </if>
+      <if test="auditstate != null" >
+        AUDITSTATE = #{auditstate,jdbcType=VARCHAR},
+      </if>
+      <if test="auditremarks != null" >
+        AUDITREMARKS = #{auditremarks,jdbcType=VARCHAR},
+      </if>
+      <if test="registrant != null" >
+        REGISTRANT = #{registrant,jdbcType=VARCHAR},
+      </if>
+      <if test="systime != null" >
+        SYSTIME = #{systime,jdbcType=VARCHAR},
+      </if>
+      <if test="auditchecker != null" >
+        AUDITCHECKER = #{auditchecker,jdbcType=VARCHAR},
+      </if>
+      <if test="auditchecktime != null" >
+        AUDITCHECKTIME = #{auditchecktime,jdbcType=VARCHAR},
+      </if>
+      <if test="proposer != null" >
+        PROPOSER = #{proposer,jdbcType=VARCHAR},
+      </if>
+      <if test="applytime != null" >
+        APPLYTIME = #{applytime,jdbcType=VARCHAR},
+      </if>
+      <if test="checker != null" >
+        CHECKER = #{checker,jdbcType=VARCHAR},
+      </if>
+      <if test="checktime != null" >
+        CHECKTIME = #{checktime,jdbcType=VARCHAR},
+      </if>
+      <if test="isapply != null" >
+        ISAPPLY = #{isapply,jdbcType=VARCHAR},
+      </if>
+      <if test="proposerid != null" >
+        PROPOSERID = #{proposerid,jdbcType=DECIMAL},
+      </if>
+      <if test="remarks != null" >
+        REMARKS = #{remarks,jdbcType=VARCHAR},
+      </if>
+      <if test="realchargemodel != null" >
+        REALCHARGEMODEL = #{realchargemodel,jdbcType=VARCHAR},
+      </if>
+      <if test="realchargerate != null" >
+        REALCHARGERATE = #{realchargerate,jdbcType=DECIMAL},
+      </if>
+      <if test="sharestate != null" >
+        SHARESTATE = #{sharestate,jdbcType=VARCHAR},
+      </if>
+      <if test="requisition != null" >
+        REQUISITION = #{requisition,jdbcType=VARCHAR},
+      </if>
+      <if test="sharetime != null" >
+        SHARETIME = #{sharetime,jdbcType=VARCHAR},
+      </if>
+      <if test="isredevelopment != null" >
+        ISREDEVELOPMENT = #{isredevelopment,jdbcType=VARCHAR},
+      </if>
+      <if test="requiredtime != null" >
+        REQUIREDTIME = #{requiredtime,jdbcType=VARCHAR},
+      </if>
+      <if test="video != null" >
+        VIDEO = #{video,jdbcType=VARCHAR},
+      </if>
+      <if test="delflag != null" >
+        DELFLAG = #{delflag,jdbcType=VARCHAR},
+      </if>
+      <if test="runningstate != null" >
+        RUNNINGSTATE = #{runningstate,jdbcType=VARCHAR},
+      </if>
+      <if test="issueshare != null" >
+        ISSUESHARE = #{issueshare,jdbcType=VARCHAR},
+      </if>
+      <if test="noissreason != null" >
+        NOISSREASON = #{noissreason,jdbcType=VARCHAR},
+      </if>
+      <if test="contactingmphone != null" >
+        CONTACTINGMPHONE = #{contactingmphone,jdbcType=VARCHAR},
+      </if>
+      <if test="depnumber != null" >
+        DEPNUMBER = #{depnumber,jdbcType=VARCHAR},
+      </if>
+      <if test="keywords != null" >
+        KEYWORDS = #{keywords,jdbcType=VARCHAR},
+      </if>
+      <if test="predictype != null" >
+        PREDICTYPE = #{predictype,jdbcType=VARCHAR},
+      </if>
+      <if test="handle != null" >
+        HANDLE = #{handle,jdbcType=DECIMAL},
+      </if>
+      <if test="latitude != null" >
+        LATITUDE = #{latitude,jdbcType=VARCHAR},
+      </if>
+      <if test="longitude != null" >
+        LONGITUDE = #{longitude,jdbcType=VARCHAR},
+      </if>
+      <if test="lbspoiid != null" >
+        LBSPOIID = #{lbspoiid,jdbcType=VARCHAR},
+      </if>
+      <if test="supportscien != null" >
+        SUPPORTSCIEN = #{supportscien,jdbcType=VARCHAR},
+      </if>
+      <if test="supportotherscien != null" >
+        SUPPORTOTHERSCIEN = #{supportotherscien,jdbcType=VARCHAR},
+      </if>
+      <if test="supportfirmtest != null" >
+        SUPPORTFIRMTEST = #{supportfirmtest,jdbcType=VARCHAR},
+      </if>
+      <if test="otherratio != null" >
+        OTHERRATIO = #{otherratio,jdbcType=VARCHAR},
+      </if>
+      <if test="equproperty != null" >
+        EQUPROPERTY = #{equproperty,jdbcType=VARCHAR},
+      </if>
+      <if test="preserorganization != null" >
+        PRESERORGANIZATION = #{preserorganization,jdbcType=VARCHAR},
+      </if>
+      <if test="istemporary != null" >
+        ISTEMPORARY = #{istemporary,jdbcType=VARCHAR},
+      </if>
+      <if test="bills != null" >
+        BILLS = #{bills,jdbcType=DECIMAL},
+      </if>
+      <if test="allinfo != null" >
+        ALLINFO = #{allinfo,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where LABSEQNO = #{labseqno,jdbcType=DECIMAL}
+      and EQUIPSEQNO = #{equipseqno,jdbcType=DECIMAL}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.coder520.POI.LabEquipment.entity.LabEquipment" >
+    update LAB_EQUIPMENT
+    set EQUIPNO = #{equipno,jdbcType=VARCHAR},
+      KIND = #{kind,jdbcType=VARCHAR},
+      CHINESENAME = #{chinesename,jdbcType=VARCHAR},
+      ENGLISHNAME = #{englishname,jdbcType=VARCHAR},
+      WHICHLAB = #{whichlab,jdbcType=VARCHAR},
+      WHICHBRANCH = #{whichbranch,jdbcType=VARCHAR},
+      SPECFICATION = #{specfication,jdbcType=VARCHAR},
+      MANUFACTORY = #{manufactory,jdbcType=VARCHAR},
+      GAINEDWAY = #{gainedway,jdbcType=VARCHAR},
+      ACCOUNTINGDATE = #{accountingdate,jdbcType=TIMESTAMP},
+      RAWVALUE = #{rawvalue,jdbcType=DECIMAL},
+      ORIGIN = #{origin,jdbcType=VARCHAR},
+      ORIGINOFFUND = #{originoffund,jdbcType=VARCHAR},
+      APPLIEDFIELDS = #{appliedfields,jdbcType=VARCHAR},
+      SCIFIELDS = #{scifields,jdbcType=VARCHAR},
+      QUALIFICATIONS = #{qualifications,jdbcType=VARCHAR},
+      KEYFEATURE = #{keyfeature,jdbcType=VARCHAR},
+      ATTACHMENT = #{attachment,jdbcType=VARCHAR},
+      ACCEPTEDBYLAB = #{acceptedbylab,jdbcType=VARCHAR},
+      MEASURING = #{measuring,jdbcType=VARCHAR},
+      RUNNINGSTATUS = #{runningstatus,jdbcType=VARCHAR},
+      USINGSTATUS = #{usingstatus,jdbcType=VARCHAR},
+      SHAREMODEL = #{sharemodel,jdbcType=VARCHAR},
+      ISSHAREFORPROV = #{isshareforprov,jdbcType=VARCHAR},
+      ISREGISTERED = #{isregistered,jdbcType=VARCHAR},
+      KEYTECHS = #{keytechs,jdbcType=VARCHAR},
+      CONTACTINGMAN = #{contactingman,jdbcType=VARCHAR},
+      CONTACTINGPHONE = #{contactingphone,jdbcType=VARCHAR},
+      EMAIL = #{email,jdbcType=VARCHAR},
+      TIMEOFWORKING = #{timeofworking,jdbcType=DECIMAL},
+      TIMEOFSERVE = #{timeofserve,jdbcType=DECIMAL},
+      CHARGEMODEL = #{chargemodel,jdbcType=VARCHAR},
+      CHARGERATE = #{chargerate,jdbcType=DECIMAL},
+      REMARK = #{remark,jdbcType=VARCHAR},
+      EQUIPMEMBERS = #{equipmembers,jdbcType=VARCHAR},
+      KIND1 = #{kind1,jdbcType=VARCHAR},
+      KIND2 = #{kind2,jdbcType=VARCHAR},
+      VALUETYPE = #{valuetype,jdbcType=VARCHAR},
+      SERVICESZONE = #{serviceszone,jdbcType=VARCHAR},
+      FAX = #{fax,jdbcType=VARCHAR},
+      EQUIPLOCATION = #{equiplocation,jdbcType=VARCHAR},
+      GOVRAWVALUE = #{govrawvalue,jdbcType=DECIMAL},
+      OWNRAWVALUE = #{ownrawvalue,jdbcType=DECIMAL},
+      ATTENTION = #{attention,jdbcType=VARCHAR},
+      EXAMINESTATE = #{examinestate,jdbcType=VARCHAR},
+      AUDITSTATE = #{auditstate,jdbcType=VARCHAR},
+      AUDITREMARKS = #{auditremarks,jdbcType=VARCHAR},
+      REGISTRANT = #{registrant,jdbcType=VARCHAR},
+      SYSTIME = #{systime,jdbcType=VARCHAR},
+      AUDITCHECKER = #{auditchecker,jdbcType=VARCHAR},
+      AUDITCHECKTIME = #{auditchecktime,jdbcType=VARCHAR},
+      PROPOSER = #{proposer,jdbcType=VARCHAR},
+      APPLYTIME = #{applytime,jdbcType=VARCHAR},
+      CHECKER = #{checker,jdbcType=VARCHAR},
+      CHECKTIME = #{checktime,jdbcType=VARCHAR},
+      ISAPPLY = #{isapply,jdbcType=VARCHAR},
+      PROPOSERID = #{proposerid,jdbcType=DECIMAL},
+      REMARKS = #{remarks,jdbcType=VARCHAR},
+      REALCHARGEMODEL = #{realchargemodel,jdbcType=VARCHAR},
+      REALCHARGERATE = #{realchargerate,jdbcType=DECIMAL},
+      SHARESTATE = #{sharestate,jdbcType=VARCHAR},
+      REQUISITION = #{requisition,jdbcType=VARCHAR},
+      SHARETIME = #{sharetime,jdbcType=VARCHAR},
+      ISREDEVELOPMENT = #{isredevelopment,jdbcType=VARCHAR},
+      REQUIREDTIME = #{requiredtime,jdbcType=VARCHAR},
+      VIDEO = #{video,jdbcType=VARCHAR},
+      DELFLAG = #{delflag,jdbcType=VARCHAR},
+      RUNNINGSTATE = #{runningstate,jdbcType=VARCHAR},
+      ISSUESHARE = #{issueshare,jdbcType=VARCHAR},
+      NOISSREASON = #{noissreason,jdbcType=VARCHAR},
+      CONTACTINGMPHONE = #{contactingmphone,jdbcType=VARCHAR},
+      DEPNUMBER = #{depnumber,jdbcType=VARCHAR},
+      KEYWORDS = #{keywords,jdbcType=VARCHAR},
+      PREDICTYPE = #{predictype,jdbcType=VARCHAR},
+      HANDLE = #{handle,jdbcType=DECIMAL},
+      LATITUDE = #{latitude,jdbcType=VARCHAR},
+      LONGITUDE = #{longitude,jdbcType=VARCHAR},
+      LBSPOIID = #{lbspoiid,jdbcType=VARCHAR},
+      SUPPORTSCIEN = #{supportscien,jdbcType=VARCHAR},
+      SUPPORTOTHERSCIEN = #{supportotherscien,jdbcType=VARCHAR},
+      SUPPORTFIRMTEST = #{supportfirmtest,jdbcType=VARCHAR},
+      OTHERRATIO = #{otherratio,jdbcType=VARCHAR},
+      EQUPROPERTY = #{equproperty,jdbcType=VARCHAR},
+      PRESERORGANIZATION = #{preserorganization,jdbcType=VARCHAR},
+      ISTEMPORARY = #{istemporary,jdbcType=VARCHAR},
+      BILLS = #{bills,jdbcType=DECIMAL},
+      ALLINFO = #{allinfo,jdbcType=LONGVARCHAR}
+    where LABSEQNO = #{labseqno,jdbcType=DECIMAL}
+      and EQUIPSEQNO = #{equipseqno,jdbcType=DECIMAL}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.coder520.POI.LabEquipment.entity.LabEquipment" >
+    update LAB_EQUIPMENT
+    set EQUIPNO = #{equipno,jdbcType=VARCHAR},
+      KIND = #{kind,jdbcType=VARCHAR},
+      CHINESENAME = #{chinesename,jdbcType=VARCHAR},
+      ENGLISHNAME = #{englishname,jdbcType=VARCHAR},
+      WHICHLAB = #{whichlab,jdbcType=VARCHAR},
+      WHICHBRANCH = #{whichbranch,jdbcType=VARCHAR},
+      SPECFICATION = #{specfication,jdbcType=VARCHAR},
+      MANUFACTORY = #{manufactory,jdbcType=VARCHAR},
+      GAINEDWAY = #{gainedway,jdbcType=VARCHAR},
+      ACCOUNTINGDATE = #{accountingdate,jdbcType=TIMESTAMP},
+      RAWVALUE = #{rawvalue,jdbcType=DECIMAL},
+      ORIGIN = #{origin,jdbcType=VARCHAR},
+      ORIGINOFFUND = #{originoffund,jdbcType=VARCHAR},
+      APPLIEDFIELDS = #{appliedfields,jdbcType=VARCHAR},
+      SCIFIELDS = #{scifields,jdbcType=VARCHAR},
+      QUALIFICATIONS = #{qualifications,jdbcType=VARCHAR},
+      KEYFEATURE = #{keyfeature,jdbcType=VARCHAR},
+      ATTACHMENT = #{attachment,jdbcType=VARCHAR},
+      ACCEPTEDBYLAB = #{acceptedbylab,jdbcType=VARCHAR},
+      MEASURING = #{measuring,jdbcType=VARCHAR},
+      RUNNINGSTATUS = #{runningstatus,jdbcType=VARCHAR},
+      USINGSTATUS = #{usingstatus,jdbcType=VARCHAR},
+      SHAREMODEL = #{sharemodel,jdbcType=VARCHAR},
+      ISSHAREFORPROV = #{isshareforprov,jdbcType=VARCHAR},
+      ISREGISTERED = #{isregistered,jdbcType=VARCHAR},
+      KEYTECHS = #{keytechs,jdbcType=VARCHAR},
+      CONTACTINGMAN = #{contactingman,jdbcType=VARCHAR},
+      CONTACTINGPHONE = #{contactingphone,jdbcType=VARCHAR},
+      EMAIL = #{email,jdbcType=VARCHAR},
+      TIMEOFWORKING = #{timeofworking,jdbcType=DECIMAL},
+      TIMEOFSERVE = #{timeofserve,jdbcType=DECIMAL},
+      CHARGEMODEL = #{chargemodel,jdbcType=VARCHAR},
+      CHARGERATE = #{chargerate,jdbcType=DECIMAL},
+      REMARK = #{remark,jdbcType=VARCHAR},
+      EQUIPMEMBERS = #{equipmembers,jdbcType=VARCHAR},
+      KIND1 = #{kind1,jdbcType=VARCHAR},
+      KIND2 = #{kind2,jdbcType=VARCHAR},
+      VALUETYPE = #{valuetype,jdbcType=VARCHAR},
+      SERVICESZONE = #{serviceszone,jdbcType=VARCHAR},
+      FAX = #{fax,jdbcType=VARCHAR},
+      EQUIPLOCATION = #{equiplocation,jdbcType=VARCHAR},
+      GOVRAWVALUE = #{govrawvalue,jdbcType=DECIMAL},
+      OWNRAWVALUE = #{ownrawvalue,jdbcType=DECIMAL},
+      ATTENTION = #{attention,jdbcType=VARCHAR},
+      EXAMINESTATE = #{examinestate,jdbcType=VARCHAR},
+      AUDITSTATE = #{auditstate,jdbcType=VARCHAR},
+      AUDITREMARKS = #{auditremarks,jdbcType=VARCHAR},
+      REGISTRANT = #{registrant,jdbcType=VARCHAR},
+      SYSTIME = #{systime,jdbcType=VARCHAR},
+      AUDITCHECKER = #{auditchecker,jdbcType=VARCHAR},
+      AUDITCHECKTIME = #{auditchecktime,jdbcType=VARCHAR},
+      PROPOSER = #{proposer,jdbcType=VARCHAR},
+      APPLYTIME = #{applytime,jdbcType=VARCHAR},
+      CHECKER = #{checker,jdbcType=VARCHAR},
+      CHECKTIME = #{checktime,jdbcType=VARCHAR},
+      ISAPPLY = #{isapply,jdbcType=VARCHAR},
+      PROPOSERID = #{proposerid,jdbcType=DECIMAL},
+      REMARKS = #{remarks,jdbcType=VARCHAR},
+      REALCHARGEMODEL = #{realchargemodel,jdbcType=VARCHAR},
+      REALCHARGERATE = #{realchargerate,jdbcType=DECIMAL},
+      SHARESTATE = #{sharestate,jdbcType=VARCHAR},
+      REQUISITION = #{requisition,jdbcType=VARCHAR},
+      SHARETIME = #{sharetime,jdbcType=VARCHAR},
+      ISREDEVELOPMENT = #{isredevelopment,jdbcType=VARCHAR},
+      REQUIREDTIME = #{requiredtime,jdbcType=VARCHAR},
+      VIDEO = #{video,jdbcType=VARCHAR},
+      DELFLAG = #{delflag,jdbcType=VARCHAR},
+      RUNNINGSTATE = #{runningstate,jdbcType=VARCHAR},
+      ISSUESHARE = #{issueshare,jdbcType=VARCHAR},
+      NOISSREASON = #{noissreason,jdbcType=VARCHAR},
+      CONTACTINGMPHONE = #{contactingmphone,jdbcType=VARCHAR},
+      DEPNUMBER = #{depnumber,jdbcType=VARCHAR},
+      KEYWORDS = #{keywords,jdbcType=VARCHAR},
+      PREDICTYPE = #{predictype,jdbcType=VARCHAR},
+      HANDLE = #{handle,jdbcType=DECIMAL},
+      LATITUDE = #{latitude,jdbcType=VARCHAR},
+      LONGITUDE = #{longitude,jdbcType=VARCHAR},
+      LBSPOIID = #{lbspoiid,jdbcType=VARCHAR},
+      SUPPORTSCIEN = #{supportscien,jdbcType=VARCHAR},
+      SUPPORTOTHERSCIEN = #{supportotherscien,jdbcType=VARCHAR},
+      SUPPORTFIRMTEST = #{supportfirmtest,jdbcType=VARCHAR},
+      OTHERRATIO = #{otherratio,jdbcType=VARCHAR},
+      EQUPROPERTY = #{equproperty,jdbcType=VARCHAR},
+      PRESERORGANIZATION = #{preserorganization,jdbcType=VARCHAR},
+      ISTEMPORARY = #{istemporary,jdbcType=VARCHAR},
+      BILLS = #{bills,jdbcType=DECIMAL}
+    where LABSEQNO = #{labseqno,jdbcType=DECIMAL}
+      and EQUIPSEQNO = #{equipseqno,jdbcType=DECIMAL}
+  </update>
+</mapper>

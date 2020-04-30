@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <typeAliases>
+        <typeAlias type="com.health.beans.User02" alias="user"></typeAlias>
+        <typeAlias type="com.health.beans.User03" alias="user3"></typeAlias>
+        <typeAlias type="com.health.beans.QueryVo" alias="qv"></typeAlias>
+        <typeAlias type="com.health.beans.Account" alias="account"></typeAlias>
+        <typeAlias type="com.health.beans.AccountUser" alias="acuser"></typeAlias>
+        <typeAlias type="com.health.beans.Role" alias="role"></typeAlias>
+    </typeAliases>
+    <!--配置mybatis的环境-->
+    <environments default="mysql">
+        <environment id="mysql">
+            <transactionManager type="JDBC"></transactionManager>
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.jdbc.Driver"></property>
+                <property name="url" value="jdbc:mysql://localhost:3306/web29"></property>
+                <property name="username" value="root"></property>
+                <property name="password" value="199656"></property>
+            </dataSource>
+        </environment>
+    </environments>
+
+    <mappers>
+        <!--<mapper resource="com\itheima\mapper\UserDao.xml"></mapper>-->
+        <!--<mapper class=""></mapper>-->
+        <!--<package name=""></package>-->
+        <!--<mapper resource="com\itheima\mapper\AccountDao.xml"></mapper>-->
+        <package name="com.itheima.dao"></package>
+    </mappers>
+
+</configuration>

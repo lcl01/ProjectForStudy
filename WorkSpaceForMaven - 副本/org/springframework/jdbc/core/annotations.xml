@@ -1,0 +1,5 @@
+<root>
+    <item name='org.springframework.jdbc.core.JdbcTemplate T queryForObject(java.lang.String, org.springframework.jdbc.core.RowMapper&lt;T&gt;, java.lang.Object...)'>
+        <annotation name='java.lang.Deprecated'/>
+    </item>
+</root>

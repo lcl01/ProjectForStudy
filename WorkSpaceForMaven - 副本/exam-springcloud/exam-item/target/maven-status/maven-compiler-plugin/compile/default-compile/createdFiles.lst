@@ -1,0 +1,7 @@
+com\lcl\UserProviderApplication.class
+com\lcl\controller\UserController.class
+com\lcl\domain\Result.class
+com\lcl\domain\User.class
+com\lcl\dao\UserDao.class
+com\lcl\service\UserService.class
+com\lcl\service\impl\UserServiceImpl.class

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop.xsd">
+   <!-- 配置srping的Ioc,把service对象配置进来-->
+    <bean id="accountService" class="com.changgou.service.impl.AccountServiceImpl"></bean>
+    <!-- 配置Logger类，声明切面（创建对象，不是真正aop的切面） -->
+    <bean id="logger" class="com.changgou.util.Logger"></bean>
+    <!--配置AOP-->
+    <aop:config>
+        <aop:aspect id="logAdvice" ref="logger">
+            <!-- 配置通知的类型，并且建立通知方法和切入点方法的关联-->
+            <aop:before method="printLog" pointcut="execution(void com.changgou.service.impl.AccountServiceImpl.saveAccount())"></aop:before>
+            <aop:before method="printLog" pointcut="execution(void com.changgou.service.impl.AccountServiceImpl.updateAccount(int))"></aop:before>
+            <aop:before method="printLog" pointcut="execution(int com.changgou.service.impl.AccountServiceImpl.deleteAccount())"></aop:before>
+            <!--<aop:before method="printLog" pointcut="execution(* com.itheima.service..*.*(..))"></aop:before>-->
+            <aop:before method="lcl" pointcut="execution(void com.changgou.service.impl.AccountServiceImpl.lcl01())"></aop:before>
+         </aop:aspect>
+
+    </aop:config>
+
+</beans>

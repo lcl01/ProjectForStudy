@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="lcl-provider:war">
+    <output-path>$PROJECT_DIR$/lcl-provider/target</output-path>
+    <root id="archive" name="lcl-provider.war">
+      <element id="artifact" artifact-name="lcl-provider:war exploded" />
+    </root>
+  </artifact>
+</component>

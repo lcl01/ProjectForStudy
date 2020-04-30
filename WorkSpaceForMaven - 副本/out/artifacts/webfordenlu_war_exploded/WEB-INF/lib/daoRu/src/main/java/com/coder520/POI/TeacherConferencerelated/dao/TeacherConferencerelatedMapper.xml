@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coder520.POI.TeacherConferencerelated.dao.TeacherConferencerelatedMapper" >
+  <resultMap id="BaseResultMap" type="com.coder520.POI.TeacherConferencerelated.entity.TeacherConferencerelated" >
+    <id column="TEACHERSEQNO" property="teacherseqno" jdbcType="DECIMAL" />
+    <id column="CONFERENCESEQNO" property="conferenceseqno" jdbcType="DECIMAL" />
+    <id column="LABSEQNO" property="labseqno" jdbcType="DECIMAL" />
+    <result column="RELATEDLAB" property="relatedlab" jdbcType="VARCHAR" />
+    <result column="CONTRIBUTION" property="contribution" jdbcType="VARCHAR" />
+    <result column="CONFERENCEUUID" property="conferenceuuid" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    TEACHERSEQNO, CONFERENCESEQNO, LABSEQNO, RELATEDLAB, CONTRIBUTION, CONFERENCEUUID
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="com.coder520.POI.TeacherConferencerelated.entity.TeacherConferencerelatedKey" >
+    select 
+    <include refid="Base_Column_List" />
+    from TEACHER_CONFERENCERELATED
+    where TEACHERSEQNO = #{teacherseqno,jdbcType=DECIMAL}
+      and CONFERENCESEQNO = #{conferenceseqno,jdbcType=DECIMAL}
+      and LABSEQNO = #{labseqno,jdbcType=DECIMAL}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="com.coder520.POI.TeacherConferencerelated.entity.TeacherConferencerelatedKey" >
+    delete from TEACHER_CONFERENCERELATED
+    where TEACHERSEQNO = #{teacherseqno,jdbcType=DECIMAL}
+      and CONFERENCESEQNO = #{conferenceseqno,jdbcType=DECIMAL}
+      and LABSEQNO = #{labseqno,jdbcType=DECIMAL}
+  </delete>
+  <insert id="insert" parameterType="com.coder520.POI.TeacherConferencerelated.entity.TeacherConferencerelated" >
+    insert into TEACHER_CONFERENCERELATED (TEACHERSEQNO, CONFERENCESEQNO, LABSEQNO, 
+      RELATEDLAB, CONTRIBUTION, CONFERENCEUUID
+      )
+    values (#{teacherseqno,jdbcType=DECIMAL}, #{conferenceseqno,jdbcType=DECIMAL}, #{labseqno,jdbcType=DECIMAL}, 
+      #{relatedlab,jdbcType=VARCHAR}, #{contribution,jdbcType=VARCHAR}, #{conferenceuuid,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.coder520.POI.TeacherConferencerelated.entity.TeacherConferencerelated" >
+    insert into TEACHER_CONFERENCERELATED
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="teacherseqno != null" >
+        TEACHERSEQNO,
+      </if>
+      <if test="conferenceseqno != null" >
+        CONFERENCESEQNO,
+      </if>
+      <if test="labseqno != null" >
+        LABSEQNO,
+      </if>
+      <if test="relatedlab != null" >
+        RELATEDLAB,
+      </if>
+      <if test="contribution != null" >
+        CONTRIBUTION,
+      </if>
+      <if test="conferenceuuid != null" >
+        CONFERENCEUUID,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="teacherseqno != null" >
+        #{teacherseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="conferenceseqno != null" >
+        #{conferenceseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="labseqno != null" >
+        #{labseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="relatedlab != null" >
+        #{relatedlab,jdbcType=VARCHAR},
+      </if>
+      <if test="contribution != null" >
+        #{contribution,jdbcType=VARCHAR},
+      </if>
+      <if test="conferenceuuid != null" >
+        #{conferenceuuid,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.coder520.POI.TeacherConferencerelated.entity.TeacherConferencerelated" >
+    update TEACHER_CONFERENCERELATED
+    <set >
+      <if test="relatedlab != null" >
+        RELATEDLAB = #{relatedlab,jdbcType=VARCHAR},
+      </if>
+      <if test="contribution != null" >
+        CONTRIBUTION = #{contribution,jdbcType=VARCHAR},
+      </if>
+      <if test="conferenceuuid != null" >
+        CONFERENCEUUID = #{conferenceuuid,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where TEACHERSEQNO = #{teacherseqno,jdbcType=DECIMAL}
+      and CONFERENCESEQNO = #{conferenceseqno,jdbcType=DECIMAL}
+      and LABSEQNO = #{labseqno,jdbcType=DECIMAL}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.coder520.POI.TeacherConferencerelated.entity.TeacherConferencerelated" >
+    update TEACHER_CONFERENCERELATED
+    set RELATEDLAB = #{relatedlab,jdbcType=VARCHAR},
+      CONTRIBUTION = #{contribution,jdbcType=VARCHAR},
+      CONFERENCEUUID = #{conferenceuuid,jdbcType=VARCHAR}
+    where TEACHERSEQNO = #{teacherseqno,jdbcType=DECIMAL}
+      and CONFERENCESEQNO = #{conferenceseqno,jdbcType=DECIMAL}
+      and LABSEQNO = #{labseqno,jdbcType=DECIMAL}
+  </update>
+</mapper>

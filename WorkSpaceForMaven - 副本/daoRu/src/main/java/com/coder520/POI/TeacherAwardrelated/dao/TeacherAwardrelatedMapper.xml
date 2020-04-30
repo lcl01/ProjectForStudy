@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coder520.POI.TeacherAwardrelated.dao.TeacherAwardrelatedMapper" >
+  <resultMap id="BaseResultMap" type="com.coder520.POI.TeacherAwardrelated.entity.TeacherAwardrelated" >
+    <id column="TEACHERSEQNO" property="teacherseqno" jdbcType="DECIMAL" />
+    <id column="AWARDSEQNO" property="awardseqno" jdbcType="DECIMAL" />
+    <id column="LABSEQNO" property="labseqno" jdbcType="DECIMAL" />
+    <result column="RELATEDLAB" property="relatedlab" jdbcType="VARCHAR" />
+    <result column="CONTRIBUTION" property="contribution" jdbcType="VARCHAR" />
+    <result column="AWARDUUID" property="awarduuid" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    TEACHERSEQNO, AWARDSEQNO, LABSEQNO, RELATEDLAB, CONTRIBUTION, AWARDUUID
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="com.coder520.POI.TeacherAwardrelated.entity.TeacherAwardrelatedKey" >
+    select 
+    <include refid="Base_Column_List" />
+    from TEACHER_AWARDRELATED
+    where TEACHERSEQNO = #{teacherseqno,jdbcType=DECIMAL}
+      and AWARDSEQNO = #{awardseqno,jdbcType=DECIMAL}
+      and LABSEQNO = #{labseqno,jdbcType=DECIMAL}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="com.coder520.POI.TeacherAwardrelated.entity.TeacherAwardrelatedKey" >
+    delete from TEACHER_AWARDRELATED
+    where TEACHERSEQNO = #{teacherseqno,jdbcType=DECIMAL}
+      and AWARDSEQNO = #{awardseqno,jdbcType=DECIMAL}
+      and LABSEQNO = #{labseqno,jdbcType=DECIMAL}
+  </delete>
+  <insert id="insert" parameterType="com.coder520.POI.TeacherAwardrelated.entity.TeacherAwardrelated" >
+    insert into TEACHER_AWARDRELATED (TEACHERSEQNO, AWARDSEQNO, LABSEQNO, 
+      RELATEDLAB, CONTRIBUTION, AWARDUUID
+      )
+    values (#{teacherseqno,jdbcType=DECIMAL}, #{awardseqno,jdbcType=DECIMAL}, #{labseqno,jdbcType=DECIMAL}, 
+      #{relatedlab,jdbcType=VARCHAR}, #{contribution,jdbcType=VARCHAR}, #{awarduuid,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.coder520.POI.TeacherAwardrelated.entity.TeacherAwardrelated" >
+    insert into TEACHER_AWARDRELATED
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="teacherseqno != null" >
+        TEACHERSEQNO,
+      </if>
+      <if test="awardseqno != null" >
+        AWARDSEQNO,
+      </if>
+      <if test="labseqno != null" >
+        LABSEQNO,
+      </if>
+      <if test="relatedlab != null" >
+        RELATEDLAB,
+      </if>
+      <if test="contribution != null" >
+        CONTRIBUTION,
+      </if>
+      <if test="awarduuid != null" >
+        AWARDUUID,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="teacherseqno != null" >
+        #{teacherseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="awardseqno != null" >
+        #{awardseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="labseqno != null" >
+        #{labseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="relatedlab != null" >
+        #{relatedlab,jdbcType=VARCHAR},
+      </if>
+      <if test="contribution != null" >
+        #{contribution,jdbcType=VARCHAR},
+      </if>
+      <if test="awarduuid != null" >
+        #{awarduuid,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.coder520.POI.TeacherAwardrelated.entity.TeacherAwardrelated" >
+    update TEACHER_AWARDRELATED
+    <set >
+      <if test="relatedlab != null" >
+        RELATEDLAB = #{relatedlab,jdbcType=VARCHAR},
+      </if>
+      <if test="contribution != null" >
+        CONTRIBUTION = #{contribution,jdbcType=VARCHAR},
+      </if>
+      <if test="awarduuid != null" >
+        AWARDUUID = #{awarduuid,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where TEACHERSEQNO = #{teacherseqno,jdbcType=DECIMAL}
+      and AWARDSEQNO = #{awardseqno,jdbcType=DECIMAL}
+      and LABSEQNO = #{labseqno,jdbcType=DECIMAL}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.coder520.POI.TeacherAwardrelated.entity.TeacherAwardrelated" >
+    update TEACHER_AWARDRELATED
+    set RELATEDLAB = #{relatedlab,jdbcType=VARCHAR},
+      CONTRIBUTION = #{contribution,jdbcType=VARCHAR},
+      AWARDUUID = #{awarduuid,jdbcType=VARCHAR}
+    where TEACHERSEQNO = #{teacherseqno,jdbcType=DECIMAL}
+      and AWARDSEQNO = #{awardseqno,jdbcType=DECIMAL}
+      and LABSEQNO = #{labseqno,jdbcType=DECIMAL}
+  </update>
+</mapper>

@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coder520.POI.TeacherLiterature.dao.TeacherLiteratureMapper" >
+  <resultMap id="BaseResultMap" type="com.coder520.POI.TeacherLiterature.entity.TeacherLiterature" >
+    <id column="TEACHERSEQNO" property="teacherseqno" jdbcType="DECIMAL" />
+    <id column="LITERATURESEQNO" property="literatureseqno" jdbcType="DECIMAL" />
+    <result column="LITERATURENAME" property="literaturename" jdbcType="VARCHAR" />
+    <result column="FIRSTAUTHOR" property="firstauthor" jdbcType="VARCHAR" />
+    <result column="OTHERAUTHOR" property="otherauthor" jdbcType="VARCHAR" />
+    <result column="LITERAURETYPE" property="literauretype" jdbcType="VARCHAR" />
+    <result column="STATISTICSTYPE" property="statisticstype" jdbcType="VARCHAR" />
+    <result column="TOTALWORDS" property="totalwords" jdbcType="DECIMAL" />
+    <result column="PRESS" property="press" jdbcType="VARCHAR" />
+    <result column="PUBLICATIONDATE" property="publicationdate" jdbcType="VARCHAR" />
+    <result column="ISSN" property="issn" jdbcType="VARCHAR" />
+    <result column="LITERATUREACCESSORIES" property="literatureaccessories" jdbcType="VARCHAR" />
+    <result column="ISSECRECT" property="issecrect" jdbcType="VARCHAR" />
+    <result column="LASTMODIFIEDTIME" property="lastmodifiedtime" jdbcType="VARCHAR" />
+    <result column="LASTMODIFIEDMAN" property="lastmodifiedman" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="LITERATUREUUID" property="literatureuuid" jdbcType="VARCHAR" />
+    <result column="MAJORDEPTSEQNO" property="majordeptseqno" jdbcType="DECIMAL" />
+    <result column="MAJORLABSEQNO" property="majorlabseqno" jdbcType="DECIMAL" />
+    <result column="MAJORSEQNO" property="majorseqno" jdbcType="DECIMAL" />
+    <result column="OTHERAUTHORUUID" property="otherauthoruuid" jdbcType="VARCHAR" />
+    <result column="LITERATUREOTHERSNUM" property="literatureothersnum" jdbcType="VARCHAR" />
+    <result column="OTHERSDEPTSEQNO" property="othersdeptseqno" jdbcType="VARCHAR" />
+    <result column="OTHERSLABSEQNO" property="otherslabseqno" jdbcType="VARCHAR" />
+    <result column="LASTMODIFIEDMANID" property="lastmodifiedmanid" jdbcType="VARCHAR" />
+    <result column="PERSONHELPREGISTERSEQNO" property="personhelpregisterseqno" jdbcType="DECIMAL" />
+    <result column="TEMPSTATE" property="tempstate" jdbcType="CHAR" />
+    <result column="ISKCW" property="iskcw" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    TEACHERSEQNO, LITERATURESEQNO, LITERATURENAME, FIRSTAUTHOR, OTHERAUTHOR, LITERAURETYPE, 
+    STATISTICSTYPE, TOTALWORDS, PRESS, PUBLICATIONDATE, ISSN, LITERATUREACCESSORIES, 
+    ISSECRECT, LASTMODIFIEDTIME, LASTMODIFIEDMAN, STATUS, LITERATUREUUID, MAJORDEPTSEQNO, 
+    MAJORLABSEQNO, MAJORSEQNO, OTHERAUTHORUUID, LITERATUREOTHERSNUM, OTHERSDEPTSEQNO, 
+    OTHERSLABSEQNO, LASTMODIFIEDMANID, PERSONHELPREGISTERSEQNO, TEMPSTATE, ISKCW
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="com.coder520.POI.TeacherLiterature.entity.TeacherLiteratureKey" >
+    select 
+    <include refid="Base_Column_List" />
+    from TEACHER_LITERATURE
+    where TEACHERSEQNO = #{teacherseqno,jdbcType=DECIMAL}
+      and LITERATURESEQNO = #{literatureseqno,jdbcType=DECIMAL}
+  </select>
+
+  <select id="findByName" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select
+    <include refid="Base_Column_List" />
+    from TEACHER_LITERATURE
+    where LITERATURENAME = #{literaturename,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="com.coder520.POI.TeacherLiterature.entity.TeacherLiteratureKey" >
+    delete from TEACHER_LITERATURE
+    where TEACHERSEQNO = #{teacherseqno,jdbcType=DECIMAL}
+      and LITERATURESEQNO = #{literatureseqno,jdbcType=DECIMAL}
+  </delete>
+  <insert id="insert" parameterType="com.coder520.POI.TeacherLiterature.entity.TeacherLiterature" >
+    insert into TEACHER_LITERATURE (TEACHERSEQNO, LITERATURESEQNO, LITERATURENAME, 
+      FIRSTAUTHOR, OTHERAUTHOR, LITERAURETYPE, 
+      STATISTICSTYPE, TOTALWORDS, PRESS, 
+      PUBLICATIONDATE, ISSN, LITERATUREACCESSORIES, 
+      ISSECRECT, LASTMODIFIEDTIME, LASTMODIFIEDMAN, 
+      STATUS, LITERATUREUUID, MAJORDEPTSEQNO, 
+      MAJORLABSEQNO, MAJORSEQNO, OTHERAUTHORUUID, 
+      LITERATUREOTHERSNUM, OTHERSDEPTSEQNO, OTHERSLABSEQNO, 
+      LASTMODIFIEDMANID, PERSONHELPREGISTERSEQNO, 
+      TEMPSTATE, ISKCW)
+    values (#{teacherseqno,jdbcType=DECIMAL}, #{literatureseqno,jdbcType=DECIMAL}, #{literaturename,jdbcType=VARCHAR}, 
+      #{firstauthor,jdbcType=VARCHAR}, #{otherauthor,jdbcType=VARCHAR}, #{literauretype,jdbcType=VARCHAR}, 
+      #{statisticstype,jdbcType=VARCHAR}, #{totalwords,jdbcType=DECIMAL}, #{press,jdbcType=VARCHAR}, 
+      #{publicationdate,jdbcType=VARCHAR}, #{issn,jdbcType=VARCHAR}, #{literatureaccessories,jdbcType=VARCHAR}, 
+      #{issecrect,jdbcType=VARCHAR}, #{lastmodifiedtime,jdbcType=VARCHAR}, #{lastmodifiedman,jdbcType=VARCHAR}, 
+      #{status,jdbcType=VARCHAR}, #{literatureuuid,jdbcType=VARCHAR}, #{majordeptseqno,jdbcType=DECIMAL}, 
+      #{majorlabseqno,jdbcType=DECIMAL}, #{majorseqno,jdbcType=DECIMAL}, #{otherauthoruuid,jdbcType=VARCHAR}, 
+      #{literatureothersnum,jdbcType=VARCHAR}, #{othersdeptseqno,jdbcType=VARCHAR}, #{otherslabseqno,jdbcType=VARCHAR}, 
+      #{lastmodifiedmanid,jdbcType=VARCHAR}, #{personhelpregisterseqno,jdbcType=DECIMAL}, 
+      #{tempstate,jdbcType=CHAR}, #{iskcw,jdbcType=VARCHAR})
+  </insert>
+
+  <insert id="insertAddKey" parameterType="com.coder520.POI.TeacherLiterature.entity.TeacherLiterature" >
+    <selectKey keyProperty="literatureseqno" resultType="long" order="BEFORE">
+      select  nvl(max(LITERATURESEQNO),0)+1 from TEACHER_LITERATURE
+    </selectKey>
+    insert into TEACHER_LITERATURE (TEACHERSEQNO, LITERATURESEQNO, LITERATURENAME,
+    FIRSTAUTHOR, OTHERAUTHOR, LITERAURETYPE,
+    STATISTICSTYPE, TOTALWORDS, PRESS,
+    PUBLICATIONDATE, ISSN, LITERATUREACCESSORIES,
+    ISSECRECT, LASTMODIFIEDTIME, LASTMODIFIEDMAN,
+    STATUS, LITERATUREUUID, MAJORDEPTSEQNO,
+    MAJORLABSEQNO, MAJORSEQNO, OTHERAUTHORUUID,
+    LITERATUREOTHERSNUM, OTHERSDEPTSEQNO, OTHERSLABSEQNO,
+    LASTMODIFIEDMANID, PERSONHELPREGISTERSEQNO,
+    TEMPSTATE, ISKCW)
+    values (#{teacherseqno,jdbcType=DECIMAL}, #{literatureseqno,jdbcType=DECIMAL}, #{literaturename,jdbcType=VARCHAR},
+    #{firstauthor,jdbcType=VARCHAR}, #{otherauthor,jdbcType=VARCHAR}, #{literauretype,jdbcType=VARCHAR},
+    #{statisticstype,jdbcType=VARCHAR}, #{totalwords,jdbcType=DECIMAL}, #{press,jdbcType=VARCHAR},
+    #{publicationdate,jdbcType=VARCHAR}, #{issn,jdbcType=VARCHAR}, #{literatureaccessories,jdbcType=VARCHAR},
+    #{issecrect,jdbcType=VARCHAR}, #{lastmodifiedtime,jdbcType=VARCHAR}, #{lastmodifiedman,jdbcType=VARCHAR},
+    #{status,jdbcType=VARCHAR}, #{literatureuuid,jdbcType=VARCHAR}, #{majordeptseqno,jdbcType=DECIMAL},
+    #{majorlabseqno,jdbcType=DECIMAL}, #{majorseqno,jdbcType=DECIMAL}, #{otherauthoruuid,jdbcType=VARCHAR},
+    #{literatureothersnum,jdbcType=VARCHAR}, #{othersdeptseqno,jdbcType=VARCHAR}, #{otherslabseqno,jdbcType=VARCHAR},
+    #{lastmodifiedmanid,jdbcType=VARCHAR}, #{personhelpregisterseqno,jdbcType=DECIMAL},
+    #{tempstate,jdbcType=CHAR}, #{iskcw,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.coder520.POI.TeacherLiterature.entity.TeacherLiterature" >
+    insert into TEACHER_LITERATURE
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="teacherseqno != null" >
+        TEACHERSEQNO,
+      </if>
+      <if test="literatureseqno != null" >
+        LITERATURESEQNO,
+      </if>
+      <if test="literaturename != null" >
+        LITERATURENAME,
+      </if>
+      <if test="firstauthor != null" >
+        FIRSTAUTHOR,
+      </if>
+      <if test="otherauthor != null" >
+        OTHERAUTHOR,
+      </if>
+      <if test="literauretype != null" >
+        LITERAURETYPE,
+      </if>
+      <if test="statisticstype != null" >
+        STATISTICSTYPE,
+      </if>
+      <if test="totalwords != null" >
+        TOTALWORDS,
+      </if>
+      <if test="press != null" >
+        PRESS,
+      </if>
+      <if test="publicationdate != null" >
+        PUBLICATIONDATE,
+      </if>
+      <if test="issn != null" >
+        ISSN,
+      </if>
+      <if test="literatureaccessories != null" >
+        LITERATUREACCESSORIES,
+      </if>
+      <if test="issecrect != null" >
+        ISSECRECT,
+      </if>
+      <if test="lastmodifiedtime != null" >
+        LASTMODIFIEDTIME,
+      </if>
+      <if test="lastmodifiedman != null" >
+        LASTMODIFIEDMAN,
+      </if>
+      <if test="status != null" >
+        STATUS,
+      </if>
+      <if test="literatureuuid != null" >
+        LITERATUREUUID,
+      </if>
+      <if test="majordeptseqno != null" >
+        MAJORDEPTSEQNO,
+      </if>
+      <if test="majorlabseqno != null" >
+        MAJORLABSEQNO,
+      </if>
+      <if test="majorseqno != null" >
+        MAJORSEQNO,
+      </if>
+      <if test="otherauthoruuid != null" >
+        OTHERAUTHORUUID,
+      </if>
+      <if test="literatureothersnum != null" >
+        LITERATUREOTHERSNUM,
+      </if>
+      <if test="othersdeptseqno != null" >
+        OTHERSDEPTSEQNO,
+      </if>
+      <if test="otherslabseqno != null" >
+        OTHERSLABSEQNO,
+      </if>
+      <if test="lastmodifiedmanid != null" >
+        LASTMODIFIEDMANID,
+      </if>
+      <if test="personhelpregisterseqno != null" >
+        PERSONHELPREGISTERSEQNO,
+      </if>
+      <if test="tempstate != null" >
+        TEMPSTATE,
+      </if>
+      <if test="iskcw != null" >
+        ISKCW,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="teacherseqno != null" >
+        #{teacherseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="literatureseqno != null" >
+        #{literatureseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="literaturename != null" >
+        #{literaturename,jdbcType=VARCHAR},
+      </if>
+      <if test="firstauthor != null" >
+        #{firstauthor,jdbcType=VARCHAR},
+      </if>
+      <if test="otherauthor != null" >
+        #{otherauthor,jdbcType=VARCHAR},
+      </if>
+      <if test="literauretype != null" >
+        #{literauretype,jdbcType=VARCHAR},
+      </if>
+      <if test="statisticstype != null" >
+        #{statisticstype,jdbcType=VARCHAR},
+      </if>
+      <if test="totalwords != null" >
+        #{totalwords,jdbcType=DECIMAL},
+      </if>
+      <if test="press != null" >
+        #{press,jdbcType=VARCHAR},
+      </if>
+      <if test="publicationdate != null" >
+        #{publicationdate,jdbcType=VARCHAR},
+      </if>
+      <if test="issn != null" >
+        #{issn,jdbcType=VARCHAR},
+      </if>
+      <if test="literatureaccessories != null" >
+        #{literatureaccessories,jdbcType=VARCHAR},
+      </if>
+      <if test="issecrect != null" >
+        #{issecrect,jdbcType=VARCHAR},
+      </if>
+      <if test="lastmodifiedtime != null" >
+        #{lastmodifiedtime,jdbcType=VARCHAR},
+      </if>
+      <if test="lastmodifiedman != null" >
+        #{lastmodifiedman,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="literatureuuid != null" >
+        #{literatureuuid,jdbcType=VARCHAR},
+      </if>
+      <if test="majordeptseqno != null" >
+        #{majordeptseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="majorlabseqno != null" >
+        #{majorlabseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="majorseqno != null" >
+        #{majorseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="otherauthoruuid != null" >
+        #{otherauthoruuid,jdbcType=VARCHAR},
+      </if>
+      <if test="literatureothersnum != null" >
+        #{literatureothersnum,jdbcType=VARCHAR},
+      </if>
+      <if test="othersdeptseqno != null" >
+        #{othersdeptseqno,jdbcType=VARCHAR},
+      </if>
+      <if test="otherslabseqno != null" >
+        #{otherslabseqno,jdbcType=VARCHAR},
+      </if>
+      <if test="lastmodifiedmanid != null" >
+        #{lastmodifiedmanid,jdbcType=VARCHAR},
+      </if>
+      <if test="personhelpregisterseqno != null" >
+        #{personhelpregisterseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="tempstate != null" >
+        #{tempstate,jdbcType=CHAR},
+      </if>
+      <if test="iskcw != null" >
+        #{iskcw,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.coder520.POI.TeacherLiterature.entity.TeacherLiterature" >
+    update TEACHER_LITERATURE
+    <set >
+      <if test="literaturename != null" >
+        LITERATURENAME = #{literaturename,jdbcType=VARCHAR},
+      </if>
+      <if test="firstauthor != null" >
+        FIRSTAUTHOR = #{firstauthor,jdbcType=VARCHAR},
+      </if>
+      <if test="otherauthor != null" >
+        OTHERAUTHOR = #{otherauthor,jdbcType=VARCHAR},
+      </if>
+      <if test="literauretype != null" >
+        LITERAURETYPE = #{literauretype,jdbcType=VARCHAR},
+      </if>
+      <if test="statisticstype != null" >
+        STATISTICSTYPE = #{statisticstype,jdbcType=VARCHAR},
+      </if>
+      <if test="totalwords != null" >
+        TOTALWORDS = #{totalwords,jdbcType=DECIMAL},
+      </if>
+      <if test="press != null" >
+        PRESS = #{press,jdbcType=VARCHAR},
+      </if>
+      <if test="publicationdate != null" >
+        PUBLICATIONDATE = #{publicationdate,jdbcType=VARCHAR},
+      </if>
+      <if test="issn != null" >
+        ISSN = #{issn,jdbcType=VARCHAR},
+      </if>
+      <if test="literatureaccessories != null" >
+        LITERATUREACCESSORIES = #{literatureaccessories,jdbcType=VARCHAR},
+      </if>
+      <if test="issecrect != null" >
+        ISSECRECT = #{issecrect,jdbcType=VARCHAR},
+      </if>
+      <if test="lastmodifiedtime != null" >
+        LASTMODIFIEDTIME = #{lastmodifiedtime,jdbcType=VARCHAR},
+      </if>
+      <if test="lastmodifiedman != null" >
+        LASTMODIFIEDMAN = #{lastmodifiedman,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        STATUS = #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="literatureuuid != null" >
+        LITERATUREUUID = #{literatureuuid,jdbcType=VARCHAR},
+      </if>
+      <if test="majordeptseqno != null" >
+        MAJORDEPTSEQNO = #{majordeptseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="majorlabseqno != null" >
+        MAJORLABSEQNO = #{majorlabseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="majorseqno != null" >
+        MAJORSEQNO = #{majorseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="otherauthoruuid != null" >
+        OTHERAUTHORUUID = #{otherauthoruuid,jdbcType=VARCHAR},
+      </if>
+      <if test="literatureothersnum != null" >
+        LITERATUREOTHERSNUM = #{literatureothersnum,jdbcType=VARCHAR},
+      </if>
+      <if test="othersdeptseqno != null" >
+        OTHERSDEPTSEQNO = #{othersdeptseqno,jdbcType=VARCHAR},
+      </if>
+      <if test="otherslabseqno != null" >
+        OTHERSLABSEQNO = #{otherslabseqno,jdbcType=VARCHAR},
+      </if>
+      <if test="lastmodifiedmanid != null" >
+        LASTMODIFIEDMANID = #{lastmodifiedmanid,jdbcType=VARCHAR},
+      </if>
+      <if test="personhelpregisterseqno != null" >
+        PERSONHELPREGISTERSEQNO = #{personhelpregisterseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="tempstate != null" >
+        TEMPSTATE = #{tempstate,jdbcType=CHAR},
+      </if>
+      <if test="iskcw != null" >
+        ISKCW = #{iskcw,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where TEACHERSEQNO = #{teacherseqno,jdbcType=DECIMAL}
+      and LITERATURESEQNO = #{literatureseqno,jdbcType=DECIMAL}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.coder520.POI.TeacherLiterature.entity.TeacherLiterature" >
+    update TEACHER_LITERATURE
+    set LITERATURENAME = #{literaturename,jdbcType=VARCHAR},
+      FIRSTAUTHOR = #{firstauthor,jdbcType=VARCHAR},
+      OTHERAUTHOR = #{otherauthor,jdbcType=VARCHAR},
+      LITERAURETYPE = #{literauretype,jdbcType=VARCHAR},
+      STATISTICSTYPE = #{statisticstype,jdbcType=VARCHAR},
+      TOTALWORDS = #{totalwords,jdbcType=DECIMAL},
+      PRESS = #{press,jdbcType=VARCHAR},
+      PUBLICATIONDATE = #{publicationdate,jdbcType=VARCHAR},
+      ISSN = #{issn,jdbcType=VARCHAR},
+      LITERATUREACCESSORIES = #{literatureaccessories,jdbcType=VARCHAR},
+      ISSECRECT = #{issecrect,jdbcType=VARCHAR},
+      LASTMODIFIEDTIME = #{lastmodifiedtime,jdbcType=VARCHAR},
+      LASTMODIFIEDMAN = #{lastmodifiedman,jdbcType=VARCHAR},
+      STATUS = #{status,jdbcType=VARCHAR},
+      LITERATUREUUID = #{literatureuuid,jdbcType=VARCHAR},
+      MAJORDEPTSEQNO = #{majordeptseqno,jdbcType=DECIMAL},
+      MAJORLABSEQNO = #{majorlabseqno,jdbcType=DECIMAL},
+      MAJORSEQNO = #{majorseqno,jdbcType=DECIMAL},
+      OTHERAUTHORUUID = #{otherauthoruuid,jdbcType=VARCHAR},
+      LITERATUREOTHERSNUM = #{literatureothersnum,jdbcType=VARCHAR},
+      OTHERSDEPTSEQNO = #{othersdeptseqno,jdbcType=VARCHAR},
+      OTHERSLABSEQNO = #{otherslabseqno,jdbcType=VARCHAR},
+      LASTMODIFIEDMANID = #{lastmodifiedmanid,jdbcType=VARCHAR},
+      PERSONHELPREGISTERSEQNO = #{personhelpregisterseqno,jdbcType=DECIMAL},
+      TEMPSTATE = #{tempstate,jdbcType=CHAR},
+      ISKCW = #{iskcw,jdbcType=VARCHAR}
+    where TEACHERSEQNO = #{teacherseqno,jdbcType=DECIMAL}
+      and LITERATURESEQNO = #{literatureseqno,jdbcType=DECIMAL}
+  </update>
+</mapper>

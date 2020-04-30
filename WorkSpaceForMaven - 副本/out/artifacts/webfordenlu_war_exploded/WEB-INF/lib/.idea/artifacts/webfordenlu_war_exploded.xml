@@ -1,0 +1,31 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="webfordenlu:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/webfordenlu_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="webfordenlu" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="file-copy" path="$PROJECT_DIR$/webfordenlu/src/lib/c3p0-0.9.5.2.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/webfordenlu/src/lib/commons-logging-1.2.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/webfordenlu/src/lib/mchange-commons-java-0.2.12.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/webfordenlu/src/lib/mysql-connector-java-5.1.37-bin.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/webfordenlu/src/lib/spring-beans-5.0.0.RELEASE.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/webfordenlu/src/lib/spring-core-5.0.0.RELEASE.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/webfordenlu/src/lib/spring-jdbc-5.0.0.RELEASE.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/webfordenlu/src/lib/spring-tx-5.0.0.RELEASE.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/webforlogin/src/lib/c3p0-0.9.5.2.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/webforlogin/src/lib/commons-logging-1.2.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/webforlogin/src/lib/mchange-commons-java-0.2.12.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/webforlogin/src/lib/spring-beans-5.0.0.RELEASE.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/webforlogin/src/lib/spring-core-5.0.0.RELEASE.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/webforlogin/src/lib/spring-jdbc-5.0.0.RELEASE.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/webforlogin/src/lib/spring-tx-5.0.0.RELEASE.jar" />
+          <element id="dir-copy" path="$PROJECT_DIR$" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="webfordenlu/web/Web" />
+    </root>
+  </artifact>
+</component>

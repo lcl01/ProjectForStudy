@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd"
+>
+    <context:property-placeholder location="classpath:jdbc.properties"/>
+
+    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" destroy-method="close">
+        <property name="driverClassName" value="${jdbc.driver}"></property>
+        <property name="url" value="${jdbc.url}"></property>
+        <property name="username" value="${jdbc.username}"></property>
+        <property name="password" value="${jdbc.password}"></property>
+    </bean>
+
+    <!--注册SqlSessionFactory-->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <!--注入DataSource-->
+        <property name="dataSource" ref="dataSource"></property>
+        <!--注入SqlMapConfig(建议加)-->
+        <property name="configLocation" value="classpath:SqlMapConfig.xml"></property>
+    </bean>
+
+    <!--注册dao包扫描器-->
+    <bean id="mapperScanner" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com.lcl.dao"></property>
+    </bean>
+
+    <!--1.配置事务管理器-->
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"></property>
+    </bean>
+
+    <tx:advice id="adviceId" transaction-manager="transactionManager">
+        <tx:attributes>
+            <tx:method name="find*" read-only="true"></tx:method>
+            <tx:method name="select*" read-only="true"></tx:method>
+            <tx:method name="save*" read-only="false" propagation="REQUIRED"></tx:method>
+            <tx:method name="delete*" read-only="false" propagation="REQUIRED"></tx:method>
+            <tx:method name="update*" read-only="false" propagation="REQUIRED"></tx:method>
+            <tx:method name="insert*" read-only="false" propagation="REQUIRED"></tx:method>
+        </tx:attributes>
+    </tx:advice>
+
+    <aop:config>
+        <aop:pointcut id="pointcutId" expression="execution(* com.lcl.service.impl.*.*(..))"></aop:pointcut>
+        <!--配置切面-->
+        <aop:advisor advice-ref="adviceId" pointcut-ref="pointcutId"></aop:advisor>
+    </aop:config>
+</beans>

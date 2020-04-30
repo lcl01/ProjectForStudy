@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body >
+<center>
+    <h1>用户登录</h1>
+    <form action="userServlet" method="post">
+        姓名：<input type="text" name="username" /><br/>
+        密码：<input type="password" name="password"/><br/>
+        验证码:<input type="text" name="code" placeholder="请输入验证码"/>
+        <br/>
+        <img id="imgId" src="codeServlet"/>   <input type="button" value="换一张" onclick="changeImg()"/>
+        <br/>
+        <input type="submit" value="登录"/>
+    </form>
+</center>
+
+<!--1. 给按钮设置一个点击事件
+2. 创建一个函数响应这个事件
+3. 在这个函数里面:  改变img的src的属性值
+-->
+
+
+<script>
+    function changeImg() {
+        //改变img的src的属性值.    拼接参数, 这个参数没有实际意义.  目的就是忽悠浏览器这不是同一个资源
+        document.getElementById("imgId").src = "codeServlet?aaa="+new Date().getMilliseconds();
+    }
+
+</script>
+
+</body>
+</html>

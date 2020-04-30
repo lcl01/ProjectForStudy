@@ -1,0 +1,40 @@
+GET http://localhost:8080/param/testRequestHeader?username=张三
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-03-08T063919.200.html
+
+###
+
+PUT http://localhost:8080/param/testPathVariable?username=张三
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-03-08T063646.200.txt
+
+###
+
+POST http://localhost:8080/param/testPathVariable?username=张三
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-03-08T063621.200.html
+
+###
+
+DELETE http://localhost:8080/param/testPathVariable/1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-03-08T063459.200.txt
+
+###
+
+GET http://localhost:8080/param/testPathVariable/1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-03-08T063431.200.html
+
+###
+

@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coder520.POI.TeacherStandard.dao.TeacherStandardMapper" >
+  <resultMap id="BaseResultMap" type="com.coder520.POI.TeacherStandard.entity.TeacherStandard" >
+    <id column="TEACHERSEQNO" property="teacherseqno" jdbcType="DECIMAL" />
+    <id column="STANDARDSEQNO" property="standardseqno" jdbcType="DECIMAL" />
+    <result column="STANDARDNAME" property="standardname" jdbcType="VARCHAR" />
+    <result column="STANDARDABSTRACT" property="standardabstract" jdbcType="VARCHAR" />
+    <result column="RELEASEDATE" property="releasedate" jdbcType="VARCHAR" />
+    <result column="STANDARDTYPE" property="standardtype" jdbcType="VARCHAR" />
+    <result column="ISSECRECT" property="issecrect" jdbcType="VARCHAR" />
+    <result column="ACCESSORIES" property="accessories" jdbcType="VARCHAR" />
+    <result column="LASTMODIFIEDTIME" property="lastmodifiedtime" jdbcType="VARCHAR" />
+    <result column="LASTMODIFIEDMANID" property="lastmodifiedmanid" jdbcType="DECIMAL" />
+    <result column="LASTMODIFIEDMAN" property="lastmodifiedman" jdbcType="VARCHAR" />
+    <result column="STANDARDUUID" property="standarduuid" jdbcType="VARCHAR" />
+    <result column="APPROVESTATUS" property="approvestatus" jdbcType="VARCHAR" />
+    <result column="ISRELEASE" property="isrelease" jdbcType="VARCHAR" />
+    <result column="PERSONHELPREGISTERSEQNO" property="personhelpregisterseqno" jdbcType="DECIMAL" />
+    <result column="ISTRANS" property="istrans" jdbcType="VARCHAR" />
+    <result column="TEMPSTATE" property="tempstate" jdbcType="CHAR" />
+    <result column="ISKCW" property="iskcw" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    TEACHERSEQNO, STANDARDSEQNO, STANDARDNAME, STANDARDABSTRACT, RELEASEDATE, STANDARDTYPE, 
+    ISSECRECT, ACCESSORIES, LASTMODIFIEDTIME, LASTMODIFIEDMANID, LASTMODIFIEDMAN, STANDARDUUID, 
+    APPROVESTATUS, ISRELEASE, PERSONHELPREGISTERSEQNO, ISTRANS, TEMPSTATE, ISKCW
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="com.coder520.POI.TeacherStandard.entity.TeacherStandardKey" >
+    select 
+    <include refid="Base_Column_List" />
+    from TEACHER_STANDARD
+    where TEACHERSEQNO = #{teacherseqno,jdbcType=DECIMAL}
+      and STANDARDSEQNO = #{standardseqno,jdbcType=DECIMAL}
+  </select>
+
+  <select id="findByName" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select
+    <include refid="Base_Column_List" />
+    from TEACHER_STANDARD
+    where STANDARDNAME = #{standardname,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="com.coder520.POI.TeacherStandard.entity.TeacherStandardKey" >
+    delete from TEACHER_STANDARD
+    where TEACHERSEQNO = #{teacherseqno,jdbcType=DECIMAL}
+      and STANDARDSEQNO = #{standardseqno,jdbcType=DECIMAL}
+  </delete>
+  <insert id="insert" parameterType="com.coder520.POI.TeacherStandard.entity.TeacherStandard" >
+    insert into TEACHER_STANDARD (TEACHERSEQNO, STANDARDSEQNO, STANDARDNAME, 
+      STANDARDABSTRACT, RELEASEDATE, STANDARDTYPE, 
+      ISSECRECT, ACCESSORIES, LASTMODIFIEDTIME, 
+      LASTMODIFIEDMANID, LASTMODIFIEDMAN, STANDARDUUID, 
+      APPROVESTATUS, ISRELEASE, PERSONHELPREGISTERSEQNO, 
+      ISTRANS, TEMPSTATE, ISKCW
+      )
+    values (#{teacherseqno,jdbcType=DECIMAL}, #{standardseqno,jdbcType=DECIMAL}, #{standardname,jdbcType=VARCHAR}, 
+      #{standardabstract,jdbcType=VARCHAR}, #{releasedate,jdbcType=VARCHAR}, #{standardtype,jdbcType=VARCHAR}, 
+      #{issecrect,jdbcType=VARCHAR}, #{accessories,jdbcType=VARCHAR}, #{lastmodifiedtime,jdbcType=VARCHAR}, 
+      #{lastmodifiedmanid,jdbcType=DECIMAL}, #{lastmodifiedman,jdbcType=VARCHAR}, #{standarduuid,jdbcType=VARCHAR}, 
+      #{approvestatus,jdbcType=VARCHAR}, #{isrelease,jdbcType=VARCHAR}, #{personhelpregisterseqno,jdbcType=DECIMAL}, 
+      #{istrans,jdbcType=VARCHAR}, #{tempstate,jdbcType=CHAR}, #{iskcw,jdbcType=VARCHAR}
+      )
+  </insert>
+
+  <insert id="insertAddKey" parameterType="com.coder520.POI.TeacherStandard.entity.TeacherStandard" >
+    <selectKey keyProperty="standardseqno" resultType="long" order="BEFORE">
+      select  nvl(max(STANDARDSEQNO),0)+1 from TEACHER_STANDARD
+    </selectKey>
+    insert into TEACHER_STANDARD (TEACHERSEQNO, STANDARDSEQNO, STANDARDNAME,
+    STANDARDABSTRACT, RELEASEDATE, STANDARDTYPE,
+    ISSECRECT, ACCESSORIES, LASTMODIFIEDTIME,
+    LASTMODIFIEDMANID, LASTMODIFIEDMAN, STANDARDUUID,
+    APPROVESTATUS, ISRELEASE, PERSONHELPREGISTERSEQNO,
+    ISTRANS, TEMPSTATE, ISKCW
+    )
+    values (#{teacherseqno,jdbcType=DECIMAL}, #{standardseqno,jdbcType=DECIMAL}, #{standardname,jdbcType=VARCHAR},
+    #{standardabstract,jdbcType=VARCHAR}, #{releasedate,jdbcType=VARCHAR}, #{standardtype,jdbcType=VARCHAR},
+    #{issecrect,jdbcType=VARCHAR}, #{accessories,jdbcType=VARCHAR}, #{lastmodifiedtime,jdbcType=VARCHAR},
+    #{lastmodifiedmanid,jdbcType=DECIMAL}, #{lastmodifiedman,jdbcType=VARCHAR}, #{standarduuid,jdbcType=VARCHAR},
+    #{approvestatus,jdbcType=VARCHAR}, #{isrelease,jdbcType=VARCHAR}, #{personhelpregisterseqno,jdbcType=DECIMAL},
+    #{istrans,jdbcType=VARCHAR}, #{tempstate,jdbcType=CHAR}, #{iskcw,jdbcType=VARCHAR}
+    )
+  </insert>
+  <insert id="insertSelective" parameterType="com.coder520.POI.TeacherStandard.entity.TeacherStandard" >
+    insert into TEACHER_STANDARD
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="teacherseqno != null" >
+        TEACHERSEQNO,
+      </if>
+      <if test="standardseqno != null" >
+        STANDARDSEQNO,
+      </if>
+      <if test="standardname != null" >
+        STANDARDNAME,
+      </if>
+      <if test="standardabstract != null" >
+        STANDARDABSTRACT,
+      </if>
+      <if test="releasedate != null" >
+        RELEASEDATE,
+      </if>
+      <if test="standardtype != null" >
+        STANDARDTYPE,
+      </if>
+      <if test="issecrect != null" >
+        ISSECRECT,
+      </if>
+      <if test="accessories != null" >
+        ACCESSORIES,
+      </if>
+      <if test="lastmodifiedtime != null" >
+        LASTMODIFIEDTIME,
+      </if>
+      <if test="lastmodifiedmanid != null" >
+        LASTMODIFIEDMANID,
+      </if>
+      <if test="lastmodifiedman != null" >
+        LASTMODIFIEDMAN,
+      </if>
+      <if test="standarduuid != null" >
+        STANDARDUUID,
+      </if>
+      <if test="approvestatus != null" >
+        APPROVESTATUS,
+      </if>
+      <if test="isrelease != null" >
+        ISRELEASE,
+      </if>
+      <if test="personhelpregisterseqno != null" >
+        PERSONHELPREGISTERSEQNO,
+      </if>
+      <if test="istrans != null" >
+        ISTRANS,
+      </if>
+      <if test="tempstate != null" >
+        TEMPSTATE,
+      </if>
+      <if test="iskcw != null" >
+        ISKCW,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="teacherseqno != null" >
+        #{teacherseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="standardseqno != null" >
+        #{standardseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="standardname != null" >
+        #{standardname,jdbcType=VARCHAR},
+      </if>
+      <if test="standardabstract != null" >
+        #{standardabstract,jdbcType=VARCHAR},
+      </if>
+      <if test="releasedate != null" >
+        #{releasedate,jdbcType=VARCHAR},
+      </if>
+      <if test="standardtype != null" >
+        #{standardtype,jdbcType=VARCHAR},
+      </if>
+      <if test="issecrect != null" >
+        #{issecrect,jdbcType=VARCHAR},
+      </if>
+      <if test="accessories != null" >
+        #{accessories,jdbcType=VARCHAR},
+      </if>
+      <if test="lastmodifiedtime != null" >
+        #{lastmodifiedtime,jdbcType=VARCHAR},
+      </if>
+      <if test="lastmodifiedmanid != null" >
+        #{lastmodifiedmanid,jdbcType=DECIMAL},
+      </if>
+      <if test="lastmodifiedman != null" >
+        #{lastmodifiedman,jdbcType=VARCHAR},
+      </if>
+      <if test="standarduuid != null" >
+        #{standarduuid,jdbcType=VARCHAR},
+      </if>
+      <if test="approvestatus != null" >
+        #{approvestatus,jdbcType=VARCHAR},
+      </if>
+      <if test="isrelease != null" >
+        #{isrelease,jdbcType=VARCHAR},
+      </if>
+      <if test="personhelpregisterseqno != null" >
+        #{personhelpregisterseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="istrans != null" >
+        #{istrans,jdbcType=VARCHAR},
+      </if>
+      <if test="tempstate != null" >
+        #{tempstate,jdbcType=CHAR},
+      </if>
+      <if test="iskcw != null" >
+        #{iskcw,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.coder520.POI.TeacherStandard.entity.TeacherStandard" >
+    update TEACHER_STANDARD
+    <set >
+      <if test="standardname != null" >
+        STANDARDNAME = #{standardname,jdbcType=VARCHAR},
+      </if>
+      <if test="standardabstract != null" >
+        STANDARDABSTRACT = #{standardabstract,jdbcType=VARCHAR},
+      </if>
+      <if test="releasedate != null" >
+        RELEASEDATE = #{releasedate,jdbcType=VARCHAR},
+      </if>
+      <if test="standardtype != null" >
+        STANDARDTYPE = #{standardtype,jdbcType=VARCHAR},
+      </if>
+      <if test="issecrect != null" >
+        ISSECRECT = #{issecrect,jdbcType=VARCHAR},
+      </if>
+      <if test="accessories != null" >
+        ACCESSORIES = #{accessories,jdbcType=VARCHAR},
+      </if>
+      <if test="lastmodifiedtime != null" >
+        LASTMODIFIEDTIME = #{lastmodifiedtime,jdbcType=VARCHAR},
+      </if>
+      <if test="lastmodifiedmanid != null" >
+        LASTMODIFIEDMANID = #{lastmodifiedmanid,jdbcType=DECIMAL},
+      </if>
+      <if test="lastmodifiedman != null" >
+        LASTMODIFIEDMAN = #{lastmodifiedman,jdbcType=VARCHAR},
+      </if>
+      <if test="standarduuid != null" >
+        STANDARDUUID = #{standarduuid,jdbcType=VARCHAR},
+      </if>
+      <if test="approvestatus != null" >
+        APPROVESTATUS = #{approvestatus,jdbcType=VARCHAR},
+      </if>
+      <if test="isrelease != null" >
+        ISRELEASE = #{isrelease,jdbcType=VARCHAR},
+      </if>
+      <if test="personhelpregisterseqno != null" >
+        PERSONHELPREGISTERSEQNO = #{personhelpregisterseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="istrans != null" >
+        ISTRANS = #{istrans,jdbcType=VARCHAR},
+      </if>
+      <if test="tempstate != null" >
+        TEMPSTATE = #{tempstate,jdbcType=CHAR},
+      </if>
+      <if test="iskcw != null" >
+        ISKCW = #{iskcw,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where TEACHERSEQNO = #{teacherseqno,jdbcType=DECIMAL}
+      and STANDARDSEQNO = #{standardseqno,jdbcType=DECIMAL}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.coder520.POI.TeacherStandard.entity.TeacherStandard" >
+    update TEACHER_STANDARD
+    set STANDARDNAME = #{standardname,jdbcType=VARCHAR},
+      STANDARDABSTRACT = #{standardabstract,jdbcType=VARCHAR},
+      RELEASEDATE = #{releasedate,jdbcType=VARCHAR},
+      STANDARDTYPE = #{standardtype,jdbcType=VARCHAR},
+      ISSECRECT = #{issecrect,jdbcType=VARCHAR},
+      ACCESSORIES = #{accessories,jdbcType=VARCHAR},
+      LASTMODIFIEDTIME = #{lastmodifiedtime,jdbcType=VARCHAR},
+      LASTMODIFIEDMANID = #{lastmodifiedmanid,jdbcType=DECIMAL},
+      LASTMODIFIEDMAN = #{lastmodifiedman,jdbcType=VARCHAR},
+      STANDARDUUID = #{standarduuid,jdbcType=VARCHAR},
+      APPROVESTATUS = #{approvestatus,jdbcType=VARCHAR},
+      ISRELEASE = #{isrelease,jdbcType=VARCHAR},
+      PERSONHELPREGISTERSEQNO = #{personhelpregisterseqno,jdbcType=DECIMAL},
+      ISTRANS = #{istrans,jdbcType=VARCHAR},
+      TEMPSTATE = #{tempstate,jdbcType=CHAR},
+      ISKCW = #{iskcw,jdbcType=VARCHAR}
+    where TEACHERSEQNO = #{teacherseqno,jdbcType=DECIMAL}
+      and STANDARDSEQNO = #{standardseqno,jdbcType=DECIMAL}
+  </update>
+</mapper>

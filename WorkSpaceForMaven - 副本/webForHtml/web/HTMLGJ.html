@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1px" width="500px" align="center">
+    <tr>
+        <td><input type="checkbox" id="all" onclick="checkedAll(this)"/></td>
+        <td>商品名称</td>
+        <td>商品价格</td>
+        <td>商品数量</td>
+        <td>操作</td>
+    </tr>
+
+    <tr>
+        <td><input type="checkbox" class="one"/></td>
+        <td>MAC</td>
+        <td>18000</td>
+        <td>10</td>
+        <td>
+            <a href="#">删除</a>
+            <a href="#">修改</a>
+        </td>
+    </tr>
+
+    <tr>
+        <td><input type="checkbox" class="one"/></td>
+        <td>MAC</td>
+        <td>18000</td>
+        <td>10</td>
+        <td>
+            <a href="#">删除</a>
+            <a href="#">修改</a>
+        </td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" class="one"/></td>
+        <td>MAC</td>
+        <td>18000</td>
+        <td>10</td>
+        <td>
+            <a href="#">删除</a>
+            <a href="#">修改</a>
+        </td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" class="one"/></td>
+        <td>MAC</td>
+        <td>18000</td>
+        <td>10</td>
+        <td>
+            <a href="#">删除</a>
+            <a href="#">修改</a>
+        </td>
+    </tr>
+</table>
+</body>
+<script>
+    var trELes =  document.getElementsByTagName("tr");
+    for(var i  = 0; i < trELes.length; i++){
+        //判断是奇数行还是偶数行,
+        if (i % 2 == 0){
+            // 给奇数行设置一个背景色,
+            trELes[i].style.backgroundColor = "#4F81BD";
+        }else{
+            // 给偶数行也设置一个另外背景色
+            trELes[i].style.backgroundColor = "#FFB6C1";
+        }
+
+    }
+</script>
+</html>

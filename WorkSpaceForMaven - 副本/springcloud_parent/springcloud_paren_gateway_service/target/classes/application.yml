@@ -1,0 +1,49 @@
+server:
+  port: 18084
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      routes:
+      #id唯一标识，可自定义
+        - id: user-service-route
+            #路由的服务地址
+            #lb协议表示从Eureka注册中心获取服务请求地址
+          #user-provider访问的服务名称。
+          #路由地址如果通过lb协议加服务名称时，会自动使用负载均衡访问对应服务
+          uri: lb://user-provider
+
+#          uri: http://localhost:18079  //写死了
+          # 路由断言：路由拦截规则
+          predicates:
+#            - Path=/user/**
+            - Path=/**
+
+          filters:
+            - StripPrefix=1
+              #配置自定义局部过滤器，此处的名字与过滤器声明时的前缀一致
+            - MyParam=name
+#              - Path=/**
+#  去除路径前缀
+              #注意：PrefixPath与StripPrefix过滤器不要一起使用，一起使用等于没配置过滤器
+
+#       filters:  #注意：PrefixPath与StripPrefix过滤器不要一起使用，一起使用等于没配置过滤器
+#         - PrefixPath=/user  # 给当前路由所有请求，添加"/user"前缀
+#         - StripPrefix=1  # 去除路径前缀过滤器，一个"/"识别为一个路径
+#  2.6.2.2.1添加路径前缀
+              #- Path=/user/**
+              #注意：要想接下来的前缀过滤器生效，此处拦截规则为所有url:/**
+#              - Path=/**
+#          filters:
+#          - PrefixPath=/user  # 给当前路由所有请求，添加"/user"前缀
+          #默认过滤器配置
+#       default-filters:
+#            # 往响应过滤器中加入响应头信息
+#         - AddResponseHeader=X-Response-Default-MyName,itheima
+eureka:
+  client:
+    service-url:
+      # 注册Eureka Server集群
+      defaultZone: http://127.0.0.1:7001/eureka
+#  通过网关配置一个路由功能，用户访问网关的时候,如果用户请求的路径是以/user开始，则路由到user-provider服务去,修改application.yml配置即可实现，配置如下：

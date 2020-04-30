@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.itheima.dao.AccountDao">
+    <!--<resultMap id="accountMap" type="Account">-->
+        <!--<id column="ID" property="id"></id>-->
+        <!--<result column="UID" property="uid"></result>-->
+        <!--<result column="MONEY" property="money"></result>-->
+        <!--&lt;!&ndash;<association property="user" javaType="user">&ndash;&gt;-->
+            <!--&lt;!&ndash;<id property="id" column="id"></id>&ndash;&gt;-->
+            <!--&lt;!&ndash;<result property="username" column="username"></result>&ndash;&gt;-->
+            <!--&lt;!&ndash;<result property="birthday" column="birthday"></result>&ndash;&gt;-->
+            <!--&lt;!&ndash;<result property="sex" column="sex"></result>&ndash;&gt;-->
+            <!--&lt;!&ndash;<result property="address" column="address"></result>&ndash;&gt;-->
+        <!--&lt;!&ndash;</association>&ndash;&gt;-->
+        <!--<association property="user" javaType="User" column="uid" select="com.itheima.dao.UserDao.findById" fetchType="eager"></association>-->
+
+    <!--</resultMap>-->
+    <select id="findByAccountUser" resultMap="accountMap">
+        SELECT * from account;
+    </select>
+    <!--<select id="findAccountByUid" resultType="account" parameterType="int">-->
+        <!--SELECT * from account WHERE uid=#{uid};-->
+    <!--</select>-->
+
+
+
+
+</mapper>

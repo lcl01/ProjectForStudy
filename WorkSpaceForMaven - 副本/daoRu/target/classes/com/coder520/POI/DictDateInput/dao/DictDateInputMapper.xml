@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coder520.POI.DictDateInput.dao.DictDateInputMapper" >
+  <resultMap id="BaseResultMap" type="com.coder520.POI.DictDateInput.entity.DictDateInput" >
+    <id column="FIELDSEQNO" property="fieldseqno" jdbcType="DECIMAL" />
+    <result column="FIELDCODE" property="fieldcode" jdbcType="VARCHAR" />
+    <result column="FIELDNAME" property="fieldname" jdbcType="VARCHAR" />
+    <result column="FIELDVALUE" property="fieldvalue" jdbcType="VARCHAR" />
+    <result column="RANKID" property="rankid" jdbcType="DECIMAL" />
+    <result column="CLASSCODE" property="classcode" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    FIELDSEQNO, FIELDCODE, FIELDNAME, FIELDVALUE, RANKID, CLASSCODE
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from DICT_DATAINPUT
+    where FIELDSEQNO = #{fieldseqno,jdbcType=DECIMAL}
+  </select>
+
+  <select id="findByName" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select
+    <include refid="Base_Column_List" />
+    from DICT_DATAINPUT
+    where FIELDNAME = #{fieldname,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from DICT_DATAINPUT
+    where FIELDSEQNO = #{fieldseqno,jdbcType=DECIMAL}
+  </delete>
+  <insert id="insert" parameterType="com.coder520.POI.DictDateInput.entity.DictDateInput" >
+    insert into DICT_DATAINPUT (FIELDSEQNO, FIELDCODE, FIELDNAME, 
+      FIELDVALUE, RANKID, CLASSCODE
+      )
+    values (#{fieldseqno,jdbcType=DECIMAL}, #{fieldcode,jdbcType=VARCHAR}, #{fieldname,jdbcType=VARCHAR}, 
+      #{fieldvalue,jdbcType=VARCHAR}, #{rankid,jdbcType=DECIMAL}, #{classcode,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.coder520.POI.DictDateInput.entity.DictDateInput" >
+    insert into DICT_DATAINPUT
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="fieldseqno != null" >
+        FIELDSEQNO,
+      </if>
+      <if test="fieldcode != null" >
+        FIELDCODE,
+      </if>
+      <if test="fieldname != null" >
+        FIELDNAME,
+      </if>
+      <if test="fieldvalue != null" >
+        FIELDVALUE,
+      </if>
+      <if test="rankid != null" >
+        RANKID,
+      </if>
+      <if test="classcode != null" >
+        CLASSCODE,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="fieldseqno != null" >
+        #{fieldseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="fieldcode != null" >
+        #{fieldcode,jdbcType=VARCHAR},
+      </if>
+      <if test="fieldname != null" >
+        #{fieldname,jdbcType=VARCHAR},
+      </if>
+      <if test="fieldvalue != null" >
+        #{fieldvalue,jdbcType=VARCHAR},
+      </if>
+      <if test="rankid != null" >
+        #{rankid,jdbcType=DECIMAL},
+      </if>
+      <if test="classcode != null" >
+        #{classcode,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.coder520.POI.DictDateInput.entity.DictDateInput" >
+    update DICT_DATAINPUT
+    <set >
+      <if test="fieldcode != null" >
+        FIELDCODE = #{fieldcode,jdbcType=VARCHAR},
+      </if>
+      <if test="fieldname != null" >
+        FIELDNAME = #{fieldname,jdbcType=VARCHAR},
+      </if>
+      <if test="fieldvalue != null" >
+        FIELDVALUE = #{fieldvalue,jdbcType=VARCHAR},
+      </if>
+      <if test="rankid != null" >
+        RANKID = #{rankid,jdbcType=DECIMAL},
+      </if>
+      <if test="classcode != null" >
+        CLASSCODE = #{classcode,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where FIELDSEQNO = #{fieldseqno,jdbcType=DECIMAL}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.coder520.POI.DictDateInput.entity.DictDateInput" >
+    update DICT_DATAINPUT
+    set FIELDCODE = #{fieldcode,jdbcType=VARCHAR},
+      FIELDNAME = #{fieldname,jdbcType=VARCHAR},
+      FIELDVALUE = #{fieldvalue,jdbcType=VARCHAR},
+      RANKID = #{rankid,jdbcType=DECIMAL},
+      CLASSCODE = #{classcode,jdbcType=VARCHAR}
+    where FIELDSEQNO = #{fieldseqno,jdbcType=DECIMAL}
+  </update>
+</mapper>

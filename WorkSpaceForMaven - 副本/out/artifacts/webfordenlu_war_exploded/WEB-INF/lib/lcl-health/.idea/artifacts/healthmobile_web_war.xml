@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="healthmobile-web:war">
+    <output-path>$PROJECT_DIR$/health-parrent/healthmobile-web/target</output-path>
+    <root id="archive" name="healthmobile-web-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="healthmobile-web:war exploded" />
+    </root>
+  </artifact>
+</component>

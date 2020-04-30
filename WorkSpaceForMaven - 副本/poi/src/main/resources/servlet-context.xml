@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"
+            xmlns:beans="http://www.springframework.org/schema/beans">
+    <beans:property name="prefix" value="/WEB-INF/views/" />  
+    <beans:property name="suffix" value=".jsp" />  
+</beans:bean>  

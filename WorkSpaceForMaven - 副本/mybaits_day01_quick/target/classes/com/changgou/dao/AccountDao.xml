@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.health.dao.Accountdao">
+    <select id="findAll" resultType="account">
+        select * from account;
+    </select>
+    <select id="findById" parameterType="int" resultType="account">
+        select * from account where id = #{uid}
+    </select>
+    <select id="findByAccountUser" resultType="acuser">
+        select a.*,u.username,u.address FROM account a,user02 u WHERE u.id = a.uid
+    </select>
+    <select id="findAll01" resultMap="accountMap">
+        select u.*,a.id as aid,a.uid,a.money FROM account a,user02 u WHERE u.id = a.uid
+    </select>
+    <resultMap id="accountMap" type="account">
+        <id property="id" column="aid"></id>
+        <result property="uid" column="uid"></result>
+        <result property="money" column="money"></result>
+        <association property="user02" javaType="user">
+        <!--<association property="user02" javaType="User02">-->
+            <id property="username" column="username"></id>
+            <result property="birthday" column="birthday"></result>
+            <result property="sex" column="sex"></result>
+            <result property="address" column="address"></result>
+        </association>
+    </resultMap>
+    <select id="findAll02" resultMap="userMap">
+        SELECT u.*,a.id as aid,a.UID,a.MONEY from user02 u LEFT JOIN account a on u.id=a.UID
+    </select>
+    <resultMap id="userMap" type="user">
+        <id property="id" column="id"></id>
+        <result property="username" column="username"></result>
+        <result property="address" column="address"></result>
+        <result property="sex" column="sex"></result>
+        <result property="birthday" column="birthday"></result>
+        <collection property="accounts" ofType="account">
+            <id property="id" column="aid"></id>
+            <result property="uid" column="uid"></result>
+            <result property="money" column="money"></result>
+        </collection>
+    </resultMap>
+
+</mapper>

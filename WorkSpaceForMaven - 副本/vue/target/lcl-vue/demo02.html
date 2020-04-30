@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue_v-on:click</title>
+    <script src="js/vuejs-2.5.16.js"></script>
+</head>
+<body>
+<div id="app">
+    {{message}}
+    <br/>
+    <input type="button" value="改变一下" @click="fun01"/>
+    <br/>
+    <input type="text" value="hello" @keydown="fun02($event)"/>
+</div>
+<script>
+    new Vue(
+        {
+            el:"#app",
+            data:{
+                message:'你好！猴子鑫lcl de lp',
+            },
+            methods:{
+                fun01:function () {
+                    this.message='你好猴子鑫嘻嘻';
+                },
+                fun02:function (e) {
+                    var keyCode=e.keyCode;
+                    if(!(keyCode >=42 && keyCode <=57)){
+                        e.preventDefault();
+                    }
+                }
+            }
+        }
+    );
+</script>
+</body>
+</html>

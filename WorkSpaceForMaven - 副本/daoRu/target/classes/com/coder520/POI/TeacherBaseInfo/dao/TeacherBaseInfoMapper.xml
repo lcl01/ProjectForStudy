@@ -1,0 +1,693 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coder520.POI.TeacherBaseInfo.dao.TeacherBaseInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.coder520.POI.TeacherBaseInfo.entity.TeacherBaseInfo" >
+    <id column="TEACHERSEQNO" property="teacherseqno" jdbcType="DECIMAL" />
+    <result column="TEACHERNAME" property="teachername" jdbcType="VARCHAR" />
+    <result column="LOGINPASSWORD" property="loginpassword" jdbcType="VARCHAR" />
+    <result column="SEX" property="sex" jdbcType="VARCHAR" />
+    <result column="DEPTMENT" property="deptment" jdbcType="VARCHAR" />
+    <result column="LABORATORY" property="laboratory" jdbcType="VARCHAR" />
+    <result column="BRANCHOFLAB" property="branchoflab" jdbcType="VARCHAR" />
+    <result column="PHONE" property="phone" jdbcType="VARCHAR" />
+    <result column="REGISTINGTIME" property="registingtime" jdbcType="TIMESTAMP" />
+    <result column="NATIONALITY" property="nationality" jdbcType="VARCHAR" />
+    <result column="BIRTHDAY" property="birthday" jdbcType="VARCHAR" />
+    <result column="AGE" property="age" jdbcType="VARCHAR" />
+    <result column="DEGREES" property="degrees" jdbcType="VARCHAR" />
+    <result column="EDUCATION" property="education" jdbcType="VARCHAR" />
+    <result column="RESEARCHING" property="researching" jdbcType="VARCHAR" />
+    <result column="DUTIES" property="duties" jdbcType="VARCHAR" />
+    <result column="TITLES" property="titles" jdbcType="VARCHAR" />
+    <result column="SITUATIONOFPOST" property="situationofpost" jdbcType="VARCHAR" />
+    <result column="SPECIALISTTITLE" property="specialisttitle" jdbcType="VARCHAR" />
+    <result column="INSTRUCTOROF" property="instructorof" jdbcType="VARCHAR" />
+    <result column="ACADEMICEXPERTISE" property="academicexpertise" jdbcType="VARCHAR" />
+    <result column="YEARSOFINLAB" property="yearsofinlab" jdbcType="VARCHAR" />
+    <result column="ISTEAMCOOPERATION" property="isteamcooperation" jdbcType="VARCHAR" />
+    <result column="ISBACKBONE" property="isbackbone" jdbcType="VARCHAR" />
+    <result column="FUNCTIONOFLAB" property="functionoflab" jdbcType="VARCHAR" />
+    <result column="ISACADEMICBOARD" property="isacademicboard" jdbcType="VARCHAR" />
+    <result column="FUNCTIONOFACADEMICBOARD" property="functionofacademicboard" jdbcType="VARCHAR" />
+    <result column="TALENTSCATEGORY" property="talentscategory" jdbcType="VARCHAR" />
+    <result column="APPROVALDEPARTMENT" property="approvaldepartment" jdbcType="VARCHAR" />
+    <result column="GETDESIGNATIONTIME" property="getdesignationtime" jdbcType="VARCHAR" />
+    <result column="ISOVERSEASRETURNEE" property="isoverseasreturnee" jdbcType="VARCHAR" />
+    <result column="ISRESEARCHER" property="isresearcher" jdbcType="VARCHAR" />
+    <result column="RIGHTROLES" property="rightroles" jdbcType="DECIMAL" />
+    <result column="PHOTO" property="photo" jdbcType="VARCHAR" />
+    <result column="TEACHERLOGONNAME" property="teacherlogonname" jdbcType="VARCHAR" />
+    <result column="USERTYPE" property="usertype" jdbcType="VARCHAR" />
+    <result column="EMAIL" property="email" jdbcType="VARCHAR" />
+    <result column="INTRODUCTION" property="introduction" jdbcType="VARCHAR" />
+    <result column="OTHERINTODUCTION" property="otherintoduction" jdbcType="VARCHAR" />
+    <result column="DELETEFLAG" property="deleteflag" jdbcType="VARCHAR" />
+    <result column="GRASCHOOL" property="graschool" jdbcType="VARCHAR" />
+    <result column="WORKRESUME" property="workresume" jdbcType="VARCHAR" />
+    <result column="TITLESLV" property="titleslv" jdbcType="VARCHAR" />
+    <result column="MPHONE" property="mphone" jdbcType="VARCHAR" />
+    <result column="AUTHCODE" property="authcode" jdbcType="VARCHAR" />
+    <result column="ISBEACOMEGUIDE" property="isbeacomeguide" jdbcType="VARCHAR" />
+    <result column="TALENTSAREAS" property="talentsareas" jdbcType="VARCHAR" />
+    <result column="NATIONALPLAN" property="nationalplan" jdbcType="VARCHAR" />
+    <result column="ISCOMPLETE" property="iscomplete" jdbcType="VARCHAR" />
+    <result column="RESEARCHFIELDS" property="researchfields" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    TEACHERSEQNO, TEACHERNAME, LOGINPASSWORD, SEX, DEPTMENT, LABORATORY, BRANCHOFLAB, 
+    PHONE, REGISTINGTIME, NATIONALITY, BIRTHDAY, AGE, DEGREES, EDUCATION, RESEARCHING, 
+    DUTIES, TITLES, SITUATIONOFPOST, SPECIALISTTITLE, INSTRUCTOROF, ACADEMICEXPERTISE, 
+    YEARSOFINLAB, ISTEAMCOOPERATION, ISBACKBONE, FUNCTIONOFLAB, ISACADEMICBOARD, FUNCTIONOFACADEMICBOARD, 
+    TALENTSCATEGORY, APPROVALDEPARTMENT, GETDESIGNATIONTIME, ISOVERSEASRETURNEE, ISRESEARCHER, 
+    RIGHTROLES, PHOTO, TEACHERLOGONNAME, USERTYPE, EMAIL, INTRODUCTION, OTHERINTODUCTION, 
+    DELETEFLAG, GRASCHOOL, WORKRESUME, TITLESLV, MPHONE, AUTHCODE, ISBEACOMEGUIDE, TALENTSAREAS, 
+    NATIONALPLAN, ISCOMPLETE, RESEARCHFIELDS
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from TEACHER_BASEINFO
+    where TEACHERSEQNO = #{teacherseqno,jdbcType=VARCHAR}
+  </select>
+
+  <select id="findNewTeacher" resultMap="BaseResultMap"  >
+    select
+    <include refid="Base_Column_List" />
+    from TEACHER_BASEINFO
+    where TEACHERSEQNO > 44804
+--     where TEACHERSEQNO > 42035
+    ORDER BY TEACHERSEQNO ASC
+  </select>
+
+  <select id="findNewTeacherByName" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select
+    <include refid="Base_Column_List" />
+    from TEACHER_BASEINFO
+    where TEACHERNAME = #{teachername,jdbcType=DECIMAL}
+    AND TEACHERSEQNO > 44804
+--     AND TEACHERSEQNO > 42035
+    ORDER BY TEACHERSEQNO
+  </select>
+
+  <select id="findTeacherByName" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select
+    <include refid="Base_Column_List" />
+    from TEACHER_BASEINFO
+    where TEACHERNAME = #{teachername,jdbcType=DECIMAL}
+    ORDER BY TEACHERSEQNO DESC
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from TEACHER_BASEINFO
+    where TEACHERSEQNO = #{teacherseqno,jdbcType=DECIMAL}
+  </delete>
+  <insert id="insert" parameterType="com.coder520.POI.TeacherBaseInfo.entity.TeacherBaseInfo" >
+    insert into TEACHER_BASEINFO (TEACHERSEQNO, TEACHERNAME, LOGINPASSWORD, 
+      SEX, DEPTMENT, LABORATORY, 
+      BRANCHOFLAB, PHONE, REGISTINGTIME, 
+      NATIONALITY, BIRTHDAY, AGE, 
+      DEGREES, EDUCATION, RESEARCHING, 
+      DUTIES, TITLES, SITUATIONOFPOST, 
+      SPECIALISTTITLE, INSTRUCTOROF, ACADEMICEXPERTISE, 
+      YEARSOFINLAB, ISTEAMCOOPERATION, ISBACKBONE, 
+      FUNCTIONOFLAB, ISACADEMICBOARD, FUNCTIONOFACADEMICBOARD, 
+      TALENTSCATEGORY, APPROVALDEPARTMENT, GETDESIGNATIONTIME, 
+      ISOVERSEASRETURNEE, ISRESEARCHER, RIGHTROLES, 
+      PHOTO, TEACHERLOGONNAME, USERTYPE, 
+      EMAIL, INTRODUCTION, OTHERINTODUCTION, 
+      DELETEFLAG, GRASCHOOL, WORKRESUME, 
+      TITLESLV, MPHONE, AUTHCODE, 
+      ISBEACOMEGUIDE, TALENTSAREAS, NATIONALPLAN, 
+      ISCOMPLETE, RESEARCHFIELDS)
+    values (#{teacherseqno,jdbcType=DECIMAL}, #{teachername,jdbcType=VARCHAR}, #{loginpassword,jdbcType=VARCHAR}, 
+      #{sex,jdbcType=VARCHAR}, #{deptment,jdbcType=VARCHAR}, #{laboratory,jdbcType=VARCHAR}, 
+      #{branchoflab,jdbcType=VARCHAR}, #{phone,jdbcType=VARCHAR}, #{registingtime,jdbcType=TIMESTAMP}, 
+      #{nationality,jdbcType=VARCHAR}, #{birthday,jdbcType=VARCHAR}, #{age,jdbcType=VARCHAR}, 
+      #{degrees,jdbcType=VARCHAR}, #{education,jdbcType=VARCHAR}, #{researching,jdbcType=VARCHAR}, 
+      #{duties,jdbcType=VARCHAR}, #{titles,jdbcType=VARCHAR}, #{situationofpost,jdbcType=VARCHAR}, 
+      #{specialisttitle,jdbcType=VARCHAR}, #{instructorof,jdbcType=VARCHAR}, #{academicexpertise,jdbcType=VARCHAR}, 
+      #{yearsofinlab,jdbcType=VARCHAR}, #{isteamcooperation,jdbcType=VARCHAR}, #{isbackbone,jdbcType=VARCHAR}, 
+      #{functionoflab,jdbcType=VARCHAR}, #{isacademicboard,jdbcType=VARCHAR}, #{functionofacademicboard,jdbcType=VARCHAR}, 
+      #{talentscategory,jdbcType=VARCHAR}, #{approvaldepartment,jdbcType=VARCHAR}, #{getdesignationtime,jdbcType=VARCHAR}, 
+      #{isoverseasreturnee,jdbcType=VARCHAR}, #{isresearcher,jdbcType=VARCHAR}, #{rightroles,jdbcType=DECIMAL}, 
+      #{photo,jdbcType=VARCHAR}, #{teacherlogonname,jdbcType=VARCHAR}, #{usertype,jdbcType=VARCHAR}, 
+      #{email,jdbcType=VARCHAR}, #{introduction,jdbcType=VARCHAR}, #{otherintoduction,jdbcType=VARCHAR}, 
+      #{deleteflag,jdbcType=VARCHAR}, #{graschool,jdbcType=VARCHAR}, #{workresume,jdbcType=VARCHAR}, 
+      #{titleslv,jdbcType=VARCHAR}, #{mphone,jdbcType=VARCHAR}, #{authcode,jdbcType=VARCHAR}, 
+      #{isbeacomeguide,jdbcType=VARCHAR}, #{talentsareas,jdbcType=VARCHAR}, #{nationalplan,jdbcType=VARCHAR}, 
+      #{iscomplete,jdbcType=VARCHAR}, #{researchfields,jdbcType=VARCHAR})
+  </insert>
+
+  <insert id="insertAddKey" parameterType="com.coder520.POI.TeacherBaseInfo.entity.TeacherBaseInfo" >
+    <selectKey keyProperty="teacherseqno" resultType="long" order="BEFORE">
+      select  nvl(max(TEACHERSEQNO),0)+1 from TEACHER_BASEINFO
+    </selectKey>
+    insert into TEACHER_BASEINFO (TEACHERSEQNO, TEACHERNAME, LOGINPASSWORD,
+    SEX, DEPTMENT, LABORATORY,
+    BRANCHOFLAB, PHONE, REGISTINGTIME,
+    NATIONALITY, BIRTHDAY, AGE,
+    DEGREES, EDUCATION, RESEARCHING,
+    DUTIES, TITLES, SITUATIONOFPOST,
+    SPECIALISTTITLE, INSTRUCTOROF, ACADEMICEXPERTISE,
+    YEARSOFINLAB, ISTEAMCOOPERATION, ISBACKBONE,
+    FUNCTIONOFLAB, ISACADEMICBOARD, FUNCTIONOFACADEMICBOARD,
+    TALENTSCATEGORY, APPROVALDEPARTMENT, GETDESIGNATIONTIME,
+    ISOVERSEASRETURNEE, ISRESEARCHER, RIGHTROLES,
+    PHOTO, TEACHERLOGONNAME, USERTYPE,
+    EMAIL, INTRODUCTION, OTHERINTODUCTION,
+    DELETEFLAG, GRASCHOOL, WORKRESUME,
+    TITLESLV, MPHONE, AUTHCODE,
+    ISBEACOMEGUIDE, TALENTSAREAS, NATIONALPLAN,
+    ISCOMPLETE, RESEARCHFIELDS)
+    values (#{teacherseqno,jdbcType=DECIMAL}, #{teachername,jdbcType=VARCHAR}, #{loginpassword,jdbcType=VARCHAR},
+    #{sex,jdbcType=VARCHAR}, #{deptment,jdbcType=VARCHAR}, #{laboratory,jdbcType=VARCHAR},
+    #{branchoflab,jdbcType=VARCHAR}, #{phone,jdbcType=VARCHAR}, #{registingtime,jdbcType=TIMESTAMP},
+    #{nationality,jdbcType=VARCHAR}, #{birthday,jdbcType=VARCHAR}, #{age,jdbcType=VARCHAR},
+    #{degrees,jdbcType=VARCHAR}, #{education,jdbcType=VARCHAR}, #{researching,jdbcType=VARCHAR},
+    #{duties,jdbcType=VARCHAR}, #{titles,jdbcType=VARCHAR}, #{situationofpost,jdbcType=VARCHAR},
+    #{specialisttitle,jdbcType=VARCHAR}, #{instructorof,jdbcType=VARCHAR}, #{academicexpertise,jdbcType=VARCHAR},
+    #{yearsofinlab,jdbcType=VARCHAR}, #{isteamcooperation,jdbcType=VARCHAR}, #{isbackbone,jdbcType=VARCHAR},
+    #{functionoflab,jdbcType=VARCHAR}, #{isacademicboard,jdbcType=VARCHAR}, #{functionofacademicboard,jdbcType=VARCHAR},
+    #{talentscategory,jdbcType=VARCHAR}, #{approvaldepartment,jdbcType=VARCHAR}, #{getdesignationtime,jdbcType=VARCHAR},
+    #{isoverseasreturnee,jdbcType=VARCHAR}, #{isresearcher,jdbcType=VARCHAR}, #{rightroles,jdbcType=DECIMAL},
+    #{photo,jdbcType=VARCHAR}, #{teacherlogonname,jdbcType=VARCHAR}, #{usertype,jdbcType=VARCHAR},
+    #{email,jdbcType=VARCHAR}, #{introduction,jdbcType=VARCHAR}, #{otherintoduction,jdbcType=VARCHAR},
+    #{deleteflag,jdbcType=VARCHAR}, #{graschool,jdbcType=VARCHAR}, #{workresume,jdbcType=VARCHAR},
+    #{titleslv,jdbcType=VARCHAR}, #{mphone,jdbcType=VARCHAR}, #{authcode,jdbcType=VARCHAR},
+    #{isbeacomeguide,jdbcType=VARCHAR}, #{talentsareas,jdbcType=VARCHAR}, #{nationalplan,jdbcType=VARCHAR},
+    #{iscomplete,jdbcType=VARCHAR}, #{researchfields,jdbcType=VARCHAR})
+  </insert>
+
+  <insert id="insertSelective" parameterType="com.coder520.POI.TeacherBaseInfo.entity.TeacherBaseInfo" >
+    insert into TEACHER_BASEINFO
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="teacherseqno != null" >
+        TEACHERSEQNO,
+      </if>
+      <if test="teachername != null" >
+        TEACHERNAME,
+      </if>
+      <if test="loginpassword != null" >
+        LOGINPASSWORD,
+      </if>
+      <if test="sex != null" >
+        SEX,
+      </if>
+      <if test="deptment != null" >
+        DEPTMENT,
+      </if>
+      <if test="laboratory != null" >
+        LABORATORY,
+      </if>
+      <if test="branchoflab != null" >
+        BRANCHOFLAB,
+      </if>
+      <if test="phone != null" >
+        PHONE,
+      </if>
+      <if test="registingtime != null" >
+        REGISTINGTIME,
+      </if>
+      <if test="nationality != null" >
+        NATIONALITY,
+      </if>
+      <if test="birthday != null" >
+        BIRTHDAY,
+      </if>
+      <if test="age != null" >
+        AGE,
+      </if>
+      <if test="degrees != null" >
+        DEGREES,
+      </if>
+      <if test="education != null" >
+        EDUCATION,
+      </if>
+      <if test="researching != null" >
+        RESEARCHING,
+      </if>
+      <if test="duties != null" >
+        DUTIES,
+      </if>
+      <if test="titles != null" >
+        TITLES,
+      </if>
+      <if test="situationofpost != null" >
+        SITUATIONOFPOST,
+      </if>
+      <if test="specialisttitle != null" >
+        SPECIALISTTITLE,
+      </if>
+      <if test="instructorof != null" >
+        INSTRUCTOROF,
+      </if>
+      <if test="academicexpertise != null" >
+        ACADEMICEXPERTISE,
+      </if>
+      <if test="yearsofinlab != null" >
+        YEARSOFINLAB,
+      </if>
+      <if test="isteamcooperation != null" >
+        ISTEAMCOOPERATION,
+      </if>
+      <if test="isbackbone != null" >
+        ISBACKBONE,
+      </if>
+      <if test="functionoflab != null" >
+        FUNCTIONOFLAB,
+      </if>
+      <if test="isacademicboard != null" >
+        ISACADEMICBOARD,
+      </if>
+      <if test="functionofacademicboard != null" >
+        FUNCTIONOFACADEMICBOARD,
+      </if>
+      <if test="talentscategory != null" >
+        TALENTSCATEGORY,
+      </if>
+      <if test="approvaldepartment != null" >
+        APPROVALDEPARTMENT,
+      </if>
+      <if test="getdesignationtime != null" >
+        GETDESIGNATIONTIME,
+      </if>
+      <if test="isoverseasreturnee != null" >
+        ISOVERSEASRETURNEE,
+      </if>
+      <if test="isresearcher != null" >
+        ISRESEARCHER,
+      </if>
+      <if test="rightroles != null" >
+        RIGHTROLES,
+      </if>
+      <if test="photo != null" >
+        PHOTO,
+      </if>
+      <if test="teacherlogonname != null" >
+        TEACHERLOGONNAME,
+      </if>
+      <if test="usertype != null" >
+        USERTYPE,
+      </if>
+      <if test="email != null" >
+        EMAIL,
+      </if>
+      <if test="introduction != null" >
+        INTRODUCTION,
+      </if>
+      <if test="otherintoduction != null" >
+        OTHERINTODUCTION,
+      </if>
+      <if test="deleteflag != null" >
+        DELETEFLAG,
+      </if>
+      <if test="graschool != null" >
+        GRASCHOOL,
+      </if>
+      <if test="workresume != null" >
+        WORKRESUME,
+      </if>
+      <if test="titleslv != null" >
+        TITLESLV,
+      </if>
+      <if test="mphone != null" >
+        MPHONE,
+      </if>
+      <if test="authcode != null" >
+        AUTHCODE,
+      </if>
+      <if test="isbeacomeguide != null" >
+        ISBEACOMEGUIDE,
+      </if>
+      <if test="talentsareas != null" >
+        TALENTSAREAS,
+      </if>
+      <if test="nationalplan != null" >
+        NATIONALPLAN,
+      </if>
+      <if test="iscomplete != null" >
+        ISCOMPLETE,
+      </if>
+      <if test="researchfields != null" >
+        RESEARCHFIELDS,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="teacherseqno != null" >
+        #{teacherseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="teachername != null" >
+        #{teachername,jdbcType=VARCHAR},
+      </if>
+      <if test="loginpassword != null" >
+        #{loginpassword,jdbcType=VARCHAR},
+      </if>
+      <if test="sex != null" >
+        #{sex,jdbcType=VARCHAR},
+      </if>
+      <if test="deptment != null" >
+        #{deptment,jdbcType=VARCHAR},
+      </if>
+      <if test="laboratory != null" >
+        #{laboratory,jdbcType=VARCHAR},
+      </if>
+      <if test="branchoflab != null" >
+        #{branchoflab,jdbcType=VARCHAR},
+      </if>
+      <if test="phone != null" >
+        #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="registingtime != null" >
+        #{registingtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="nationality != null" >
+        #{nationality,jdbcType=VARCHAR},
+      </if>
+      <if test="birthday != null" >
+        #{birthday,jdbcType=VARCHAR},
+      </if>
+      <if test="age != null" >
+        #{age,jdbcType=VARCHAR},
+      </if>
+      <if test="degrees != null" >
+        #{degrees,jdbcType=VARCHAR},
+      </if>
+      <if test="education != null" >
+        #{education,jdbcType=VARCHAR},
+      </if>
+      <if test="researching != null" >
+        #{researching,jdbcType=VARCHAR},
+      </if>
+      <if test="duties != null" >
+        #{duties,jdbcType=VARCHAR},
+      </if>
+      <if test="titles != null" >
+        #{titles,jdbcType=VARCHAR},
+      </if>
+      <if test="situationofpost != null" >
+        #{situationofpost,jdbcType=VARCHAR},
+      </if>
+      <if test="specialisttitle != null" >
+        #{specialisttitle,jdbcType=VARCHAR},
+      </if>
+      <if test="instructorof != null" >
+        #{instructorof,jdbcType=VARCHAR},
+      </if>
+      <if test="academicexpertise != null" >
+        #{academicexpertise,jdbcType=VARCHAR},
+      </if>
+      <if test="yearsofinlab != null" >
+        #{yearsofinlab,jdbcType=VARCHAR},
+      </if>
+      <if test="isteamcooperation != null" >
+        #{isteamcooperation,jdbcType=VARCHAR},
+      </if>
+      <if test="isbackbone != null" >
+        #{isbackbone,jdbcType=VARCHAR},
+      </if>
+      <if test="functionoflab != null" >
+        #{functionoflab,jdbcType=VARCHAR},
+      </if>
+      <if test="isacademicboard != null" >
+        #{isacademicboard,jdbcType=VARCHAR},
+      </if>
+      <if test="functionofacademicboard != null" >
+        #{functionofacademicboard,jdbcType=VARCHAR},
+      </if>
+      <if test="talentscategory != null" >
+        #{talentscategory,jdbcType=VARCHAR},
+      </if>
+      <if test="approvaldepartment != null" >
+        #{approvaldepartment,jdbcType=VARCHAR},
+      </if>
+      <if test="getdesignationtime != null" >
+        #{getdesignationtime,jdbcType=VARCHAR},
+      </if>
+      <if test="isoverseasreturnee != null" >
+        #{isoverseasreturnee,jdbcType=VARCHAR},
+      </if>
+      <if test="isresearcher != null" >
+        #{isresearcher,jdbcType=VARCHAR},
+      </if>
+      <if test="rightroles != null" >
+        #{rightroles,jdbcType=DECIMAL},
+      </if>
+      <if test="photo != null" >
+        #{photo,jdbcType=VARCHAR},
+      </if>
+      <if test="teacherlogonname != null" >
+        #{teacherlogonname,jdbcType=VARCHAR},
+      </if>
+      <if test="usertype != null" >
+        #{usertype,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null" >
+        #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="introduction != null" >
+        #{introduction,jdbcType=VARCHAR},
+      </if>
+      <if test="otherintoduction != null" >
+        #{otherintoduction,jdbcType=VARCHAR},
+      </if>
+      <if test="deleteflag != null" >
+        #{deleteflag,jdbcType=VARCHAR},
+      </if>
+      <if test="graschool != null" >
+        #{graschool,jdbcType=VARCHAR},
+      </if>
+      <if test="workresume != null" >
+        #{workresume,jdbcType=VARCHAR},
+      </if>
+      <if test="titleslv != null" >
+        #{titleslv,jdbcType=VARCHAR},
+      </if>
+      <if test="mphone != null" >
+        #{mphone,jdbcType=VARCHAR},
+      </if>
+      <if test="authcode != null" >
+        #{authcode,jdbcType=VARCHAR},
+      </if>
+      <if test="isbeacomeguide != null" >
+        #{isbeacomeguide,jdbcType=VARCHAR},
+      </if>
+      <if test="talentsareas != null" >
+        #{talentsareas,jdbcType=VARCHAR},
+      </if>
+      <if test="nationalplan != null" >
+        #{nationalplan,jdbcType=VARCHAR},
+      </if>
+      <if test="iscomplete != null" >
+        #{iscomplete,jdbcType=VARCHAR},
+      </if>
+      <if test="researchfields != null" >
+        #{researchfields,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.coder520.POI.TeacherBaseInfo.entity.TeacherBaseInfo" >
+    update TEACHER_BASEINFO
+    <set >
+      <if test="teachername != null" >
+        TEACHERNAME = #{teachername,jdbcType=VARCHAR},
+      </if>
+      <if test="loginpassword != null" >
+        LOGINPASSWORD = #{loginpassword,jdbcType=VARCHAR},
+      </if>
+      <if test="sex != null" >
+        SEX = #{sex,jdbcType=VARCHAR},
+      </if>
+      <if test="deptment != null" >
+        DEPTMENT = #{deptment,jdbcType=VARCHAR},
+      </if>
+      <if test="laboratory != null" >
+        LABORATORY = #{laboratory,jdbcType=VARCHAR},
+      </if>
+      <if test="branchoflab != null" >
+        BRANCHOFLAB = #{branchoflab,jdbcType=VARCHAR},
+      </if>
+      <if test="phone != null" >
+        PHONE = #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="registingtime != null" >
+        REGISTINGTIME = #{registingtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="nationality != null" >
+        NATIONALITY = #{nationality,jdbcType=VARCHAR},
+      </if>
+      <if test="birthday != null" >
+        BIRTHDAY = #{birthday,jdbcType=VARCHAR},
+      </if>
+      <if test="age != null" >
+        AGE = #{age,jdbcType=VARCHAR},
+      </if>
+      <if test="degrees != null" >
+        DEGREES = #{degrees,jdbcType=VARCHAR},
+      </if>
+      <if test="education != null" >
+        EDUCATION = #{education,jdbcType=VARCHAR},
+      </if>
+      <if test="researching != null" >
+        RESEARCHING = #{researching,jdbcType=VARCHAR},
+      </if>
+      <if test="duties != null" >
+        DUTIES = #{duties,jdbcType=VARCHAR},
+      </if>
+      <if test="titles != null" >
+        TITLES = #{titles,jdbcType=VARCHAR},
+      </if>
+      <if test="situationofpost != null" >
+        SITUATIONOFPOST = #{situationofpost,jdbcType=VARCHAR},
+      </if>
+      <if test="specialisttitle != null" >
+        SPECIALISTTITLE = #{specialisttitle,jdbcType=VARCHAR},
+      </if>
+      <if test="instructorof != null" >
+        INSTRUCTOROF = #{instructorof,jdbcType=VARCHAR},
+      </if>
+      <if test="academicexpertise != null" >
+        ACADEMICEXPERTISE = #{academicexpertise,jdbcType=VARCHAR},
+      </if>
+      <if test="yearsofinlab != null" >
+        YEARSOFINLAB = #{yearsofinlab,jdbcType=VARCHAR},
+      </if>
+      <if test="isteamcooperation != null" >
+        ISTEAMCOOPERATION = #{isteamcooperation,jdbcType=VARCHAR},
+      </if>
+      <if test="isbackbone != null" >
+        ISBACKBONE = #{isbackbone,jdbcType=VARCHAR},
+      </if>
+      <if test="functionoflab != null" >
+        FUNCTIONOFLAB = #{functionoflab,jdbcType=VARCHAR},
+      </if>
+      <if test="isacademicboard != null" >
+        ISACADEMICBOARD = #{isacademicboard,jdbcType=VARCHAR},
+      </if>
+      <if test="functionofacademicboard != null" >
+        FUNCTIONOFACADEMICBOARD = #{functionofacademicboard,jdbcType=VARCHAR},
+      </if>
+      <if test="talentscategory != null" >
+        TALENTSCATEGORY = #{talentscategory,jdbcType=VARCHAR},
+      </if>
+      <if test="approvaldepartment != null" >
+        APPROVALDEPARTMENT = #{approvaldepartment,jdbcType=VARCHAR},
+      </if>
+      <if test="getdesignationtime != null" >
+        GETDESIGNATIONTIME = #{getdesignationtime,jdbcType=VARCHAR},
+      </if>
+      <if test="isoverseasreturnee != null" >
+        ISOVERSEASRETURNEE = #{isoverseasreturnee,jdbcType=VARCHAR},
+      </if>
+      <if test="isresearcher != null" >
+        ISRESEARCHER = #{isresearcher,jdbcType=VARCHAR},
+      </if>
+      <if test="rightroles != null" >
+        RIGHTROLES = #{rightroles,jdbcType=DECIMAL},
+      </if>
+      <if test="photo != null" >
+        PHOTO = #{photo,jdbcType=VARCHAR},
+      </if>
+      <if test="teacherlogonname != null" >
+        TEACHERLOGONNAME = #{teacherlogonname,jdbcType=VARCHAR},
+      </if>
+      <if test="usertype != null" >
+        USERTYPE = #{usertype,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null" >
+        EMAIL = #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="introduction != null" >
+        INTRODUCTION = #{introduction,jdbcType=VARCHAR},
+      </if>
+      <if test="otherintoduction != null" >
+        OTHERINTODUCTION = #{otherintoduction,jdbcType=VARCHAR},
+      </if>
+      <if test="deleteflag != null" >
+        DELETEFLAG = #{deleteflag,jdbcType=VARCHAR},
+      </if>
+      <if test="graschool != null" >
+        GRASCHOOL = #{graschool,jdbcType=VARCHAR},
+      </if>
+      <if test="workresume != null" >
+        WORKRESUME = #{workresume,jdbcType=VARCHAR},
+      </if>
+      <if test="titleslv != null" >
+        TITLESLV = #{titleslv,jdbcType=VARCHAR},
+      </if>
+      <if test="mphone != null" >
+        MPHONE = #{mphone,jdbcType=VARCHAR},
+      </if>
+      <if test="authcode != null" >
+        AUTHCODE = #{authcode,jdbcType=VARCHAR},
+      </if>
+      <if test="isbeacomeguide != null" >
+        ISBEACOMEGUIDE = #{isbeacomeguide,jdbcType=VARCHAR},
+      </if>
+      <if test="talentsareas != null" >
+        TALENTSAREAS = #{talentsareas,jdbcType=VARCHAR},
+      </if>
+      <if test="nationalplan != null" >
+        NATIONALPLAN = #{nationalplan,jdbcType=VARCHAR},
+      </if>
+      <if test="iscomplete != null" >
+        ISCOMPLETE = #{iscomplete,jdbcType=VARCHAR},
+      </if>
+      <if test="researchfields != null" >
+        RESEARCHFIELDS = #{researchfields,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where TEACHERSEQNO = #{teacherseqno,jdbcType=DECIMAL}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.coder520.POI.TeacherBaseInfo.entity.TeacherBaseInfo" >
+    update TEACHER_BASEINFO
+    set TEACHERNAME = #{teachername,jdbcType=VARCHAR},
+      LOGINPASSWORD = #{loginpassword,jdbcType=VARCHAR},
+      SEX = #{sex,jdbcType=VARCHAR},
+      DEPTMENT = #{deptment,jdbcType=VARCHAR},
+      LABORATORY = #{laboratory,jdbcType=VARCHAR},
+      BRANCHOFLAB = #{branchoflab,jdbcType=VARCHAR},
+      PHONE = #{phone,jdbcType=VARCHAR},
+      REGISTINGTIME = #{registingtime,jdbcType=TIMESTAMP},
+      NATIONALITY = #{nationality,jdbcType=VARCHAR},
+      BIRTHDAY = #{birthday,jdbcType=VARCHAR},
+      AGE = #{age,jdbcType=VARCHAR},
+      DEGREES = #{degrees,jdbcType=VARCHAR},
+      EDUCATION = #{education,jdbcType=VARCHAR},
+      RESEARCHING = #{researching,jdbcType=VARCHAR},
+      DUTIES = #{duties,jdbcType=VARCHAR},
+      TITLES = #{titles,jdbcType=VARCHAR},
+      SITUATIONOFPOST = #{situationofpost,jdbcType=VARCHAR},
+      SPECIALISTTITLE = #{specialisttitle,jdbcType=VARCHAR},
+      INSTRUCTOROF = #{instructorof,jdbcType=VARCHAR},
+      ACADEMICEXPERTISE = #{academicexpertise,jdbcType=VARCHAR},
+      YEARSOFINLAB = #{yearsofinlab,jdbcType=VARCHAR},
+      ISTEAMCOOPERATION = #{isteamcooperation,jdbcType=VARCHAR},
+      ISBACKBONE = #{isbackbone,jdbcType=VARCHAR},
+      FUNCTIONOFLAB = #{functionoflab,jdbcType=VARCHAR},
+      ISACADEMICBOARD = #{isacademicboard,jdbcType=VARCHAR},
+      FUNCTIONOFACADEMICBOARD = #{functionofacademicboard,jdbcType=VARCHAR},
+      TALENTSCATEGORY = #{talentscategory,jdbcType=VARCHAR},
+      APPROVALDEPARTMENT = #{approvaldepartment,jdbcType=VARCHAR},
+      GETDESIGNATIONTIME = #{getdesignationtime,jdbcType=VARCHAR},
+      ISOVERSEASRETURNEE = #{isoverseasreturnee,jdbcType=VARCHAR},
+      ISRESEARCHER = #{isresearcher,jdbcType=VARCHAR},
+      RIGHTROLES = #{rightroles,jdbcType=DECIMAL},
+      PHOTO = #{photo,jdbcType=VARCHAR},
+      TEACHERLOGONNAME = #{teacherlogonname,jdbcType=VARCHAR},
+      USERTYPE = #{usertype,jdbcType=VARCHAR},
+      EMAIL = #{email,jdbcType=VARCHAR},
+      INTRODUCTION = #{introduction,jdbcType=VARCHAR},
+      OTHERINTODUCTION = #{otherintoduction,jdbcType=VARCHAR},
+      DELETEFLAG = #{deleteflag,jdbcType=VARCHAR},
+      GRASCHOOL = #{graschool,jdbcType=VARCHAR},
+      WORKRESUME = #{workresume,jdbcType=VARCHAR},
+      TITLESLV = #{titleslv,jdbcType=VARCHAR},
+      MPHONE = #{mphone,jdbcType=VARCHAR},
+      AUTHCODE = #{authcode,jdbcType=VARCHAR},
+      ISBEACOMEGUIDE = #{isbeacomeguide,jdbcType=VARCHAR},
+      TALENTSAREAS = #{talentsareas,jdbcType=VARCHAR},
+      NATIONALPLAN = #{nationalplan,jdbcType=VARCHAR},
+      ISCOMPLETE = #{iscomplete,jdbcType=VARCHAR},
+      RESEARCHFIELDS = #{researchfields,jdbcType=VARCHAR}
+    where TEACHERSEQNO = #{teacherseqno,jdbcType=DECIMAL}
+  </update>
+</mapper>

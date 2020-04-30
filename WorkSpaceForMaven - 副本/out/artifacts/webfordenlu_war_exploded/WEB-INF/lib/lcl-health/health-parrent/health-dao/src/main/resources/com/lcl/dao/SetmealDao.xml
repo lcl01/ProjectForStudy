@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lcl.dao.SetmealDao">
+    <insert id="add" parameterType="com.lcl.pojo.Setmeal">
+        <selectKey resultType="java.lang.Integer" order="AFTER" keyProperty="id">
+            SELECT last_insert_id()
+        </selectKey>
+        insert INTO t_setmeal (code,name,sex,age,helpCode,price,remark,attention,img)
+        values(#{code},#{name},#{sex},#{age},#{helpCode},#{price},#{remark},#{attention},#{img})
+    </insert>
+    <insert id="setSetmealAndCheckGroup" parameterType="hashmap">
+        insert into t_setmeal_checkgoup(setmeal_id,checkgroup_id)
+        VALUES (#{setmeal_id},#{checkgroup_id})
+    </insert>
+    <select id="selectByCondition" parameterType="String" resultType="com.lcl.pojo.Setmeal">
+        SELECT * from t_setmeal
+        <if test="value != null and value.length > 0">
+            WHERE code =#{VALUE} OR name= #{value} or helpCode=#{value}
+        </if>
+    </select>
+    <select id="findAll" resultType="com.lcl.pojo.Setmeal">
+        select * FROM t_setmeal
+    </select>
+    <resultMap type="com.lcl.pojo.Setmeal" id="baseResultMap">
+        <id column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="code" property="code"/>
+        <result column="helpCode" property="helpCode"/>
+        <result column="sex" property="sex"/>
+        <result column="age" property="age"/>
+        <result column="price" property="price"/>
+        <result column="remark" property="remark"/>
+        <result column="attention" property="attention"/>
+        <result column="img" property="img"/>
+    </resultMap>
+    <resultMap type="com.lcl.pojo.Setmeal" id="findByIdResultMap" extends="baseResultMap">
+        <collection property="checkGroups" javaType="ArrayList"
+                    ofType="com.lcl.pojo.CheckGroup" column="id"
+                    select="com.lcl.dao.CheckGroupDao.findCheckGroupById">
+        </collection>
+    </resultMap>
+    <select id="findById" resultMap="findByIdResultMap">
+        select * from t_setmeal  where id=#{id}
+    </select>
+    <select id="findSetmealCount" resultType="map">
+         select s.name,count(o.id) as value
+  	from t_order o ,t_setmeal s
+  	where o.setmeal_id = s.id
+  	group by s.name
+   </select>
+</mapper>

@@ -1,0 +1,21 @@
+server:
+  port: 80
+  servlet:
+    context-path: /hello
+name: ass
+user:
+  name: llc
+  age: 18
+  sex: shengzheng
+  userListObj:
+    - name: llc
+      age: 24
+      sex: boy
+    - name: ly
+      age: 19
+      sex: girl
+user2: {name: llc, age: 18, addr: shengzheng}
+userList:
+  - llc
+  - lcly
+userList2: [llc,lcly]

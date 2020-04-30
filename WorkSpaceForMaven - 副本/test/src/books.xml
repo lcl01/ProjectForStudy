@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<books>
+    <book id="b1">
+        <name>四十二章经</name>
+        <autor>不详</autor>
+        <price>10000</price>
+    </book>
+    <book id="b2">
+        <name>葵花宝典</name>
+        <autor>小李子</autor>
+        <price>8888</price>
+    </book>
+    <apple>
+        <name>苹果</name>
+    </apple>
+</books>

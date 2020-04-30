@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coder520.POI.TeacherConferences.dao.TeacherConferencesMapper" >
+  <resultMap id="BaseResultMap" type="com.coder520.POI.TeacherConferences.entity.TeacherConferences" >
+    <id column="TEACHERSEQNO" property="teacherseqno" jdbcType="DECIMAL" />
+    <id column="CONFERENCESEQNO" property="conferenceseqno" jdbcType="DECIMAL" />
+    <result column="CONFERENCENAME" property="conferencename" jdbcType="VARCHAR" />
+    <result column="SPONSOR" property="sponsor" jdbcType="VARCHAR" />
+    <result column="TYPE1" property="type1" jdbcType="VARCHAR" />
+    <result column="TYPE2" property="type2" jdbcType="VARCHAR" />
+    <result column="CHAIRMAN" property="chairman" jdbcType="VARCHAR" />
+    <result column="HOLDINGTIME" property="holdingtime" jdbcType="VARCHAR" />
+    <result column="NUMBERSOFATTENDING" property="numbersofattending" jdbcType="VARCHAR" />
+    <result column="CONFERENCEACCESSORIES" property="conferenceaccessories" jdbcType="VARCHAR" />
+    <result column="LASTMODIFIEDTIME" property="lastmodifiedtime" jdbcType="VARCHAR" />
+    <result column="LASTMODIFIEDMAN" property="lastmodifiedman" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="CONFERENCEUUID" property="conferenceuuid" jdbcType="VARCHAR" />
+    <result column="LASTMODIFIEDMANID" property="lastmodifiedmanid" jdbcType="VARCHAR" />
+    <result column="PERSONHELPREGISTERSEQNO" property="personhelpregisterseqno" jdbcType="DECIMAL" />
+    <result column="TEMPSTATE" property="tempstate" jdbcType="CHAR" />
+    <result column="ISKCW" property="iskcw" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    TEACHERSEQNO, CONFERENCESEQNO, CONFERENCENAME, SPONSOR, TYPE1, TYPE2, CHAIRMAN, HOLDINGTIME, 
+    NUMBERSOFATTENDING, CONFERENCEACCESSORIES, LASTMODIFIEDTIME, LASTMODIFIEDMAN, STATUS, 
+    CONFERENCEUUID, LASTMODIFIEDMANID, PERSONHELPREGISTERSEQNO, TEMPSTATE, ISKCW
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="com.coder520.POI.TeacherConferences.entity.TeacherConferencesKey" >
+    select 
+    <include refid="Base_Column_List" />
+    from TEACHER_CONFERENCES
+    where TEACHERSEQNO = #{teacherseqno,jdbcType=DECIMAL}
+      and CONFERENCESEQNO = #{conferenceseqno,jdbcType=DECIMAL}
+  </select>
+
+  <select id="findByName" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select
+    <include refid="Base_Column_List" />
+    from TEACHER_CONFERENCES
+    where CONFERENCENAME = #{conferencename,jdbcType=VARCHAR}
+  </select>
+
+  <delete id="deleteByPrimaryKey" parameterType="com.coder520.POI.TeacherConferences.entity.TeacherConferencesKey" >
+    delete from TEACHER_CONFERENCES
+    where TEACHERSEQNO = #{teacherseqno,jdbcType=DECIMAL}
+      and CONFERENCESEQNO = #{conferenceseqno,jdbcType=DECIMAL}
+  </delete>
+  <insert id="insert" parameterType="com.coder520.POI.TeacherConferences.entity.TeacherConferences" >
+    insert into TEACHER_CONFERENCES (TEACHERSEQNO, CONFERENCESEQNO, CONFERENCENAME, 
+      SPONSOR, TYPE1, TYPE2, 
+      CHAIRMAN, HOLDINGTIME, NUMBERSOFATTENDING, 
+      CONFERENCEACCESSORIES, LASTMODIFIEDTIME, 
+      LASTMODIFIEDMAN, STATUS, CONFERENCEUUID, 
+      LASTMODIFIEDMANID, PERSONHELPREGISTERSEQNO, 
+      TEMPSTATE, ISKCW)
+    values (#{teacherseqno,jdbcType=DECIMAL}, #{conferenceseqno,jdbcType=DECIMAL}, #{conferencename,jdbcType=VARCHAR}, 
+      #{sponsor,jdbcType=VARCHAR}, #{type1,jdbcType=VARCHAR}, #{type2,jdbcType=VARCHAR}, 
+      #{chairman,jdbcType=VARCHAR}, #{holdingtime,jdbcType=VARCHAR}, #{numbersofattending,jdbcType=VARCHAR}, 
+      #{conferenceaccessories,jdbcType=VARCHAR}, #{lastmodifiedtime,jdbcType=VARCHAR}, 
+      #{lastmodifiedman,jdbcType=VARCHAR}, #{status,jdbcType=VARCHAR}, #{conferenceuuid,jdbcType=VARCHAR}, 
+      #{lastmodifiedmanid,jdbcType=VARCHAR}, #{personhelpregisterseqno,jdbcType=DECIMAL}, 
+      #{tempstate,jdbcType=CHAR}, #{iskcw,jdbcType=VARCHAR})
+  </insert>
+
+  <insert id="insertAddKey" parameterType="com.coder520.POI.TeacherConferences.entity.TeacherConferences" >
+    <selectKey keyProperty="conferenceseqno" resultType="long" order="BEFORE">
+      select  nvl(max(CONFERENCESEQNO),0)+1 from TEACHER_CONFERENCES
+    </selectKey>
+    insert into TEACHER_CONFERENCES (TEACHERSEQNO, CONFERENCESEQNO, CONFERENCENAME,
+    SPONSOR, TYPE1, TYPE2,
+    CHAIRMAN, HOLDINGTIME, NUMBERSOFATTENDING,
+    CONFERENCEACCESSORIES, LASTMODIFIEDTIME,
+    LASTMODIFIEDMAN, STATUS, CONFERENCEUUID,
+    LASTMODIFIEDMANID, PERSONHELPREGISTERSEQNO,
+    TEMPSTATE, ISKCW)
+    values (#{teacherseqno,jdbcType=DECIMAL}, #{conferenceseqno,jdbcType=DECIMAL}, #{conferencename,jdbcType=VARCHAR},
+    #{sponsor,jdbcType=VARCHAR}, #{type1,jdbcType=VARCHAR}, #{type2,jdbcType=VARCHAR},
+    #{chairman,jdbcType=VARCHAR}, #{holdingtime,jdbcType=VARCHAR}, #{numbersofattending,jdbcType=VARCHAR},
+    #{conferenceaccessories,jdbcType=VARCHAR}, #{lastmodifiedtime,jdbcType=VARCHAR},
+    #{lastmodifiedman,jdbcType=VARCHAR}, #{status,jdbcType=VARCHAR}, #{conferenceuuid,jdbcType=VARCHAR},
+    #{lastmodifiedmanid,jdbcType=VARCHAR}, #{personhelpregisterseqno,jdbcType=DECIMAL},
+    #{tempstate,jdbcType=CHAR}, #{iskcw,jdbcType=VARCHAR})
+  </insert>
+
+  <insert id="insertSelective" parameterType="com.coder520.POI.TeacherConferences.entity.TeacherConferences" >
+    insert into TEACHER_CONFERENCES
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="teacherseqno != null" >
+        TEACHERSEQNO,
+      </if>
+      <if test="conferenceseqno != null" >
+        CONFERENCESEQNO,
+      </if>
+      <if test="conferencename != null" >
+        CONFERENCENAME,
+      </if>
+      <if test="sponsor != null" >
+        SPONSOR,
+      </if>
+      <if test="type1 != null" >
+        TYPE1,
+      </if>
+      <if test="type2 != null" >
+        TYPE2,
+      </if>
+      <if test="chairman != null" >
+        CHAIRMAN,
+      </if>
+      <if test="holdingtime != null" >
+        HOLDINGTIME,
+      </if>
+      <if test="numbersofattending != null" >
+        NUMBERSOFATTENDING,
+      </if>
+      <if test="conferenceaccessories != null" >
+        CONFERENCEACCESSORIES,
+      </if>
+      <if test="lastmodifiedtime != null" >
+        LASTMODIFIEDTIME,
+      </if>
+      <if test="lastmodifiedman != null" >
+        LASTMODIFIEDMAN,
+      </if>
+      <if test="status != null" >
+        STATUS,
+      </if>
+      <if test="conferenceuuid != null" >
+        CONFERENCEUUID,
+      </if>
+      <if test="lastmodifiedmanid != null" >
+        LASTMODIFIEDMANID,
+      </if>
+      <if test="personhelpregisterseqno != null" >
+        PERSONHELPREGISTERSEQNO,
+      </if>
+      <if test="tempstate != null" >
+        TEMPSTATE,
+      </if>
+      <if test="iskcw != null" >
+        ISKCW,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="teacherseqno != null" >
+        #{teacherseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="conferenceseqno != null" >
+        #{conferenceseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="conferencename != null" >
+        #{conferencename,jdbcType=VARCHAR},
+      </if>
+      <if test="sponsor != null" >
+        #{sponsor,jdbcType=VARCHAR},
+      </if>
+      <if test="type1 != null" >
+        #{type1,jdbcType=VARCHAR},
+      </if>
+      <if test="type2 != null" >
+        #{type2,jdbcType=VARCHAR},
+      </if>
+      <if test="chairman != null" >
+        #{chairman,jdbcType=VARCHAR},
+      </if>
+      <if test="holdingtime != null" >
+        #{holdingtime,jdbcType=VARCHAR},
+      </if>
+      <if test="numbersofattending != null" >
+        #{numbersofattending,jdbcType=VARCHAR},
+      </if>
+      <if test="conferenceaccessories != null" >
+        #{conferenceaccessories,jdbcType=VARCHAR},
+      </if>
+      <if test="lastmodifiedtime != null" >
+        #{lastmodifiedtime,jdbcType=VARCHAR},
+      </if>
+      <if test="lastmodifiedman != null" >
+        #{lastmodifiedman,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="conferenceuuid != null" >
+        #{conferenceuuid,jdbcType=VARCHAR},
+      </if>
+      <if test="lastmodifiedmanid != null" >
+        #{lastmodifiedmanid,jdbcType=VARCHAR},
+      </if>
+      <if test="personhelpregisterseqno != null" >
+        #{personhelpregisterseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="tempstate != null" >
+        #{tempstate,jdbcType=CHAR},
+      </if>
+      <if test="iskcw != null" >
+        #{iskcw,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.coder520.POI.TeacherConferences.entity.TeacherConferences" >
+    update TEACHER_CONFERENCES
+    <set >
+      <if test="conferencename != null" >
+        CONFERENCENAME = #{conferencename,jdbcType=VARCHAR},
+      </if>
+      <if test="sponsor != null" >
+        SPONSOR = #{sponsor,jdbcType=VARCHAR},
+      </if>
+      <if test="type1 != null" >
+        TYPE1 = #{type1,jdbcType=VARCHAR},
+      </if>
+      <if test="type2 != null" >
+        TYPE2 = #{type2,jdbcType=VARCHAR},
+      </if>
+      <if test="chairman != null" >
+        CHAIRMAN = #{chairman,jdbcType=VARCHAR},
+      </if>
+      <if test="holdingtime != null" >
+        HOLDINGTIME = #{holdingtime,jdbcType=VARCHAR},
+      </if>
+      <if test="numbersofattending != null" >
+        NUMBERSOFATTENDING = #{numbersofattending,jdbcType=VARCHAR},
+      </if>
+      <if test="conferenceaccessories != null" >
+        CONFERENCEACCESSORIES = #{conferenceaccessories,jdbcType=VARCHAR},
+      </if>
+      <if test="lastmodifiedtime != null" >
+        LASTMODIFIEDTIME = #{lastmodifiedtime,jdbcType=VARCHAR},
+      </if>
+      <if test="lastmodifiedman != null" >
+        LASTMODIFIEDMAN = #{lastmodifiedman,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        STATUS = #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="conferenceuuid != null" >
+        CONFERENCEUUID = #{conferenceuuid,jdbcType=VARCHAR},
+      </if>
+      <if test="lastmodifiedmanid != null" >
+        LASTMODIFIEDMANID = #{lastmodifiedmanid,jdbcType=VARCHAR},
+      </if>
+      <if test="personhelpregisterseqno != null" >
+        PERSONHELPREGISTERSEQNO = #{personhelpregisterseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="tempstate != null" >
+        TEMPSTATE = #{tempstate,jdbcType=CHAR},
+      </if>
+      <if test="iskcw != null" >
+        ISKCW = #{iskcw,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where TEACHERSEQNO = #{teacherseqno,jdbcType=DECIMAL}
+      and CONFERENCESEQNO = #{conferenceseqno,jdbcType=DECIMAL}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.coder520.POI.TeacherConferences.entity.TeacherConferences" >
+    update TEACHER_CONFERENCES
+    set CONFERENCENAME = #{conferencename,jdbcType=VARCHAR},
+      SPONSOR = #{sponsor,jdbcType=VARCHAR},
+      TYPE1 = #{type1,jdbcType=VARCHAR},
+      TYPE2 = #{type2,jdbcType=VARCHAR},
+      CHAIRMAN = #{chairman,jdbcType=VARCHAR},
+      HOLDINGTIME = #{holdingtime,jdbcType=VARCHAR},
+      NUMBERSOFATTENDING = #{numbersofattending,jdbcType=VARCHAR},
+      CONFERENCEACCESSORIES = #{conferenceaccessories,jdbcType=VARCHAR},
+      LASTMODIFIEDTIME = #{lastmodifiedtime,jdbcType=VARCHAR},
+      LASTMODIFIEDMAN = #{lastmodifiedman,jdbcType=VARCHAR},
+      STATUS = #{status,jdbcType=VARCHAR},
+      CONFERENCEUUID = #{conferenceuuid,jdbcType=VARCHAR},
+      LASTMODIFIEDMANID = #{lastmodifiedmanid,jdbcType=VARCHAR},
+      PERSONHELPREGISTERSEQNO = #{personhelpregisterseqno,jdbcType=DECIMAL},
+      TEMPSTATE = #{tempstate,jdbcType=CHAR},
+      ISKCW = #{iskcw,jdbcType=VARCHAR}
+    where TEACHERSEQNO = #{teacherseqno,jdbcType=DECIMAL}
+      and CONFERENCESEQNO = #{conferenceseqno,jdbcType=DECIMAL}
+  </update>
+</mapper>

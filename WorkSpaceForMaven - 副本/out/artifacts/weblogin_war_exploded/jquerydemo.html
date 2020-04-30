@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+       #divId{
+            height: 50px;
+            width: 50px;
+        }
+        #adDiv{
+            height: 300px;
+            width: 300px;
+            background-color: green;
+        }
+    </style>
+    <script type="text/javascript" src="js/jquery-3.3.1.js">
+    </script>
+
+</head>
+<body>
+<input type="button" id="btnId" value="点击">
+<br/>
+<input id="inputId"  type="text" value="hello.."/>
+<br/>
+<select id="starSelectId">
+    <option value="Jordan">乔丹</option>
+    <option value="James">詹姆斯</option>
+    <option value="Kobe">科比</option>
+    <option value="Iverson">艾弗森</option>
+</select>
+<br/>
+<div  id="divId" ></div>
+<br/>
+<input id="inputId01" type="text"/><br/>
+<input id="btnId05" type="button" value="点我吧" /><br/>
+<input id="btnId06" type="button" value="解绑点我吧按钮的点击事件" /><br/>
+<br/>
+<input type="button" value="show()" id="btn1" />
+<br/>
+<input type="button" value="hide()" id="btn2" />
+<br/>
+<input type="button" value="toggle()" id="btn3" />
+<div id="div1" style="width: 100px; height: 100px; border: 1px solid red;"></div>
+<br/>
+<div id="adDiv"></div>
+<br/>
+<div id="divId07" style="width: 100px;height: 100px;background-color: red"></div>
+<input type="button" value="获得背景色的样式值" id="btn001"/>
+<input type="button" value="设置背景色的样式值为green" id="btn002"/>
+<br/>
+<span>哈哈</span><br/>
+<span>hello</span><br/>
+<span>哈哈</span><br/>
+<span>哈哈</span><br/>
+<span>哈哈</span><br/>
+<span>哈哈</span><br/>
+<input type="button" value="添加class" id="btn11"/>
+<input type="button" value="移除class" id="btn12"/>
+<br/>
+<table>
+    <tr>
+        <th><input type="checkbox" id="all"></th>
+        <th>商品</th>
+        <th>商品</th>
+        <th>商品</th>
+        <th>商品</th>
+    </tr>
+    <tr>
+        <th ><input type="checkbox" class="one"></th>
+        <th>商品</th>
+        <th>商品</th>
+        <th>商品</th>
+        <th>商品</th>
+    </tr>
+    <tr>
+        <th ><input type="checkbox" class="one"></th>
+        <th>商品</th>
+        <th>商品</th>
+        <th>商品</th>
+        <th>商品</th>
+    </tr>
+    <tr>
+        <th ><input type="checkbox" class="one"></th>
+        <th>商品</th>
+        <th>商品</th>
+        <th>商品</th>
+        <th>商品</th>
+    </tr>
+    <tr>
+        <th ><input type="checkbox" class="one"></th>
+        <th>商品</th>
+        <th>商品</th>
+        <th>商品</th>
+        <th>商品</th>
+    </tr>
+</table>
+</body>
+<script type="text/javascript">
+    $("#btnId").click(function () {
+        alert("dfdfdf.....")
+    });
+    $("#inputId").focus(function () {
+        //this ----> document.getElementById("inputId");
+        console.log("获得了焦点..."+this.value);
+    });
+    //jq对象.blur(function(){})  失去焦点事件
+    $("#inputId").blur(function () {
+        console.log("失去了焦点...");
+    });
+    //jq对象.change(function(){}) 内容改变事件
+    $("#starSelectId").change(function () {
+        console.log("内容改变了..."+this.value);
+    });
+    $("#divId").mouseenter(function () {
+        //this.style.backgroundColor = "red";
+        $(this).css("backgroundColor","red");   //把js对象转成了jq对象
+    });
+    $("#divId").mouseout(function () {
+        //this.style.backgroundColor = "blue";
+        $(this).css("backgroundColor","blue");
+    });
+    $("#inputId01").keydown(function () {
+        console.log("键盘按下...");
+    });
+
+    //  jq对象.keyup()  键盘抬起
+    $("#inputId01").keyup(function () {
+        console.log("键盘抬起...");
+    });
+    //jq对象.click(function(){})
+    $("#btnId05").click(function () {
+        alert("hello...");
+    });
+    $("#btnId06").on("click",function () {
+        //解绑 btnId 的点击事件  jq对象.off("事件");
+        $("#btnId05").off("click");
+    });
+    $("#btn1").click(function() {
+        $("#div1").show(1000);
+    });
+    $("#btn2").click(function() {
+        $("#div1").hide(1000,function(){
+            alert("Bye...");
+        });
+    });
+    $("#btn3").click(function () {
+        $("#div1").toggle()
+        }
+    );
+    setTimeout("showAd()",3000);
+    function showAd() {
+        var $adObj =   $("#adDiv");
+        $adObj.show(3000,function () {
+            setTimeout("hideAd()",3000);
+        })
+    }
+    function hideAd() {
+        var $adObj =   $("#adDiv");
+        $adObj.hide(3000,function () {
+            setTimeout("showAd()",3000);
+        })
+
+    }
+    $("#btn001").click(function () {
+        //获得div里面的CSS样式的值
+        var colorValue =  $("#divId07").css("background-color");
+        alert("colorValue="+colorValue);
+    });
+
+    $("#btn002").click(function () {
+        //设置背景色的样式值为green
+        $("#divId07").css("background-color","green");
+    });
+    $("#btn11").click(function () {
+        //给span添加类 spanClass
+        $("span").addClass("spanClass");
+    });
+    $("#btn12").click(function () {
+        //给span移除类 spanClass
+        $("span").removeClass("spanClass");
+    });
+    $("tr:odd").css("backgroundColor","#FFB6C1");
+    $("tr:even").css("backgroundColor","#4F81BD");
+    var originColor;
+    //鼠标进入事件
+    $("tr").mouseenter(function () {
+        //先获得之前的颜色 存到一个变量里面, 再在鼠标离开的时候使用
+        originColor = $(this).css("backgroundColor");
+
+        /*this当前对象, 谁被鼠标进入了,this就是谁 并且是js对象*/
+        $(this).css("backgroundColor","red");
+    });
+
+    //鼠标离开事件
+    $("tr").mouseout(function () {
+        //设置之前的背景色
+        $(this).css("backgroundColor",originColor);
+    });
+    $("#all").click(function() {
+        //根据最上面的复选框是否选中而选中,this是最上面复选框对象(并且是dom(js)对象)
+        $(".one").attr("checked",this.checked);
+    });
+
+</script>
+</html>

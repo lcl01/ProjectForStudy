@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.itheima.mapper.ShenShiBiaoMapper" >
+  <resultMap id="BaseResultMap" type="com.itheima.bean.ShenShiBiao" >
+    <result column="id" property="id" jdbcType="INTEGER" />
+    <result column="province_id" property="provinceId" jdbcType="INTEGER" />
+    <result column="province_name" property="provinceName" jdbcType="VARCHAR" />
+    <result column="city_id" property="cityId" jdbcType="INTEGER" />
+    <result column="region3_city_name" property="region3CityName" jdbcType="VARCHAR" />
+    <result column="region3_town_id" property="region3TownId" jdbcType="INTEGER" />
+    <result column="region3_town_name" property="region3TownName" jdbcType="VARCHAR" />
+    <result column="region3_province_id" property="region3ProvinceId" jdbcType="INTEGER" />
+    <result column="region3_province_name" property="region3ProvinceName" jdbcType="VARCHAR" />
+    <result column="region3_city_id" property="region3CityId" jdbcType="INTEGER" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    id, province_id, province_name, city_id, region3_city_name, region3_town_id, region3_town_name, 
+    region3_province_id, region3_province_name, region3_city_id
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.itheima.bean.ShenShiBiaoExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from shengshibiao
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <delete id="deleteByExample" parameterType="com.itheima.bean.ShenShiBiaoExample" >
+    delete from shengshibiao
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.itheima.bean.ShenShiBiao" >
+    insert into shengshibiao (id, province_id, province_name, 
+      city_id, region3_city_name, region3_town_id, 
+      region3_town_name, region3_province_id, region3_province_name, 
+      region3_city_id)
+    values (#{id,jdbcType=INTEGER}, #{provinceId,jdbcType=INTEGER}, #{provinceName,jdbcType=VARCHAR}, 
+      #{cityId,jdbcType=INTEGER}, #{region3CityName,jdbcType=VARCHAR}, #{region3TownId,jdbcType=INTEGER}, 
+      #{region3TownName,jdbcType=VARCHAR}, #{region3ProvinceId,jdbcType=INTEGER}, #{region3ProvinceName,jdbcType=VARCHAR}, 
+      #{region3CityId,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.itheima.bean.ShenShiBiao" >
+    insert into shengshibiao
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="provinceId != null" >
+        province_id,
+      </if>
+      <if test="provinceName != null" >
+        province_name,
+      </if>
+      <if test="cityId != null" >
+        city_id,
+      </if>
+      <if test="region3CityName != null" >
+        region3_city_name,
+      </if>
+      <if test="region3TownId != null" >
+        region3_town_id,
+      </if>
+      <if test="region3TownName != null" >
+        region3_town_name,
+      </if>
+      <if test="region3ProvinceId != null" >
+        region3_province_id,
+      </if>
+      <if test="region3ProvinceName != null" >
+        region3_province_name,
+      </if>
+      <if test="region3CityId != null" >
+        region3_city_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="provinceId != null" >
+        #{provinceId,jdbcType=INTEGER},
+      </if>
+      <if test="provinceName != null" >
+        #{provinceName,jdbcType=VARCHAR},
+      </if>
+      <if test="cityId != null" >
+        #{cityId,jdbcType=INTEGER},
+      </if>
+      <if test="region3CityName != null" >
+        #{region3CityName,jdbcType=VARCHAR},
+      </if>
+      <if test="region3TownId != null" >
+        #{region3TownId,jdbcType=INTEGER},
+      </if>
+      <if test="region3TownName != null" >
+        #{region3TownName,jdbcType=VARCHAR},
+      </if>
+      <if test="region3ProvinceId != null" >
+        #{region3ProvinceId,jdbcType=INTEGER},
+      </if>
+      <if test="region3ProvinceName != null" >
+        #{region3ProvinceName,jdbcType=VARCHAR},
+      </if>
+      <if test="region3CityId != null" >
+        #{region3CityId,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.itheima.bean.ShenShiBiaoExample" resultType="java.lang.Integer" >
+    select count(*) from shengshibiao
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update shengshibiao
+    <set >
+      <if test="record.id != null" >
+        id = #{record.id,jdbcType=INTEGER},
+      </if>
+      <if test="record.provinceId != null" >
+        province_id = #{record.provinceId,jdbcType=INTEGER},
+      </if>
+      <if test="record.provinceName != null" >
+        province_name = #{record.provinceName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cityId != null" >
+        city_id = #{record.cityId,jdbcType=INTEGER},
+      </if>
+      <if test="record.region3CityName != null" >
+        region3_city_name = #{record.region3CityName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.region3TownId != null" >
+        region3_town_id = #{record.region3TownId,jdbcType=INTEGER},
+      </if>
+      <if test="record.region3TownName != null" >
+        region3_town_name = #{record.region3TownName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.region3ProvinceId != null" >
+        region3_province_id = #{record.region3ProvinceId,jdbcType=INTEGER},
+      </if>
+      <if test="record.region3ProvinceName != null" >
+        region3_province_name = #{record.region3ProvinceName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.region3CityId != null" >
+        region3_city_id = #{record.region3CityId,jdbcType=INTEGER},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update shengshibiao
+    set id = #{record.id,jdbcType=INTEGER},
+      province_id = #{record.provinceId,jdbcType=INTEGER},
+      province_name = #{record.provinceName,jdbcType=VARCHAR},
+      city_id = #{record.cityId,jdbcType=INTEGER},
+      region3_city_name = #{record.region3CityName,jdbcType=VARCHAR},
+      region3_town_id = #{record.region3TownId,jdbcType=INTEGER},
+      region3_town_name = #{record.region3TownName,jdbcType=VARCHAR},
+      region3_province_id = #{record.region3ProvinceId,jdbcType=INTEGER},
+      region3_province_name = #{record.region3ProvinceName,jdbcType=VARCHAR},
+      region3_city_id = #{record.region3CityId,jdbcType=INTEGER}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+</mapper>

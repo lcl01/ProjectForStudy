@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h3>一,操作请求行和请求头</h3>
+    <a href="demo01?name=zs&age=18">获得客户机信息(操作请求行ServletDemo01)</a><br/>
+    <form action="demo01" method="post">
+        <input type="submit"/>
+    </form><br/>
+    <a href="demo02">操作请求头(ServletDemo02)</a><br/>
+    <h3>二,获得请求参数(操作请求体)</h3>
+    <form action="demo03" method="post">
+        用户名:<input type="text" name="username"/><br/>
+        密码:<input type="password" name="password"/><br/>
+        爱好:
+            <input type="checkbox" name="hobby" value="basketball"/>篮球
+            <input type="checkbox" name="hobby" value="code"/>敲代码
+            <input type="checkbox" name="hobby" value="film"/>看电影
+            <input type="checkbox" name="hobby" value="football"/>足球<br/>
+        <input type="submit"/>
+    </form>
+    <h3>三,转发</h3>
+    <a href="demo04">转发(李四ServletDemo04,李四老婆05)</a><br/>
+    <h4>四,案例</h4>
+    <a href="login.html">登录页面</a>
+
+
+</body>
+</html>

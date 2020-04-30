@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.itheima.dao.AccountDao">
+    <select id="findByAccountUser" resultMap="acMap">
+    select * from account;
+    </select>
+    <resultMap id="acMap" type="com.changgou.beans.Account">
+        <id property="id" column="ID"></id>
+        <result property="uid" column="UID"></result>
+        <result property="money" column="MONEY"></result>
+        <association property="user" column="UID" javaType="com.changgou.beans.User" select="UserDao.findById" ></association>
+    </resultMap>
+    <!--<select id="findAccountByUid" resultMap="account" parameterType="int"> -->
+    <select id="findAccountByUid" resultType="account" parameterType="int">
+    select * from account where uid = #{uid};
+</select>
+    <resultMap id="account" type="com.changgou.beans.Account">
+        <id property="id" column="ID"></id>
+        <result property="uid" column="UID"></result>
+        <result property="money" column="MONEY"></result>
+    </resultMap>
+
+</mapper>

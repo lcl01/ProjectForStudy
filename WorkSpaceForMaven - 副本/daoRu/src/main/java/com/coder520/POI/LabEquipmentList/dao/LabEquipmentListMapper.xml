@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coder520.POI.LabEquipmentList.dao.LabEquipmentListMapper" >
+  <resultMap id="BaseResultMap" type="com.coder520.POI.LabEquipmentList.entity.LabEquipmentList" >
+    <id column="NO" property="no" jdbcType="DECIMAL" />
+    <result column="LABSEQNO" property="labseqno" jdbcType="VARCHAR" />
+    <result column="YEAR" property="year" jdbcType="VARCHAR" />
+    <result column="LABNO" property="labno" jdbcType="VARCHAR" />
+    <result column="EQUIPNAME" property="equipname" jdbcType="VARCHAR" />
+    <result column="SPECIFICATION" property="specification" jdbcType="OTHER" />
+    <result column="MANUFACTORY" property="manufactory" jdbcType="OTHER" />
+    <result column="ORIGIN" property="origin" jdbcType="VARCHAR" />
+    <result column="RAWVALUE" property="rawvalue" jdbcType="VARCHAR" />
+    <result column="ACCOUNTINGLAB" property="accountinglab" jdbcType="VARCHAR" />
+    <result column="ACCOUNTINGDATE" property="accountingdate" jdbcType="VARCHAR" />
+    <result column="FLAG" property="flag" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    NO, LABSEQNO, YEAR, LABNO, EQUIPNAME, SPECIFICATION, MANUFACTORY, ORIGIN, RAWVALUE, 
+    ACCOUNTINGLAB, ACCOUNTINGDATE, FLAG
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from LAB_EQUIPLIST
+    where NO = #{no,jdbcType=DECIMAL}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from LAB_EQUIPLIST
+    where NO = #{no,jdbcType=DECIMAL}
+  </delete>
+  <insert id="insert" parameterType="com.coder520.POI.LabEquipmentList.entity.LabEquipmentList" >
+    insert into LAB_EQUIPLIST (NO, LABSEQNO, YEAR, 
+      LABNO, EQUIPNAME, SPECIFICATION, 
+      MANUFACTORY, ORIGIN, RAWVALUE, 
+      ACCOUNTINGLAB, ACCOUNTINGDATE, FLAG
+      )
+    values (#{no,jdbcType=DECIMAL}, #{labseqno,jdbcType=VARCHAR}, #{year,jdbcType=VARCHAR}, 
+      #{labno,jdbcType=VARCHAR}, #{equipname,jdbcType=VARCHAR}, #{specification,jdbcType=OTHER}, 
+      #{manufactory,jdbcType=OTHER}, #{origin,jdbcType=VARCHAR}, #{rawvalue,jdbcType=VARCHAR}, 
+      #{accountinglab,jdbcType=VARCHAR}, #{accountingdate,jdbcType=VARCHAR}, #{flag,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.coder520.POI.LabEquipmentList.entity.LabEquipmentList" >
+    insert into LAB_EQUIPLIST
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="no != null" >
+        NO,
+      </if>
+      <if test="labseqno != null" >
+        LABSEQNO,
+      </if>
+      <if test="year != null" >
+        YEAR,
+      </if>
+      <if test="labno != null" >
+        LABNO,
+      </if>
+      <if test="equipname != null" >
+        EQUIPNAME,
+      </if>
+      <if test="specification != null" >
+        SPECIFICATION,
+      </if>
+      <if test="manufactory != null" >
+        MANUFACTORY,
+      </if>
+      <if test="origin != null" >
+        ORIGIN,
+      </if>
+      <if test="rawvalue != null" >
+        RAWVALUE,
+      </if>
+      <if test="accountinglab != null" >
+        ACCOUNTINGLAB,
+      </if>
+      <if test="accountingdate != null" >
+        ACCOUNTINGDATE,
+      </if>
+      <if test="flag != null" >
+        FLAG,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="no != null" >
+        #{no,jdbcType=DECIMAL},
+      </if>
+      <if test="labseqno != null" >
+        #{labseqno,jdbcType=VARCHAR},
+      </if>
+      <if test="year != null" >
+        #{year,jdbcType=VARCHAR},
+      </if>
+      <if test="labno != null" >
+        #{labno,jdbcType=VARCHAR},
+      </if>
+      <if test="equipname != null" >
+        #{equipname,jdbcType=VARCHAR},
+      </if>
+      <if test="specification != null" >
+        #{specification,jdbcType=OTHER},
+      </if>
+      <if test="manufactory != null" >
+        #{manufactory,jdbcType=OTHER},
+      </if>
+      <if test="origin != null" >
+        #{origin,jdbcType=VARCHAR},
+      </if>
+      <if test="rawvalue != null" >
+        #{rawvalue,jdbcType=VARCHAR},
+      </if>
+      <if test="accountinglab != null" >
+        #{accountinglab,jdbcType=VARCHAR},
+      </if>
+      <if test="accountingdate != null" >
+        #{accountingdate,jdbcType=VARCHAR},
+      </if>
+      <if test="flag != null" >
+        #{flag,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.coder520.POI.LabEquipmentList.entity.LabEquipmentList" >
+    update LAB_EQUIPLIST
+    <set >
+      <if test="labseqno != null" >
+        LABSEQNO = #{labseqno,jdbcType=VARCHAR},
+      </if>
+      <if test="year != null" >
+        YEAR = #{year,jdbcType=VARCHAR},
+      </if>
+      <if test="labno != null" >
+        LABNO = #{labno,jdbcType=VARCHAR},
+      </if>
+      <if test="equipname != null" >
+        EQUIPNAME = #{equipname,jdbcType=VARCHAR},
+      </if>
+      <if test="specification != null" >
+        SPECIFICATION = #{specification,jdbcType=OTHER},
+      </if>
+      <if test="manufactory != null" >
+        MANUFACTORY = #{manufactory,jdbcType=OTHER},
+      </if>
+      <if test="origin != null" >
+        ORIGIN = #{origin,jdbcType=VARCHAR},
+      </if>
+      <if test="rawvalue != null" >
+        RAWVALUE = #{rawvalue,jdbcType=VARCHAR},
+      </if>
+      <if test="accountinglab != null" >
+        ACCOUNTINGLAB = #{accountinglab,jdbcType=VARCHAR},
+      </if>
+      <if test="accountingdate != null" >
+        ACCOUNTINGDATE = #{accountingdate,jdbcType=VARCHAR},
+      </if>
+      <if test="flag != null" >
+        FLAG = #{flag,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where NO = #{no,jdbcType=DECIMAL}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.coder520.POI.LabEquipmentList.entity.LabEquipmentList" >
+    update LAB_EQUIPLIST
+    set LABSEQNO = #{labseqno,jdbcType=VARCHAR},
+      YEAR = #{year,jdbcType=VARCHAR},
+      LABNO = #{labno,jdbcType=VARCHAR},
+      EQUIPNAME = #{equipname,jdbcType=VARCHAR},
+      SPECIFICATION = #{specification,jdbcType=OTHER},
+      MANUFACTORY = #{manufactory,jdbcType=OTHER},
+      ORIGIN = #{origin,jdbcType=VARCHAR},
+      RAWVALUE = #{rawvalue,jdbcType=VARCHAR},
+      ACCOUNTINGLAB = #{accountinglab,jdbcType=VARCHAR},
+      ACCOUNTINGDATE = #{accountingdate,jdbcType=VARCHAR},
+      FLAG = #{flag,jdbcType=VARCHAR}
+    where NO = #{no,jdbcType=DECIMAL}
+  </update>
+</mapper>

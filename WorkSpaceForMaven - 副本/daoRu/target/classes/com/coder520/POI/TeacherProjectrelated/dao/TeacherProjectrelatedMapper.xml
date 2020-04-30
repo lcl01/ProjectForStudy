@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coder520.POI.TeacherProjectrelated.dao.TeacherProjectrelatedMapper" >
+  <resultMap id="BaseResultMap" type="com.coder520.POI.TeacherProjectrelated.entity.TeacherProjectrelated" >
+    <id column="TEACHERSEQNO" property="teacherseqno" jdbcType="DECIMAL" />
+    <id column="PROJECTSEQNO" property="projectseqno" jdbcType="DECIMAL" />
+    <id column="LABSEQNO" property="labseqno" jdbcType="DECIMAL" />
+    <result column="RELATEDLAB" property="relatedlab" jdbcType="VARCHAR" />
+    <result column="CONTRIBUTION" property="contribution" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    TEACHERSEQNO, PROJECTSEQNO, LABSEQNO, RELATEDLAB, CONTRIBUTION
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="com.coder520.POI.TeacherProjectrelated.entity.TeacherProjectrelatedKey" >
+    select 
+    <include refid="Base_Column_List" />
+    from TEACHER_PROJECTRELATED
+    where TEACHERSEQNO = #{teacherseqno,jdbcType=DECIMAL}
+      and PROJECTSEQNO = #{projectseqno,jdbcType=DECIMAL}
+      and LABSEQNO = #{labseqno,jdbcType=DECIMAL}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="com.coder520.POI.TeacherProjectrelated.entity.TeacherProjectrelatedKey" >
+    delete from TEACHER_PROJECTRELATED
+    where TEACHERSEQNO = #{teacherseqno,jdbcType=DECIMAL}
+      and PROJECTSEQNO = #{projectseqno,jdbcType=DECIMAL}
+      and LABSEQNO = #{labseqno,jdbcType=DECIMAL}
+  </delete>
+  <insert id="insert" parameterType="com.coder520.POI.TeacherProjectrelated.entity.TeacherProjectrelated" >
+    insert into TEACHER_PROJECTRELATED (TEACHERSEQNO, PROJECTSEQNO, LABSEQNO, 
+      RELATEDLAB, CONTRIBUTION)
+    values (#{teacherseqno,jdbcType=DECIMAL}, #{projectseqno,jdbcType=DECIMAL}, #{labseqno,jdbcType=DECIMAL}, 
+      #{relatedlab,jdbcType=VARCHAR}, #{contribution,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.coder520.POI.TeacherProjectrelated.entity.TeacherProjectrelated" >
+    insert into TEACHER_PROJECTRELATED
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="teacherseqno != null" >
+        TEACHERSEQNO,
+      </if>
+      <if test="projectseqno != null" >
+        PROJECTSEQNO,
+      </if>
+      <if test="labseqno != null" >
+        LABSEQNO,
+      </if>
+      <if test="relatedlab != null" >
+        RELATEDLAB,
+      </if>
+      <if test="contribution != null" >
+        CONTRIBUTION,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="teacherseqno != null" >
+        #{teacherseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="projectseqno != null" >
+        #{projectseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="labseqno != null" >
+        #{labseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="relatedlab != null" >
+        #{relatedlab,jdbcType=VARCHAR},
+      </if>
+      <if test="contribution != null" >
+        #{contribution,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.coder520.POI.TeacherProjectrelated.entity.TeacherProjectrelated" >
+    update TEACHER_PROJECTRELATED
+    <set >
+      <if test="relatedlab != null" >
+        RELATEDLAB = #{relatedlab,jdbcType=VARCHAR},
+      </if>
+      <if test="contribution != null" >
+        CONTRIBUTION = #{contribution,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where TEACHERSEQNO = #{teacherseqno,jdbcType=DECIMAL}
+      and PROJECTSEQNO = #{projectseqno,jdbcType=DECIMAL}
+      and LABSEQNO = #{labseqno,jdbcType=DECIMAL}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.coder520.POI.TeacherProjectrelated.entity.TeacherProjectrelated" >
+    update TEACHER_PROJECTRELATED
+    set RELATEDLAB = #{relatedlab,jdbcType=VARCHAR},
+      CONTRIBUTION = #{contribution,jdbcType=VARCHAR}
+    where TEACHERSEQNO = #{teacherseqno,jdbcType=DECIMAL}
+      and PROJECTSEQNO = #{projectseqno,jdbcType=DECIMAL}
+      and LABSEQNO = #{labseqno,jdbcType=DECIMAL}
+  </update>
+</mapper>

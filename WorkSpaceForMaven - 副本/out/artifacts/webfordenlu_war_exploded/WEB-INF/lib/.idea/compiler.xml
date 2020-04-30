@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="renren-generator" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="changgou-service-rabbitmq" target="1.8" />
+      <module name="changgou-web-item-api" target="1.8" />
+      <module name="changgou_common" target="1.8" />
+      <module name="changgou_common_db" target="1.8" />
+      <module name="changgou_eureka" target="1.8" />
+      <module name="changgou_gateway" target="1.8" />
+      <module name="changgou_gateway_web" target="1.8" />
+      <module name="changgou_parent" target="1.8" />
+      <module name="changgou_service" target="1.8" />
+      <module name="changgou_service_api" target="1.8" />
+      <module name="changgou_service_canal" target="1.8" />
+      <module name="changgou_service_file" target="1.8" />
+      <module name="changgou_service_goods" target="1.8" />
+      <module name="changgou_service_goods_api" target="1.8" />
+      <module name="changgou_service_order" target="1.8" />
+      <module name="changgou_service_order_api" target="1.8" />
+      <module name="changgou_service_pay" target="1.8" />
+      <module name="changgou_service_search" target="1.8" />
+      <module name="changgou_service_search_api" target="1.8" />
+      <module name="changgou_service_seckill" target="1.8" />
+      <module name="changgou_service_seckill_api" target="1.8" />
+      <module name="changgou_service_user" target="1.8" />
+      <module name="changgou_service_user_api" target="1.8" />
+      <module name="changgou_user_oauth" target="1.8" />
+      <module name="changgou_web" target="1.8" />
+      <module name="changgou_web_item" target="1.8" />
+      <module name="changgou_web_search" target="1.8" />
+      <module name="crawler" target="1.8" />
+      <module name="POI" target="1.8" />
+      <module name="ssm_parent" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

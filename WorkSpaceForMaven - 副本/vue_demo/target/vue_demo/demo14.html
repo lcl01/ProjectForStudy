@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vuejs中axios数据调用</title>
+    <script src="js/vuejs-2.5.16.js"></script>
+    <script src="js/axios-0.18.0.js"></script>
+</head>
+<body>
+<div id="app">
+    {{message}}
+</div>
+</body>
+<script>
+    var vm = new Vue({
+        el: "#app",
+        data: {
+            message: ''
+        },
+        methods: {
+            init: function(){
+                axios.get("./data/user.json").then(function(response){
+                    // alert(response);
+                    console.log(response);
+                    alert(JSON.stringify(response))
+                    alert(response.data[0].username);
+                })
+            }
+        },
+        created: function(){
+            this.init();
+        }
+    });
+</script>
+</html>

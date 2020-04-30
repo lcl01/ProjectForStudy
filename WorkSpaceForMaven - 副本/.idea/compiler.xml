@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="changgou-gateway-web" />
+        <module name="changgou-service-content" />
+        <module name="changgou-service-content-api" />
+        <module name="changgou-service-goods" />
+        <module name="changgou-service-goods-api" />
+        <module name="changgou-service-order" />
+        <module name="changgou-service-order-api" />
+        <module name="changgou-service-pay" />
+        <module name="changgou-service-pay-api" />
+        <module name="changgou-service-rabbitmq" />
+        <module name="changgou-service-search" />
+        <module name="changgou-service-search-api" />
+        <module name="changgou-service-seckill" />
+        <module name="changgou-service-seckill-api" />
+        <module name="changgou-service-user" />
+        <module name="changgou-service-user-api" />
+        <module name="changgou-user-oauth" />
+        <module name="changgou-web-item" />
+        <module name="changgou-web-item-api" />
+        <module name="changgou-web-search" />
+        <module name="changgoucommon" />
+        <module name="changgoucommondb" />
+        <module name="changgoueureka" />
+        <module name="changgouservicecanal" />
+        <module name="changgouservicefile" />
+        <module name="code-template" />
+        <module name="conf_server" />
+        <module name="elasticsearch_demo01" />
+        <module name="health_common" />
+        <module name="health_dao" />
+        <module name="health_daoru" />
+        <module name="health_interface" />
+        <module name="health_jobs" />
+        <module name="health_pojo" />
+        <module name="health_service" />
+        <module name="health_web" />
+        <module name="healthmobile_web" />
+        <module name="itheima-dubbo-consumer" />
+        <module name="itheima-dubbo-provider" />
+        <module name="itheima_javaweb" />
+        <module name="lucene_demo" />
+        <module name="mongodb" />
+        <module name="mybaits_day01_quick" />
+        <module name="mybatis_annotation" />
+        <module name="mybatis_lazy" />
+        <module name="poi" />
+        <module name="renren-generator" />
+        <module name="spring_account" />
+        <module name="spring_account_aopxml" />
+        <module name="spring_account_withoutxml" />
+        <module name="spring_annotation_account" />
+        <module name="spring_annotation_aop" />
+        <module name="spring_annotation_day04_aop" />
+        <module name="spring_annotation_ioc" />
+        <module name="spring_aop_advice" />
+        <module name="spring_day" />
+        <module name="spring_day03_account" />
+        <module name="spring_day03_aop" />
+        <module name="spring_ioc" />
+        <module name="spring_jdbctemplate" />
+        <module name="spring_proxy" />
+        <module name="spring_smssw_annotation" />
+        <module name="spring_tx_day04" />
+        <module name="spring_tx_smssw" />
+        <module name="springboot-jpa" />
+        <module name="springboot-mybatis" />
+        <module name="springboot-thymeleaf" />
+        <module name="springboot_cloud" />
+        <module name="springboot_cloud_resttemplate" />
+        <module name="springboot_datajpa" />
+        <module name="springboot_demo001" />
+        <module name="springboot_helloworld" />
+        <module name="springboot_mysql" />
+        <module name="springboot_rabbitmq" />
+        <module name="springboot_rabbitmq_consumer" />
+        <module name="springboot_rabbitmq_delay" />
+        <module name="springboot_rabbitmq_producer" />
+        <module name="springcloud_paren_gateway_service" />
+        <module name="springcloud_parent_eureka_server" />
+        <module name="springcloud_parent_User_consumer" />
+        <module name="springcloud_parent_user_provider_demo" />
+        <module name="springcloudparentuser_provider" />
+        <module name="springdata_elasticsearch_demo" />
+        <module name="springmvc_day02_responce" />
+        <module name="springmvc_day03_ssm" />
+        <module name="springmvc_quickly" />
+        <module name="springmvc_response02" />
+        <module name="springmvc_ssm_regist" />
+        <module name="springsecurity_demo" />
+        <module name="ssm_dao" />
+        <module name="ssm_model" />
+        <module name="ssm_modelzi" />
+        <module name="ssm_pojo" />
+        <module name="ssm_service" />
+        <module name="ssm_web" />
+        <module name="tensquare_article" />
+        <module name="tensquare_common" />
+        <module name="tensquare_encrypt" />
+        <module name="tensquare_eureka" />
+        <module name="tensquare_notice" />
+        <module name="tensquare_user" />
+        <module name="thymelef" />
+        <module name="vue_demo" />
+        <module name="vue_user" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="changgou-gateway-web (1)" target="1.5" />
+      <module name="changgou_common" target="1.8" />
+      <module name="changgou_common_db" target="1.8" />
+      <module name="changgou_eureka" target="1.8" />
+      <module name="changgou_gateway" target="1.8" />
+      <module name="changgou_gateway_web" target="1.8" />
+      <module name="changgou_parent" target="1.8" />
+      <module name="changgou_service" target="1.8" />
+      <module name="changgou_service_api" target="1.8" />
+      <module name="changgou_service_canal" target="1.8" />
+      <module name="changgou_service_file" target="1.8" />
+      <module name="changgou_service_goods" target="1.8" />
+      <module name="changgou_service_goods_api" target="1.8" />
+      <module name="changgou_service_order" target="1.8" />
+      <module name="changgou_service_order_api" target="1.8" />
+      <module name="changgou_service_pay" target="1.8" />
+      <module name="changgou_service_search" target="1.8" />
+      <module name="changgou_service_search_api" target="1.8" />
+      <module name="changgou_service_seckill" target="1.8" />
+      <module name="changgou_service_seckill_api" target="1.8" />
+      <module name="changgou_service_user" target="1.8" />
+      <module name="changgou_service_user_api" target="1.8" />
+      <module name="changgou_user_oauth" target="1.8" />
+      <module name="changgou_web" target="1.8" />
+      <module name="changgou_web_item" target="1.8" />
+      <module name="changgou_web_search" target="1.8" />
+      <module name="changgouserviceapi" target="1.8" />
+      <module name="crawler" target="1.8" />
+      <module name="day57_vue_01" target="1.8" />
+      <module name="elasticsearch_demo" target="1.5" />
+      <module name="health_common (1)" target="1.8" />
+      <module name="health_dao (1)" target="1.8" />
+      <module name="health_interface (1)" target="1.8" />
+      <module name="health_parent (1)" target="1.8" />
+      <module name="health_pojo (1)" target="1.8" />
+      <module name="health_service (1)" target="1.8" />
+      <module name="health_web (1)" target="1.8" />
+      <module name="itheim-adubbo-provider" target="1.8" />
+      <module name="lucene_demo (1)" target="1.8" />
+      <module name="mybatis_day02_dao" target="1.5" />
+      <module name="POI" target="1.8" />
+      <module name="spring_data_jpa" target="1.8" />
+      <module name="springmvc_quickStart" target="1.8" />
+      <module name="ssm_model" target="1.5" />
+      <module name="ssm_modelzi" target="1.5" />
+      <module name="ssm_parent" target="1.5" />
+      <module name="test01" target="1.5" />
+      <module name="thymelef" target="1.8" />
+      <module name="user_provider" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

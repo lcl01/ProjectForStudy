@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #div{
+            background-color: red;
+        }
+    </style>
+    <script src="js/vuejs-2.5.16.js"></script>
+</head>
+<body>
+<!--<div id="app">-->
+    <!--{{100+100+message}}<br/>-->
+    <!--{{message>10?"ok":"不OK"}}<br/>-->
+    <!--{{message1}}-->
+<!--</div>-->
+<div id="app">
+    {{message}}<br/>
+    <div @mouseover="fun1" id="div" style="width: 70%;height: 80%">
+        12345
+        <textarea v-on:mouseover="fun2($event)">abc</textarea>
+    </div>
+</div>
+</body>
+<script>
+    // new Vue({
+    //     el:"#app",
+    //     data:{
+    //         message:10,
+    //         message1:"hello"
+    //     }
+    // });
+    new Vue({
+    el:"#app",
+    data:{
+        message:"李龙城"
+    },
+    methods:{
+        fun1:function () {
+            alert("div域");
+        },
+        fun2:function (e) {
+            alert("text域");
+            // 阻止冒泡（如果2个方法重叠，阻止上一层fun1方法的执行 ）
+            e.stopPropagation();
+        }
+    }
+
+    });
+</script>
+</html>

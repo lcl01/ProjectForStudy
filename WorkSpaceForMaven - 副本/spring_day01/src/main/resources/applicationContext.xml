@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+    <!--<bean id="accountDao" class="com.lcl.dao.impl.AccountDaoImpl"></bean>-->
+    <!--<bean id="accountService" class="com.lcl.service.impl.AccountServiceImpl">-->
+    <!--<property name="accountDao" ref="accountDao"></property>-->
+    <!--</bean>-->
+    <context:component-scan base-package="com.lcl"></context:component-scan>
+    <context:property-placeholder location="jdbc.properties"></context:property-placeholder>
+    <bean id="accountDao" class="com.lcl.dao.impl.AccountDaoImpl"></bean>
+
+    <bean id="runner" class="org.apache.commons.dbutils.QueryRunner">
+        <constructor-arg name="ds" ref="dataSource"></constructor-arg>
+
+    </bean>
+    <bean id="connectionUtils" class="com.lcl.utills.ConnectionUtils">
+        <!-- 注入数据源-->
+        <property name="dataSource" ref="dataSource"></property>
+    </bean>
+    <bean id="proxyAccountService" factory-bean="beanFactory" factory-method="getAccountService"></bean>
+    <bean id="beanFactory" class="com.lcl.factory.BeanFactory1">
+        <!-- 注入service -->
+        <property name="accountService" ref="accountService"></property>
+        <!-- 注入事务管理器 -->
+        <property name="txManager" ref="txManager"></property>
+    </bean>
+    <bean id="txManager" class="com.lcl.utills.TransactionManager">
+        <!-- 注入ConnectionUtils -->
+        <property name="connectionUtils" ref="connectionUtils"></property>
+    </bean>
+    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+        <property name="driverClass" value="${jdbc.driver}"></property>
+        <property name="jdbcUrl" value="${jdbc.url}"></property>
+        <property name="user" value="${jdbc.username}"></property>
+        <property name="password" value="${jdbc.password}"></property>
+    </bean>
+
+    <import resource="classpath:applicationContext-service.xml"></import>
+    <import resource="classpath:applicationContext-dao.xml"></import>
+
+    <!--<context:component-scan base-package="com.lcl"></context:component-scan>-->
+</beans>

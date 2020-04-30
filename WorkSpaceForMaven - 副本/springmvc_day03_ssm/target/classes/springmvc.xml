@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+<context:component-scan base-package="com.itheima.ssm">
+    <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"></context:include-filter>
+    <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Service"></context:exclude-filter>
+    <!--	解决方案一：
+		SpringMVC只扫描 @Controller 注解、不扫描@Service注解
+		Spring不扫描 @Controller 注解
+
+	解决方案二：
+		只让SpringMVC扫描，不让Spring扫描
+        在springMVC的配置中添加<import resource="applicationContext.xml"></import>/-->
+</context:component-scan>
+    <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/pages/"></property>
+        <property name="suffix" value=".jsp"></property>
+    </bean>
+    <mvc:default-servlet-handler></mvc:default-servlet-handler>
+    <mvc:annotation-driven></mvc:annotation-driven>
+    <!--
+         <mvc:resources location="/css/" mapping="/css/**" />
+        <mvc:resources location="/images/" mapping="/images/**" />
+        <mvc:resources location="/js/" mapping="/js/**" />
+    -->
+
+</beans>

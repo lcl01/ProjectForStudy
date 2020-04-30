@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/health_parent/health_jobs" />
+    <file type="web" url="file://$PROJECT_DIR$/health_parent/health_service" />
+    <file type="web" url="file://$PROJECT_DIR$/health_parent/health_web" />
+    <file type="web" url="file://$PROJECT_DIR$/health_parent/healthmobile_web" />
+    <file type="web" url="file://$PROJECT_DIR$/health_parent/springsecurity_demo" />
+    <file type="web" url="file://$PROJECT_DIR$/itheim-adubbo-provider" />
+    <file type="web" url="file://$PROJECT_DIR$/itheima-dubbo-consumer" />
+    <file type="web" url="file://$PROJECT_DIR$/itheima-dubbo-provider" />
+    <file type="web" url="file://$PROJECT_DIR$/itheima_javaweb" />
+    <file type="web" url="file://$PROJECT_DIR$/mybaits_day01_quick" />
+    <file type="web" url="file://$PROJECT_DIR$/springboot_datajpa" />
+    <file type="web" url="file://$PROJECT_DIR$/springmvc_day02_responce" />
+    <file type="web" url="file://$PROJECT_DIR$/springmvc_day03_ssm" />
+    <file type="web" url="file://$PROJECT_DIR$/springmvc_quickly" />
+    <file type="web" url="file://$PROJECT_DIR$/springmvc_response02" />
+    <file type="web" url="file://$PROJECT_DIR$/springmvc_ssm_regist" />
+    <file type="web" url="file://$PROJECT_DIR$/ssm_parentFU/ssm_web" />
+    <file type="web" url="file://$PROJECT_DIR$/vue_demo" />
+    <file type="web" url="file://$PROJECT_DIR$/vue_user" />
+    <file type="web" url="file://F:/sz61/传智健康/day02/代码/health_parent/health_service" />
+    <file type="web" url="file://F:/sz61/传智健康/day02/代码/health_parent/health_web" />
+    <file type="web" url="file://F:/sz74/java-web/day57_vue/03.代码/vueDemo/day57_vue_01" />
+  </component>
+  <component name="JavaScriptSettings">
+    <option name="languageLevel" value="ES6" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/changgou_parent/pom.xml" />
+        <option value="$PROJECT_DIR$/itheima_javaweb/pom.xml" />
+        <option value="$PROJECT_DIR$/itheima-dubbo-consumer/pom.xml" />
+        <option value="$PROJECT_DIR$/itheima-dubbo-provider/pom.xml" />
+        <option value="$PROJECT_DIR$/mybaits_day01_quick/pom.xml" />
+        <option value="$PROJECT_DIR$/mybatis_lazy/pom.xml" />
+        <option value="$PROJECT_DIR$/mybatis_annotation/pom.xml" />
+        <option value="$PROJECT_DIR$/spring_day/pom.xml" />
+        <option value="$PROJECT_DIR$/spring_ioc/pom.xml" />
+        <option value="$PROJECT_DIR$/spring_annotation_ioc/pom.xml" />
+        <option value="$PROJECT_DIR$/spring_account/pom.xml" />
+        <option value="$PROJECT_DIR$/spring_annotation_account/pom.xml" />
+        <option value="$PROJECT_DIR$/spring_account_withoutxml/pom.xml" />
+        <option value="$PROJECT_DIR$/spring_day03_account/pom.xml" />
+        <option value="$PROJECT_DIR$/spring_proxy/pom.xml" />
+        <option value="$PROJECT_DIR$/spring_day03_aop/pom.xml" />
+        <option value="$PROJECT_DIR$/spring_aop_advice/pom.xml" />
+        <option value="$PROJECT_DIR$/spring_annotation_aop/pom.xml" />
+        <option value="$PROJECT_DIR$/spring_account_aopxml/pom.xml" />
+        <option value="$PROJECT_DIR$/spring_annotation_day04_aop/pom.xml" />
+        <option value="$PROJECT_DIR$/spring_jdbctemplate/pom.xml" />
+        <option value="$PROJECT_DIR$/spring_tx_day04/pom.xml" />
+        <option value="$PROJECT_DIR$/spring_tx_smssw/pom.xml" />
+        <option value="$PROJECT_DIR$/spring_smssw_annotation/pom.xml" />
+        <option value="$PROJECT_DIR$/springmvc_quickly/pom.xml" />
+        <option value="$PROJECT_DIR$/springmvc_day02_responce/pom.xml" />
+        <option value="$PROJECT_DIR$/springmvc_response02/pom.xml" />
+        <option value="$PROJECT_DIR$/springmvc_day03_ssm/pom.xml" />
+        <option value="$PROJECT_DIR$/springmvc_ssm_regist/pom.xml" />
+        <option value="$PROJECT_DIR$/ssm_parentFU/pom.xml" />
+        <option value="$PROJECT_DIR$/vue_demo/pom.xml" />
+        <option value="$PROJECT_DIR$/vue_user/pom.xml" />
+        <option value="$PROJECT_DIR$/health_parent/pom.xml" />
+        <option value="F:/sz61/传智健康/day02/代码/health_parent/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot_helloworld/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot_demo001/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot_mysql/pom.xml" />
+        <option value="$PROJECT_DIR$/spring_data_jpa/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot_data_jpa/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot_datajpa/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot_rabbitmq/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot_rabbitmq_producer/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot_rabbitmq_consumer/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot_cloud/pom.xml" />
+        <option value="$PROJECT_DIR$/sptingboot_cloud_resttemplate/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot_cloud_resttemplate/pom.xml" />
+        <option value="$PROJECT_DIR$/springcloud_parent/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-mybatis/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-jpa/pom.xml" />
+        <option value="$PROJECT_DIR$/lucene_demo/pom.xml" />
+        <option value="$PROJECT_DIR$/elasticsearch_demo01/pom.xml" />
+        <option value="$PROJECT_DIR$/springdata_elasticsearch_demo/pom.xml" />
+        <option value="$PROJECT_DIR$/Changgouparent/pom.xml" />
+        <option value="$PROJECT_DIR$/Changgou-parent/pom.xml" />
+        <option value="$PROJECT_DIR$/Changgou-parent/changgou-service-api/pom.xml" />
+        <option value="$PROJECT_DIR$/Changgou-parent/changgou-service-api/changgou-service-content-api/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-thymeleaf/pom.xml" />
+        <option value="$PROJECT_DIR$/Changgou-parent/changgou-gateway/changgou-gateway-web/pom.xml" />
+        <option value="$PROJECT_DIR$/code-template/pom.xml" />
+        <option value="$PROJECT_DIR$/Changgou-parent/changgou-user-oauth/pom.xml" />
+        <option value="$PROJECT_DIR$/tensquare_parent/pom.xml" />
+        <option value="$PROJECT_DIR$/tensquare_parent/tensquare_user/pom.xml" />
+        <option value="$PROJECT_DIR$/poi/pom.xml" />
+        <option value="$PROJECT_DIR$/code-generator/pom.xml" />
+      </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/changgou_parent/changgou_common/pom.xml" />
+        <option value="$PROJECT_DIR$/changgou_parent/changgou_common_db/pom.xml" />
+        <option value="$PROJECT_DIR$/changgou_parent/changgou_eureka/pom.xml" />
+        <option value="$PROJECT_DIR$/changgou_parent/changgou_gateway/changgou_gateway_web/pom.xml" />
+        <option value="$PROJECT_DIR$/changgou_parent/changgou_gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/changgou_parent/changgou_service/changgou-service-rabbitmq/pom.xml" />
+        <option value="$PROJECT_DIR$/changgou_parent/changgou_service/changgou_service_canal/pom.xml" />
+        <option value="$PROJECT_DIR$/changgou_parent/changgou_service/changgou_service_file/pom.xml" />
+        <option value="$PROJECT_DIR$/changgou_parent/changgou_service/changgou_service_goods/pom.xml" />
+        <option value="$PROJECT_DIR$/changgou_parent/changgou_service/changgou_service_order/pom.xml" />
+        <option value="$PROJECT_DIR$/changgou_parent/changgou_service/changgou_service_pay/pom.xml" />
+        <option value="$PROJECT_DIR$/changgou_parent/changgou_service/changgou_service_search/pom.xml" />
+        <option value="$PROJECT_DIR$/changgou_parent/changgou_service/changgou_service_seckill/pom.xml" />
+        <option value="$PROJECT_DIR$/changgou_parent/changgou_service/changgou_service_user/pom.xml" />
+        <option value="$PROJECT_DIR$/changgou_parent/changgou_service/pom.xml" />
+        <option value="$PROJECT_DIR$/changgou_parent/changgou_service_api/changgou-web-item-api/pom.xml" />
+        <option value="$PROJECT_DIR$/changgou_parent/changgou_service_api/changgou_service_goods_api/pom.xml" />
+        <option value="$PROJECT_DIR$/changgou_parent/changgou_service_api/changgou_service_order_api/pom.xml" />
+        <option value="$PROJECT_DIR$/changgou_parent/changgou_service_api/changgou_service_search_api/pom.xml" />
+        <option value="$PROJECT_DIR$/changgou_parent/changgou_service_api/changgou_service_seckill_api/pom.xml" />
+        <option value="$PROJECT_DIR$/changgou_parent/changgou_service_api/changgou_service_user_api/pom.xml" />
+        <option value="$PROJECT_DIR$/changgou_parent/changgou_service_api/pom.xml" />
+        <option value="$PROJECT_DIR$/changgou_parent/changgou_user_oauth/pom.xml" />
+        <option value="$PROJECT_DIR$/changgou_parent/changgou_web/changgou_web_item/pom.xml" />
+        <option value="$PROJECT_DIR$/changgou_parent/changgou_web/changgou_web_search/pom.xml" />
+        <option value="$PROJECT_DIR$/changgou_parent/changgou_web/pom.xml" />
+        <option value="$PROJECT_DIR$/changgou_parent/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot_data_jpa/pom.xml" />
+        <option value="$PROJECT_DIR$/ssm_parentFU/ssm_model/pom.xml" />
+        <option value="$PROJECT_DIR$/ssm_parentFU/ssm_modelzi/pom.xml" />
+        <option value="F:/sz61/传智健康/day02/代码/health_parent/health_common/pom.xml" />
+        <option value="F:/sz61/传智健康/day02/代码/health_parent/health_dao/pom.xml" />
+        <option value="F:/sz61/传智健康/day02/代码/health_parent/health_interface/pom.xml" />
+        <option value="F:/sz61/传智健康/day02/代码/health_parent/health_pojo/pom.xml" />
+        <option value="F:/sz61/传智健康/day02/代码/health_parent/health_service/pom.xml" />
+        <option value="F:/sz61/传智健康/day02/代码/health_parent/health_web/pom.xml" />
+        <option value="F:/sz61/传智健康/day02/代码/health_parent/pom.xml" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

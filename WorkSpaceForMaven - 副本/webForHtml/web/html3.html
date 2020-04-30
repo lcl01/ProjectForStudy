@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--&lt;!&ndash;籍贯：<select name="provinceId" id="provinceId" onchange="refreshCity(this)">&ndash;&gt;-->
+    <!--&lt;!&ndash;<option value="-1">-请选择-</option>&ndash;&gt;-->
+    <!--&lt;!&ndash;<option value="0">广东</option>&ndash;&gt;-->
+    <!--&lt;!&ndash;<option value="1">湖北</option>&ndash;&gt;-->
+    <!--&lt;!&ndash;<option value="2">山东</option>&ndash;&gt;-->
+<!--&lt;!&ndash;</select>&ndash;&gt;-->
+<!--<select id="cityId">-->
+    <!--<option>-请选择-</option>-->
+<!--</select>-->
+<span id="timeSpanId"></span>
+</body>
+<script type="text/javascript">
+    // var array = [1,2,3,4,"哈哈哈"];
+    // console.log(array.length); //5
+    //定义了一个长度为3的数组
+    // var citys = new Array(3);
+    //
+    // citys[0] = ["深圳","惠州","东莞","广州"];
+    // citys[1] = ["武汉","黄冈","鄂州","黄石"];
+    // citys[2] = ["济南","青岛","威海","日照","烟台"];
+    //
+    //
+    // //遍历
+    // for(var i = 0; i < citys.length;i++){
+    //     var cityArray =  citys[i];
+    //     console.log("cityArray="+cityArray);
+    //
+    //     for(var j = 0; j  < cityArray.length;j++){
+    //         console.log("city="+cityArray[j]);
+    //     }
+    //
+    // }
+    // var citys = new Array(3);
+    // citys[0] = ["深圳","惠州","东莞","广州"];
+    // citys[1] = ["武汉","黄冈","鄂州","黄石"];
+    // citys[2] = ["济南","青岛","威海","日照","烟台"];
+    // function refreshCity(obj){
+    //     var citySelect =  document.getElementById("cityId");
+    //
+    //     // 清空城市的select里面之前的option innerHTML;
+    //     citySelect.innerHTML  = "<option>-请选择-</option>";
+    //     var pValue =  obj.value;
+    //     if (pValue > -1){
+    //         var cityArray =   citys[pValue];
+    //         for(var i = 0; i < cityArray.length;i++){
+    //             var cityValue =  cityArray[i];
+    //             var opEle =   document.createElement("option");
+    //             var textNode =   document.createTextNode(cityValue);
+    //             opEle.appendChild(textNode);
+    //             citySelect.appendChild(opEle);
+    //         }
+    //     }
+    // }
+    var spanEle =  document.getElementById("timeSpanId");
+    setInterval("showTime()",1000);
+    function showTime() {
+        var myDate = new Date();
+        var timeStr =  myDate.toLocaleString();
+        spanEle.innerHTML = timeStr;
+    }
+</script>
+</html>

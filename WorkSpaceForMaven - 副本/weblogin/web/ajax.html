@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="js/jquery-3.3.1.js">
+    </script>
+</head>
+<body>
+<input type="button" value="JS的Ajax入门(GET方式请求)" onclick="sendAjaxGet()"/>
+<input type="button" value="JS的Ajax入门(Post方式请求)" onclick="sendAjaxPost()"/>
+<br/>
+<center>
+    <h1>用户注册页面</h1>
+    <table border="1px" width="500px">
+        <tr>
+            <td>用户名:</td>
+            <td><input type="text" id="username" onblur="checkUsername(this)"/>
+                <span id="usernamespan"></span>
+            </td>
+        </tr>
+
+        <tr>
+            <td>密码:</td>
+            <td><input type="password"/>
+            </td>
+        </tr>
+
+        <tr>
+            <td>邮箱:</td>
+            <td><input type="password"/>
+            </td>
+        </tr>
+
+        <tr>
+            <td>电话:</td>
+            <td><input type="password"/>
+            </td>
+        </tr>
+
+        <tr>
+            <td><input id="submitId" type="button" value="注册"/></td>
+        </tr>
+
+    </table>
+</center>
+<br/>
+<input type="button" value="jqury的Ajax" id="btn02">
+<br/>
+<input type="button" value="ajax" id="btn03">
+</body>
+<script>
+    function sendAjaxPost() {
+        var xmlHttp=null;
+        if (window.XMLHttpRequest) {
+            xmlHttp=new XMLHttpRequest();
+        }else if(window.ActiveXObject){
+            xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlHttp.open("POST", "/servletAjax");
+        xmlHttp.setRequestHeader("content-type","application/x-www-form-urlencoded");
+        xmlHttp.send("username=zs&password=123456");
+        xmlHttp.onreadystatechange = function() {
+            if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+                var result = xmlHttp.responseText;
+                alert(result);
+            }
+        };
+    }
+    function sendAjaxGet() {
+        //1.创建xmlHttpRequest对象
+        var xmlHttp = null;
+        if (window.XMLHttpRequest) {// all modern browsers
+            xmlHttp = new XMLHttpRequest();
+        } else if (window.ActiveXObject) {// for IE5, IE6
+            xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+        //2.打开连接
+        xmlHttp.open("GET","/servletAjax?username=zs&password=123456");
+        //3.发送请求
+        xmlHttp.send();
+
+        //4.设置对象状态发生改变所触发的函数
+        xmlHttp.onreadystatechange = function(){
+            if(xmlHttp.readyState == 4 && xmlHttp.status == 200){
+                var result = xmlHttp.responseText;
+                alert(result);
+            }
+
+        };
+
+    }
+</script>
+<script>
+    function checkUsername(obj){
+        var username =  obj.value;
+        var xmlhttp=null;
+        if (window.XMLHttpRequest){
+            xmlhttp = new XMLHttpRequest();
+        }else if(window.ActiveXObject){
+            xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.open("get","/servletAjaxDemo02?username="+username);
+        xmlhttp.send();
+        xmlhttp.onreadystatechange= function (){
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200){
+                var flag =  xmlhttp.responseText;
+                if (flag == "true") {
+                    document.getElementById("usernamespan").innerHTML = "<font color='green'>恭喜!用户名可用!</font>";
+
+                }else {
+                    document.getElementById("usernamespan").innerHTML = "<font color='red'>用户名已经被占用!</font>";
+                }
+            }
+        }
+    }
+</script>
+<script>
+    $("#btn02").click(function (){
+        $.post("/servletAjax",{"username":"zs","password":"123555550"},function (result) {
+            alert(result);
+        });
+    });
+    $("#btn03").click(
+        function () {
+            $.ajax(
+                {
+                    url:"/servletAjax",
+                    async:true,
+                    data:"username=zs&password=9998877",
+                    type:"get",
+                    dataType:"text",
+                    success:function (data) {
+                        alert(data);
+                    },
+                    error:function () {
+                        alert("失败");
+                    }
+                }
+            );
+        }
+    )
+</script>
+</html>

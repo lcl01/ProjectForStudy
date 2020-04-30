@@ -1,0 +1,624 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coder520.POI.TeacherProject.dao.TeacherProjectMapper" >
+  <resultMap id="BaseResultMap" type="com.coder520.POI.TeacherProject.entity.TeacherProject" >
+    <id column="TEACHERSEQNO" property="teacherseqno" jdbcType="DECIMAL" />
+    <id column="PROJECTSEQNO" property="projectseqno" jdbcType="DECIMAL" />
+    <result column="PROJECTNAME" property="projectname" jdbcType="VARCHAR" />
+    <result column="PROJECTISSUEDDEPT" property="projectissueddept" jdbcType="VARCHAR" />
+    <result column="PROJECTCATEGORY" property="projectcategory" jdbcType="VARCHAR" />
+    <result column="PROJECTTYPE1" property="projecttype1" jdbcType="DECIMAL" />
+    <result column="PROJECTTYPE2" property="projecttype2" jdbcType="DECIMAL" />
+    <result column="PROJECTTYPE3" property="projecttype3" jdbcType="DECIMAL" />
+    <result column="PROJECTMAJOR" property="projectmajor" jdbcType="VARCHAR" />
+    <result column="PROJECTMEMBERS" property="projectmembers" jdbcType="VARCHAR" />
+    <result column="BEGINTIME" property="begintime" jdbcType="VARCHAR" />
+    <result column="ENDTIME" property="endtime" jdbcType="VARCHAR" />
+    <result column="RESEARCHEDTIME" property="researchedtime" jdbcType="VARCHAR" />
+    <result column="FUNDS" property="funds" jdbcType="DECIMAL" />
+    <result column="RECEIVEDFEE" property="receivedfee" jdbcType="DECIMAL" />
+    <result column="RECEIVEDFEEINYEAR" property="receivedfeeinyear" jdbcType="DECIMAL" />
+    <result column="RANKINGDEPT" property="rankingdept" jdbcType="DECIMAL" />
+    <result column="CONTRACTNO" property="contractno" jdbcType="VARCHAR" />
+    <result column="CONTRACTACCESSORIES" property="contractaccessories" jdbcType="VARCHAR" />
+    <result column="ISSECRECT" property="issecrect" jdbcType="VARCHAR" />
+    <result column="LASTMODIFIEDTIME" property="lastmodifiedtime" jdbcType="VARCHAR" />
+    <result column="LASTMODIFEDMAN" property="lastmodifedman" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="PROJECTTYPE4" property="projecttype4" jdbcType="DECIMAL" />
+    <result column="PROJECTCLASS" property="projectclass" jdbcType="VARCHAR" />
+    <result column="PROJECTCATEGORYB" property="projectcategoryb" jdbcType="VARCHAR" />
+    <result column="PROJECTCATEGORYC" property="projectcategoryc" jdbcType="VARCHAR" />
+    <result column="DEPTAUTHORIZED" property="deptauthorized" jdbcType="VARCHAR" />
+    <result column="MAJORDEPTSEQNO" property="majordeptseqno" jdbcType="DECIMAL" />
+    <result column="MAJORLABSEQNO" property="majorlabseqno" jdbcType="DECIMAL" />
+    <result column="MAJORSEQNO" property="majorseqno" jdbcType="DECIMAL" />
+    <result column="PROJECTOTHERS" property="projectothers" jdbcType="VARCHAR" />
+    <result column="PROJECTMAJORNUM" property="projectmajornum" jdbcType="VARCHAR" />
+    <result column="PROJECTOTHERSNUM" property="projectothersnum" jdbcType="VARCHAR" />
+    <result column="OTHERSDEPTSEQNO" property="othersdeptseqno" jdbcType="VARCHAR" />
+    <result column="OTHERSLABSEQNO" property="otherslabseqno" jdbcType="VARCHAR" />
+    <result column="PROJECTNOTES" property="projectnotes" jdbcType="VARCHAR" />
+    <result column="LASTMODIFEDMANID" property="lastmodifedmanid" jdbcType="VARCHAR" />
+    <result column="INTRODUCTION" property="introduction" jdbcType="VARCHAR" />
+    <result column="COOPERATION" property="cooperation" jdbcType="VARCHAR" />
+    <result column="SUPCOUNT" property="supcount" jdbcType="DECIMAL" />
+    <result column="PERSONHELPREGISTERSEQNO" property="personhelpregisterseqno" jdbcType="DECIMAL" />
+    <result column="TECHNICALFIELD" property="technicalfield" jdbcType="VARCHAR" />
+    <result column="CURRENTYEAREXPEND" property="currentyearexpend" jdbcType="VARCHAR" />
+    <result column="TEMPSTATE" property="tempstate" jdbcType="CHAR" />
+    <result column="ISKCW" property="iskcw" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    TEACHERSEQNO, PROJECTSEQNO, PROJECTNAME, PROJECTISSUEDDEPT, PROJECTCATEGORY, PROJECTTYPE1, 
+    PROJECTTYPE2, PROJECTTYPE3, PROJECTMAJOR, PROJECTMEMBERS, BEGINTIME, ENDTIME, RESEARCHEDTIME, 
+    FUNDS, RECEIVEDFEE, RECEIVEDFEEINYEAR, RANKINGDEPT, CONTRACTNO, CONTRACTACCESSORIES, 
+    ISSECRECT, LASTMODIFIEDTIME, LASTMODIFEDMAN, STATUS, PROJECTTYPE4, PROJECTCLASS, 
+    PROJECTCATEGORYB, PROJECTCATEGORYC, DEPTAUTHORIZED, MAJORDEPTSEQNO, MAJORLABSEQNO, 
+    MAJORSEQNO, PROJECTOTHERS, PROJECTMAJORNUM, PROJECTOTHERSNUM, OTHERSDEPTSEQNO, OTHERSLABSEQNO, 
+    PROJECTNOTES, LASTMODIFEDMANID, INTRODUCTION, COOPERATION, SUPCOUNT, PERSONHELPREGISTERSEQNO, 
+    TECHNICALFIELD, CURRENTYEAREXPEND, TEMPSTATE, ISKCW
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="com.coder520.POI.TeacherProject.entity.TeacherProjectKey" >
+    select 
+    <include refid="Base_Column_List" />
+    from TEACHER_PROJECT
+    where TEACHERSEQNO = #{teacherseqno,jdbcType=DECIMAL}
+      and PROJECTSEQNO = #{projectseqno,jdbcType=DECIMAL}
+  </select>
+
+  <select id="findByName" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select
+    <include refid="Base_Column_List" />
+    from TEACHER_PROJECT
+    where PROJECTNAME = #{projectname,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="com.coder520.POI.TeacherProject.entity.TeacherProjectKey" >
+    delete from TEACHER_PROJECT
+    where TEACHERSEQNO = #{teacherseqno,jdbcType=DECIMAL}
+      and PROJECTSEQNO = #{projectseqno,jdbcType=DECIMAL}
+  </delete>
+  <insert id="insert" parameterType="com.coder520.POI.TeacherProject.entity.TeacherProject" >
+    insert into TEACHER_PROJECT (TEACHERSEQNO, PROJECTSEQNO, PROJECTNAME, 
+      PROJECTISSUEDDEPT, PROJECTCATEGORY, PROJECTTYPE1, 
+      PROJECTTYPE2, PROJECTTYPE3, PROJECTMAJOR, 
+      PROJECTMEMBERS, BEGINTIME, ENDTIME, 
+      RESEARCHEDTIME, FUNDS, RECEIVEDFEE, 
+      RECEIVEDFEEINYEAR, RANKINGDEPT, CONTRACTNO, 
+      CONTRACTACCESSORIES, ISSECRECT, LASTMODIFIEDTIME, 
+      LASTMODIFEDMAN, STATUS, PROJECTTYPE4, 
+      PROJECTCLASS, PROJECTCATEGORYB, PROJECTCATEGORYC, 
+      DEPTAUTHORIZED, MAJORDEPTSEQNO, MAJORLABSEQNO, 
+      MAJORSEQNO, PROJECTOTHERS, PROJECTMAJORNUM, 
+      PROJECTOTHERSNUM, OTHERSDEPTSEQNO, OTHERSLABSEQNO, 
+      PROJECTNOTES, LASTMODIFEDMANID, INTRODUCTION, 
+      COOPERATION, SUPCOUNT, PERSONHELPREGISTERSEQNO, 
+      TECHNICALFIELD, CURRENTYEAREXPEND, TEMPSTATE, 
+      ISKCW)
+    values (#{teacherseqno,jdbcType=DECIMAL}, #{projectseqno,jdbcType=DECIMAL}, #{projectname,jdbcType=VARCHAR}, 
+      #{projectissueddept,jdbcType=VARCHAR}, #{projectcategory,jdbcType=VARCHAR}, #{projecttype1,jdbcType=DECIMAL}, 
+      #{projecttype2,jdbcType=DECIMAL}, #{projecttype3,jdbcType=DECIMAL}, #{projectmajor,jdbcType=VARCHAR}, 
+      #{projectmembers,jdbcType=VARCHAR}, #{begintime,jdbcType=VARCHAR}, #{endtime,jdbcType=VARCHAR}, 
+      #{researchedtime,jdbcType=VARCHAR}, #{funds,jdbcType=DECIMAL}, #{receivedfee,jdbcType=DECIMAL}, 
+      #{receivedfeeinyear,jdbcType=DECIMAL}, #{rankingdept,jdbcType=DECIMAL}, #{contractno,jdbcType=VARCHAR}, 
+      #{contractaccessories,jdbcType=VARCHAR}, #{issecrect,jdbcType=VARCHAR}, #{lastmodifiedtime,jdbcType=VARCHAR}, 
+      #{lastmodifedman,jdbcType=VARCHAR}, #{status,jdbcType=VARCHAR}, #{projecttype4,jdbcType=DECIMAL}, 
+      #{projectclass,jdbcType=VARCHAR}, #{projectcategoryb,jdbcType=VARCHAR}, #{projectcategoryc,jdbcType=VARCHAR}, 
+      #{deptauthorized,jdbcType=VARCHAR}, #{majordeptseqno,jdbcType=DECIMAL}, #{majorlabseqno,jdbcType=DECIMAL}, 
+      #{majorseqno,jdbcType=DECIMAL}, #{projectothers,jdbcType=VARCHAR}, #{projectmajornum,jdbcType=VARCHAR}, 
+      #{projectothersnum,jdbcType=VARCHAR}, #{othersdeptseqno,jdbcType=VARCHAR}, #{otherslabseqno,jdbcType=VARCHAR}, 
+      #{projectnotes,jdbcType=VARCHAR}, #{lastmodifedmanid,jdbcType=VARCHAR}, #{introduction,jdbcType=VARCHAR}, 
+      #{cooperation,jdbcType=VARCHAR}, #{supcount,jdbcType=DECIMAL}, #{personhelpregisterseqno,jdbcType=DECIMAL}, 
+      #{technicalfield,jdbcType=VARCHAR}, #{currentyearexpend,jdbcType=VARCHAR}, #{tempstate,jdbcType=CHAR}, 
+      #{iskcw,jdbcType=VARCHAR})
+  </insert>
+
+  <insert id="insertAddKey" parameterType="com.coder520.POI.TeacherProject.entity.TeacherProject" >
+    <selectKey keyProperty="projectseqno" resultType="long" order="BEFORE">
+      select  nvl(max(PROJECTSEQNO),0)+1 from TEACHER_PROJECT
+    </selectKey>
+    insert into TEACHER_PROJECT (TEACHERSEQNO, PROJECTSEQNO, PROJECTNAME,
+    PROJECTISSUEDDEPT, PROJECTCATEGORY, PROJECTTYPE1,
+    PROJECTTYPE2, PROJECTTYPE3, PROJECTMAJOR,
+    PROJECTMEMBERS, BEGINTIME, ENDTIME,
+    RESEARCHEDTIME, FUNDS, RECEIVEDFEE,
+    RECEIVEDFEEINYEAR, RANKINGDEPT, CONTRACTNO,
+    CONTRACTACCESSORIES, ISSECRECT, LASTMODIFIEDTIME,
+    LASTMODIFEDMAN, STATUS, PROJECTTYPE4,
+    PROJECTCLASS, PROJECTCATEGORYB, PROJECTCATEGORYC,
+    DEPTAUTHORIZED, MAJORDEPTSEQNO, MAJORLABSEQNO,
+    MAJORSEQNO, PROJECTOTHERS, PROJECTMAJORNUM,
+    PROJECTOTHERSNUM, OTHERSDEPTSEQNO, OTHERSLABSEQNO,
+    PROJECTNOTES, LASTMODIFEDMANID, INTRODUCTION,
+    COOPERATION, SUPCOUNT, PERSONHELPREGISTERSEQNO,
+    TECHNICALFIELD, CURRENTYEAREXPEND, TEMPSTATE,
+    ISKCW)
+    values (#{teacherseqno,jdbcType=DECIMAL}, #{projectseqno,jdbcType=DECIMAL}, #{projectname,jdbcType=VARCHAR},
+    #{projectissueddept,jdbcType=VARCHAR}, #{projectcategory,jdbcType=VARCHAR}, #{projecttype1,jdbcType=DECIMAL},
+    #{projecttype2,jdbcType=DECIMAL}, #{projecttype3,jdbcType=DECIMAL}, #{projectmajor,jdbcType=VARCHAR},
+    #{projectmembers,jdbcType=VARCHAR}, #{begintime,jdbcType=VARCHAR}, #{endtime,jdbcType=VARCHAR},
+    #{researchedtime,jdbcType=VARCHAR}, #{funds,jdbcType=DECIMAL}, #{receivedfee,jdbcType=DECIMAL},
+    #{receivedfeeinyear,jdbcType=DECIMAL}, #{rankingdept,jdbcType=DECIMAL}, #{contractno,jdbcType=VARCHAR},
+    #{contractaccessories,jdbcType=VARCHAR}, #{issecrect,jdbcType=VARCHAR}, #{lastmodifiedtime,jdbcType=VARCHAR},
+    #{lastmodifedman,jdbcType=VARCHAR}, #{status,jdbcType=VARCHAR}, #{projecttype4,jdbcType=DECIMAL},
+    #{projectclass,jdbcType=VARCHAR}, #{projectcategoryb,jdbcType=VARCHAR}, #{projectcategoryc,jdbcType=VARCHAR},
+    #{deptauthorized,jdbcType=VARCHAR}, #{majordeptseqno,jdbcType=DECIMAL}, #{majorlabseqno,jdbcType=DECIMAL},
+    #{majorseqno,jdbcType=DECIMAL}, #{projectothers,jdbcType=VARCHAR}, #{projectmajornum,jdbcType=VARCHAR},
+    #{projectothersnum,jdbcType=VARCHAR}, #{othersdeptseqno,jdbcType=VARCHAR}, #{otherslabseqno,jdbcType=VARCHAR},
+    #{projectnotes,jdbcType=VARCHAR}, #{lastmodifedmanid,jdbcType=VARCHAR}, #{introduction,jdbcType=VARCHAR},
+    #{cooperation,jdbcType=VARCHAR}, #{supcount,jdbcType=DECIMAL}, #{personhelpregisterseqno,jdbcType=DECIMAL},
+    #{technicalfield,jdbcType=VARCHAR}, #{currentyearexpend,jdbcType=VARCHAR}, #{tempstate,jdbcType=CHAR},
+    #{iskcw,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.coder520.POI.TeacherProject.entity.TeacherProject" >
+    insert into TEACHER_PROJECT
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="teacherseqno != null" >
+        TEACHERSEQNO,
+      </if>
+      <if test="projectseqno != null" >
+        PROJECTSEQNO,
+      </if>
+      <if test="projectname != null" >
+        PROJECTNAME,
+      </if>
+      <if test="projectissueddept != null" >
+        PROJECTISSUEDDEPT,
+      </if>
+      <if test="projectcategory != null" >
+        PROJECTCATEGORY,
+      </if>
+      <if test="projecttype1 != null" >
+        PROJECTTYPE1,
+      </if>
+      <if test="projecttype2 != null" >
+        PROJECTTYPE2,
+      </if>
+      <if test="projecttype3 != null" >
+        PROJECTTYPE3,
+      </if>
+      <if test="projectmajor != null" >
+        PROJECTMAJOR,
+      </if>
+      <if test="projectmembers != null" >
+        PROJECTMEMBERS,
+      </if>
+      <if test="begintime != null" >
+        BEGINTIME,
+      </if>
+      <if test="endtime != null" >
+        ENDTIME,
+      </if>
+      <if test="researchedtime != null" >
+        RESEARCHEDTIME,
+      </if>
+      <if test="funds != null" >
+        FUNDS,
+      </if>
+      <if test="receivedfee != null" >
+        RECEIVEDFEE,
+      </if>
+      <if test="receivedfeeinyear != null" >
+        RECEIVEDFEEINYEAR,
+      </if>
+      <if test="rankingdept != null" >
+        RANKINGDEPT,
+      </if>
+      <if test="contractno != null" >
+        CONTRACTNO,
+      </if>
+      <if test="contractaccessories != null" >
+        CONTRACTACCESSORIES,
+      </if>
+      <if test="issecrect != null" >
+        ISSECRECT,
+      </if>
+      <if test="lastmodifiedtime != null" >
+        LASTMODIFIEDTIME,
+      </if>
+      <if test="lastmodifedman != null" >
+        LASTMODIFEDMAN,
+      </if>
+      <if test="status != null" >
+        STATUS,
+      </if>
+      <if test="projecttype4 != null" >
+        PROJECTTYPE4,
+      </if>
+      <if test="projectclass != null" >
+        PROJECTCLASS,
+      </if>
+      <if test="projectcategoryb != null" >
+        PROJECTCATEGORYB,
+      </if>
+      <if test="projectcategoryc != null" >
+        PROJECTCATEGORYC,
+      </if>
+      <if test="deptauthorized != null" >
+        DEPTAUTHORIZED,
+      </if>
+      <if test="majordeptseqno != null" >
+        MAJORDEPTSEQNO,
+      </if>
+      <if test="majorlabseqno != null" >
+        MAJORLABSEQNO,
+      </if>
+      <if test="majorseqno != null" >
+        MAJORSEQNO,
+      </if>
+      <if test="projectothers != null" >
+        PROJECTOTHERS,
+      </if>
+      <if test="projectmajornum != null" >
+        PROJECTMAJORNUM,
+      </if>
+      <if test="projectothersnum != null" >
+        PROJECTOTHERSNUM,
+      </if>
+      <if test="othersdeptseqno != null" >
+        OTHERSDEPTSEQNO,
+      </if>
+      <if test="otherslabseqno != null" >
+        OTHERSLABSEQNO,
+      </if>
+      <if test="projectnotes != null" >
+        PROJECTNOTES,
+      </if>
+      <if test="lastmodifedmanid != null" >
+        LASTMODIFEDMANID,
+      </if>
+      <if test="introduction != null" >
+        INTRODUCTION,
+      </if>
+      <if test="cooperation != null" >
+        COOPERATION,
+      </if>
+      <if test="supcount != null" >
+        SUPCOUNT,
+      </if>
+      <if test="personhelpregisterseqno != null" >
+        PERSONHELPREGISTERSEQNO,
+      </if>
+      <if test="technicalfield != null" >
+        TECHNICALFIELD,
+      </if>
+      <if test="currentyearexpend != null" >
+        CURRENTYEAREXPEND,
+      </if>
+      <if test="tempstate != null" >
+        TEMPSTATE,
+      </if>
+      <if test="iskcw != null" >
+        ISKCW,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="teacherseqno != null" >
+        #{teacherseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="projectseqno != null" >
+        #{projectseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="projectname != null" >
+        #{projectname,jdbcType=VARCHAR},
+      </if>
+      <if test="projectissueddept != null" >
+        #{projectissueddept,jdbcType=VARCHAR},
+      </if>
+      <if test="projectcategory != null" >
+        #{projectcategory,jdbcType=VARCHAR},
+      </if>
+      <if test="projecttype1 != null" >
+        #{projecttype1,jdbcType=DECIMAL},
+      </if>
+      <if test="projecttype2 != null" >
+        #{projecttype2,jdbcType=DECIMAL},
+      </if>
+      <if test="projecttype3 != null" >
+        #{projecttype3,jdbcType=DECIMAL},
+      </if>
+      <if test="projectmajor != null" >
+        #{projectmajor,jdbcType=VARCHAR},
+      </if>
+      <if test="projectmembers != null" >
+        #{projectmembers,jdbcType=VARCHAR},
+      </if>
+      <if test="begintime != null" >
+        #{begintime,jdbcType=VARCHAR},
+      </if>
+      <if test="endtime != null" >
+        #{endtime,jdbcType=VARCHAR},
+      </if>
+      <if test="researchedtime != null" >
+        #{researchedtime,jdbcType=VARCHAR},
+      </if>
+      <if test="funds != null" >
+        #{funds,jdbcType=DECIMAL},
+      </if>
+      <if test="receivedfee != null" >
+        #{receivedfee,jdbcType=DECIMAL},
+      </if>
+      <if test="receivedfeeinyear != null" >
+        #{receivedfeeinyear,jdbcType=DECIMAL},
+      </if>
+      <if test="rankingdept != null" >
+        #{rankingdept,jdbcType=DECIMAL},
+      </if>
+      <if test="contractno != null" >
+        #{contractno,jdbcType=VARCHAR},
+      </if>
+      <if test="contractaccessories != null" >
+        #{contractaccessories,jdbcType=VARCHAR},
+      </if>
+      <if test="issecrect != null" >
+        #{issecrect,jdbcType=VARCHAR},
+      </if>
+      <if test="lastmodifiedtime != null" >
+        #{lastmodifiedtime,jdbcType=VARCHAR},
+      </if>
+      <if test="lastmodifedman != null" >
+        #{lastmodifedman,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="projecttype4 != null" >
+        #{projecttype4,jdbcType=DECIMAL},
+      </if>
+      <if test="projectclass != null" >
+        #{projectclass,jdbcType=VARCHAR},
+      </if>
+      <if test="projectcategoryb != null" >
+        #{projectcategoryb,jdbcType=VARCHAR},
+      </if>
+      <if test="projectcategoryc != null" >
+        #{projectcategoryc,jdbcType=VARCHAR},
+      </if>
+      <if test="deptauthorized != null" >
+        #{deptauthorized,jdbcType=VARCHAR},
+      </if>
+      <if test="majordeptseqno != null" >
+        #{majordeptseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="majorlabseqno != null" >
+        #{majorlabseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="majorseqno != null" >
+        #{majorseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="projectothers != null" >
+        #{projectothers,jdbcType=VARCHAR},
+      </if>
+      <if test="projectmajornum != null" >
+        #{projectmajornum,jdbcType=VARCHAR},
+      </if>
+      <if test="projectothersnum != null" >
+        #{projectothersnum,jdbcType=VARCHAR},
+      </if>
+      <if test="othersdeptseqno != null" >
+        #{othersdeptseqno,jdbcType=VARCHAR},
+      </if>
+      <if test="otherslabseqno != null" >
+        #{otherslabseqno,jdbcType=VARCHAR},
+      </if>
+      <if test="projectnotes != null" >
+        #{projectnotes,jdbcType=VARCHAR},
+      </if>
+      <if test="lastmodifedmanid != null" >
+        #{lastmodifedmanid,jdbcType=VARCHAR},
+      </if>
+      <if test="introduction != null" >
+        #{introduction,jdbcType=VARCHAR},
+      </if>
+      <if test="cooperation != null" >
+        #{cooperation,jdbcType=VARCHAR},
+      </if>
+      <if test="supcount != null" >
+        #{supcount,jdbcType=DECIMAL},
+      </if>
+      <if test="personhelpregisterseqno != null" >
+        #{personhelpregisterseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="technicalfield != null" >
+        #{technicalfield,jdbcType=VARCHAR},
+      </if>
+      <if test="currentyearexpend != null" >
+        #{currentyearexpend,jdbcType=VARCHAR},
+      </if>
+      <if test="tempstate != null" >
+        #{tempstate,jdbcType=CHAR},
+      </if>
+      <if test="iskcw != null" >
+        #{iskcw,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.coder520.POI.TeacherProject.entity.TeacherProject" >
+    update TEACHER_PROJECT
+    <set >
+      <if test="projectname != null" >
+        PROJECTNAME = #{projectname,jdbcType=VARCHAR},
+      </if>
+      <if test="projectissueddept != null" >
+        PROJECTISSUEDDEPT = #{projectissueddept,jdbcType=VARCHAR},
+      </if>
+      <if test="projectcategory != null" >
+        PROJECTCATEGORY = #{projectcategory,jdbcType=VARCHAR},
+      </if>
+      <if test="projecttype1 != null" >
+        PROJECTTYPE1 = #{projecttype1,jdbcType=DECIMAL},
+      </if>
+      <if test="projecttype2 != null" >
+        PROJECTTYPE2 = #{projecttype2,jdbcType=DECIMAL},
+      </if>
+      <if test="projecttype3 != null" >
+        PROJECTTYPE3 = #{projecttype3,jdbcType=DECIMAL},
+      </if>
+      <if test="projectmajor != null" >
+        PROJECTMAJOR = #{projectmajor,jdbcType=VARCHAR},
+      </if>
+      <if test="projectmembers != null" >
+        PROJECTMEMBERS = #{projectmembers,jdbcType=VARCHAR},
+      </if>
+      <if test="begintime != null" >
+        BEGINTIME = #{begintime,jdbcType=VARCHAR},
+      </if>
+      <if test="endtime != null" >
+        ENDTIME = #{endtime,jdbcType=VARCHAR},
+      </if>
+      <if test="researchedtime != null" >
+        RESEARCHEDTIME = #{researchedtime,jdbcType=VARCHAR},
+      </if>
+      <if test="funds != null" >
+        FUNDS = #{funds,jdbcType=DECIMAL},
+      </if>
+      <if test="receivedfee != null" >
+        RECEIVEDFEE = #{receivedfee,jdbcType=DECIMAL},
+      </if>
+      <if test="receivedfeeinyear != null" >
+        RECEIVEDFEEINYEAR = #{receivedfeeinyear,jdbcType=DECIMAL},
+      </if>
+      <if test="rankingdept != null" >
+        RANKINGDEPT = #{rankingdept,jdbcType=DECIMAL},
+      </if>
+      <if test="contractno != null" >
+        CONTRACTNO = #{contractno,jdbcType=VARCHAR},
+      </if>
+      <if test="contractaccessories != null" >
+        CONTRACTACCESSORIES = #{contractaccessories,jdbcType=VARCHAR},
+      </if>
+      <if test="issecrect != null" >
+        ISSECRECT = #{issecrect,jdbcType=VARCHAR},
+      </if>
+      <if test="lastmodifiedtime != null" >
+        LASTMODIFIEDTIME = #{lastmodifiedtime,jdbcType=VARCHAR},
+      </if>
+      <if test="lastmodifedman != null" >
+        LASTMODIFEDMAN = #{lastmodifedman,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        STATUS = #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="projecttype4 != null" >
+        PROJECTTYPE4 = #{projecttype4,jdbcType=DECIMAL},
+      </if>
+      <if test="projectclass != null" >
+        PROJECTCLASS = #{projectclass,jdbcType=VARCHAR},
+      </if>
+      <if test="projectcategoryb != null" >
+        PROJECTCATEGORYB = #{projectcategoryb,jdbcType=VARCHAR},
+      </if>
+      <if test="projectcategoryc != null" >
+        PROJECTCATEGORYC = #{projectcategoryc,jdbcType=VARCHAR},
+      </if>
+      <if test="deptauthorized != null" >
+        DEPTAUTHORIZED = #{deptauthorized,jdbcType=VARCHAR},
+      </if>
+      <if test="majordeptseqno != null" >
+        MAJORDEPTSEQNO = #{majordeptseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="majorlabseqno != null" >
+        MAJORLABSEQNO = #{majorlabseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="majorseqno != null" >
+        MAJORSEQNO = #{majorseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="projectothers != null" >
+        PROJECTOTHERS = #{projectothers,jdbcType=VARCHAR},
+      </if>
+      <if test="projectmajornum != null" >
+        PROJECTMAJORNUM = #{projectmajornum,jdbcType=VARCHAR},
+      </if>
+      <if test="projectothersnum != null" >
+        PROJECTOTHERSNUM = #{projectothersnum,jdbcType=VARCHAR},
+      </if>
+      <if test="othersdeptseqno != null" >
+        OTHERSDEPTSEQNO = #{othersdeptseqno,jdbcType=VARCHAR},
+      </if>
+      <if test="otherslabseqno != null" >
+        OTHERSLABSEQNO = #{otherslabseqno,jdbcType=VARCHAR},
+      </if>
+      <if test="projectnotes != null" >
+        PROJECTNOTES = #{projectnotes,jdbcType=VARCHAR},
+      </if>
+      <if test="lastmodifedmanid != null" >
+        LASTMODIFEDMANID = #{lastmodifedmanid,jdbcType=VARCHAR},
+      </if>
+      <if test="introduction != null" >
+        INTRODUCTION = #{introduction,jdbcType=VARCHAR},
+      </if>
+      <if test="cooperation != null" >
+        COOPERATION = #{cooperation,jdbcType=VARCHAR},
+      </if>
+      <if test="supcount != null" >
+        SUPCOUNT = #{supcount,jdbcType=DECIMAL},
+      </if>
+      <if test="personhelpregisterseqno != null" >
+        PERSONHELPREGISTERSEQNO = #{personhelpregisterseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="technicalfield != null" >
+        TECHNICALFIELD = #{technicalfield,jdbcType=VARCHAR},
+      </if>
+      <if test="currentyearexpend != null" >
+        CURRENTYEAREXPEND = #{currentyearexpend,jdbcType=VARCHAR},
+      </if>
+      <if test="tempstate != null" >
+        TEMPSTATE = #{tempstate,jdbcType=CHAR},
+      </if>
+      <if test="iskcw != null" >
+        ISKCW = #{iskcw,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where TEACHERSEQNO = #{teacherseqno,jdbcType=DECIMAL}
+      and PROJECTSEQNO = #{projectseqno,jdbcType=DECIMAL}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.coder520.POI.TeacherProject.entity.TeacherProject" >
+    update TEACHER_PROJECT
+    set PROJECTNAME = #{projectname,jdbcType=VARCHAR},
+      PROJECTISSUEDDEPT = #{projectissueddept,jdbcType=VARCHAR},
+      PROJECTCATEGORY = #{projectcategory,jdbcType=VARCHAR},
+      PROJECTTYPE1 = #{projecttype1,jdbcType=DECIMAL},
+      PROJECTTYPE2 = #{projecttype2,jdbcType=DECIMAL},
+      PROJECTTYPE3 = #{projecttype3,jdbcType=DECIMAL},
+      PROJECTMAJOR = #{projectmajor,jdbcType=VARCHAR},
+      PROJECTMEMBERS = #{projectmembers,jdbcType=VARCHAR},
+      BEGINTIME = #{begintime,jdbcType=VARCHAR},
+      ENDTIME = #{endtime,jdbcType=VARCHAR},
+      RESEARCHEDTIME = #{researchedtime,jdbcType=VARCHAR},
+      FUNDS = #{funds,jdbcType=DECIMAL},
+      RECEIVEDFEE = #{receivedfee,jdbcType=DECIMAL},
+      RECEIVEDFEEINYEAR = #{receivedfeeinyear,jdbcType=DECIMAL},
+      RANKINGDEPT = #{rankingdept,jdbcType=DECIMAL},
+      CONTRACTNO = #{contractno,jdbcType=VARCHAR},
+      CONTRACTACCESSORIES = #{contractaccessories,jdbcType=VARCHAR},
+      ISSECRECT = #{issecrect,jdbcType=VARCHAR},
+      LASTMODIFIEDTIME = #{lastmodifiedtime,jdbcType=VARCHAR},
+      LASTMODIFEDMAN = #{lastmodifedman,jdbcType=VARCHAR},
+      STATUS = #{status,jdbcType=VARCHAR},
+      PROJECTTYPE4 = #{projecttype4,jdbcType=DECIMAL},
+      PROJECTCLASS = #{projectclass,jdbcType=VARCHAR},
+      PROJECTCATEGORYB = #{projectcategoryb,jdbcType=VARCHAR},
+      PROJECTCATEGORYC = #{projectcategoryc,jdbcType=VARCHAR},
+      DEPTAUTHORIZED = #{deptauthorized,jdbcType=VARCHAR},
+      MAJORDEPTSEQNO = #{majordeptseqno,jdbcType=DECIMAL},
+      MAJORLABSEQNO = #{majorlabseqno,jdbcType=DECIMAL},
+      MAJORSEQNO = #{majorseqno,jdbcType=DECIMAL},
+      PROJECTOTHERS = #{projectothers,jdbcType=VARCHAR},
+      PROJECTMAJORNUM = #{projectmajornum,jdbcType=VARCHAR},
+      PROJECTOTHERSNUM = #{projectothersnum,jdbcType=VARCHAR},
+      OTHERSDEPTSEQNO = #{othersdeptseqno,jdbcType=VARCHAR},
+      OTHERSLABSEQNO = #{otherslabseqno,jdbcType=VARCHAR},
+      PROJECTNOTES = #{projectnotes,jdbcType=VARCHAR},
+      LASTMODIFEDMANID = #{lastmodifedmanid,jdbcType=VARCHAR},
+      INTRODUCTION = #{introduction,jdbcType=VARCHAR},
+      COOPERATION = #{cooperation,jdbcType=VARCHAR},
+      SUPCOUNT = #{supcount,jdbcType=DECIMAL},
+      PERSONHELPREGISTERSEQNO = #{personhelpregisterseqno,jdbcType=DECIMAL},
+      TECHNICALFIELD = #{technicalfield,jdbcType=VARCHAR},
+      CURRENTYEAREXPEND = #{currentyearexpend,jdbcType=VARCHAR},
+      TEMPSTATE = #{tempstate,jdbcType=CHAR},
+      ISKCW = #{iskcw,jdbcType=VARCHAR}
+    where TEACHERSEQNO = #{teacherseqno,jdbcType=DECIMAL}
+      and PROJECTSEQNO = #{projectseqno,jdbcType=DECIMAL}
+  </update>
+</mapper>

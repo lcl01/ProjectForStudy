@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img id="imgId" src="../img/banner_1.jpg" width="600px" height="200px"/><br/>
+<input type="button" value="上一张" onclick="preImg()"/>
+<input type="button" value="下一张" onclick="nextImg()"/>
+</body>
+<script type="text/javascript">
+    setInterval(preImg,1000);
+  var i=1;
+  function preImg(){
+      i--
+      if(i==0){
+          i=3;
+      }
+      var elementById = document.getElementById("imgId");
+      elementById.src= "../img/banner_"+i+".jpg";
+
+  }
+  function nextImg() {
+      i++;
+      if (i == 4){
+          i = 1;
+      }
+
+      //1. 获得img标签对象
+      var imgEle =  document.getElementById("imgId");
+      //2. 改变src值
+      imgEle.src = "../img/banner_"+i+".jpg";
+  }
+</script>
+</html>

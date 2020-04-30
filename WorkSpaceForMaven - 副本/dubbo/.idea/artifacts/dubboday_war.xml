@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="dubboday:war">
+    <output-path>$PROJECT_DIR$/dubboday/target</output-path>
+    <root id="archive" name="dubbo-day-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="dubboday:war exploded" />
+    </root>
+  </artifact>
+</component>

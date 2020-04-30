@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue_v-on:click</title>
+    <script src="js/vuejs-2.5.16.js"></script>
+
+</head>
+<body>
+<div id="app">
+    <!--<input type="text" @keydown.enter="fun01"/>-->
+    <!--<form action="http://www.chuanzhi.com" method="post" @click.prevent>-->
+        <!--<input type="submit"/>-->
+    <!--</form>-->
+    <!--<div @click="fun01">-->
+        <!--<a href="http://www.baidu.com" @click.stop>百度</a>-->
+    <!--</div>-->
+    <div v-html="message"></div>
+    <div v-text="message"></div>c
+    <div></div>
+
+</div>
+<script>
+//    new Vue({
+//        el:"#app",
+//        data:{
+//            message:'<h1>hello world</h1>'
+//        },
+//        methods:{
+//
+//        }
+//    });
+//    new Vue({
+//        el:"#app",
+//        data:{},
+//        methods:{
+//            fun01:function () {
+//                alert("摁了enter键");
+//            }
+//        }
+//    });
+//    new Vue(
+//        {
+//            el:"#app",
+//            data:{},
+//            methods:{
+//                fun01:function () {
+//                    alert('百度');
+//                }
+//            }
+//        }
+//    );
+</script>
+</body>
+</html>

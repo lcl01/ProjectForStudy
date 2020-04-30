@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coder520.POI.UuserRolesMap.dao.UuserRolesMapMapper" >
+  <resultMap id="BaseResultMap" type="com.coder520.POI.UuserRolesMap.entity.UuserRolesMap" >
+    <id column="MAPSEQNO" property="mapseqno" jdbcType="DECIMAL" />
+    <result column="USERSEQNO" property="userseqno" jdbcType="DECIMAL" />
+    <result column="MODELSUBITEMRIGHTS" property="modelsubitemrights" jdbcType="VARCHAR" />
+    <result column="ROLESEQNOSTR" property="roleseqnostr" jdbcType="VARCHAR" />
+    <result column="ROLESEQNO" property="roleseqno" jdbcType="DECIMAL" />
+    <result column="ADMINID" property="adminid" jdbcType="DECIMAL" />
+    <result column="ADMINNAME" property="adminname" jdbcType="VARCHAR" />
+    <result column="DEPTSEQNO" property="deptseqno" jdbcType="DECIMAL" />
+    <result column="LABSEQNO" property="labseqno" jdbcType="DECIMAL" />
+    <result column="ISMANAGER" property="ismanager" jdbcType="VARCHAR" />
+    <result column="CREATETIME" property="createtime" jdbcType="TIMESTAMP" />
+    <result column="FUNCTIONOFLAB" property="functionoflab" jdbcType="VARCHAR" />
+    <result column="ISRESEARCHER" property="isresearcher" jdbcType="VARCHAR" />
+    <result column="ISACADEMICBOARD" property="isacademicboard" jdbcType="VARCHAR" />
+    <result column="FUNCTIONOFACADEMICBOARD" property="functionofacademicboard" jdbcType="VARCHAR" />
+    <result column="ISBACKBONE" property="isbackbone" jdbcType="VARCHAR" />
+    <result column="JOINTIME" property="jointime" jdbcType="VARCHAR" />
+    <result column="EXITTIME" property="exittime" jdbcType="VARCHAR" />
+    <result column="FUNCTIONOFLABTYPE2" property="functionoflabtype2" jdbcType="VARCHAR" />
+  </resultMap>
+  <resultMap id="ResultMapWithBLOBs" type="com.coder520.POI.UuserRolesMap.entity.UuserRolesMap" extends="BaseResultMap" >
+    <result column="MODELITEMRIGHTS" property="modelitemrights" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    MAPSEQNO, USERSEQNO, MODELSUBITEMRIGHTS, ROLESEQNOSTR, ROLESEQNO, ADMINID, ADMINNAME, 
+    DEPTSEQNO, LABSEQNO, ISMANAGER, CREATETIME, FUNCTIONOFLAB, ISRESEARCHER, ISACADEMICBOARD, 
+    FUNCTIONOFACADEMICBOARD, ISBACKBONE, JOINTIME, EXITTIME, FUNCTIONOFLABTYPE2
+  </sql>
+  <sql id="Blob_Column_List" >
+    MODELITEMRIGHTS
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from UUSER_ROLES_MAP
+    where MAPSEQNO = #{mapseqno,jdbcType=DECIMAL}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from UUSER_ROLES_MAP
+    where MAPSEQNO = #{mapseqno,jdbcType=DECIMAL}
+  </delete>
+  <insert id="insert" parameterType="com.coder520.POI.UuserRolesMap.entity.UuserRolesMap" >
+    insert into UUSER_ROLES_MAP (MAPSEQNO, USERSEQNO, MODELSUBITEMRIGHTS, 
+      ROLESEQNOSTR, ROLESEQNO, ADMINID, 
+      ADMINNAME, DEPTSEQNO, LABSEQNO, 
+      ISMANAGER, CREATETIME, FUNCTIONOFLAB, 
+      ISRESEARCHER, ISACADEMICBOARD, FUNCTIONOFACADEMICBOARD, 
+      ISBACKBONE, JOINTIME, EXITTIME, 
+      FUNCTIONOFLABTYPE2, MODELITEMRIGHTS
+      )
+    values (#{mapseqno,jdbcType=DECIMAL}, #{userseqno,jdbcType=DECIMAL}, #{modelsubitemrights,jdbcType=VARCHAR}, 
+      #{roleseqnostr,jdbcType=VARCHAR}, #{roleseqno,jdbcType=DECIMAL}, #{adminid,jdbcType=DECIMAL}, 
+      #{adminname,jdbcType=VARCHAR}, #{deptseqno,jdbcType=DECIMAL}, #{labseqno,jdbcType=DECIMAL}, 
+      #{ismanager,jdbcType=VARCHAR}, #{createtime,jdbcType=TIMESTAMP}, #{functionoflab,jdbcType=VARCHAR}, 
+      #{isresearcher,jdbcType=VARCHAR}, #{isacademicboard,jdbcType=VARCHAR}, #{functionofacademicboard,jdbcType=VARCHAR}, 
+      #{isbackbone,jdbcType=VARCHAR}, #{jointime,jdbcType=VARCHAR}, #{exittime,jdbcType=VARCHAR}, 
+      #{functionoflabtype2,jdbcType=VARCHAR}, #{modelitemrights,jdbcType=LONGVARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.coder520.POI.UuserRolesMap.entity.UuserRolesMap" >
+    insert into UUSER_ROLES_MAP
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="mapseqno != null" >
+        MAPSEQNO,
+      </if>
+      <if test="userseqno != null" >
+        USERSEQNO,
+      </if>
+      <if test="modelsubitemrights != null" >
+        MODELSUBITEMRIGHTS,
+      </if>
+      <if test="roleseqnostr != null" >
+        ROLESEQNOSTR,
+      </if>
+      <if test="roleseqno != null" >
+        ROLESEQNO,
+      </if>
+      <if test="adminid != null" >
+        ADMINID,
+      </if>
+      <if test="adminname != null" >
+        ADMINNAME,
+      </if>
+      <if test="deptseqno != null" >
+        DEPTSEQNO,
+      </if>
+      <if test="labseqno != null" >
+        LABSEQNO,
+      </if>
+      <if test="ismanager != null" >
+        ISMANAGER,
+      </if>
+      <if test="createtime != null" >
+        CREATETIME,
+      </if>
+      <if test="functionoflab != null" >
+        FUNCTIONOFLAB,
+      </if>
+      <if test="isresearcher != null" >
+        ISRESEARCHER,
+      </if>
+      <if test="isacademicboard != null" >
+        ISACADEMICBOARD,
+      </if>
+      <if test="functionofacademicboard != null" >
+        FUNCTIONOFACADEMICBOARD,
+      </if>
+      <if test="isbackbone != null" >
+        ISBACKBONE,
+      </if>
+      <if test="jointime != null" >
+        JOINTIME,
+      </if>
+      <if test="exittime != null" >
+        EXITTIME,
+      </if>
+      <if test="functionoflabtype2 != null" >
+        FUNCTIONOFLABTYPE2,
+      </if>
+      <if test="modelitemrights != null" >
+        MODELITEMRIGHTS,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="mapseqno != null" >
+        #{mapseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="userseqno != null" >
+        #{userseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="modelsubitemrights != null" >
+        #{modelsubitemrights,jdbcType=VARCHAR},
+      </if>
+      <if test="roleseqnostr != null" >
+        #{roleseqnostr,jdbcType=VARCHAR},
+      </if>
+      <if test="roleseqno != null" >
+        #{roleseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="adminid != null" >
+        #{adminid,jdbcType=DECIMAL},
+      </if>
+      <if test="adminname != null" >
+        #{adminname,jdbcType=VARCHAR},
+      </if>
+      <if test="deptseqno != null" >
+        #{deptseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="labseqno != null" >
+        #{labseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="ismanager != null" >
+        #{ismanager,jdbcType=VARCHAR},
+      </if>
+      <if test="createtime != null" >
+        #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="functionoflab != null" >
+        #{functionoflab,jdbcType=VARCHAR},
+      </if>
+      <if test="isresearcher != null" >
+        #{isresearcher,jdbcType=VARCHAR},
+      </if>
+      <if test="isacademicboard != null" >
+        #{isacademicboard,jdbcType=VARCHAR},
+      </if>
+      <if test="functionofacademicboard != null" >
+        #{functionofacademicboard,jdbcType=VARCHAR},
+      </if>
+      <if test="isbackbone != null" >
+        #{isbackbone,jdbcType=VARCHAR},
+      </if>
+      <if test="jointime != null" >
+        #{jointime,jdbcType=VARCHAR},
+      </if>
+      <if test="exittime != null" >
+        #{exittime,jdbcType=VARCHAR},
+      </if>
+      <if test="functionoflabtype2 != null" >
+        #{functionoflabtype2,jdbcType=VARCHAR},
+      </if>
+      <if test="modelitemrights != null" >
+        #{modelitemrights,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.coder520.POI.UuserRolesMap.entity.UuserRolesMap" >
+    update UUSER_ROLES_MAP
+    <set >
+      <if test="userseqno != null" >
+        USERSEQNO = #{userseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="modelsubitemrights != null" >
+        MODELSUBITEMRIGHTS = #{modelsubitemrights,jdbcType=VARCHAR},
+      </if>
+      <if test="roleseqnostr != null" >
+        ROLESEQNOSTR = #{roleseqnostr,jdbcType=VARCHAR},
+      </if>
+      <if test="roleseqno != null" >
+        ROLESEQNO = #{roleseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="adminid != null" >
+        ADMINID = #{adminid,jdbcType=DECIMAL},
+      </if>
+      <if test="adminname != null" >
+        ADMINNAME = #{adminname,jdbcType=VARCHAR},
+      </if>
+      <if test="deptseqno != null" >
+        DEPTSEQNO = #{deptseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="labseqno != null" >
+        LABSEQNO = #{labseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="ismanager != null" >
+        ISMANAGER = #{ismanager,jdbcType=VARCHAR},
+      </if>
+      <if test="createtime != null" >
+        CREATETIME = #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="functionoflab != null" >
+        FUNCTIONOFLAB = #{functionoflab,jdbcType=VARCHAR},
+      </if>
+      <if test="isresearcher != null" >
+        ISRESEARCHER = #{isresearcher,jdbcType=VARCHAR},
+      </if>
+      <if test="isacademicboard != null" >
+        ISACADEMICBOARD = #{isacademicboard,jdbcType=VARCHAR},
+      </if>
+      <if test="functionofacademicboard != null" >
+        FUNCTIONOFACADEMICBOARD = #{functionofacademicboard,jdbcType=VARCHAR},
+      </if>
+      <if test="isbackbone != null" >
+        ISBACKBONE = #{isbackbone,jdbcType=VARCHAR},
+      </if>
+      <if test="jointime != null" >
+        JOINTIME = #{jointime,jdbcType=VARCHAR},
+      </if>
+      <if test="exittime != null" >
+        EXITTIME = #{exittime,jdbcType=VARCHAR},
+      </if>
+      <if test="functionoflabtype2 != null" >
+        FUNCTIONOFLABTYPE2 = #{functionoflabtype2,jdbcType=VARCHAR},
+      </if>
+      <if test="modelitemrights != null" >
+        MODELITEMRIGHTS = #{modelitemrights,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where MAPSEQNO = #{mapseqno,jdbcType=DECIMAL}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.coder520.POI.UuserRolesMap.entity.UuserRolesMap" >
+    update UUSER_ROLES_MAP
+    set USERSEQNO = #{userseqno,jdbcType=DECIMAL},
+      MODELSUBITEMRIGHTS = #{modelsubitemrights,jdbcType=VARCHAR},
+      ROLESEQNOSTR = #{roleseqnostr,jdbcType=VARCHAR},
+      ROLESEQNO = #{roleseqno,jdbcType=DECIMAL},
+      ADMINID = #{adminid,jdbcType=DECIMAL},
+      ADMINNAME = #{adminname,jdbcType=VARCHAR},
+      DEPTSEQNO = #{deptseqno,jdbcType=DECIMAL},
+      LABSEQNO = #{labseqno,jdbcType=DECIMAL},
+      ISMANAGER = #{ismanager,jdbcType=VARCHAR},
+      CREATETIME = #{createtime,jdbcType=TIMESTAMP},
+      FUNCTIONOFLAB = #{functionoflab,jdbcType=VARCHAR},
+      ISRESEARCHER = #{isresearcher,jdbcType=VARCHAR},
+      ISACADEMICBOARD = #{isacademicboard,jdbcType=VARCHAR},
+      FUNCTIONOFACADEMICBOARD = #{functionofacademicboard,jdbcType=VARCHAR},
+      ISBACKBONE = #{isbackbone,jdbcType=VARCHAR},
+      JOINTIME = #{jointime,jdbcType=VARCHAR},
+      EXITTIME = #{exittime,jdbcType=VARCHAR},
+      FUNCTIONOFLABTYPE2 = #{functionoflabtype2,jdbcType=VARCHAR},
+      MODELITEMRIGHTS = #{modelitemrights,jdbcType=LONGVARCHAR}
+    where MAPSEQNO = #{mapseqno,jdbcType=DECIMAL}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.coder520.POI.UuserRolesMap.entity.UuserRolesMap" >
+    update UUSER_ROLES_MAP
+    set USERSEQNO = #{userseqno,jdbcType=DECIMAL},
+      MODELSUBITEMRIGHTS = #{modelsubitemrights,jdbcType=VARCHAR},
+      ROLESEQNOSTR = #{roleseqnostr,jdbcType=VARCHAR},
+      ROLESEQNO = #{roleseqno,jdbcType=DECIMAL},
+      ADMINID = #{adminid,jdbcType=DECIMAL},
+      ADMINNAME = #{adminname,jdbcType=VARCHAR},
+      DEPTSEQNO = #{deptseqno,jdbcType=DECIMAL},
+      LABSEQNO = #{labseqno,jdbcType=DECIMAL},
+      ISMANAGER = #{ismanager,jdbcType=VARCHAR},
+      CREATETIME = #{createtime,jdbcType=TIMESTAMP},
+      FUNCTIONOFLAB = #{functionoflab,jdbcType=VARCHAR},
+      ISRESEARCHER = #{isresearcher,jdbcType=VARCHAR},
+      ISACADEMICBOARD = #{isacademicboard,jdbcType=VARCHAR},
+      FUNCTIONOFACADEMICBOARD = #{functionofacademicboard,jdbcType=VARCHAR},
+      ISBACKBONE = #{isbackbone,jdbcType=VARCHAR},
+      JOINTIME = #{jointime,jdbcType=VARCHAR},
+      EXITTIME = #{exittime,jdbcType=VARCHAR},
+      FUNCTIONOFLABTYPE2 = #{functionoflabtype2,jdbcType=VARCHAR}
+    where MAPSEQNO = #{mapseqno,jdbcType=DECIMAL}
+  </update>
+</mapper>

@@ -1,0 +1,575 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coder520.POI.TeacherThesis.dao.TeacherThesisMapper" >
+  <resultMap id="BaseResultMap" type="com.coder520.POI.TeacherThesis.entity.TeacherThesis" >
+    <id column="TEACHERSEQNO" property="teacherseqno" jdbcType="DECIMAL" />
+    <id column="THESISSEQNO" property="thesisseqno" jdbcType="DECIMAL" />
+    <result column="THESSTNAME" property="thesstname" jdbcType="VARCHAR" />
+    <result column="THESISTYPE1" property="thesistype1" jdbcType="VARCHAR" />
+    <result column="THESISTYPE2" property="thesistype2" jdbcType="VARCHAR" />
+    <result column="FIRSTAUTHOR" property="firstauthor" jdbcType="VARCHAR" />
+    <result column="CORRESPONDINGAUTHOR" property="correspondingauthor" jdbcType="VARCHAR" />
+    <result column="OTHERAUTHOR" property="otherauthor" jdbcType="VARCHAR" />
+    <result column="ISSN" property="issn" jdbcType="VARCHAR" />
+    <result column="PUBLICATION" property="publication" jdbcType="VARCHAR" />
+    <result column="PUBLISHTIME" property="publishtime" jdbcType="VARCHAR" />
+    <result column="QUOTEDCOUNTS" property="quotedcounts" jdbcType="VARCHAR" />
+    <result column="MAXQUOTECOUNTS" property="maxquotecounts" jdbcType="VARCHAR" />
+    <result column="IMPACTFACTOR" property="impactfactor" jdbcType="VARCHAR" />
+    <result column="PUBLICATIONSTATUS" property="publicationstatus" jdbcType="VARCHAR" />
+    <result column="ISSECRECT" property="issecrect" jdbcType="VARCHAR" />
+    <result column="LASTMODIFIEDTIME" property="lastmodifiedtime" jdbcType="VARCHAR" />
+    <result column="LASTMODIFIEDPEOPLE" property="lastmodifiedpeople" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="ISMONO" property="ismono" jdbcType="VARCHAR" />
+    <result column="MONOTYPE" property="monotype" jdbcType="VARCHAR" />
+    <result column="THESISUUID" property="thesisuuid" jdbcType="VARCHAR" />
+    <result column="CONTRACTACCESSORIES" property="contractaccessories" jdbcType="VARCHAR" />
+    <result column="MAJORDEPTSEQNO" property="majordeptseqno" jdbcType="DECIMAL" />
+    <result column="MAJORLABSEQNO" property="majorlabseqno" jdbcType="DECIMAL" />
+    <result column="MAJORSEQNO" property="majorseqno" jdbcType="DECIMAL" />
+    <result column="CORRESDEPTSEQNO" property="corresdeptseqno" jdbcType="DECIMAL" />
+    <result column="CORRESLABSEQNO" property="correslabseqno" jdbcType="DECIMAL" />
+    <result column="CORRESSEQNO" property="corresseqno" jdbcType="DECIMAL" />
+    <result column="OTHERAUTHORUUID" property="otherauthoruuid" jdbcType="VARCHAR" />
+    <result column="THESISTYPE0" property="thesistype0" jdbcType="VARCHAR" />
+    <result column="THESISOTHERS" property="thesisothers" jdbcType="VARCHAR" />
+    <result column="THESISMAJORNUM" property="thesismajornum" jdbcType="VARCHAR" />
+    <result column="THESISOTHERSNUM" property="thesisothersnum" jdbcType="VARCHAR" />
+    <result column="OTHERSDEPTSEQNO" property="othersdeptseqno" jdbcType="VARCHAR" />
+    <result column="OTHERSLABSEQNO" property="otherslabseqno" jdbcType="VARCHAR" />
+    <result column="LASTMODIFIEDPEOPLEID" property="lastmodifiedpeopleid" jdbcType="VARCHAR" />
+    <result column="INTRODUCTION" property="introduction" jdbcType="VARCHAR" />
+    <result column="WRITERNO" property="writerno" jdbcType="DECIMAL" />
+    <result column="WRITERNAME" property="writername" jdbcType="VARCHAR" />
+    <result column="TEMPSTATE" property="tempstate" jdbcType="CHAR" />
+    <result column="ISKCW" property="iskcw" jdbcType="CHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    TEACHERSEQNO, THESISSEQNO, THESSTNAME, THESISTYPE1, THESISTYPE2, FIRSTAUTHOR, CORRESPONDINGAUTHOR, 
+    OTHERAUTHOR, ISSN, PUBLICATION, PUBLISHTIME, QUOTEDCOUNTS, MAXQUOTECOUNTS, IMPACTFACTOR, 
+    PUBLICATIONSTATUS, ISSECRECT, LASTMODIFIEDTIME, LASTMODIFIEDPEOPLE, STATUS, ISMONO, 
+    MONOTYPE, THESISUUID, CONTRACTACCESSORIES, MAJORDEPTSEQNO, MAJORLABSEQNO, MAJORSEQNO, 
+    CORRESDEPTSEQNO, CORRESLABSEQNO, CORRESSEQNO, OTHERAUTHORUUID, THESISTYPE0, THESISOTHERS, 
+    THESISMAJORNUM, THESISOTHERSNUM, OTHERSDEPTSEQNO, OTHERSLABSEQNO, LASTMODIFIEDPEOPLEID, 
+    INTRODUCTION, WRITERNO, WRITERNAME, TEMPSTATE, ISKCW
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="com.coder520.POI.TeacherThesis.entity.TeacherThesisKey" >
+    select 
+    <include refid="Base_Column_List" />
+    from TEACHER_THESIS
+    where TEACHERSEQNO = #{teacherseqno,jdbcType=DECIMAL}
+      and THESISSEQNO = #{thesisseqno,jdbcType=DECIMAL}
+  </select>
+
+  <select id="findByName" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select
+    <include refid="Base_Column_List" />
+    from TEACHER_THESIS
+    where THESSTNAME = #{thesstname,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="com.coder520.POI.TeacherThesis.entity.TeacherThesisKey" >
+    delete from TEACHER_THESIS
+    where TEACHERSEQNO = #{teacherseqno,jdbcType=DECIMAL}
+      and THESISSEQNO = #{thesisseqno,jdbcType=DECIMAL}
+  </delete>
+  <insert id="insert" parameterType="com.coder520.POI.TeacherThesis.entity.TeacherThesis" >
+    insert into TEACHER_THESIS (TEACHERSEQNO, THESISSEQNO, THESSTNAME, 
+      THESISTYPE1, THESISTYPE2, FIRSTAUTHOR, 
+      CORRESPONDINGAUTHOR, OTHERAUTHOR, ISSN, 
+      PUBLICATION, PUBLISHTIME, QUOTEDCOUNTS, 
+      MAXQUOTECOUNTS, IMPACTFACTOR, PUBLICATIONSTATUS, 
+      ISSECRECT, LASTMODIFIEDTIME, LASTMODIFIEDPEOPLE, 
+      STATUS, ISMONO, MONOTYPE, 
+      THESISUUID, CONTRACTACCESSORIES, MAJORDEPTSEQNO, 
+      MAJORLABSEQNO, MAJORSEQNO, CORRESDEPTSEQNO, 
+      CORRESLABSEQNO, CORRESSEQNO, OTHERAUTHORUUID, 
+      THESISTYPE0, THESISOTHERS, THESISMAJORNUM, 
+      THESISOTHERSNUM, OTHERSDEPTSEQNO, OTHERSLABSEQNO, 
+      LASTMODIFIEDPEOPLEID, INTRODUCTION, WRITERNO, 
+      WRITERNAME, TEMPSTATE, ISKCW
+      )
+    values (#{teacherseqno,jdbcType=DECIMAL}, #{thesisseqno,jdbcType=DECIMAL}, #{thesstname,jdbcType=VARCHAR}, 
+      #{thesistype1,jdbcType=VARCHAR}, #{thesistype2,jdbcType=VARCHAR}, #{firstauthor,jdbcType=VARCHAR}, 
+      #{correspondingauthor,jdbcType=VARCHAR}, #{otherauthor,jdbcType=VARCHAR}, #{issn,jdbcType=VARCHAR}, 
+      #{publication,jdbcType=VARCHAR}, #{publishtime,jdbcType=VARCHAR}, #{quotedcounts,jdbcType=VARCHAR}, 
+      #{maxquotecounts,jdbcType=VARCHAR}, #{impactfactor,jdbcType=VARCHAR}, #{publicationstatus,jdbcType=VARCHAR}, 
+      #{issecrect,jdbcType=VARCHAR}, #{lastmodifiedtime,jdbcType=VARCHAR}, #{lastmodifiedpeople,jdbcType=VARCHAR}, 
+      #{status,jdbcType=VARCHAR}, #{ismono,jdbcType=VARCHAR}, #{monotype,jdbcType=VARCHAR}, 
+      #{thesisuuid,jdbcType=VARCHAR}, #{contractaccessories,jdbcType=VARCHAR}, #{majordeptseqno,jdbcType=DECIMAL}, 
+      #{majorlabseqno,jdbcType=DECIMAL}, #{majorseqno,jdbcType=DECIMAL}, #{corresdeptseqno,jdbcType=DECIMAL}, 
+      #{correslabseqno,jdbcType=DECIMAL}, #{corresseqno,jdbcType=DECIMAL}, #{otherauthoruuid,jdbcType=VARCHAR}, 
+      #{thesistype0,jdbcType=VARCHAR}, #{thesisothers,jdbcType=VARCHAR}, #{thesismajornum,jdbcType=VARCHAR}, 
+      #{thesisothersnum,jdbcType=VARCHAR}, #{othersdeptseqno,jdbcType=VARCHAR}, #{otherslabseqno,jdbcType=VARCHAR}, 
+      #{lastmodifiedpeopleid,jdbcType=VARCHAR}, #{introduction,jdbcType=VARCHAR}, #{writerno,jdbcType=DECIMAL}, 
+      #{writername,jdbcType=VARCHAR}, #{tempstate,jdbcType=CHAR}, #{iskcw,jdbcType=CHAR}
+      )
+  </insert>
+
+  <insert id="insertAddKey" parameterType="com.coder520.POI.TeacherThesis.entity.TeacherThesis" >
+    <selectKey keyProperty="thesisseqno" resultType="long" order="BEFORE">
+      select  nvl(max(THESISSEQNO),0)+1 from TEACHER_THESIS
+    </selectKey>
+    insert into TEACHER_THESIS (TEACHERSEQNO, THESISSEQNO, THESSTNAME,
+    THESISTYPE1, THESISTYPE2, FIRSTAUTHOR,
+    CORRESPONDINGAUTHOR, OTHERAUTHOR, ISSN,
+    PUBLICATION, PUBLISHTIME, QUOTEDCOUNTS,
+    MAXQUOTECOUNTS, IMPACTFACTOR, PUBLICATIONSTATUS,
+    ISSECRECT, LASTMODIFIEDTIME, LASTMODIFIEDPEOPLE,
+    STATUS, ISMONO, MONOTYPE,
+    THESISUUID, CONTRACTACCESSORIES, MAJORDEPTSEQNO,
+    MAJORLABSEQNO, MAJORSEQNO, CORRESDEPTSEQNO,
+    CORRESLABSEQNO, CORRESSEQNO, OTHERAUTHORUUID,
+    THESISTYPE0, THESISOTHERS, THESISMAJORNUM,
+    THESISOTHERSNUM, OTHERSDEPTSEQNO, OTHERSLABSEQNO,
+    LASTMODIFIEDPEOPLEID, INTRODUCTION, WRITERNO,
+    WRITERNAME, TEMPSTATE, ISKCW
+    )
+    values (#{teacherseqno,jdbcType=DECIMAL}, #{thesisseqno,jdbcType=DECIMAL}, #{thesstname,jdbcType=VARCHAR},
+    #{thesistype1,jdbcType=VARCHAR}, #{thesistype2,jdbcType=VARCHAR}, #{firstauthor,jdbcType=VARCHAR},
+    #{correspondingauthor,jdbcType=VARCHAR}, #{otherauthor,jdbcType=VARCHAR}, #{issn,jdbcType=VARCHAR},
+    #{publication,jdbcType=VARCHAR}, #{publishtime,jdbcType=VARCHAR}, #{quotedcounts,jdbcType=VARCHAR},
+    #{maxquotecounts,jdbcType=VARCHAR}, #{impactfactor,jdbcType=VARCHAR}, #{publicationstatus,jdbcType=VARCHAR},
+    #{issecrect,jdbcType=VARCHAR}, #{lastmodifiedtime,jdbcType=VARCHAR}, #{lastmodifiedpeople,jdbcType=VARCHAR},
+    #{status,jdbcType=VARCHAR}, #{ismono,jdbcType=VARCHAR}, #{monotype,jdbcType=VARCHAR},
+    #{thesisuuid,jdbcType=VARCHAR}, #{contractaccessories,jdbcType=VARCHAR}, #{majordeptseqno,jdbcType=DECIMAL},
+    #{majorlabseqno,jdbcType=DECIMAL}, #{majorseqno,jdbcType=DECIMAL}, #{corresdeptseqno,jdbcType=DECIMAL},
+    #{correslabseqno,jdbcType=DECIMAL}, #{corresseqno,jdbcType=DECIMAL}, #{otherauthoruuid,jdbcType=VARCHAR},
+    #{thesistype0,jdbcType=VARCHAR}, #{thesisothers,jdbcType=VARCHAR}, #{thesismajornum,jdbcType=VARCHAR},
+    #{thesisothersnum,jdbcType=VARCHAR}, #{othersdeptseqno,jdbcType=VARCHAR}, #{otherslabseqno,jdbcType=VARCHAR},
+    #{lastmodifiedpeopleid,jdbcType=VARCHAR}, #{introduction,jdbcType=VARCHAR}, #{writerno,jdbcType=DECIMAL},
+    #{writername,jdbcType=VARCHAR}, #{tempstate,jdbcType=CHAR}, #{iskcw,jdbcType=CHAR}
+    )
+  </insert>
+  <insert id="insertSelective" parameterType="com.coder520.POI.TeacherThesis.entity.TeacherThesis" >
+    insert into TEACHER_THESIS
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="teacherseqno != null" >
+        TEACHERSEQNO,
+      </if>
+      <if test="thesisseqno != null" >
+        THESISSEQNO,
+      </if>
+      <if test="thesstname != null" >
+        THESSTNAME,
+      </if>
+      <if test="thesistype1 != null" >
+        THESISTYPE1,
+      </if>
+      <if test="thesistype2 != null" >
+        THESISTYPE2,
+      </if>
+      <if test="firstauthor != null" >
+        FIRSTAUTHOR,
+      </if>
+      <if test="correspondingauthor != null" >
+        CORRESPONDINGAUTHOR,
+      </if>
+      <if test="otherauthor != null" >
+        OTHERAUTHOR,
+      </if>
+      <if test="issn != null" >
+        ISSN,
+      </if>
+      <if test="publication != null" >
+        PUBLICATION,
+      </if>
+      <if test="publishtime != null" >
+        PUBLISHTIME,
+      </if>
+      <if test="quotedcounts != null" >
+        QUOTEDCOUNTS,
+      </if>
+      <if test="maxquotecounts != null" >
+        MAXQUOTECOUNTS,
+      </if>
+      <if test="impactfactor != null" >
+        IMPACTFACTOR,
+      </if>
+      <if test="publicationstatus != null" >
+        PUBLICATIONSTATUS,
+      </if>
+      <if test="issecrect != null" >
+        ISSECRECT,
+      </if>
+      <if test="lastmodifiedtime != null" >
+        LASTMODIFIEDTIME,
+      </if>
+      <if test="lastmodifiedpeople != null" >
+        LASTMODIFIEDPEOPLE,
+      </if>
+      <if test="status != null" >
+        STATUS,
+      </if>
+      <if test="ismono != null" >
+        ISMONO,
+      </if>
+      <if test="monotype != null" >
+        MONOTYPE,
+      </if>
+      <if test="thesisuuid != null" >
+        THESISUUID,
+      </if>
+      <if test="contractaccessories != null" >
+        CONTRACTACCESSORIES,
+      </if>
+      <if test="majordeptseqno != null" >
+        MAJORDEPTSEQNO,
+      </if>
+      <if test="majorlabseqno != null" >
+        MAJORLABSEQNO,
+      </if>
+      <if test="majorseqno != null" >
+        MAJORSEQNO,
+      </if>
+      <if test="corresdeptseqno != null" >
+        CORRESDEPTSEQNO,
+      </if>
+      <if test="correslabseqno != null" >
+        CORRESLABSEQNO,
+      </if>
+      <if test="corresseqno != null" >
+        CORRESSEQNO,
+      </if>
+      <if test="otherauthoruuid != null" >
+        OTHERAUTHORUUID,
+      </if>
+      <if test="thesistype0 != null" >
+        THESISTYPE0,
+      </if>
+      <if test="thesisothers != null" >
+        THESISOTHERS,
+      </if>
+      <if test="thesismajornum != null" >
+        THESISMAJORNUM,
+      </if>
+      <if test="thesisothersnum != null" >
+        THESISOTHERSNUM,
+      </if>
+      <if test="othersdeptseqno != null" >
+        OTHERSDEPTSEQNO,
+      </if>
+      <if test="otherslabseqno != null" >
+        OTHERSLABSEQNO,
+      </if>
+      <if test="lastmodifiedpeopleid != null" >
+        LASTMODIFIEDPEOPLEID,
+      </if>
+      <if test="introduction != null" >
+        INTRODUCTION,
+      </if>
+      <if test="writerno != null" >
+        WRITERNO,
+      </if>
+      <if test="writername != null" >
+        WRITERNAME,
+      </if>
+      <if test="tempstate != null" >
+        TEMPSTATE,
+      </if>
+      <if test="iskcw != null" >
+        ISKCW,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="teacherseqno != null" >
+        #{teacherseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="thesisseqno != null" >
+        #{thesisseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="thesstname != null" >
+        #{thesstname,jdbcType=VARCHAR},
+      </if>
+      <if test="thesistype1 != null" >
+        #{thesistype1,jdbcType=VARCHAR},
+      </if>
+      <if test="thesistype2 != null" >
+        #{thesistype2,jdbcType=VARCHAR},
+      </if>
+      <if test="firstauthor != null" >
+        #{firstauthor,jdbcType=VARCHAR},
+      </if>
+      <if test="correspondingauthor != null" >
+        #{correspondingauthor,jdbcType=VARCHAR},
+      </if>
+      <if test="otherauthor != null" >
+        #{otherauthor,jdbcType=VARCHAR},
+      </if>
+      <if test="issn != null" >
+        #{issn,jdbcType=VARCHAR},
+      </if>
+      <if test="publication != null" >
+        #{publication,jdbcType=VARCHAR},
+      </if>
+      <if test="publishtime != null" >
+        #{publishtime,jdbcType=VARCHAR},
+      </if>
+      <if test="quotedcounts != null" >
+        #{quotedcounts,jdbcType=VARCHAR},
+      </if>
+      <if test="maxquotecounts != null" >
+        #{maxquotecounts,jdbcType=VARCHAR},
+      </if>
+      <if test="impactfactor != null" >
+        #{impactfactor,jdbcType=VARCHAR},
+      </if>
+      <if test="publicationstatus != null" >
+        #{publicationstatus,jdbcType=VARCHAR},
+      </if>
+      <if test="issecrect != null" >
+        #{issecrect,jdbcType=VARCHAR},
+      </if>
+      <if test="lastmodifiedtime != null" >
+        #{lastmodifiedtime,jdbcType=VARCHAR},
+      </if>
+      <if test="lastmodifiedpeople != null" >
+        #{lastmodifiedpeople,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="ismono != null" >
+        #{ismono,jdbcType=VARCHAR},
+      </if>
+      <if test="monotype != null" >
+        #{monotype,jdbcType=VARCHAR},
+      </if>
+      <if test="thesisuuid != null" >
+        #{thesisuuid,jdbcType=VARCHAR},
+      </if>
+      <if test="contractaccessories != null" >
+        #{contractaccessories,jdbcType=VARCHAR},
+      </if>
+      <if test="majordeptseqno != null" >
+        #{majordeptseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="majorlabseqno != null" >
+        #{majorlabseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="majorseqno != null" >
+        #{majorseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="corresdeptseqno != null" >
+        #{corresdeptseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="correslabseqno != null" >
+        #{correslabseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="corresseqno != null" >
+        #{corresseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="otherauthoruuid != null" >
+        #{otherauthoruuid,jdbcType=VARCHAR},
+      </if>
+      <if test="thesistype0 != null" >
+        #{thesistype0,jdbcType=VARCHAR},
+      </if>
+      <if test="thesisothers != null" >
+        #{thesisothers,jdbcType=VARCHAR},
+      </if>
+      <if test="thesismajornum != null" >
+        #{thesismajornum,jdbcType=VARCHAR},
+      </if>
+      <if test="thesisothersnum != null" >
+        #{thesisothersnum,jdbcType=VARCHAR},
+      </if>
+      <if test="othersdeptseqno != null" >
+        #{othersdeptseqno,jdbcType=VARCHAR},
+      </if>
+      <if test="otherslabseqno != null" >
+        #{otherslabseqno,jdbcType=VARCHAR},
+      </if>
+      <if test="lastmodifiedpeopleid != null" >
+        #{lastmodifiedpeopleid,jdbcType=VARCHAR},
+      </if>
+      <if test="introduction != null" >
+        #{introduction,jdbcType=VARCHAR},
+      </if>
+      <if test="writerno != null" >
+        #{writerno,jdbcType=DECIMAL},
+      </if>
+      <if test="writername != null" >
+        #{writername,jdbcType=VARCHAR},
+      </if>
+      <if test="tempstate != null" >
+        #{tempstate,jdbcType=CHAR},
+      </if>
+      <if test="iskcw != null" >
+        #{iskcw,jdbcType=CHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.coder520.POI.TeacherThesis.entity.TeacherThesis" >
+    update TEACHER_THESIS
+    <set >
+      <if test="thesstname != null" >
+        THESSTNAME = #{thesstname,jdbcType=VARCHAR},
+      </if>
+      <if test="thesistype1 != null" >
+        THESISTYPE1 = #{thesistype1,jdbcType=VARCHAR},
+      </if>
+      <if test="thesistype2 != null" >
+        THESISTYPE2 = #{thesistype2,jdbcType=VARCHAR},
+      </if>
+      <if test="firstauthor != null" >
+        FIRSTAUTHOR = #{firstauthor,jdbcType=VARCHAR},
+      </if>
+      <if test="correspondingauthor != null" >
+        CORRESPONDINGAUTHOR = #{correspondingauthor,jdbcType=VARCHAR},
+      </if>
+      <if test="otherauthor != null" >
+        OTHERAUTHOR = #{otherauthor,jdbcType=VARCHAR},
+      </if>
+      <if test="issn != null" >
+        ISSN = #{issn,jdbcType=VARCHAR},
+      </if>
+      <if test="publication != null" >
+        PUBLICATION = #{publication,jdbcType=VARCHAR},
+      </if>
+      <if test="publishtime != null" >
+        PUBLISHTIME = #{publishtime,jdbcType=VARCHAR},
+      </if>
+      <if test="quotedcounts != null" >
+        QUOTEDCOUNTS = #{quotedcounts,jdbcType=VARCHAR},
+      </if>
+      <if test="maxquotecounts != null" >
+        MAXQUOTECOUNTS = #{maxquotecounts,jdbcType=VARCHAR},
+      </if>
+      <if test="impactfactor != null" >
+        IMPACTFACTOR = #{impactfactor,jdbcType=VARCHAR},
+      </if>
+      <if test="publicationstatus != null" >
+        PUBLICATIONSTATUS = #{publicationstatus,jdbcType=VARCHAR},
+      </if>
+      <if test="issecrect != null" >
+        ISSECRECT = #{issecrect,jdbcType=VARCHAR},
+      </if>
+      <if test="lastmodifiedtime != null" >
+        LASTMODIFIEDTIME = #{lastmodifiedtime,jdbcType=VARCHAR},
+      </if>
+      <if test="lastmodifiedpeople != null" >
+        LASTMODIFIEDPEOPLE = #{lastmodifiedpeople,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        STATUS = #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="ismono != null" >
+        ISMONO = #{ismono,jdbcType=VARCHAR},
+      </if>
+      <if test="monotype != null" >
+        MONOTYPE = #{monotype,jdbcType=VARCHAR},
+      </if>
+      <if test="thesisuuid != null" >
+        THESISUUID = #{thesisuuid,jdbcType=VARCHAR},
+      </if>
+      <if test="contractaccessories != null" >
+        CONTRACTACCESSORIES = #{contractaccessories,jdbcType=VARCHAR},
+      </if>
+      <if test="majordeptseqno != null" >
+        MAJORDEPTSEQNO = #{majordeptseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="majorlabseqno != null" >
+        MAJORLABSEQNO = #{majorlabseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="majorseqno != null" >
+        MAJORSEQNO = #{majorseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="corresdeptseqno != null" >
+        CORRESDEPTSEQNO = #{corresdeptseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="correslabseqno != null" >
+        CORRESLABSEQNO = #{correslabseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="corresseqno != null" >
+        CORRESSEQNO = #{corresseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="otherauthoruuid != null" >
+        OTHERAUTHORUUID = #{otherauthoruuid,jdbcType=VARCHAR},
+      </if>
+      <if test="thesistype0 != null" >
+        THESISTYPE0 = #{thesistype0,jdbcType=VARCHAR},
+      </if>
+      <if test="thesisothers != null" >
+        THESISOTHERS = #{thesisothers,jdbcType=VARCHAR},
+      </if>
+      <if test="thesismajornum != null" >
+        THESISMAJORNUM = #{thesismajornum,jdbcType=VARCHAR},
+      </if>
+      <if test="thesisothersnum != null" >
+        THESISOTHERSNUM = #{thesisothersnum,jdbcType=VARCHAR},
+      </if>
+      <if test="othersdeptseqno != null" >
+        OTHERSDEPTSEQNO = #{othersdeptseqno,jdbcType=VARCHAR},
+      </if>
+      <if test="otherslabseqno != null" >
+        OTHERSLABSEQNO = #{otherslabseqno,jdbcType=VARCHAR},
+      </if>
+      <if test="lastmodifiedpeopleid != null" >
+        LASTMODIFIEDPEOPLEID = #{lastmodifiedpeopleid,jdbcType=VARCHAR},
+      </if>
+      <if test="introduction != null" >
+        INTRODUCTION = #{introduction,jdbcType=VARCHAR},
+      </if>
+      <if test="writerno != null" >
+        WRITERNO = #{writerno,jdbcType=DECIMAL},
+      </if>
+      <if test="writername != null" >
+        WRITERNAME = #{writername,jdbcType=VARCHAR},
+      </if>
+      <if test="tempstate != null" >
+        TEMPSTATE = #{tempstate,jdbcType=CHAR},
+      </if>
+      <if test="iskcw != null" >
+        ISKCW = #{iskcw,jdbcType=CHAR},
+      </if>
+    </set>
+    where TEACHERSEQNO = #{teacherseqno,jdbcType=DECIMAL}
+      and THESISSEQNO = #{thesisseqno,jdbcType=DECIMAL}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.coder520.POI.TeacherThesis.entity.TeacherThesis" >
+    update TEACHER_THESIS
+    set THESSTNAME = #{thesstname,jdbcType=VARCHAR},
+      THESISTYPE1 = #{thesistype1,jdbcType=VARCHAR},
+      THESISTYPE2 = #{thesistype2,jdbcType=VARCHAR},
+      FIRSTAUTHOR = #{firstauthor,jdbcType=VARCHAR},
+      CORRESPONDINGAUTHOR = #{correspondingauthor,jdbcType=VARCHAR},
+      OTHERAUTHOR = #{otherauthor,jdbcType=VARCHAR},
+      ISSN = #{issn,jdbcType=VARCHAR},
+      PUBLICATION = #{publication,jdbcType=VARCHAR},
+      PUBLISHTIME = #{publishtime,jdbcType=VARCHAR},
+      QUOTEDCOUNTS = #{quotedcounts,jdbcType=VARCHAR},
+      MAXQUOTECOUNTS = #{maxquotecounts,jdbcType=VARCHAR},
+      IMPACTFACTOR = #{impactfactor,jdbcType=VARCHAR},
+      PUBLICATIONSTATUS = #{publicationstatus,jdbcType=VARCHAR},
+      ISSECRECT = #{issecrect,jdbcType=VARCHAR},
+      LASTMODIFIEDTIME = #{lastmodifiedtime,jdbcType=VARCHAR},
+      LASTMODIFIEDPEOPLE = #{lastmodifiedpeople,jdbcType=VARCHAR},
+      STATUS = #{status,jdbcType=VARCHAR},
+      ISMONO = #{ismono,jdbcType=VARCHAR},
+      MONOTYPE = #{monotype,jdbcType=VARCHAR},
+      THESISUUID = #{thesisuuid,jdbcType=VARCHAR},
+      CONTRACTACCESSORIES = #{contractaccessories,jdbcType=VARCHAR},
+      MAJORDEPTSEQNO = #{majordeptseqno,jdbcType=DECIMAL},
+      MAJORLABSEQNO = #{majorlabseqno,jdbcType=DECIMAL},
+      MAJORSEQNO = #{majorseqno,jdbcType=DECIMAL},
+      CORRESDEPTSEQNO = #{corresdeptseqno,jdbcType=DECIMAL},
+      CORRESLABSEQNO = #{correslabseqno,jdbcType=DECIMAL},
+      CORRESSEQNO = #{corresseqno,jdbcType=DECIMAL},
+      OTHERAUTHORUUID = #{otherauthoruuid,jdbcType=VARCHAR},
+      THESISTYPE0 = #{thesistype0,jdbcType=VARCHAR},
+      THESISOTHERS = #{thesisothers,jdbcType=VARCHAR},
+      THESISMAJORNUM = #{thesismajornum,jdbcType=VARCHAR},
+      THESISOTHERSNUM = #{thesisothersnum,jdbcType=VARCHAR},
+      OTHERSDEPTSEQNO = #{othersdeptseqno,jdbcType=VARCHAR},
+      OTHERSLABSEQNO = #{otherslabseqno,jdbcType=VARCHAR},
+      LASTMODIFIEDPEOPLEID = #{lastmodifiedpeopleid,jdbcType=VARCHAR},
+      INTRODUCTION = #{introduction,jdbcType=VARCHAR},
+      WRITERNO = #{writerno,jdbcType=DECIMAL},
+      WRITERNAME = #{writername,jdbcType=VARCHAR},
+      TEMPSTATE = #{tempstate,jdbcType=CHAR},
+      ISKCW = #{iskcw,jdbcType=CHAR}
+    where TEACHERSEQNO = #{teacherseqno,jdbcType=DECIMAL}
+      and THESISSEQNO = #{thesisseqno,jdbcType=DECIMAL}
+  </update>
+</mapper>

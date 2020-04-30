@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<select id="pSelect">
+    <option>请选择</option>
+</select>
+</body>
+<script>
+    $.post("provinceServlet",function (result) {
+        $(result).each(function (i, obj) {
+            $("#pSelect").append("<option>"+obj.pname+"</option>");
+        });
+    },"json");
+</script>
+</html>

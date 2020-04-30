@@ -1,0 +1,566 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coder520.POI.TeacherPatent.dao.TeacherPatentMapper" >
+  <resultMap id="BaseResultMap" type="com.coder520.POI.TeacherPatent.entity.TeacherPatent" >
+    <id column="TEACHERSEQNO" property="teacherseqno" jdbcType="DECIMAL" />
+    <id column="PATENTSEQNO" property="patentseqno" jdbcType="DECIMAL" />
+    <result column="PATENTNAME" property="patentname" jdbcType="VARCHAR" />
+    <result column="PATENTNO" property="patentno" jdbcType="VARCHAR" />
+    <result column="ISAPPLIED" property="isapplied" jdbcType="VARCHAR" />
+    <result column="ISGRANTED" property="isgranted" jdbcType="VARCHAR" />
+    <result column="PATENTCATEGORY" property="patentcategory" jdbcType="VARCHAR" />
+    <result column="STANDARDCATEGORY" property="standardcategory" jdbcType="VARCHAR" />
+    <result column="APPLIEDDATE" property="applieddate" jdbcType="VARCHAR" />
+    <result column="GRANTEDDATE" property="granteddate" jdbcType="VARCHAR" />
+    <result column="FIRSTINVENTOR" property="firstinventor" jdbcType="VARCHAR" />
+    <result column="OTHERINVENTOR" property="otherinventor" jdbcType="VARCHAR" />
+    <result column="PATENTACCESSORIES" property="patentaccessories" jdbcType="VARCHAR" />
+    <result column="ISSECRECT" property="issecrect" jdbcType="VARCHAR" />
+    <result column="LASTMODIFIEDTIME" property="lastmodifiedtime" jdbcType="VARCHAR" />
+    <result column="LASTMODIFIEDMAN" property="lastmodifiedman" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="PATENTUUID" property="patentuuid" jdbcType="VARCHAR" />
+    <result column="ISTRANS" property="istrans" jdbcType="VARCHAR" />
+    <result column="MAJORDEPTSEQNO" property="majordeptseqno" jdbcType="DECIMAL" />
+    <result column="MAJORLABSEQNO" property="majorlabseqno" jdbcType="DECIMAL" />
+    <result column="MAJORSEQNO" property="majorseqno" jdbcType="DECIMAL" />
+    <result column="OTHERINVENTORUUID" property="otherinventoruuid" jdbcType="VARCHAR" />
+    <result column="OTHERINVENTORDEPTSEQNO" property="otherinventordeptseqno" jdbcType="VARCHAR" />
+    <result column="OTHERINVENTORLABSEQNO" property="otherinventorlabseqno" jdbcType="VARCHAR" />
+    <result column="OTHERINVENTORSEQNO" property="otherinventorseqno" jdbcType="VARCHAR" />
+    <result column="LASTMODIFIEDMANID" property="lastmodifiedmanid" jdbcType="VARCHAR" />
+    <result column="INTRODUCTION" property="introduction" jdbcType="VARCHAR" />
+    <result column="PATENTEEDEPTSEQNO" property="patenteedeptseqno" jdbcType="DECIMAL" />
+    <result column="PATENTEELABSEQNO" property="patenteelabseqno" jdbcType="DECIMAL" />
+    <result column="PATENTEESEQNO" property="patenteeseqno" jdbcType="DECIMAL" />
+    <result column="PATENTEENAME" property="patenteename" jdbcType="VARCHAR" />
+    <result column="WRITERNO" property="writerno" jdbcType="DECIMAL" />
+    <result column="WRITERNAME" property="writername" jdbcType="VARCHAR" />
+    <result column="PATENTEEDEPTSEQ" property="patenteedeptseq" jdbcType="VARCHAR" />
+    <result column="PATENTEELABSEQ" property="patenteelabseq" jdbcType="VARCHAR" />
+    <result column="PATENTEESEQ" property="patenteeseq" jdbcType="VARCHAR" />
+    <result column="PATENTEENAMESTR" property="patenteenamestr" jdbcType="VARCHAR" />
+    <result column="TEMPSTATE" property="tempstate" jdbcType="CHAR" />
+    <result column="ISKCW" property="iskcw" jdbcType="VARCHAR" />
+    <result column="TRANSDATE" property="transdate" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    TEACHERSEQNO, PATENTSEQNO, PATENTNAME, PATENTNO, ISAPPLIED, ISGRANTED, PATENTCATEGORY, 
+    STANDARDCATEGORY, APPLIEDDATE, GRANTEDDATE, FIRSTINVENTOR, OTHERINVENTOR, PATENTACCESSORIES, 
+    ISSECRECT, LASTMODIFIEDTIME, LASTMODIFIEDMAN, STATUS, PATENTUUID, ISTRANS, MAJORDEPTSEQNO, 
+    MAJORLABSEQNO, MAJORSEQNO, OTHERINVENTORUUID, OTHERINVENTORDEPTSEQNO, OTHERINVENTORLABSEQNO, 
+    OTHERINVENTORSEQNO, LASTMODIFIEDMANID, INTRODUCTION, PATENTEEDEPTSEQNO, PATENTEELABSEQNO, 
+    PATENTEESEQNO, PATENTEENAME, WRITERNO, WRITERNAME, PATENTEEDEPTSEQ, PATENTEELABSEQ, 
+    PATENTEESEQ, PATENTEENAMESTR, TEMPSTATE, ISKCW, TRANSDATE
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="com.coder520.POI.TeacherPatent.entity.TeacherPatentKey" >
+    select 
+    <include refid="Base_Column_List" />
+    from TEACHER_PATENT
+    where TEACHERSEQNO = #{teacherseqno,jdbcType=DECIMAL}
+      and PATENTSEQNO = #{patentseqno,jdbcType=DECIMAL}
+  </select>
+
+  <select id="findByName" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select
+    <include refid="Base_Column_List" />
+    from TEACHER_PATENT
+    where PATENTNAME = #{patentname,jdbcType=VARCHAR}
+  </select>
+
+  <delete id="deleteByPrimaryKey" parameterType="com.coder520.POI.TeacherPatent.entity.TeacherPatentKey" >
+    delete from TEACHER_PATENT
+    where TEACHERSEQNO = #{teacherseqno,jdbcType=DECIMAL}
+      and PATENTSEQNO = #{patentseqno,jdbcType=DECIMAL}
+  </delete>
+  <insert id="insert" parameterType="com.coder520.POI.TeacherPatent.entity.TeacherPatent" >
+  insert into TEACHER_PATENT (TEACHERSEQNO, PATENTSEQNO, PATENTNAME,
+  PATENTNO, ISAPPLIED, ISGRANTED,
+  PATENTCATEGORY, STANDARDCATEGORY, APPLIEDDATE,
+  GRANTEDDATE, FIRSTINVENTOR, OTHERINVENTOR,
+  PATENTACCESSORIES, ISSECRECT, LASTMODIFIEDTIME,
+  LASTMODIFIEDMAN, STATUS, PATENTUUID,
+  ISTRANS, MAJORDEPTSEQNO, MAJORLABSEQNO,
+  MAJORSEQNO, OTHERINVENTORUUID, OTHERINVENTORDEPTSEQNO,
+  OTHERINVENTORLABSEQNO, OTHERINVENTORSEQNO,
+  LASTMODIFIEDMANID, INTRODUCTION, PATENTEEDEPTSEQNO,
+  PATENTEELABSEQNO, PATENTEESEQNO, PATENTEENAME,
+  WRITERNO, WRITERNAME, PATENTEEDEPTSEQ,
+  PATENTEELABSEQ, PATENTEESEQ, PATENTEENAMESTR,
+  TEMPSTATE, ISKCW, TRANSDATE
+  )
+  values (#{teacherseqno,jdbcType=DECIMAL}, #{patentseqno,jdbcType=DECIMAL}, #{patentname,jdbcType=VARCHAR},
+  #{patentno,jdbcType=VARCHAR}, #{isapplied,jdbcType=VARCHAR}, #{isgranted,jdbcType=VARCHAR},
+  #{patentcategory,jdbcType=VARCHAR}, #{standardcategory,jdbcType=VARCHAR}, #{applieddate,jdbcType=VARCHAR},
+  #{granteddate,jdbcType=VARCHAR}, #{firstinventor,jdbcType=VARCHAR}, #{otherinventor,jdbcType=VARCHAR},
+  #{patentaccessories,jdbcType=VARCHAR}, #{issecrect,jdbcType=VARCHAR}, #{lastmodifiedtime,jdbcType=VARCHAR},
+  #{lastmodifiedman,jdbcType=VARCHAR}, #{status,jdbcType=VARCHAR}, #{patentuuid,jdbcType=VARCHAR},
+  #{istrans,jdbcType=VARCHAR}, #{majordeptseqno,jdbcType=DECIMAL}, #{majorlabseqno,jdbcType=DECIMAL},
+  #{majorseqno,jdbcType=DECIMAL}, #{otherinventoruuid,jdbcType=VARCHAR}, #{otherinventordeptseqno,jdbcType=VARCHAR},
+  #{otherinventorlabseqno,jdbcType=VARCHAR}, #{otherinventorseqno,jdbcType=VARCHAR},
+  #{lastmodifiedmanid,jdbcType=VARCHAR}, #{introduction,jdbcType=VARCHAR}, #{patenteedeptseqno,jdbcType=DECIMAL},
+  #{patenteelabseqno,jdbcType=DECIMAL}, #{patenteeseqno,jdbcType=DECIMAL}, #{patenteename,jdbcType=VARCHAR},
+  #{writerno,jdbcType=DECIMAL}, #{writername,jdbcType=VARCHAR}, #{patenteedeptseq,jdbcType=VARCHAR},
+  #{patenteelabseq,jdbcType=VARCHAR}, #{patenteeseq,jdbcType=VARCHAR}, #{patenteenamestr,jdbcType=VARCHAR},
+  #{tempstate,jdbcType=CHAR}, #{iskcw,jdbcType=VARCHAR}, #{transdate,jdbcType=VARCHAR}
+  )
+</insert>
+
+  <insert id="insertAddKey" parameterType="com.coder520.POI.TeacherPatent.entity.TeacherPatent" >
+    <selectKey keyProperty="patentseqno" resultType="long" order="BEFORE">
+      select  nvl(max(PATENTSEQNO),0)+1 from TEACHER_PATENT
+    </selectKey>
+    insert into TEACHER_PATENT (TEACHERSEQNO, PATENTSEQNO, PATENTNAME,
+    PATENTNO, ISAPPLIED, ISGRANTED,
+    PATENTCATEGORY, STANDARDCATEGORY, APPLIEDDATE,
+    GRANTEDDATE, FIRSTINVENTOR, OTHERINVENTOR,
+    PATENTACCESSORIES, ISSECRECT, LASTMODIFIEDTIME,
+    LASTMODIFIEDMAN, STATUS, PATENTUUID,
+    ISTRANS, MAJORDEPTSEQNO, MAJORLABSEQNO,
+    MAJORSEQNO, OTHERINVENTORUUID, OTHERINVENTORDEPTSEQNO,
+    OTHERINVENTORLABSEQNO, OTHERINVENTORSEQNO,
+    LASTMODIFIEDMANID, INTRODUCTION, PATENTEEDEPTSEQNO,
+    PATENTEELABSEQNO, PATENTEESEQNO, PATENTEENAME,
+    WRITERNO, WRITERNAME, PATENTEEDEPTSEQ,
+    PATENTEELABSEQ, PATENTEESEQ, PATENTEENAMESTR,
+    TEMPSTATE, ISKCW, TRANSDATE
+    )
+    values (#{teacherseqno,jdbcType=DECIMAL}, #{patentseqno,jdbcType=DECIMAL}, #{patentname,jdbcType=VARCHAR},
+    #{patentno,jdbcType=VARCHAR}, #{isapplied,jdbcType=VARCHAR}, #{isgranted,jdbcType=VARCHAR},
+    #{patentcategory,jdbcType=VARCHAR}, #{standardcategory,jdbcType=VARCHAR}, #{applieddate,jdbcType=VARCHAR},
+    #{granteddate,jdbcType=VARCHAR}, #{firstinventor,jdbcType=VARCHAR}, #{otherinventor,jdbcType=VARCHAR},
+    #{patentaccessories,jdbcType=VARCHAR}, #{issecrect,jdbcType=VARCHAR}, #{lastmodifiedtime,jdbcType=VARCHAR},
+    #{lastmodifiedman,jdbcType=VARCHAR}, #{status,jdbcType=VARCHAR}, #{patentuuid,jdbcType=VARCHAR},
+    #{istrans,jdbcType=VARCHAR}, #{majordeptseqno,jdbcType=DECIMAL}, #{majorlabseqno,jdbcType=DECIMAL},
+    #{majorseqno,jdbcType=DECIMAL}, #{otherinventoruuid,jdbcType=VARCHAR}, #{otherinventordeptseqno,jdbcType=VARCHAR},
+    #{otherinventorlabseqno,jdbcType=VARCHAR}, #{otherinventorseqno,jdbcType=VARCHAR},
+    #{lastmodifiedmanid,jdbcType=VARCHAR}, #{introduction,jdbcType=VARCHAR}, #{patenteedeptseqno,jdbcType=DECIMAL},
+    #{patenteelabseqno,jdbcType=DECIMAL}, #{patenteeseqno,jdbcType=DECIMAL}, #{patenteename,jdbcType=VARCHAR},
+    #{writerno,jdbcType=DECIMAL}, #{writername,jdbcType=VARCHAR}, #{patenteedeptseq,jdbcType=VARCHAR},
+    #{patenteelabseq,jdbcType=VARCHAR}, #{patenteeseq,jdbcType=VARCHAR}, #{patenteenamestr,jdbcType=VARCHAR},
+    #{tempstate,jdbcType=CHAR}, #{iskcw,jdbcType=VARCHAR}, #{transdate,jdbcType=VARCHAR}
+    )
+  </insert>
+
+  <insert id="insertSelective" parameterType="com.coder520.POI.TeacherPatent.entity.TeacherPatent" >
+    insert into TEACHER_PATENT
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="teacherseqno != null" >
+        TEACHERSEQNO,
+      </if>
+      <if test="patentseqno != null" >
+        PATENTSEQNO,
+      </if>
+      <if test="patentname != null" >
+        PATENTNAME,
+      </if>
+      <if test="patentno != null" >
+        PATENTNO,
+      </if>
+      <if test="isapplied != null" >
+        ISAPPLIED,
+      </if>
+      <if test="isgranted != null" >
+        ISGRANTED,
+      </if>
+      <if test="patentcategory != null" >
+        PATENTCATEGORY,
+      </if>
+      <if test="standardcategory != null" >
+        STANDARDCATEGORY,
+      </if>
+      <if test="applieddate != null" >
+        APPLIEDDATE,
+      </if>
+      <if test="granteddate != null" >
+        GRANTEDDATE,
+      </if>
+      <if test="firstinventor != null" >
+        FIRSTINVENTOR,
+      </if>
+      <if test="otherinventor != null" >
+        OTHERINVENTOR,
+      </if>
+      <if test="patentaccessories != null" >
+        PATENTACCESSORIES,
+      </if>
+      <if test="issecrect != null" >
+        ISSECRECT,
+      </if>
+      <if test="lastmodifiedtime != null" >
+        LASTMODIFIEDTIME,
+      </if>
+      <if test="lastmodifiedman != null" >
+        LASTMODIFIEDMAN,
+      </if>
+      <if test="status != null" >
+        STATUS,
+      </if>
+      <if test="patentuuid != null" >
+        PATENTUUID,
+      </if>
+      <if test="istrans != null" >
+        ISTRANS,
+      </if>
+      <if test="majordeptseqno != null" >
+        MAJORDEPTSEQNO,
+      </if>
+      <if test="majorlabseqno != null" >
+        MAJORLABSEQNO,
+      </if>
+      <if test="majorseqno != null" >
+        MAJORSEQNO,
+      </if>
+      <if test="otherinventoruuid != null" >
+        OTHERINVENTORUUID,
+      </if>
+      <if test="otherinventordeptseqno != null" >
+        OTHERINVENTORDEPTSEQNO,
+      </if>
+      <if test="otherinventorlabseqno != null" >
+        OTHERINVENTORLABSEQNO,
+      </if>
+      <if test="otherinventorseqno != null" >
+        OTHERINVENTORSEQNO,
+      </if>
+      <if test="lastmodifiedmanid != null" >
+        LASTMODIFIEDMANID,
+      </if>
+      <if test="introduction != null" >
+        INTRODUCTION,
+      </if>
+      <if test="patenteedeptseqno != null" >
+        PATENTEEDEPTSEQNO,
+      </if>
+      <if test="patenteelabseqno != null" >
+        PATENTEELABSEQNO,
+      </if>
+      <if test="patenteeseqno != null" >
+        PATENTEESEQNO,
+      </if>
+      <if test="patenteename != null" >
+        PATENTEENAME,
+      </if>
+      <if test="writerno != null" >
+        WRITERNO,
+      </if>
+      <if test="writername != null" >
+        WRITERNAME,
+      </if>
+      <if test="patenteedeptseq != null" >
+        PATENTEEDEPTSEQ,
+      </if>
+      <if test="patenteelabseq != null" >
+        PATENTEELABSEQ,
+      </if>
+      <if test="patenteeseq != null" >
+        PATENTEESEQ,
+      </if>
+      <if test="patenteenamestr != null" >
+        PATENTEENAMESTR,
+      </if>
+      <if test="tempstate != null" >
+        TEMPSTATE,
+      </if>
+      <if test="iskcw != null" >
+        ISKCW,
+      </if>
+      <if test="transdate != null" >
+        TRANSDATE,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="teacherseqno != null" >
+        #{teacherseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="patentseqno != null" >
+        #{patentseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="patentname != null" >
+        #{patentname,jdbcType=VARCHAR},
+      </if>
+      <if test="patentno != null" >
+        #{patentno,jdbcType=VARCHAR},
+      </if>
+      <if test="isapplied != null" >
+        #{isapplied,jdbcType=VARCHAR},
+      </if>
+      <if test="isgranted != null" >
+        #{isgranted,jdbcType=VARCHAR},
+      </if>
+      <if test="patentcategory != null" >
+        #{patentcategory,jdbcType=VARCHAR},
+      </if>
+      <if test="standardcategory != null" >
+        #{standardcategory,jdbcType=VARCHAR},
+      </if>
+      <if test="applieddate != null" >
+        #{applieddate,jdbcType=VARCHAR},
+      </if>
+      <if test="granteddate != null" >
+        #{granteddate,jdbcType=VARCHAR},
+      </if>
+      <if test="firstinventor != null" >
+        #{firstinventor,jdbcType=VARCHAR},
+      </if>
+      <if test="otherinventor != null" >
+        #{otherinventor,jdbcType=VARCHAR},
+      </if>
+      <if test="patentaccessories != null" >
+        #{patentaccessories,jdbcType=VARCHAR},
+      </if>
+      <if test="issecrect != null" >
+        #{issecrect,jdbcType=VARCHAR},
+      </if>
+      <if test="lastmodifiedtime != null" >
+        #{lastmodifiedtime,jdbcType=VARCHAR},
+      </if>
+      <if test="lastmodifiedman != null" >
+        #{lastmodifiedman,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="patentuuid != null" >
+        #{patentuuid,jdbcType=VARCHAR},
+      </if>
+      <if test="istrans != null" >
+        #{istrans,jdbcType=VARCHAR},
+      </if>
+      <if test="majordeptseqno != null" >
+        #{majordeptseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="majorlabseqno != null" >
+        #{majorlabseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="majorseqno != null" >
+        #{majorseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="otherinventoruuid != null" >
+        #{otherinventoruuid,jdbcType=VARCHAR},
+      </if>
+      <if test="otherinventordeptseqno != null" >
+        #{otherinventordeptseqno,jdbcType=VARCHAR},
+      </if>
+      <if test="otherinventorlabseqno != null" >
+        #{otherinventorlabseqno,jdbcType=VARCHAR},
+      </if>
+      <if test="otherinventorseqno != null" >
+        #{otherinventorseqno,jdbcType=VARCHAR},
+      </if>
+      <if test="lastmodifiedmanid != null" >
+        #{lastmodifiedmanid,jdbcType=VARCHAR},
+      </if>
+      <if test="introduction != null" >
+        #{introduction,jdbcType=VARCHAR},
+      </if>
+      <if test="patenteedeptseqno != null" >
+        #{patenteedeptseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="patenteelabseqno != null" >
+        #{patenteelabseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="patenteeseqno != null" >
+        #{patenteeseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="patenteename != null" >
+        #{patenteename,jdbcType=VARCHAR},
+      </if>
+      <if test="writerno != null" >
+        #{writerno,jdbcType=DECIMAL},
+      </if>
+      <if test="writername != null" >
+        #{writername,jdbcType=VARCHAR},
+      </if>
+      <if test="patenteedeptseq != null" >
+        #{patenteedeptseq,jdbcType=VARCHAR},
+      </if>
+      <if test="patenteelabseq != null" >
+        #{patenteelabseq,jdbcType=VARCHAR},
+      </if>
+      <if test="patenteeseq != null" >
+        #{patenteeseq,jdbcType=VARCHAR},
+      </if>
+      <if test="patenteenamestr != null" >
+        #{patenteenamestr,jdbcType=VARCHAR},
+      </if>
+      <if test="tempstate != null" >
+        #{tempstate,jdbcType=CHAR},
+      </if>
+      <if test="iskcw != null" >
+        #{iskcw,jdbcType=VARCHAR},
+      </if>
+      <if test="transdate != null" >
+        #{transdate,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.coder520.POI.TeacherPatent.entity.TeacherPatent" >
+    update TEACHER_PATENT
+    <set >
+      <if test="patentname != null" >
+        PATENTNAME = #{patentname,jdbcType=VARCHAR},
+      </if>
+      <if test="patentno != null" >
+        PATENTNO = #{patentno,jdbcType=VARCHAR},
+      </if>
+      <if test="isapplied != null" >
+        ISAPPLIED = #{isapplied,jdbcType=VARCHAR},
+      </if>
+      <if test="isgranted != null" >
+        ISGRANTED = #{isgranted,jdbcType=VARCHAR},
+      </if>
+      <if test="patentcategory != null" >
+        PATENTCATEGORY = #{patentcategory,jdbcType=VARCHAR},
+      </if>
+      <if test="standardcategory != null" >
+        STANDARDCATEGORY = #{standardcategory,jdbcType=VARCHAR},
+      </if>
+      <if test="applieddate != null" >
+        APPLIEDDATE = #{applieddate,jdbcType=VARCHAR},
+      </if>
+      <if test="granteddate != null" >
+        GRANTEDDATE = #{granteddate,jdbcType=VARCHAR},
+      </if>
+      <if test="firstinventor != null" >
+        FIRSTINVENTOR = #{firstinventor,jdbcType=VARCHAR},
+      </if>
+      <if test="otherinventor != null" >
+        OTHERINVENTOR = #{otherinventor,jdbcType=VARCHAR},
+      </if>
+      <if test="patentaccessories != null" >
+        PATENTACCESSORIES = #{patentaccessories,jdbcType=VARCHAR},
+      </if>
+      <if test="issecrect != null" >
+        ISSECRECT = #{issecrect,jdbcType=VARCHAR},
+      </if>
+      <if test="lastmodifiedtime != null" >
+        LASTMODIFIEDTIME = #{lastmodifiedtime,jdbcType=VARCHAR},
+      </if>
+      <if test="lastmodifiedman != null" >
+        LASTMODIFIEDMAN = #{lastmodifiedman,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        STATUS = #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="patentuuid != null" >
+        PATENTUUID = #{patentuuid,jdbcType=VARCHAR},
+      </if>
+      <if test="istrans != null" >
+        ISTRANS = #{istrans,jdbcType=VARCHAR},
+      </if>
+      <if test="majordeptseqno != null" >
+        MAJORDEPTSEQNO = #{majordeptseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="majorlabseqno != null" >
+        MAJORLABSEQNO = #{majorlabseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="majorseqno != null" >
+        MAJORSEQNO = #{majorseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="otherinventoruuid != null" >
+        OTHERINVENTORUUID = #{otherinventoruuid,jdbcType=VARCHAR},
+      </if>
+      <if test="otherinventordeptseqno != null" >
+        OTHERINVENTORDEPTSEQNO = #{otherinventordeptseqno,jdbcType=VARCHAR},
+      </if>
+      <if test="otherinventorlabseqno != null" >
+        OTHERINVENTORLABSEQNO = #{otherinventorlabseqno,jdbcType=VARCHAR},
+      </if>
+      <if test="otherinventorseqno != null" >
+        OTHERINVENTORSEQNO = #{otherinventorseqno,jdbcType=VARCHAR},
+      </if>
+      <if test="lastmodifiedmanid != null" >
+        LASTMODIFIEDMANID = #{lastmodifiedmanid,jdbcType=VARCHAR},
+      </if>
+      <if test="introduction != null" >
+        INTRODUCTION = #{introduction,jdbcType=VARCHAR},
+      </if>
+      <if test="patenteedeptseqno != null" >
+        PATENTEEDEPTSEQNO = #{patenteedeptseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="patenteelabseqno != null" >
+        PATENTEELABSEQNO = #{patenteelabseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="patenteeseqno != null" >
+        PATENTEESEQNO = #{patenteeseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="patenteename != null" >
+        PATENTEENAME = #{patenteename,jdbcType=VARCHAR},
+      </if>
+      <if test="writerno != null" >
+        WRITERNO = #{writerno,jdbcType=DECIMAL},
+      </if>
+      <if test="writername != null" >
+        WRITERNAME = #{writername,jdbcType=VARCHAR},
+      </if>
+      <if test="patenteedeptseq != null" >
+        PATENTEEDEPTSEQ = #{patenteedeptseq,jdbcType=VARCHAR},
+      </if>
+      <if test="patenteelabseq != null" >
+        PATENTEELABSEQ = #{patenteelabseq,jdbcType=VARCHAR},
+      </if>
+      <if test="patenteeseq != null" >
+        PATENTEESEQ = #{patenteeseq,jdbcType=VARCHAR},
+      </if>
+      <if test="patenteenamestr != null" >
+        PATENTEENAMESTR = #{patenteenamestr,jdbcType=VARCHAR},
+      </if>
+      <if test="tempstate != null" >
+        TEMPSTATE = #{tempstate,jdbcType=CHAR},
+      </if>
+      <if test="iskcw != null" >
+        ISKCW = #{iskcw,jdbcType=VARCHAR},
+      </if>
+      <if test="transdate != null" >
+        TRANSDATE = #{transdate,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where TEACHERSEQNO = #{teacherseqno,jdbcType=DECIMAL}
+      and PATENTSEQNO = #{patentseqno,jdbcType=DECIMAL}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.coder520.POI.TeacherPatent.entity.TeacherPatent" >
+    update TEACHER_PATENT
+    set PATENTNAME = #{patentname,jdbcType=VARCHAR},
+      PATENTNO = #{patentno,jdbcType=VARCHAR},
+      ISAPPLIED = #{isapplied,jdbcType=VARCHAR},
+      ISGRANTED = #{isgranted,jdbcType=VARCHAR},
+      PATENTCATEGORY = #{patentcategory,jdbcType=VARCHAR},
+      STANDARDCATEGORY = #{standardcategory,jdbcType=VARCHAR},
+      APPLIEDDATE = #{applieddate,jdbcType=VARCHAR},
+      GRANTEDDATE = #{granteddate,jdbcType=VARCHAR},
+      FIRSTINVENTOR = #{firstinventor,jdbcType=VARCHAR},
+      OTHERINVENTOR = #{otherinventor,jdbcType=VARCHAR},
+      PATENTACCESSORIES = #{patentaccessories,jdbcType=VARCHAR},
+      ISSECRECT = #{issecrect,jdbcType=VARCHAR},
+      LASTMODIFIEDTIME = #{lastmodifiedtime,jdbcType=VARCHAR},
+      LASTMODIFIEDMAN = #{lastmodifiedman,jdbcType=VARCHAR},
+      STATUS = #{status,jdbcType=VARCHAR},
+      PATENTUUID = #{patentuuid,jdbcType=VARCHAR},
+      ISTRANS = #{istrans,jdbcType=VARCHAR},
+      MAJORDEPTSEQNO = #{majordeptseqno,jdbcType=DECIMAL},
+      MAJORLABSEQNO = #{majorlabseqno,jdbcType=DECIMAL},
+      MAJORSEQNO = #{majorseqno,jdbcType=DECIMAL},
+      OTHERINVENTORUUID = #{otherinventoruuid,jdbcType=VARCHAR},
+      OTHERINVENTORDEPTSEQNO = #{otherinventordeptseqno,jdbcType=VARCHAR},
+      OTHERINVENTORLABSEQNO = #{otherinventorlabseqno,jdbcType=VARCHAR},
+      OTHERINVENTORSEQNO = #{otherinventorseqno,jdbcType=VARCHAR},
+      LASTMODIFIEDMANID = #{lastmodifiedmanid,jdbcType=VARCHAR},
+      INTRODUCTION = #{introduction,jdbcType=VARCHAR},
+      PATENTEEDEPTSEQNO = #{patenteedeptseqno,jdbcType=DECIMAL},
+      PATENTEELABSEQNO = #{patenteelabseqno,jdbcType=DECIMAL},
+      PATENTEESEQNO = #{patenteeseqno,jdbcType=DECIMAL},
+      PATENTEENAME = #{patenteename,jdbcType=VARCHAR},
+      WRITERNO = #{writerno,jdbcType=DECIMAL},
+      WRITERNAME = #{writername,jdbcType=VARCHAR},
+      PATENTEEDEPTSEQ = #{patenteedeptseq,jdbcType=VARCHAR},
+      PATENTEELABSEQ = #{patenteelabseq,jdbcType=VARCHAR},
+      PATENTEESEQ = #{patenteeseq,jdbcType=VARCHAR},
+      PATENTEENAMESTR = #{patenteenamestr,jdbcType=VARCHAR},
+      TEMPSTATE = #{tempstate,jdbcType=CHAR},
+      ISKCW = #{iskcw,jdbcType=VARCHAR},
+      TRANSDATE = #{transdate,jdbcType=VARCHAR}
+    where TEACHERSEQNO = #{teacherseqno,jdbcType=DECIMAL}
+      and PATENTSEQNO = #{patentseqno,jdbcType=DECIMAL}
+  </update>
+</mapper>

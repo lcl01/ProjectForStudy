@@ -1,0 +1,722 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coder520.POI.LabDepartment.dao.LabDepartmentMapper" >
+  <resultMap id="BaseResultMap" type="com.coder520.POI.LabDepartment.entity.LabDepartment" >
+    <id column="DEPARTMENTSEQNO" property="departmentseqno" jdbcType="DECIMAL" />
+    <result column="DEPARTMENTCODE" property="departmentcode" jdbcType="VARCHAR" />
+    <result column="DEPARTMENTNAME" property="departmentname" jdbcType="VARCHAR" />
+    <result column="DEPARTMENTSHORTNAME" property="departmentshortname" jdbcType="VARCHAR" />
+    <result column="DEPARTMENTALIAS" property="departmentalias" jdbcType="VARCHAR" />
+    <result column="DEPARTMENTENGNAME" property="departmentengname" jdbcType="VARCHAR" />
+    <result column="DEPARTMENTENGSHORTNAME" property="departmentengshortname" jdbcType="VARCHAR" />
+    <result column="DEPARTMENTMAJOR" property="departmentmajor" jdbcType="VARCHAR" />
+    <result column="ISHAVEHUGEEQUIP" property="ishavehugeequip" jdbcType="VARCHAR" />
+    <result column="ISHAVEVICEPROF" property="ishaveviceprof" jdbcType="VARCHAR" />
+    <result column="DEPARTMENTDESC" property="departmentdesc" jdbcType="VARCHAR" />
+    <result column="ORGANIZATIONCODE" property="organizationcode" jdbcType="CHAR" />
+    <result column="ADDRESS" property="address" jdbcType="VARCHAR" />
+    <result column="POSTCODE" property="postcode" jdbcType="CHAR" />
+    <result column="COUNTYANAME" property="countyaname" jdbcType="VARCHAR" />
+    <result column="COUNTYBNAME" property="countybname" jdbcType="VARCHAR" />
+    <result column="COUNTYCNAME" property="countycname" jdbcType="VARCHAR" />
+    <result column="WEB" property="web" jdbcType="VARCHAR" />
+    <result column="CORPORATIONTYPENAME" property="corporationtypename" jdbcType="VARCHAR" />
+    <result column="UNITTYPENAME" property="unittypename" jdbcType="VARCHAR" />
+    <result column="ECONOMYINDUSTRY" property="economyindustry" jdbcType="VARCHAR" />
+    <result column="SUBJECTFIELD" property="subjectfield" jdbcType="VARCHAR" />
+    <result column="ISTRANS" property="istrans" jdbcType="VARCHAR" />
+    <result column="AREAOFLOC" property="areaofloc" jdbcType="DECIMAL" />
+    <result column="AREAOFBUILDING" property="areaofbuilding" jdbcType="DECIMAL" />
+    <result column="AREAOFTECH" property="areaoftech" jdbcType="DECIMAL" />
+    <result column="FUNDOFALL" property="fundofall" jdbcType="DECIMAL" />
+    <result column="FUNDOFFIXED" property="fundoffixed" jdbcType="DECIMAL" />
+    <result column="FUNDOFFLOW" property="fundofflow" jdbcType="DECIMAL" />
+    <result column="FUNDOFOUT" property="fundofout" jdbcType="DECIMAL" />
+    <result column="DEPTOFUP" property="deptofup" jdbcType="VARCHAR" />
+    <result column="WRITER" property="writer" jdbcType="VARCHAR" />
+    <result column="ONWERDEPT" property="onwerdept" jdbcType="VARCHAR" />
+    <result column="WRITERTEL" property="writertel" jdbcType="VARCHAR" />
+    <result column="WRITERFAX" property="writerfax" jdbcType="VARCHAR" />
+    <result column="WIRTEREMAIL" property="wirteremail" jdbcType="VARCHAR" />
+    <result column="UNITSTATE" property="unitstate" jdbcType="VARCHAR" />
+    <result column="MAJOROFDEPT" property="majorofdept" jdbcType="VARCHAR" />
+    <result column="WRITERTIME" property="writertime" jdbcType="TIMESTAMP" />
+    <result column="REMARK" property="remark" jdbcType="VARCHAR" />
+    <result column="LOCATIONNO" property="locationno" jdbcType="VARCHAR" />
+    <result column="CLASSIFICATION1" property="classification1" jdbcType="VARCHAR" />
+    <result column="CLASSIFICATION2" property="classification2" jdbcType="VARCHAR" />
+    <result column="DEPMAININTRODUCE" property="depmainintroduce" jdbcType="VARCHAR" />
+    <result column="APPROVALNUMBER" property="approvalnumber" jdbcType="VARCHAR" />
+    <result column="ESTABLISGTIME" property="establisgtime" jdbcType="VARCHAR" />
+    <result column="INSTITUTIONTYPE" property="institutiontype" jdbcType="VARCHAR" />
+    <result column="PHONE" property="phone" jdbcType="VARCHAR" />
+    <result column="DEPSTATE" property="depstate" jdbcType="VARCHAR" />
+    <result column="LICENCEPATH" property="licencepath" jdbcType="VARCHAR" />
+    <result column="ISTEMPORARY" property="istemporary" jdbcType="VARCHAR" />
+    <result column="ISFULL" property="isfull" jdbcType="VARCHAR" />
+    <result column="DEPADDRESS" property="depaddress" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    DEPARTMENTSEQNO, DEPARTMENTCODE, DEPARTMENTNAME, DEPARTMENTSHORTNAME, DEPARTMENTALIAS, 
+    DEPARTMENTENGNAME, DEPARTMENTENGSHORTNAME, DEPARTMENTMAJOR, ISHAVEHUGEEQUIP, ISHAVEVICEPROF, 
+    DEPARTMENTDESC, ORGANIZATIONCODE, ADDRESS, POSTCODE, COUNTYANAME, COUNTYBNAME, COUNTYCNAME, 
+    WEB, CORPORATIONTYPENAME, UNITTYPENAME, ECONOMYINDUSTRY, SUBJECTFIELD, ISTRANS, AREAOFLOC, 
+    AREAOFBUILDING, AREAOFTECH, FUNDOFALL, FUNDOFFIXED, FUNDOFFLOW, FUNDOFOUT, DEPTOFUP, 
+    WRITER, ONWERDEPT, WRITERTEL, WRITERFAX, WIRTEREMAIL, UNITSTATE, MAJOROFDEPT, WRITERTIME, 
+    REMARK, LOCATIONNO, CLASSIFICATION1, CLASSIFICATION2, DEPMAININTRODUCE, APPROVALNUMBER, 
+    ESTABLISGTIME, INSTITUTIONTYPE, PHONE, DEPSTATE, LICENCEPATH, ISTEMPORARY, ISFULL, 
+    DEPADDRESS
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from LAB_DEPARTMENT
+    where DEPARTMENTSEQNO = #{departmentseqno,jdbcType=DECIMAL}
+  </select>
+  <select id="selectByDepartmentName" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select
+    <include refid="Base_Column_List" />
+    from LAB_DEPARTMENT
+    where DEPARTMENTNAME = #{departmentname,jdbcType=VARCHAR}
+  </select>
+
+  <select id="findNewByName" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select
+    <include refid="Base_Column_List" />
+    from LAB_DEPARTMENT
+    where DEPARTMENTNAME = #{departmentname,jdbcType=VARCHAR}
+    ORDER BY DEPARTMENTSEQNO DESC
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from LAB_DEPARTMENT
+    where DEPARTMENTSEQNO = #{departmentseqno,jdbcType=DECIMAL}
+  </delete>
+  <insert id="insert" parameterType="com.coder520.POI.LabDepartment.entity.LabDepartment" >
+    insert into LAB_DEPARTMENT (DEPARTMENTSEQNO, DEPARTMENTCODE, 
+      DEPARTMENTNAME, DEPARTMENTSHORTNAME, DEPARTMENTALIAS, 
+      DEPARTMENTENGNAME, DEPARTMENTENGSHORTNAME, 
+      DEPARTMENTMAJOR, ISHAVEHUGEEQUIP, ISHAVEVICEPROF, 
+      DEPARTMENTDESC, ORGANIZATIONCODE, ADDRESS, 
+      POSTCODE, COUNTYANAME, COUNTYBNAME, 
+      COUNTYCNAME, WEB, CORPORATIONTYPENAME, 
+      UNITTYPENAME, ECONOMYINDUSTRY, SUBJECTFIELD, 
+      ISTRANS, AREAOFLOC, AREAOFBUILDING, 
+      AREAOFTECH, FUNDOFALL, FUNDOFFIXED, 
+      FUNDOFFLOW, FUNDOFOUT, DEPTOFUP, 
+      WRITER, ONWERDEPT, WRITERTEL, 
+      WRITERFAX, WIRTEREMAIL, UNITSTATE, 
+      MAJOROFDEPT, WRITERTIME, REMARK, 
+      LOCATIONNO, CLASSIFICATION1, CLASSIFICATION2, 
+      DEPMAININTRODUCE, APPROVALNUMBER, ESTABLISGTIME, 
+      INSTITUTIONTYPE, PHONE, DEPSTATE, 
+      LICENCEPATH, ISTEMPORARY, ISFULL, 
+      DEPADDRESS)
+    values (#{departmentseqno,jdbcType=DECIMAL}, #{departmentcode,jdbcType=VARCHAR}, 
+      #{departmentname,jdbcType=VARCHAR}, #{departmentshortname,jdbcType=VARCHAR}, #{departmentalias,jdbcType=VARCHAR}, 
+      #{departmentengname,jdbcType=VARCHAR}, #{departmentengshortname,jdbcType=VARCHAR}, 
+      #{departmentmajor,jdbcType=VARCHAR}, #{ishavehugeequip,jdbcType=VARCHAR}, #{ishaveviceprof,jdbcType=VARCHAR}, 
+      #{departmentdesc,jdbcType=VARCHAR}, #{organizationcode,jdbcType=CHAR}, #{address,jdbcType=VARCHAR}, 
+      #{postcode,jdbcType=CHAR}, #{countyaname,jdbcType=VARCHAR}, #{countybname,jdbcType=VARCHAR}, 
+      #{countycname,jdbcType=VARCHAR}, #{web,jdbcType=VARCHAR}, #{corporationtypename,jdbcType=VARCHAR}, 
+      #{unittypename,jdbcType=VARCHAR}, #{economyindustry,jdbcType=VARCHAR}, #{subjectfield,jdbcType=VARCHAR}, 
+      #{istrans,jdbcType=VARCHAR}, #{areaofloc,jdbcType=DECIMAL}, #{areaofbuilding,jdbcType=DECIMAL}, 
+      #{areaoftech,jdbcType=DECIMAL}, #{fundofall,jdbcType=DECIMAL}, #{fundoffixed,jdbcType=DECIMAL}, 
+      #{fundofflow,jdbcType=DECIMAL}, #{fundofout,jdbcType=DECIMAL}, #{deptofup,jdbcType=VARCHAR}, 
+      #{writer,jdbcType=VARCHAR}, #{onwerdept,jdbcType=VARCHAR}, #{writertel,jdbcType=VARCHAR}, 
+      #{writerfax,jdbcType=VARCHAR}, #{wirteremail,jdbcType=VARCHAR}, #{unitstate,jdbcType=VARCHAR}, 
+      #{majorofdept,jdbcType=VARCHAR}, #{writertime,jdbcType=TIMESTAMP}, #{remark,jdbcType=VARCHAR}, 
+      #{locationno,jdbcType=VARCHAR}, #{classification1,jdbcType=VARCHAR}, #{classification2,jdbcType=VARCHAR}, 
+      #{depmainintroduce,jdbcType=VARCHAR}, #{approvalnumber,jdbcType=VARCHAR}, #{establisgtime,jdbcType=VARCHAR}, 
+      #{institutiontype,jdbcType=VARCHAR}, #{phone,jdbcType=VARCHAR}, #{depstate,jdbcType=VARCHAR}, 
+      #{licencepath,jdbcType=VARCHAR}, #{istemporary,jdbcType=VARCHAR}, #{isfull,jdbcType=VARCHAR}, 
+      #{depaddress,jdbcType=VARCHAR})
+  </insert>
+
+  <insert id="insertAddKey" parameterType="com.coder520.POI.LabDepartment.entity.LabDepartment" >
+
+    <selectKey keyProperty="departmentseqno" resultType="long" order="BEFORE">
+      select  nvl(max(DEPARTMENTSEQNO),0)+1 from LAB_DEPARTMENT
+    </selectKey>
+    insert into LAB_DEPARTMENT (DEPARTMENTSEQNO, DEPARTMENTCODE,
+    DEPARTMENTNAME, DEPARTMENTSHORTNAME, DEPARTMENTALIAS,
+    DEPARTMENTENGNAME, DEPARTMENTENGSHORTNAME,
+    DEPARTMENTMAJOR, ISHAVEHUGEEQUIP, ISHAVEVICEPROF,
+    DEPARTMENTDESC, ORGANIZATIONCODE, ADDRESS,
+    POSTCODE, COUNTYANAME, COUNTYBNAME,
+    COUNTYCNAME, WEB, CORPORATIONTYPENAME,
+    UNITTYPENAME, ECONOMYINDUSTRY, SUBJECTFIELD,
+    ISTRANS, AREAOFLOC, AREAOFBUILDING,
+    AREAOFTECH, FUNDOFALL, FUNDOFFIXED,
+    FUNDOFFLOW, FUNDOFOUT, DEPTOFUP,
+    WRITER, ONWERDEPT, WRITERTEL,
+    WRITERFAX, WIRTEREMAIL, UNITSTATE,
+    MAJOROFDEPT, WRITERTIME, REMARK,
+    LOCATIONNO, CLASSIFICATION1, CLASSIFICATION2,
+    DEPMAININTRODUCE, APPROVALNUMBER, ESTABLISGTIME,
+    INSTITUTIONTYPE, PHONE, DEPSTATE,
+    LICENCEPATH, ISTEMPORARY, ISFULL,
+    DEPADDRESS)
+    values (#{departmentseqno,jdbcType=DECIMAL}, #{departmentcode,jdbcType=VARCHAR},
+    #{departmentname,jdbcType=VARCHAR}, #{departmentshortname,jdbcType=VARCHAR}, #{departmentalias,jdbcType=VARCHAR},
+    #{departmentengname,jdbcType=VARCHAR}, #{departmentengshortname,jdbcType=VARCHAR},
+    #{departmentmajor,jdbcType=VARCHAR}, #{ishavehugeequip,jdbcType=VARCHAR}, #{ishaveviceprof,jdbcType=VARCHAR},
+    #{departmentdesc,jdbcType=VARCHAR}, #{organizationcode,jdbcType=CHAR}, #{address,jdbcType=VARCHAR},
+    #{postcode,jdbcType=CHAR}, #{countyaname,jdbcType=VARCHAR}, #{countybname,jdbcType=VARCHAR},
+    #{countycname,jdbcType=VARCHAR}, #{web,jdbcType=VARCHAR}, #{corporationtypename,jdbcType=VARCHAR},
+    #{unittypename,jdbcType=VARCHAR}, #{economyindustry,jdbcType=VARCHAR}, #{subjectfield,jdbcType=VARCHAR},
+    #{istrans,jdbcType=VARCHAR}, #{areaofloc,jdbcType=DECIMAL}, #{areaofbuilding,jdbcType=DECIMAL},
+    #{areaoftech,jdbcType=DECIMAL}, #{fundofall,jdbcType=DECIMAL}, #{fundoffixed,jdbcType=DECIMAL},
+    #{fundofflow,jdbcType=DECIMAL}, #{fundofout,jdbcType=DECIMAL}, #{deptofup,jdbcType=VARCHAR},
+    #{writer,jdbcType=VARCHAR}, #{onwerdept,jdbcType=VARCHAR}, #{writertel,jdbcType=VARCHAR},
+    #{writerfax,jdbcType=VARCHAR}, #{wirteremail,jdbcType=VARCHAR}, #{unitstate,jdbcType=VARCHAR},
+    #{majorofdept,jdbcType=VARCHAR}, #{writertime,jdbcType=TIMESTAMP}, #{remark,jdbcType=VARCHAR},
+    #{locationno,jdbcType=VARCHAR}, #{classification1,jdbcType=VARCHAR}, #{classification2,jdbcType=VARCHAR},
+    #{depmainintroduce,jdbcType=VARCHAR}, #{approvalnumber,jdbcType=VARCHAR}, #{establisgtime,jdbcType=VARCHAR},
+    #{institutiontype,jdbcType=VARCHAR}, #{phone,jdbcType=VARCHAR}, #{depstate,jdbcType=VARCHAR},
+    #{licencepath,jdbcType=VARCHAR}, #{istemporary,jdbcType=VARCHAR}, #{isfull,jdbcType=VARCHAR},
+    #{depaddress,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.coder520.POI.LabDepartment.entity.LabDepartment" >
+    insert into LAB_DEPARTMENT
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="departmentseqno != null" >
+        DEPARTMENTSEQNO,
+      </if>
+      <if test="departmentcode != null" >
+        DEPARTMENTCODE,
+      </if>
+      <if test="departmentname != null" >
+        DEPARTMENTNAME,
+      </if>
+      <if test="departmentshortname != null" >
+        DEPARTMENTSHORTNAME,
+      </if>
+      <if test="departmentalias != null" >
+        DEPARTMENTALIAS,
+      </if>
+      <if test="departmentengname != null" >
+        DEPARTMENTENGNAME,
+      </if>
+      <if test="departmentengshortname != null" >
+        DEPARTMENTENGSHORTNAME,
+      </if>
+      <if test="departmentmajor != null" >
+        DEPARTMENTMAJOR,
+      </if>
+      <if test="ishavehugeequip != null" >
+        ISHAVEHUGEEQUIP,
+      </if>
+      <if test="ishaveviceprof != null" >
+        ISHAVEVICEPROF,
+      </if>
+      <if test="departmentdesc != null" >
+        DEPARTMENTDESC,
+      </if>
+      <if test="organizationcode != null" >
+        ORGANIZATIONCODE,
+      </if>
+      <if test="address != null" >
+        ADDRESS,
+      </if>
+      <if test="postcode != null" >
+        POSTCODE,
+      </if>
+      <if test="countyaname != null" >
+        COUNTYANAME,
+      </if>
+      <if test="countybname != null" >
+        COUNTYBNAME,
+      </if>
+      <if test="countycname != null" >
+        COUNTYCNAME,
+      </if>
+      <if test="web != null" >
+        WEB,
+      </if>
+      <if test="corporationtypename != null" >
+        CORPORATIONTYPENAME,
+      </if>
+      <if test="unittypename != null" >
+        UNITTYPENAME,
+      </if>
+      <if test="economyindustry != null" >
+        ECONOMYINDUSTRY,
+      </if>
+      <if test="subjectfield != null" >
+        SUBJECTFIELD,
+      </if>
+      <if test="istrans != null" >
+        ISTRANS,
+      </if>
+      <if test="areaofloc != null" >
+        AREAOFLOC,
+      </if>
+      <if test="areaofbuilding != null" >
+        AREAOFBUILDING,
+      </if>
+      <if test="areaoftech != null" >
+        AREAOFTECH,
+      </if>
+      <if test="fundofall != null" >
+        FUNDOFALL,
+      </if>
+      <if test="fundoffixed != null" >
+        FUNDOFFIXED,
+      </if>
+      <if test="fundofflow != null" >
+        FUNDOFFLOW,
+      </if>
+      <if test="fundofout != null" >
+        FUNDOFOUT,
+      </if>
+      <if test="deptofup != null" >
+        DEPTOFUP,
+      </if>
+      <if test="writer != null" >
+        WRITER,
+      </if>
+      <if test="onwerdept != null" >
+        ONWERDEPT,
+      </if>
+      <if test="writertel != null" >
+        WRITERTEL,
+      </if>
+      <if test="writerfax != null" >
+        WRITERFAX,
+      </if>
+      <if test="wirteremail != null" >
+        WIRTEREMAIL,
+      </if>
+      <if test="unitstate != null" >
+        UNITSTATE,
+      </if>
+      <if test="majorofdept != null" >
+        MAJOROFDEPT,
+      </if>
+      <if test="writertime != null" >
+        WRITERTIME,
+      </if>
+      <if test="remark != null" >
+        REMARK,
+      </if>
+      <if test="locationno != null" >
+        LOCATIONNO,
+      </if>
+      <if test="classification1 != null" >
+        CLASSIFICATION1,
+      </if>
+      <if test="classification2 != null" >
+        CLASSIFICATION2,
+      </if>
+      <if test="depmainintroduce != null" >
+        DEPMAININTRODUCE,
+      </if>
+      <if test="approvalnumber != null" >
+        APPROVALNUMBER,
+      </if>
+      <if test="establisgtime != null" >
+        ESTABLISGTIME,
+      </if>
+      <if test="institutiontype != null" >
+        INSTITUTIONTYPE,
+      </if>
+      <if test="phone != null" >
+        PHONE,
+      </if>
+      <if test="depstate != null" >
+        DEPSTATE,
+      </if>
+      <if test="licencepath != null" >
+        LICENCEPATH,
+      </if>
+      <if test="istemporary != null" >
+        ISTEMPORARY,
+      </if>
+      <if test="isfull != null" >
+        ISFULL,
+      </if>
+      <if test="depaddress != null" >
+        DEPADDRESS,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="departmentseqno != null" >
+        #{departmentseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="departmentcode != null" >
+        #{departmentcode,jdbcType=VARCHAR},
+      </if>
+      <if test="departmentname != null" >
+        #{departmentname,jdbcType=VARCHAR},
+      </if>
+      <if test="departmentshortname != null" >
+        #{departmentshortname,jdbcType=VARCHAR},
+      </if>
+      <if test="departmentalias != null" >
+        #{departmentalias,jdbcType=VARCHAR},
+      </if>
+      <if test="departmentengname != null" >
+        #{departmentengname,jdbcType=VARCHAR},
+      </if>
+      <if test="departmentengshortname != null" >
+        #{departmentengshortname,jdbcType=VARCHAR},
+      </if>
+      <if test="departmentmajor != null" >
+        #{departmentmajor,jdbcType=VARCHAR},
+      </if>
+      <if test="ishavehugeequip != null" >
+        #{ishavehugeequip,jdbcType=VARCHAR},
+      </if>
+      <if test="ishaveviceprof != null" >
+        #{ishaveviceprof,jdbcType=VARCHAR},
+      </if>
+      <if test="departmentdesc != null" >
+        #{departmentdesc,jdbcType=VARCHAR},
+      </if>
+      <if test="organizationcode != null" >
+        #{organizationcode,jdbcType=CHAR},
+      </if>
+      <if test="address != null" >
+        #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="postcode != null" >
+        #{postcode,jdbcType=CHAR},
+      </if>
+      <if test="countyaname != null" >
+        #{countyaname,jdbcType=VARCHAR},
+      </if>
+      <if test="countybname != null" >
+        #{countybname,jdbcType=VARCHAR},
+      </if>
+      <if test="countycname != null" >
+        #{countycname,jdbcType=VARCHAR},
+      </if>
+      <if test="web != null" >
+        #{web,jdbcType=VARCHAR},
+      </if>
+      <if test="corporationtypename != null" >
+        #{corporationtypename,jdbcType=VARCHAR},
+      </if>
+      <if test="unittypename != null" >
+        #{unittypename,jdbcType=VARCHAR},
+      </if>
+      <if test="economyindustry != null" >
+        #{economyindustry,jdbcType=VARCHAR},
+      </if>
+      <if test="subjectfield != null" >
+        #{subjectfield,jdbcType=VARCHAR},
+      </if>
+      <if test="istrans != null" >
+        #{istrans,jdbcType=VARCHAR},
+      </if>
+      <if test="areaofloc != null" >
+        #{areaofloc,jdbcType=DECIMAL},
+      </if>
+      <if test="areaofbuilding != null" >
+        #{areaofbuilding,jdbcType=DECIMAL},
+      </if>
+      <if test="areaoftech != null" >
+        #{areaoftech,jdbcType=DECIMAL},
+      </if>
+      <if test="fundofall != null" >
+        #{fundofall,jdbcType=DECIMAL},
+      </if>
+      <if test="fundoffixed != null" >
+        #{fundoffixed,jdbcType=DECIMAL},
+      </if>
+      <if test="fundofflow != null" >
+        #{fundofflow,jdbcType=DECIMAL},
+      </if>
+      <if test="fundofout != null" >
+        #{fundofout,jdbcType=DECIMAL},
+      </if>
+      <if test="deptofup != null" >
+        #{deptofup,jdbcType=VARCHAR},
+      </if>
+      <if test="writer != null" >
+        #{writer,jdbcType=VARCHAR},
+      </if>
+      <if test="onwerdept != null" >
+        #{onwerdept,jdbcType=VARCHAR},
+      </if>
+      <if test="writertel != null" >
+        #{writertel,jdbcType=VARCHAR},
+      </if>
+      <if test="writerfax != null" >
+        #{writerfax,jdbcType=VARCHAR},
+      </if>
+      <if test="wirteremail != null" >
+        #{wirteremail,jdbcType=VARCHAR},
+      </if>
+      <if test="unitstate != null" >
+        #{unitstate,jdbcType=VARCHAR},
+      </if>
+      <if test="majorofdept != null" >
+        #{majorofdept,jdbcType=VARCHAR},
+      </if>
+      <if test="writertime != null" >
+        #{writertime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="remark != null" >
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="locationno != null" >
+        #{locationno,jdbcType=VARCHAR},
+      </if>
+      <if test="classification1 != null" >
+        #{classification1,jdbcType=VARCHAR},
+      </if>
+      <if test="classification2 != null" >
+        #{classification2,jdbcType=VARCHAR},
+      </if>
+      <if test="depmainintroduce != null" >
+        #{depmainintroduce,jdbcType=VARCHAR},
+      </if>
+      <if test="approvalnumber != null" >
+        #{approvalnumber,jdbcType=VARCHAR},
+      </if>
+      <if test="establisgtime != null" >
+        #{establisgtime,jdbcType=VARCHAR},
+      </if>
+      <if test="institutiontype != null" >
+        #{institutiontype,jdbcType=VARCHAR},
+      </if>
+      <if test="phone != null" >
+        #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="depstate != null" >
+        #{depstate,jdbcType=VARCHAR},
+      </if>
+      <if test="licencepath != null" >
+        #{licencepath,jdbcType=VARCHAR},
+      </if>
+      <if test="istemporary != null" >
+        #{istemporary,jdbcType=VARCHAR},
+      </if>
+      <if test="isfull != null" >
+        #{isfull,jdbcType=VARCHAR},
+      </if>
+      <if test="depaddress != null" >
+        #{depaddress,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.coder520.POI.LabDepartment.entity.LabDepartment" >
+    update LAB_DEPARTMENT
+    <set >
+      <if test="departmentcode != null" >
+        DEPARTMENTCODE = #{departmentcode,jdbcType=VARCHAR},
+      </if>
+      <if test="departmentname != null" >
+        DEPARTMENTNAME = #{departmentname,jdbcType=VARCHAR},
+      </if>
+      <if test="departmentshortname != null" >
+        DEPARTMENTSHORTNAME = #{departmentshortname,jdbcType=VARCHAR},
+      </if>
+      <if test="departmentalias != null" >
+        DEPARTMENTALIAS = #{departmentalias,jdbcType=VARCHAR},
+      </if>
+      <if test="departmentengname != null" >
+        DEPARTMENTENGNAME = #{departmentengname,jdbcType=VARCHAR},
+      </if>
+      <if test="departmentengshortname != null" >
+        DEPARTMENTENGSHORTNAME = #{departmentengshortname,jdbcType=VARCHAR},
+      </if>
+      <if test="departmentmajor != null" >
+        DEPARTMENTMAJOR = #{departmentmajor,jdbcType=VARCHAR},
+      </if>
+      <if test="ishavehugeequip != null" >
+        ISHAVEHUGEEQUIP = #{ishavehugeequip,jdbcType=VARCHAR},
+      </if>
+      <if test="ishaveviceprof != null" >
+        ISHAVEVICEPROF = #{ishaveviceprof,jdbcType=VARCHAR},
+      </if>
+      <if test="departmentdesc != null" >
+        DEPARTMENTDESC = #{departmentdesc,jdbcType=VARCHAR},
+      </if>
+      <if test="organizationcode != null" >
+        ORGANIZATIONCODE = #{organizationcode,jdbcType=CHAR},
+      </if>
+      <if test="address != null" >
+        ADDRESS = #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="postcode != null" >
+        POSTCODE = #{postcode,jdbcType=CHAR},
+      </if>
+      <if test="countyaname != null" >
+        COUNTYANAME = #{countyaname,jdbcType=VARCHAR},
+      </if>
+      <if test="countybname != null" >
+        COUNTYBNAME = #{countybname,jdbcType=VARCHAR},
+      </if>
+      <if test="countycname != null" >
+        COUNTYCNAME = #{countycname,jdbcType=VARCHAR},
+      </if>
+      <if test="web != null" >
+        WEB = #{web,jdbcType=VARCHAR},
+      </if>
+      <if test="corporationtypename != null" >
+        CORPORATIONTYPENAME = #{corporationtypename,jdbcType=VARCHAR},
+      </if>
+      <if test="unittypename != null" >
+        UNITTYPENAME = #{unittypename,jdbcType=VARCHAR},
+      </if>
+      <if test="economyindustry != null" >
+        ECONOMYINDUSTRY = #{economyindustry,jdbcType=VARCHAR},
+      </if>
+      <if test="subjectfield != null" >
+        SUBJECTFIELD = #{subjectfield,jdbcType=VARCHAR},
+      </if>
+      <if test="istrans != null" >
+        ISTRANS = #{istrans,jdbcType=VARCHAR},
+      </if>
+      <if test="areaofloc != null" >
+        AREAOFLOC = #{areaofloc,jdbcType=DECIMAL},
+      </if>
+      <if test="areaofbuilding != null" >
+        AREAOFBUILDING = #{areaofbuilding,jdbcType=DECIMAL},
+      </if>
+      <if test="areaoftech != null" >
+        AREAOFTECH = #{areaoftech,jdbcType=DECIMAL},
+      </if>
+      <if test="fundofall != null" >
+        FUNDOFALL = #{fundofall,jdbcType=DECIMAL},
+      </if>
+      <if test="fundoffixed != null" >
+        FUNDOFFIXED = #{fundoffixed,jdbcType=DECIMAL},
+      </if>
+      <if test="fundofflow != null" >
+        FUNDOFFLOW = #{fundofflow,jdbcType=DECIMAL},
+      </if>
+      <if test="fundofout != null" >
+        FUNDOFOUT = #{fundofout,jdbcType=DECIMAL},
+      </if>
+      <if test="deptofup != null" >
+        DEPTOFUP = #{deptofup,jdbcType=VARCHAR},
+      </if>
+      <if test="writer != null" >
+        WRITER = #{writer,jdbcType=VARCHAR},
+      </if>
+      <if test="onwerdept != null" >
+        ONWERDEPT = #{onwerdept,jdbcType=VARCHAR},
+      </if>
+      <if test="writertel != null" >
+        WRITERTEL = #{writertel,jdbcType=VARCHAR},
+      </if>
+      <if test="writerfax != null" >
+        WRITERFAX = #{writerfax,jdbcType=VARCHAR},
+      </if>
+      <if test="wirteremail != null" >
+        WIRTEREMAIL = #{wirteremail,jdbcType=VARCHAR},
+      </if>
+      <if test="unitstate != null" >
+        UNITSTATE = #{unitstate,jdbcType=VARCHAR},
+      </if>
+      <if test="majorofdept != null" >
+        MAJOROFDEPT = #{majorofdept,jdbcType=VARCHAR},
+      </if>
+      <if test="writertime != null" >
+        WRITERTIME = #{writertime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="remark != null" >
+        REMARK = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="locationno != null" >
+        LOCATIONNO = #{locationno,jdbcType=VARCHAR},
+      </if>
+      <if test="classification1 != null" >
+        CLASSIFICATION1 = #{classification1,jdbcType=VARCHAR},
+      </if>
+      <if test="classification2 != null" >
+        CLASSIFICATION2 = #{classification2,jdbcType=VARCHAR},
+      </if>
+      <if test="depmainintroduce != null" >
+        DEPMAININTRODUCE = #{depmainintroduce,jdbcType=VARCHAR},
+      </if>
+      <if test="approvalnumber != null" >
+        APPROVALNUMBER = #{approvalnumber,jdbcType=VARCHAR},
+      </if>
+      <if test="establisgtime != null" >
+        ESTABLISGTIME = #{establisgtime,jdbcType=VARCHAR},
+      </if>
+      <if test="institutiontype != null" >
+        INSTITUTIONTYPE = #{institutiontype,jdbcType=VARCHAR},
+      </if>
+      <if test="phone != null" >
+        PHONE = #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="depstate != null" >
+        DEPSTATE = #{depstate,jdbcType=VARCHAR},
+      </if>
+      <if test="licencepath != null" >
+        LICENCEPATH = #{licencepath,jdbcType=VARCHAR},
+      </if>
+      <if test="istemporary != null" >
+        ISTEMPORARY = #{istemporary,jdbcType=VARCHAR},
+      </if>
+      <if test="isfull != null" >
+        ISFULL = #{isfull,jdbcType=VARCHAR},
+      </if>
+      <if test="depaddress != null" >
+        DEPADDRESS = #{depaddress,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where DEPARTMENTSEQNO = #{departmentseqno,jdbcType=DECIMAL}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.coder520.POI.LabDepartment.entity.LabDepartment" >
+    update LAB_DEPARTMENT
+    set DEPARTMENTCODE = #{departmentcode,jdbcType=VARCHAR},
+      DEPARTMENTNAME = #{departmentname,jdbcType=VARCHAR},
+      DEPARTMENTSHORTNAME = #{departmentshortname,jdbcType=VARCHAR},
+      DEPARTMENTALIAS = #{departmentalias,jdbcType=VARCHAR},
+      DEPARTMENTENGNAME = #{departmentengname,jdbcType=VARCHAR},
+      DEPARTMENTENGSHORTNAME = #{departmentengshortname,jdbcType=VARCHAR},
+      DEPARTMENTMAJOR = #{departmentmajor,jdbcType=VARCHAR},
+      ISHAVEHUGEEQUIP = #{ishavehugeequip,jdbcType=VARCHAR},
+      ISHAVEVICEPROF = #{ishaveviceprof,jdbcType=VARCHAR},
+      DEPARTMENTDESC = #{departmentdesc,jdbcType=VARCHAR},
+      ORGANIZATIONCODE = #{organizationcode,jdbcType=CHAR},
+      ADDRESS = #{address,jdbcType=VARCHAR},
+      POSTCODE = #{postcode,jdbcType=CHAR},
+      COUNTYANAME = #{countyaname,jdbcType=VARCHAR},
+      COUNTYBNAME = #{countybname,jdbcType=VARCHAR},
+      COUNTYCNAME = #{countycname,jdbcType=VARCHAR},
+      WEB = #{web,jdbcType=VARCHAR},
+      CORPORATIONTYPENAME = #{corporationtypename,jdbcType=VARCHAR},
+      UNITTYPENAME = #{unittypename,jdbcType=VARCHAR},
+      ECONOMYINDUSTRY = #{economyindustry,jdbcType=VARCHAR},
+      SUBJECTFIELD = #{subjectfield,jdbcType=VARCHAR},
+      ISTRANS = #{istrans,jdbcType=VARCHAR},
+      AREAOFLOC = #{areaofloc,jdbcType=DECIMAL},
+      AREAOFBUILDING = #{areaofbuilding,jdbcType=DECIMAL},
+      AREAOFTECH = #{areaoftech,jdbcType=DECIMAL},
+      FUNDOFALL = #{fundofall,jdbcType=DECIMAL},
+      FUNDOFFIXED = #{fundoffixed,jdbcType=DECIMAL},
+      FUNDOFFLOW = #{fundofflow,jdbcType=DECIMAL},
+      FUNDOFOUT = #{fundofout,jdbcType=DECIMAL},
+      DEPTOFUP = #{deptofup,jdbcType=VARCHAR},
+      WRITER = #{writer,jdbcType=VARCHAR},
+      ONWERDEPT = #{onwerdept,jdbcType=VARCHAR},
+      WRITERTEL = #{writertel,jdbcType=VARCHAR},
+      WRITERFAX = #{writerfax,jdbcType=VARCHAR},
+      WIRTEREMAIL = #{wirteremail,jdbcType=VARCHAR},
+      UNITSTATE = #{unitstate,jdbcType=VARCHAR},
+      MAJOROFDEPT = #{majorofdept,jdbcType=VARCHAR},
+      WRITERTIME = #{writertime,jdbcType=TIMESTAMP},
+      REMARK = #{remark,jdbcType=VARCHAR},
+      LOCATIONNO = #{locationno,jdbcType=VARCHAR},
+      CLASSIFICATION1 = #{classification1,jdbcType=VARCHAR},
+      CLASSIFICATION2 = #{classification2,jdbcType=VARCHAR},
+      DEPMAININTRODUCE = #{depmainintroduce,jdbcType=VARCHAR},
+      APPROVALNUMBER = #{approvalnumber,jdbcType=VARCHAR},
+      ESTABLISGTIME = #{establisgtime,jdbcType=VARCHAR},
+      INSTITUTIONTYPE = #{institutiontype,jdbcType=VARCHAR},
+      PHONE = #{phone,jdbcType=VARCHAR},
+      DEPSTATE = #{depstate,jdbcType=VARCHAR},
+      LICENCEPATH = #{licencepath,jdbcType=VARCHAR},
+      ISTEMPORARY = #{istemporary,jdbcType=VARCHAR},
+      ISFULL = #{isfull,jdbcType=VARCHAR},
+      DEPADDRESS = #{depaddress,jdbcType=VARCHAR}
+    where DEPARTMENTSEQNO = #{departmentseqno,jdbcType=DECIMAL}
+  </update>
+</mapper>

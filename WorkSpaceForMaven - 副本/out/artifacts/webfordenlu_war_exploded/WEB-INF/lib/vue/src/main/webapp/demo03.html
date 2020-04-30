@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue_v-on:click</title>
+    <script src="js/vuejs-2.5.16.js"></script>
+    <style>
+        .box{
+            width:300px;
+            height: 400px;
+            border: 1px solid red;
+
+        }
+        .textarea{
+            width: 200px;
+            height:100px;
+            border: 1px solid blue;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <div class="box" @mouseover="fun01">
+        {{message}}
+        <textarea class="textarea" @mouseover="fun02($event)">
+            {{message}}
+        </textarea>
+    </div>
+
+</div>
+<script>
+    new Vue(
+        {
+            el:"#app",
+            data:{message:"你好"},
+            methods:{
+                fun01:function () {
+                    alert("div");
+                },
+                fun02:function (e) {
+                    alert("textarea");
+                    e.stopPropagation();
+                }
+            }
+        }
+    );
+</script>
+</body>
+</html>

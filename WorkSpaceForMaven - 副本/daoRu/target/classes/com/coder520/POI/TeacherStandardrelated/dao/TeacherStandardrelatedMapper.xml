@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coder520.POI.TeacherStandardrelated.dao.TeacherStandardrelatedMapper" >
+  <resultMap id="BaseResultMap" type="com.coder520.POI.TeacherStandardrelated.entity.TeacherStandardrelated" >
+    <id column="TEACHERSEQNO" property="teacherseqno" jdbcType="DECIMAL" />
+    <id column="STANDARDSEQNO" property="standardseqno" jdbcType="DECIMAL" />
+    <id column="LABSEQNO" property="labseqno" jdbcType="DECIMAL" />
+    <result column="RELATEDLAB" property="relatedlab" jdbcType="VARCHAR" />
+    <result column="CONTRIBUTION" property="contribution" jdbcType="VARCHAR" />
+    <result column="STANDARDUUID" property="standarduuid" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    TEACHERSEQNO, STANDARDSEQNO, LABSEQNO, RELATEDLAB, CONTRIBUTION, STANDARDUUID
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="com.coder520.POI.TeacherStandardrelated.entity.TeacherStandardrelatedKey" >
+    select 
+    <include refid="Base_Column_List" />
+    from TEACHER_STANDARDRELATED
+    where TEACHERSEQNO = #{teacherseqno,jdbcType=DECIMAL}
+      and STANDARDSEQNO = #{standardseqno,jdbcType=DECIMAL}
+      and LABSEQNO = #{labseqno,jdbcType=DECIMAL}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="com.coder520.POI.TeacherStandardrelated.entity.TeacherStandardrelatedKey" >
+    delete from TEACHER_STANDARDRELATED
+    where TEACHERSEQNO = #{teacherseqno,jdbcType=DECIMAL}
+      and STANDARDSEQNO = #{standardseqno,jdbcType=DECIMAL}
+      and LABSEQNO = #{labseqno,jdbcType=DECIMAL}
+  </delete>
+  <insert id="insert" parameterType="com.coder520.POI.TeacherStandardrelated.entity.TeacherStandardrelated" >
+    insert into TEACHER_STANDARDRELATED (TEACHERSEQNO, STANDARDSEQNO, LABSEQNO, 
+      RELATEDLAB, CONTRIBUTION, STANDARDUUID
+      )
+    values (#{teacherseqno,jdbcType=DECIMAL}, #{standardseqno,jdbcType=DECIMAL}, #{labseqno,jdbcType=DECIMAL}, 
+      #{relatedlab,jdbcType=VARCHAR}, #{contribution,jdbcType=VARCHAR}, #{standarduuid,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.coder520.POI.TeacherStandardrelated.entity.TeacherStandardrelated" >
+    insert into TEACHER_STANDARDRELATED
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="teacherseqno != null" >
+        TEACHERSEQNO,
+      </if>
+      <if test="standardseqno != null" >
+        STANDARDSEQNO,
+      </if>
+      <if test="labseqno != null" >
+        LABSEQNO,
+      </if>
+      <if test="relatedlab != null" >
+        RELATEDLAB,
+      </if>
+      <if test="contribution != null" >
+        CONTRIBUTION,
+      </if>
+      <if test="standarduuid != null" >
+        STANDARDUUID,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="teacherseqno != null" >
+        #{teacherseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="standardseqno != null" >
+        #{standardseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="labseqno != null" >
+        #{labseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="relatedlab != null" >
+        #{relatedlab,jdbcType=VARCHAR},
+      </if>
+      <if test="contribution != null" >
+        #{contribution,jdbcType=VARCHAR},
+      </if>
+      <if test="standarduuid != null" >
+        #{standarduuid,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.coder520.POI.TeacherStandardrelated.entity.TeacherStandardrelated" >
+    update TEACHER_STANDARDRELATED
+    <set >
+      <if test="relatedlab != null" >
+        RELATEDLAB = #{relatedlab,jdbcType=VARCHAR},
+      </if>
+      <if test="contribution != null" >
+        CONTRIBUTION = #{contribution,jdbcType=VARCHAR},
+      </if>
+      <if test="standarduuid != null" >
+        STANDARDUUID = #{standarduuid,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where TEACHERSEQNO = #{teacherseqno,jdbcType=DECIMAL}
+      and STANDARDSEQNO = #{standardseqno,jdbcType=DECIMAL}
+      and LABSEQNO = #{labseqno,jdbcType=DECIMAL}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.coder520.POI.TeacherStandardrelated.entity.TeacherStandardrelated" >
+    update TEACHER_STANDARDRELATED
+    set RELATEDLAB = #{relatedlab,jdbcType=VARCHAR},
+      CONTRIBUTION = #{contribution,jdbcType=VARCHAR},
+      STANDARDUUID = #{standarduuid,jdbcType=VARCHAR}
+    where TEACHERSEQNO = #{teacherseqno,jdbcType=DECIMAL}
+      and STANDARDSEQNO = #{standardseqno,jdbcType=DECIMAL}
+      and LABSEQNO = #{labseqno,jdbcType=DECIMAL}
+  </update>
+</mapper>

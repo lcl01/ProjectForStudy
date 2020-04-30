@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Changgou-parent" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/MyBatisGenerator" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/code-generator" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/crawler" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/daoRu" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/dubbo-lcl" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/mytest" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/poi" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/springboot_datajpa" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/tensquare_parent/tensquare_user/src/main/resources/static" vcs="Git" />
+    <mapping directory="D:\WorkSpaceForMaven\tensquare_parent\tensquare_user\src\main\resources\static\webim" vcs="Git" />
+  </component>
+</project>

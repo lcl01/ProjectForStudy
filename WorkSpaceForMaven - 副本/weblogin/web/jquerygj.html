@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--<script type="text/javascript" src="js/jquery-3.3.1.js"></script>-->
+    <script src="js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<input type="text" value="hello..." id="inputId"/><br/>
+<input type="submit" value="获得value" id="btn01"/>
+<input type="submit" value="设置value" id="btn02"/>
+<br/>
+<p id="pId"><font>hello...</font></p>
+<input type="button" value="text()" id="btn1" />
+<input type="button" value="html()" id="btn2" />
+<p id="pId01"></p><br />
+<input type="button" id="btn111" value="html(...)" />
+<input type="button" id="btn222" value="text(...)" />
+<br/>
+省份：
+<select name="province" id="province">
+    <option value="-1">-请选择-</option>
+    <option value="0">广东</option>
+    <option value="1">湖北</option>
+    <option value="2">山东</option>
+</select>
+城市：<select name="city" id="city">
+    <option>-请选择-</option>
+</select>
+</body>
+<script>
+    var array=[1,2,3,4,"aa"];
+    // $(array).each(function (a,n) {
+    //     console.log("array["+a+"]="+n);
+    // });
+    for(n of $(array)){
+        console.log("n="+n);
+    }
+    $("#btn01").click(function () {
+        //获得inputId输入框的value; jq对象.val();
+        var value =  $("#inputId").val();
+        console.log("value="+value);
+    });
+
+    $("#btn02").click(function () {
+        //设置inputId输入框的value; jq对象.val("值");
+        $("#inputId").val("你好世界...");
+
+    });
+    $("#btn1").click(function(){
+        var data=  $("#pId").text();
+        console.log("data="+data);//结果:hello...
+    });
+    $("#btn2").click(function(){
+        var data=  $("#pId").html();
+        console.log("data="+data);
+        // 结果:<font>hello...</font>
+    });
+    $("#btn111").click(function(){
+        $("#pId01").html("<font color='red'>hello...</font>");
+    });
+
+    $("#btn222").click(function(){
+        $("#pId01").text("<font color='red'>hello...</font>");
+    });
+    var array1 = new Array(3);
+    array1[0] = ["深圳", "广州", "东莞", "惠州"];
+    array1[1] = ["武汉", "黄冈", "黄石", "鄂州"];
+    array1[2] = ["济南", "青岛", "烟台"];
+    $("#province").change(function () {
+        var pvalue=this.value;
+        var $cityObj=$("#city");
+        $cityObj.html("<option>-请选择-</option>");
+        if(pvalue>=0){
+            var citys=array1[pvalue];
+            var $citys=$(citys);
+            $citys.each(function (i,n) {
+                $cityObj.append("<option>"+n+"</option>");
+            })
+        }
+    });
+</script>
+</html>

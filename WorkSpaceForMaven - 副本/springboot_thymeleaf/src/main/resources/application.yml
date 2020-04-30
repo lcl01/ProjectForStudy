@@ -1,0 +1,4 @@
+spring:
+  thymeleaf:
+    #关闭缓存，便于测试
+    cache: false

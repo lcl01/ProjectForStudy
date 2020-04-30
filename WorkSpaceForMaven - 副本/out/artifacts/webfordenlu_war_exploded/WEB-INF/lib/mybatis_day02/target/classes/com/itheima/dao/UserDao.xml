@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--
+mapper：建立Dao接口中的方法和操作的数据库的sql语句进行映射
+    namespace="com.itheima.dao.UserDao"：指定需要操作的接口
+    select：表示查询语句
+        id：Dao中提供的方法名称
+        parameterType=""：参数类型
+        resultType="com.itheima.domain.User"：结果类型，查询的结果封装到User对象中
+            此时前提：User对象中的属性和数据库user表中的字段要一致
+        <select>标签中的内容就是sql语句
+    insert
+        id：Dao中提供的方法名称
+        parameterType="com.itheima.domain.User"：参数类型
+        在写insert语句的时候，使用OGNL表达式，用来读取传递参数User中的属性值（调用User中的get方法）
+    update
+    delete
+-->
+<mapper namespace="com.itheima.dao.UserDao">
+    <cache/>
+
+    <!--处理当数据库表的字段和实体类中的属性不一致的时候，需要使用resultMap
+        id：为查询的结果起一个名称
+        type：表示封装的实体
+            <id>：封装主键
+            <result>：表示封装的结果
+                column="" ：数据库表字段的名称
+                property=""：实体类属性的名称
+    -->
+    <!--<resultMap id="userMap" type="com.itheima.domain.User">-->
+        <!--<id column="id" property="id"></id>-->
+        <!--<result column="username" property="username"></result>-->
+        <!--<result column="address" property="address"></result>-->
+        <!--<result column="sex" property="sex"></result>-->
+        <!--<result column="birthday" property="birthday"></result>-->
+        <!--<collection property="accounts" ofType="account" select="com.itheima.dao.AccountDao.findAccountByUid" column="id"></collection>-->
+    <!--</resultMap>-->
+
+
+    <!--查询所有-->
+
+
+    <!--新增-->
+    <!--需求：在新增语句之后，将保存数据的id封装到到User中 的id属性中
+        order="AFTER"：表示操作语句之后完成
+        keyColumn="id"：数据表字段的名称
+        keyProperty="id"：实体类中属性的名称，将查询结果封装到实体类中id的属性中
+        resultType：表示返回的结果类型
+                * 使用实体类
+                * 使用基本类型（int/java.lang.Integer)，int表示java.lang.Integer的别名
+
+    -->
+    <!--<select id="findById" parameterType="INT" resultType="User" useCache="true">-->
+        <!--SELECT * from user1 where id=#{uid};-->
+    <!--</select>-->
+    <!--<select id="findUserAccountList" resultMap="userMap" >-->
+        <!--SELECT * from user1-->
+    <!--</select>-->
+</mapper>

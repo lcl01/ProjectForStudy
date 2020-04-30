@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue_v-on:click</title>
+    <script src="js/vuejs-2.5.16.js"></script>
+    <script src="js/axios-0.18.0.js"></script>
+
+</head>
+<body>
+<div id="app">
+    <!--<input type="text" @keydown.enter="fun01"/>-->
+    <!--<form action="http://www.chuanzhi.com" method="post" @click.prevent>-->
+        <!--<input type="submit"/>-->
+    <!--</form>-->
+    <!--<div @click="fun01">-->
+        <!--<a href="http://www.baidu.com" @click.stop>百度</a>-->
+    <!--</div>-->
+    <!--<font v-bind:color="ys">hello world</font>-->
+    <!--<a :href="info">百度</a>-->
+    <!--用户名：<input type="text" v-model="user.username"/><br>-->
+    <!--密码: <input type="text" v-model="user.password"/><br>-->
+    <!--<input type="submit" @click="fun01" value="按钮"/>-->
+<!--</div>-->
+    <!--<ul>-->
+        <!--<li v-for="(item,index) in array">-->
+           <!--{{index}}-&#45;&#45;{{item}}-->
+        <!--</li>-->
+        <!--<hr/>-->
+        <!--<li v-for="(stu,index) in students">-->
+            <!--{{index}}&#45;&#45;&#45;&#45;{{stu.name}&#45;&#45;&#45;&#45;{{stu.age}}-->
+        <!--</li>-->
+    <!--</ul>-->
+    <!--<ul>-->
+        <!--<li v-for="(item,index) in array">-->
+            <!--{{index}}-&#45;&#45;&#45;&#45;{{item}}-->
+        <!--</li>-->
+        <!--<hr/>-->
+        <!--<li v-for="(stu,index) in students">-->
+            <!--{{index}}&#45;&#45;{{stu.name}}-&#45;&#45;&#45;&#45;{{stu.age}}-->
+        <!--</li>-->
+    <!--</ul>-->
+    <!--<ui>-->
+        <!--<li v-for="(item,index) in array">-->
+            <!--{{index}}&#45;&#45;&#45;&#45;{{item}}-->
+        <!--</li>-->
+        <!--<hr/>-->
+        <!--<li v-for="(stu,index) in students">-->
+            <!--{{index}}&#45;&#45;&#45;&#45;{{stu.name}}-&#45;&#45;{{stu.age}}-->
+        <!--</li>-->
+    <!--</ui>-->
+    <!--<span v-if="flag">hello</span>-->
+    <!--<span v-show="flag">你好</span>-->
+    <!--<input type="button" value="开关" @click="fun01"/>-->
+    {{message}}
+</div>
+<script>
+    var app = new Vue({
+        el:"#app",
+        data:{
+            message:"hello world"
+        },
+        methods:{},
+        beforeCreate:function () {
+            axios.get('data/user.json').then(
+             function (response) {
+                 app.message=response.data;
+             }
+            )
+        }
+    });
+//    new Vue({
+//        el:"#app",
+//        data:{
+//            message:'hello'
+//        },
+//        beforeCreate:function () {
+//            showMsg('beforeCreate',this);
+//        },
+//        created:function () {
+//            showMsg('created',this);
+//        },
+//        beforeMount:function () {
+//            showMsg('beforeMount',this);
+//        },
+//        mounted:function () {
+//            showMsg('mounted',this);
+//        },
+//        beforeDestroy:function () {
+//            showMsg('before',this);
+//        },
+//
+//
+//    });
+//    function showMsg(msg,obj){
+//        console.log(msg);
+//        console.log("data:" + obj.message);
+//        console.log("el元素:" + obj.$el);
+//        console.log("元素的内容:" + document.getElementById("app").innerHTML);
+//    }
+//    vue.$destroy();
+
+    //    new Vue({
+//        el:"#app",
+//        data:{
+//            flag:true
+//        },
+//        methods:{
+//            fun01:function () {
+//                this.flag=!this.flag;
+//            }
+//        }
+//    });
+
+//    new Vue({
+//        el:"#app",
+//        data:{
+//            array:['1','2','3'],
+//            students:[
+//                {
+//                    name:'zx',
+//                    age:'18'
+//                },
+//                {
+//                    name:'lc',
+//                    age:'19'
+//                }
+//            ]
+//        },
+//        methods:{}
+//    });
+//    new Vue({
+//        el:'#app',
+//        data:{
+//            user:{
+//                username:'zx',
+//                password:'123456'
+//            }
+//
+//        },
+//        methods:{
+//            fun01:function () {
+//                this.user={
+//                    username:'ls',
+//                    password:'66666'
+//                }
+//            }
+//        }
+//    });
+//    new Vue({
+//        el:"#app",
+//        data:{
+//            ys:"yellow",
+//            info:'http://www.baidu.com',
+//        },
+//        method:{
+//
+//        }
+//
+//    });
+//    new Vue({
+//        el:"#app",
+//        data:{
+//            message:'<h1>hello world</h1>'
+//        },
+//        methods:{
+//
+//        }
+//    });
+//    new Vue({
+//        el:"#app",
+//        data:{},
+//        methods:{
+//            fun01:function () {
+//                alert("摁了enter键");
+//            }
+//        }
+//    });
+//    new Vue(
+//        {
+//            el:"#app",
+//            data:{},
+//            methods:{
+//                fun01:function () {
+//                    alert('百度');
+//                }
+//            }
+//        }
+//    );
+</script>
+</body>
+</html>

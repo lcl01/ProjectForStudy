@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/MyBatisGenerator/MyBatisGenerator.iml" filepath="$PROJECT_DIR$/MyBatisGenerator/MyBatisGenerator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/poi-excel/poi-excel.iml" filepath="$PROJECT_DIR$/poi-excel/poi-excel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/servletdemo/servletdemo.iml" filepath="$PROJECT_DIR$/servletdemo/servletdemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot_data_jpa/springboot_data_jpa.iml" filepath="$PROJECT_DIR$/springboot_data_jpa/springboot_data_jpa.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ssm_parentFU/ssm_model/ssm_model.iml" filepath="$PROJECT_DIR$/ssm_parentFU/ssm_model/ssm_model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ssm_parentFU/ssm_modelzi/ssm_modelzi.iml" filepath="$PROJECT_DIR$/ssm_parentFU/ssm_modelzi/ssm_modelzi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test/test.iml" filepath="$PROJECT_DIR$/test/test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/webForHtml/webForHtml.iml" filepath="$PROJECT_DIR$/webForHtml/webForHtml.iml" />
+      <module fileurl="file://$PROJECT_DIR$/weblogin/weblogin.iml" filepath="$PROJECT_DIR$/weblogin/weblogin.iml" />
+    </modules>
+  </component>
+</project>

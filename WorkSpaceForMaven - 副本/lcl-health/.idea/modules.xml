@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/health-parrent/health-common/health-common.iml" filepath="$PROJECT_DIR$/health-parrent/health-common/health-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/health-parrent/health-dao/health-dao.iml" filepath="$PROJECT_DIR$/health-parrent/health-dao/health-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/health-parrent/health-interface/health-interface.iml" filepath="$PROJECT_DIR$/health-parrent/health-interface/health-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/health-parrent/health-jobs/health-jobs.iml" filepath="$PROJECT_DIR$/health-parrent/health-jobs/health-jobs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/health-parrent/health-parrent.iml" filepath="$PROJECT_DIR$/health-parrent/health-parrent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/health-parrent/health-pojo/health-pojo.iml" filepath="$PROJECT_DIR$/health-parrent/health-pojo/health-pojo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/health-parrent/health-service/health-service.iml" filepath="$PROJECT_DIR$/health-parrent/health-service/health-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/health-parrent/health-web/health-web.iml" filepath="$PROJECT_DIR$/health-parrent/health-web/health-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/health-parrent/healthmobile-web/healthmobile-web.iml" filepath="$PROJECT_DIR$/health-parrent/healthmobile-web/healthmobile-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/health-parrent/springsecurity-demo/springsecurity-demo.iml" filepath="$PROJECT_DIR$/health-parrent/springsecurity-demo/springsecurity-demo.iml" />
+    </modules>
+  </component>
+</project>

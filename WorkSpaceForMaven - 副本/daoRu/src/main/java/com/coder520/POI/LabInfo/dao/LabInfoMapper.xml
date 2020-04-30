@@ -1,0 +1,1561 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coder520.POI.LabInfo.dao.LabInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.coder520.POI.LabInfo.entity.LabInfo" >
+    <id column="LABSEQNO" property="labseqno" jdbcType="DECIMAL" />
+    <result column="DEPARTMENTSEQNO" property="departmentseqno" jdbcType="DECIMAL" />
+    <result column="LABNAME" property="labname" jdbcType="VARCHAR" />
+    <result column="LABNO" property="labno" jdbcType="VARCHAR" />
+    <result column="LABMAJOR" property="labmajor" jdbcType="VARCHAR" />
+    <result column="MAJORPHONE" property="majorphone" jdbcType="VARCHAR" />
+    <result column="MAJOREMAIL" property="majoremail" jdbcType="VARCHAR" />
+    <result column="MANAGER" property="manager" jdbcType="VARCHAR" />
+    <result column="MANAGERPHONE" property="managerphone" jdbcType="VARCHAR" />
+    <result column="MANAGEREMAIL" property="manageremail" jdbcType="VARCHAR" />
+    <result column="LABOTHERNAME" property="labothername" jdbcType="VARCHAR" />
+    <result column="LABENGLISHNAME" property="labenglishname" jdbcType="VARCHAR" />
+    <result column="ENGLISHIABBRNAME" property="englishiabbrname" jdbcType="VARCHAR" />
+    <result column="JOINTDEPT" property="jointdept" jdbcType="VARCHAR" />
+    <result column="LABLOCATION" property="lablocation" jdbcType="VARCHAR" />
+    <result column="LABADDRESS" property="labaddress" jdbcType="VARCHAR" />
+    <result column="POSTCODE" property="postcode" jdbcType="VARCHAR" />
+    <result column="HTTPADDRESS" property="httpaddress" jdbcType="VARCHAR" />
+    <result column="RELATEDFIELDS" property="relatedfields" jdbcType="VARCHAR" />
+    <result column="ISJOINT" property="isjoint" jdbcType="VARCHAR" />
+    <result column="LEVELOFLAB" property="leveloflab" jdbcType="VARCHAR" />
+    <result column="TYPEOFLAB" property="typeoflab" jdbcType="VARCHAR" />
+    <result column="APPROVALDEPT" property="approvaldept" jdbcType="VARCHAR" />
+    <result column="APPROVALTIME" property="approvaltime" jdbcType="TIMESTAMP" />
+    <result column="ACCEPTTIME" property="accepttime" jdbcType="TIMESTAMP" />
+    <result column="RELIEDDEPT" property="relieddept" jdbcType="VARCHAR" />
+    <result column="APPROVALNO" property="approvalno" jdbcType="VARCHAR" />
+    <result column="REGISTINGTIME" property="registingtime" jdbcType="VARCHAR" />
+    <result column="LASTASSESSEDTIME" property="lastassessedtime" jdbcType="VARCHAR" />
+    <result column="CLASSIFICATION1" property="classification1" jdbcType="VARCHAR" />
+    <result column="CLASSIFICATION2" property="classification2" jdbcType="VARCHAR" />
+    <result column="RESEARCHFIELDS" property="researchfields" jdbcType="VARCHAR" />
+    <result column="RESEARCHINTERESTS" property="researchinterests" jdbcType="VARCHAR" />
+    <result column="RESEARCHCONTENTS" property="researchcontents" jdbcType="VARCHAR" />
+    <result column="LABOUTLINE" property="laboutline" jdbcType="VARCHAR" />
+    <result column="LABSTATE" property="labstate" jdbcType="VARCHAR" />
+    <result column="LABOTHERID" property="labotherid" jdbcType="DECIMAL" />
+    <result column="CLASSIFICATION3" property="classification3" jdbcType="VARCHAR" />
+    <result column="BUILDINFO" property="buildinfo" jdbcType="VARCHAR" />
+    <result column="EDITTIME" property="edittime" jdbcType="TIMESTAMP" />
+    <result column="LABTYPE" property="labtype" jdbcType="VARCHAR" />
+    <result column="BASETYPE" property="basetype" jdbcType="VARCHAR" />
+    <result column="BASETYPESUB" property="basetypesub" jdbcType="VARCHAR" />
+    <result column="ALLIEDDEPT" property="allieddept" jdbcType="VARCHAR" />
+    <result column="REGIONNAME" property="regionname" jdbcType="VARCHAR" />
+    <result column="GOVERTYPE" property="govertype" jdbcType="VARCHAR" />
+    <result column="FIELDDIST" property="fielddist" jdbcType="VARCHAR" />
+    <result column="FIELDDISTSUB" property="fielddistsub" jdbcType="VARCHAR" />
+    <result column="SUBSATTRI" property="subsattri" jdbcType="VARCHAR" />
+    <result column="ISPOSTDOCTOR" property="ispostdoctor" jdbcType="VARCHAR" />
+    <result column="DEPTATTRI" property="deptattri" jdbcType="VARCHAR" />
+    <result column="INCUBIDENT" property="incubident" jdbcType="VARCHAR" />
+    <result column="ISPLATFORM" property="isplatform" jdbcType="VARCHAR" />
+    <result column="PHOTO" property="photo" jdbcType="VARCHAR" />
+    <result column="SUPERIORDEP" property="superiordep" jdbcType="VARCHAR" />
+    <result column="JOINTSUPERIORDEPT" property="jointsuperiordept" jdbcType="VARCHAR" />
+    <result column="AREAOFLAB" property="areaoflab" jdbcType="VARCHAR" />
+    <result column="AREAOFWORK" property="areaofwork" jdbcType="VARCHAR" />
+    <result column="LATITUDE" property="latitude" jdbcType="VARCHAR" />
+    <result column="LONGITUDE" property="longitude" jdbcType="VARCHAR" />
+    <result column="ISSIGNMAPS" property="issignmaps" jdbcType="VARCHAR" />
+    <result column="FORMATTEDADDRESS" property="formattedaddress" jdbcType="VARCHAR" />
+    <result column="ISOPENBASE" property="isopenbase" jdbcType="VARCHAR" />
+    <result column="LOCATIONNOOFLAB" property="locationnooflab" jdbcType="VARCHAR" />
+    <result column="ORDERBYKCW" property="orderbykcw" jdbcType="VARCHAR" />
+    <result column="LEVELOFLABREMARK" property="leveloflabremark" jdbcType="VARCHAR" />
+    <result column="ORDERBYTYPE" property="orderbytype" jdbcType="DECIMAL" />
+    <result column="PRODEMPOL" property="prodempol" jdbcType="VARCHAR" />
+    <result column="LABINFOSTATE" property="labinfostate" jdbcType="VARCHAR" />
+    <result column="RELYONDEP" property="relyondep" jdbcType="VARCHAR" />
+    <result column="ISTEMPORARY" property="istemporary" jdbcType="VARCHAR" />
+    <result column="ISFULL" property="isfull" jdbcType="VARCHAR" />
+    <result column="ADDRESS" property="address" jdbcType="VARCHAR" />
+  </resultMap>
+  <resultMap id="ResultMapWithBLOBs" type="com.coder520.POI.LabInfo.entity.LabInfo" extends="BaseResultMap" >
+    <result column="LABINTRO" property="labintro" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    LABSEQNO, DEPARTMENTSEQNO, LABNAME, LABNO, LABMAJOR, MAJORPHONE, MAJOREMAIL, MANAGER, 
+    MANAGERPHONE, MANAGEREMAIL, LABOTHERNAME, LABENGLISHNAME, ENGLISHIABBRNAME, JOINTDEPT, 
+    LABLOCATION, LABADDRESS, POSTCODE, HTTPADDRESS, RELATEDFIELDS, ISJOINT, LEVELOFLAB, 
+    TYPEOFLAB, APPROVALDEPT, APPROVALTIME, ACCEPTTIME, RELIEDDEPT, APPROVALNO, REGISTINGTIME, 
+    LASTASSESSEDTIME, CLASSIFICATION1, CLASSIFICATION2, RESEARCHFIELDS, RESEARCHINTERESTS, 
+    RESEARCHCONTENTS, LABOUTLINE, LABSTATE, LABOTHERID, CLASSIFICATION3, BUILDINFO, EDITTIME, 
+    LABTYPE, BASETYPE, BASETYPESUB, ALLIEDDEPT, REGIONNAME, GOVERTYPE, FIELDDIST, FIELDDISTSUB, 
+    SUBSATTRI, ISPOSTDOCTOR, DEPTATTRI, INCUBIDENT, ISPLATFORM, PHOTO, SUPERIORDEP, JOINTSUPERIORDEPT, 
+    AREAOFLAB, AREAOFWORK, LATITUDE, LONGITUDE, ISSIGNMAPS, FORMATTEDADDRESS, ISOPENBASE, 
+    LOCATIONNOOFLAB, ORDERBYKCW, LEVELOFLABREMARK, ORDERBYTYPE, PRODEMPOL, LABINFOSTATE, 
+    RELYONDEP, ISTEMPORARY, ISFULL, ADDRESS
+  </sql>
+  <sql id="Blob_Column_List" >
+    LABINTRO
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from LAB_INFO
+    where LABSEQNO = #{labseqno,jdbcType=DECIMAL}
+  </select>
+
+  <select id="selectByLabName" resultMap="BaseResultMap" parameterType="java.lang.String" >
+  select
+  <include refid="Base_Column_List" />
+  ,
+  <include refid="Blob_Column_List" />
+  from LAB_INFO
+  where LABNAME = #{labname,jdbcType=VARCHAR}
+</select>
+  <select id="selectNewByLabName" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from LAB_INFO
+    where LABNAME = #{labname,jdbcType=VARCHAR}
+    AND LABSEQNO >1370
+  </select>
+
+  <select id="findNewLabInfo" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from LAB_INFO
+    where LABSEQNO >1370
+    ORDER BY LABSEQNO
+  </select>
+
+
+  <select id="findLabByName" parameterType="java.lang.String" resultMap="BaseResultMap">
+  select
+  <include refid="Base_Column_List" />
+  ,
+  <include refid="Blob_Column_List" />
+  from LAB_INFO
+  where LABNAME = #{labname,jdbcType=VARCHAR}
+  ORDER BY LABSEQNO DESC
+</select>
+
+  <select id="findLabByManagerName" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from LAB_INFO
+    where MANAGER = #{manager,jdbcType=VARCHAR}
+    ORDER BY LABSEQNO DESC
+  </select>
+
+  <select id="selectByLabNameAndId" resultMap="BaseResultMap" >
+    select
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from LAB_INFO
+    where LABNAME = #{labname,jdbcType=VARCHAR}
+    AND DEPARTMENTSEQNO = #{departmentseqno,jdbcType=DECIMAL}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from LAB_INFO
+    where LABNAME = #{labname,jdbcType=DECIMAL}
+  </delete>
+  <insert id="insert" parameterType="com.coder520.POI.LabInfo.entity.LabInfo" >
+    insert into LAB_INFO (LABSEQNO, DEPARTMENTSEQNO, LABNAME, 
+      LABNO, LABMAJOR, MAJORPHONE, 
+      MAJOREMAIL, MANAGER, MANAGERPHONE, 
+      MANAGEREMAIL, LABOTHERNAME, LABENGLISHNAME, 
+      ENGLISHIABBRNAME, JOINTDEPT, LABLOCATION, 
+      LABADDRESS, POSTCODE, HTTPADDRESS, 
+      RELATEDFIELDS, ISJOINT, LEVELOFLAB, 
+      TYPEOFLAB, APPROVALDEPT, APPROVALTIME, 
+      ACCEPTTIME, RELIEDDEPT, APPROVALNO, 
+      REGISTINGTIME, LASTASSESSEDTIME, CLASSIFICATION1, 
+      CLASSIFICATION2, RESEARCHFIELDS, RESEARCHINTERESTS, 
+      RESEARCHCONTENTS, LABOUTLINE, LABSTATE, 
+      LABOTHERID, CLASSIFICATION3, BUILDINFO, 
+      EDITTIME, LABTYPE, BASETYPE, 
+      BASETYPESUB, ALLIEDDEPT, REGIONNAME, 
+      GOVERTYPE, FIELDDIST, FIELDDISTSUB, 
+      SUBSATTRI, ISPOSTDOCTOR, DEPTATTRI, 
+      INCUBIDENT, ISPLATFORM, PHOTO, 
+      SUPERIORDEP, JOINTSUPERIORDEPT, AREAOFLAB, 
+      AREAOFWORK, LATITUDE, LONGITUDE, 
+      ISSIGNMAPS, FORMATTEDADDRESS, ISOPENBASE, 
+      LOCATIONNOOFLAB, ORDERBYKCW, LEVELOFLABREMARK, 
+      ORDERBYTYPE, PRODEMPOL, LABINFOSTATE, 
+      RELYONDEP, ISTEMPORARY, ISFULL, 
+      ADDRESS, LABINTRO)
+    values (#{labseqno,jdbcType=DECIMAL}, #{departmentseqno,jdbcType=DECIMAL}, #{labname,jdbcType=VARCHAR}, 
+      #{labno,jdbcType=VARCHAR}, #{labmajor,jdbcType=VARCHAR}, #{majorphone,jdbcType=VARCHAR}, 
+      #{majoremail,jdbcType=VARCHAR}, #{manager,jdbcType=VARCHAR}, #{managerphone,jdbcType=VARCHAR}, 
+      #{manageremail,jdbcType=VARCHAR}, #{labothername,jdbcType=VARCHAR}, #{labenglishname,jdbcType=VARCHAR},
+      #{englishiabbrname,jdbcType=VARCHAR}, #{jointdept,jdbcType=VARCHAR}, #{lablocation,jdbcType=VARCHAR}, 
+      #{labaddress,jdbcType=VARCHAR}, #{postcode,jdbcType=VARCHAR}, #{httpaddress,jdbcType=VARCHAR}, 
+      #{relatedfields,jdbcType=VARCHAR}, #{isjoint,jdbcType=VARCHAR}, #{leveloflab,jdbcType=VARCHAR}, 
+      #{typeoflab,jdbcType=VARCHAR}, #{approvaldept,jdbcType=VARCHAR}, #{approvaltime,jdbcType=TIMESTAMP}, 
+      #{accepttime,jdbcType=TIMESTAMP}, #{relieddept,jdbcType=VARCHAR}, #{approvalno,jdbcType=VARCHAR}, 
+      #{registingtime,jdbcType=VARCHAR}, #{lastassessedtime,jdbcType=VARCHAR}, #{classification1,jdbcType=VARCHAR}, 
+      #{classification2,jdbcType=VARCHAR}, #{researchfields,jdbcType=VARCHAR}, #{researchinterests,jdbcType=VARCHAR}, 
+      #{researchcontents,jdbcType=VARCHAR}, #{laboutline,jdbcType=VARCHAR}, #{labstate,jdbcType=VARCHAR}, 
+      #{labotherid,jdbcType=DECIMAL}, #{classification3,jdbcType=VARCHAR}, #{buildinfo,jdbcType=VARCHAR}, 
+      #{edittime,jdbcType=TIMESTAMP}, #{labtype,jdbcType=VARCHAR}, #{basetype,jdbcType=VARCHAR}, 
+      #{basetypesub,jdbcType=VARCHAR}, #{allieddept,jdbcType=VARCHAR}, #{regionname,jdbcType=VARCHAR}, 
+      #{govertype,jdbcType=VARCHAR}, #{fielddist,jdbcType=VARCHAR}, #{fielddistsub,jdbcType=VARCHAR}, 
+      #{subsattri,jdbcType=VARCHAR}, #{ispostdoctor,jdbcType=VARCHAR}, #{deptattri,jdbcType=VARCHAR}, 
+      #{incubident,jdbcType=VARCHAR}, #{isplatform,jdbcType=VARCHAR}, #{photo,jdbcType=VARCHAR}, 
+      #{superiordep,jdbcType=VARCHAR}, #{jointsuperiordept,jdbcType=VARCHAR}, #{areaoflab,jdbcType=VARCHAR}, 
+      #{areaofwork,jdbcType=VARCHAR}, #{latitude,jdbcType=VARCHAR}, #{longitude,jdbcType=VARCHAR}, 
+      #{issignmaps,jdbcType=VARCHAR}, #{formattedaddress,jdbcType=VARCHAR}, #{isopenbase,jdbcType=VARCHAR}, 
+      #{locationnooflab,jdbcType=VARCHAR}, #{orderbykcw,jdbcType=VARCHAR}, #{leveloflabremark,jdbcType=VARCHAR}, 
+      #{orderbytype,jdbcType=DECIMAL}, #{prodempol,jdbcType=VARCHAR}, #{labinfostate,jdbcType=VARCHAR}, 
+      #{relyondep,jdbcType=VARCHAR}, #{istemporary,jdbcType=VARCHAR}, #{isfull,jdbcType=VARCHAR}, 
+      #{address,jdbcType=VARCHAR}, #{labintro,jdbcType=LONGVARCHAR})
+  </insert>
+
+  <insert id="insertAddKey" parameterType="com.coder520.POI.LabInfo.entity.LabInfo" >
+    <selectKey keyProperty="labseqno" resultType="long" order="BEFORE">
+      select  nvl(max(LABSEQNO),0)+1 from LAB_INFO
+  </selectKey>
+    insert into LAB_INFO (LABSEQNO, DEPARTMENTSEQNO, LABNAME,
+    LABNO, LABMAJOR, MAJORPHONE,
+    MAJOREMAIL, MANAGER, MANAGERPHONE,
+    MANAGEREMAIL, LABOTHERNAME, LABENGLISHNAME,
+    ENGLISHIABBRNAME, JOINTDEPT, LABLOCATION,
+    LABADDRESS, POSTCODE, HTTPADDRESS,
+    RELATEDFIELDS, ISJOINT, LEVELOFLAB,
+    TYPEOFLAB, APPROVALDEPT, APPROVALTIME,
+    ACCEPTTIME, RELIEDDEPT, APPROVALNO,
+    REGISTINGTIME, LASTASSESSEDTIME, CLASSIFICATION1,
+    CLASSIFICATION2, RESEARCHFIELDS, RESEARCHINTERESTS,
+    RESEARCHCONTENTS, LABOUTLINE, LABSTATE,
+    LABOTHERID, CLASSIFICATION3, BUILDINFO,
+    EDITTIME, LABTYPE, BASETYPE,
+    BASETYPESUB, ALLIEDDEPT, REGIONNAME,
+    GOVERTYPE, FIELDDIST, FIELDDISTSUB,
+    SUBSATTRI, ISPOSTDOCTOR, DEPTATTRI,
+    INCUBIDENT, ISPLATFORM, PHOTO,
+    SUPERIORDEP, JOINTSUPERIORDEPT, AREAOFLAB,
+    AREAOFWORK, LATITUDE, LONGITUDE,
+    ISSIGNMAPS, FORMATTEDADDRESS, ISOPENBASE,
+    LOCATIONNOOFLAB, ORDERBYKCW, LEVELOFLABREMARK,
+    ORDERBYTYPE, PRODEMPOL, LABINFOSTATE,
+    RELYONDEP, ISTEMPORARY, ISFULL,
+    ADDRESS, LABINTRO)
+    values (#{labseqno,jdbcType=DECIMAL}, #{departmentseqno,jdbcType=DECIMAL}, #{labname,jdbcType=VARCHAR},
+    #{labno,jdbcType=VARCHAR}, #{labmajor,jdbcType=VARCHAR}, #{majorphone,jdbcType=VARCHAR},
+    #{majoremail,jdbcType=VARCHAR}, #{manager,jdbcType=VARCHAR}, #{managerphone,jdbcType=VARCHAR},
+    #{manageremail,jdbcType=VARCHAR}, #{labothername,jdbcType=VARCHAR}, #{labenglishname,jdbcType=VARCHAR},
+    #{englishiabbrname,jdbcType=VARCHAR}, #{jointdept,jdbcType=VARCHAR}, #{lablocation,jdbcType=VARCHAR},
+    #{labaddress,jdbcType=VARCHAR}, #{postcode,jdbcType=VARCHAR}, #{httpaddress,jdbcType=VARCHAR},
+    #{relatedfields,jdbcType=VARCHAR}, #{isjoint,jdbcType=VARCHAR}, #{leveloflab,jdbcType=VARCHAR},
+    #{typeoflab,jdbcType=VARCHAR}, #{approvaldept,jdbcType=VARCHAR}, #{approvaltime,jdbcType=TIMESTAMP},
+    #{accepttime,jdbcType=TIMESTAMP}, #{relieddept,jdbcType=VARCHAR}, #{approvalno,jdbcType=VARCHAR},
+    #{registingtime,jdbcType=VARCHAR}, #{lastassessedtime,jdbcType=VARCHAR}, #{classification1,jdbcType=VARCHAR},
+    #{classification2,jdbcType=VARCHAR}, #{researchfields,jdbcType=VARCHAR}, #{researchinterests,jdbcType=VARCHAR},
+    #{researchcontents,jdbcType=VARCHAR}, #{laboutline,jdbcType=VARCHAR}, #{labstate,jdbcType=VARCHAR},
+    #{labotherid,jdbcType=DECIMAL}, #{classification3,jdbcType=VARCHAR}, #{buildinfo,jdbcType=VARCHAR},
+    #{edittime,jdbcType=TIMESTAMP}, #{labtype,jdbcType=VARCHAR}, #{basetype,jdbcType=VARCHAR},
+    #{basetypesub,jdbcType=VARCHAR}, #{allieddept,jdbcType=VARCHAR}, #{regionname,jdbcType=VARCHAR},
+    #{govertype,jdbcType=VARCHAR}, #{fielddist,jdbcType=VARCHAR}, #{fielddistsub,jdbcType=VARCHAR},
+    #{subsattri,jdbcType=VARCHAR}, #{ispostdoctor,jdbcType=VARCHAR}, #{deptattri,jdbcType=VARCHAR},
+    #{incubident,jdbcType=VARCHAR}, #{isplatform,jdbcType=VARCHAR}, #{photo,jdbcType=VARCHAR},
+    #{superiordep,jdbcType=VARCHAR}, #{jointsuperiordept,jdbcType=VARCHAR}, #{areaoflab,jdbcType=VARCHAR},
+    #{areaofwork,jdbcType=VARCHAR}, #{latitude,jdbcType=VARCHAR}, #{longitude,jdbcType=VARCHAR},
+    #{issignmaps,jdbcType=VARCHAR}, #{formattedaddress,jdbcType=VARCHAR}, #{isopenbase,jdbcType=VARCHAR},
+    #{locationnooflab,jdbcType=VARCHAR}, #{orderbykcw,jdbcType=VARCHAR}, #{leveloflabremark,jdbcType=VARCHAR},
+    #{orderbytype,jdbcType=DECIMAL}, #{prodempol,jdbcType=VARCHAR}, #{labinfostate,jdbcType=VARCHAR},
+    #{relyondep,jdbcType=VARCHAR}, #{istemporary,jdbcType=VARCHAR}, #{isfull,jdbcType=VARCHAR},
+    #{address,jdbcType=VARCHAR}, #{labintro,jdbcType=LONGVARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.coder520.POI.LabInfo.entity.LabInfo" >
+    insert into LAB_INFO
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="labseqno != null" >
+        LABSEQNO,
+      </if>
+      <if test="departmentseqno != null" >
+        DEPARTMENTSEQNO,
+      </if>
+      <if test="labname != null" >
+        LABNAME,
+      </if>
+      <if test="labno != null" >
+        LABNO,
+      </if>
+      <if test="labmajor != null" >
+        LABMAJOR,
+      </if>
+      <if test="majorphone != null" >
+        MAJORPHONE,
+      </if>
+      <if test="majoremail != null" >
+        MAJOREMAIL,
+      </if>
+      <if test="manager != null" >
+        MANAGER,
+      </if>
+      <if test="managerphone != null" >
+        MANAGERPHONE,
+      </if>
+      <if test="manageremail != null" >
+        MANAGEREMAIL,
+      </if>
+      <if test="labothername != null" >
+        LABOTHERNAME,
+      </if>
+      <if test="labenglishname != null" >
+        LABENGLISHNAME,
+      </if>
+      <if test="englishiabbrname != null" >
+        ENGLISHIABBRNAME,
+      </if>
+      <if test="jointdept != null" >
+        JOINTDEPT,
+      </if>
+      <if test="lablocation != null" >
+        LABLOCATION,
+      </if>
+      <if test="labaddress != null" >
+        LABADDRESS,
+      </if>
+      <if test="postcode != null" >
+        POSTCODE,
+      </if>
+      <if test="httpaddress != null" >
+        HTTPADDRESS,
+      </if>
+      <if test="relatedfields != null" >
+        RELATEDFIELDS,
+      </if>
+      <if test="isjoint != null" >
+        ISJOINT,
+      </if>
+      <if test="leveloflab != null" >
+        LEVELOFLAB,
+      </if>
+      <if test="typeoflab != null" >
+        TYPEOFLAB,
+      </if>
+      <if test="approvaldept != null" >
+        APPROVALDEPT,
+      </if>
+      <if test="approvaltime != null" >
+        APPROVALTIME,
+      </if>
+      <if test="accepttime != null" >
+        ACCEPTTIME,
+      </if>
+      <if test="relieddept != null" >
+        RELIEDDEPT,
+      </if>
+      <if test="approvalno != null" >
+        APPROVALNO,
+      </if>
+      <if test="registingtime != null" >
+        REGISTINGTIME,
+      </if>
+      <if test="lastassessedtime != null" >
+        LASTASSESSEDTIME,
+      </if>
+      <if test="classification1 != null" >
+        CLASSIFICATION1,
+      </if>
+      <if test="classification2 != null" >
+        CLASSIFICATION2,
+      </if>
+      <if test="researchfields != null" >
+        RESEARCHFIELDS,
+      </if>
+      <if test="researchinterests != null" >
+        RESEARCHINTERESTS,
+      </if>
+      <if test="researchcontents != null" >
+        RESEARCHCONTENTS,
+      </if>
+      <if test="laboutline != null" >
+        LABOUTLINE,
+      </if>
+      <if test="labstate != null" >
+        LABSTATE,
+      </if>
+      <if test="labotherid != null" >
+        LABOTHERID,
+      </if>
+      <if test="classification3 != null" >
+        CLASSIFICATION3,
+      </if>
+      <if test="buildinfo != null" >
+        BUILDINFO,
+      </if>
+      <if test="edittime != null" >
+        EDITTIME,
+      </if>
+      <if test="labtype != null" >
+        LABTYPE,
+      </if>
+      <if test="basetype != null" >
+        BASETYPE,
+      </if>
+      <if test="basetypesub != null" >
+        BASETYPESUB,
+      </if>
+      <if test="allieddept != null" >
+        ALLIEDDEPT,
+      </if>
+      <if test="regionname != null" >
+        REGIONNAME,
+      </if>
+      <if test="govertype != null" >
+        GOVERTYPE,
+      </if>
+      <if test="fielddist != null" >
+        FIELDDIST,
+      </if>
+      <if test="fielddistsub != null" >
+        FIELDDISTSUB,
+      </if>
+      <if test="subsattri != null" >
+        SUBSATTRI,
+      </if>
+      <if test="ispostdoctor != null" >
+        ISPOSTDOCTOR,
+      </if>
+      <if test="deptattri != null" >
+        DEPTATTRI,
+      </if>
+      <if test="incubident != null" >
+        INCUBIDENT,
+      </if>
+      <if test="isplatform != null" >
+        ISPLATFORM,
+      </if>
+      <if test="photo != null" >
+        PHOTO,
+      </if>
+      <if test="superiordep != null" >
+        SUPERIORDEP,
+      </if>
+      <if test="jointsuperiordept != null" >
+        JOINTSUPERIORDEPT,
+      </if>
+      <if test="areaoflab != null" >
+        AREAOFLAB,
+      </if>
+      <if test="areaofwork != null" >
+        AREAOFWORK,
+      </if>
+      <if test="latitude != null" >
+        LATITUDE,
+      </if>
+      <if test="longitude != null" >
+        LONGITUDE,
+      </if>
+      <if test="issignmaps != null" >
+        ISSIGNMAPS,
+      </if>
+      <if test="formattedaddress != null" >
+        FORMATTEDADDRESS,
+      </if>
+      <if test="isopenbase != null" >
+        ISOPENBASE,
+      </if>
+      <if test="locationnooflab != null" >
+        LOCATIONNOOFLAB,
+      </if>
+      <if test="orderbykcw != null" >
+        ORDERBYKCW,
+      </if>
+      <if test="leveloflabremark != null" >
+        LEVELOFLABREMARK,
+      </if>
+      <if test="orderbytype != null" >
+        ORDERBYTYPE,
+      </if>
+      <if test="prodempol != null" >
+        PRODEMPOL,
+      </if>
+      <if test="labinfostate != null" >
+        LABINFOSTATE,
+      </if>
+      <if test="relyondep != null" >
+        RELYONDEP,
+      </if>
+      <if test="istemporary != null" >
+        ISTEMPORARY,
+      </if>
+      <if test="isfull != null" >
+        ISFULL,
+      </if>
+      <if test="address != null" >
+        ADDRESS,
+      </if>
+      <if test="labintro != null" >
+        LABINTRO,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="labseqno != null" >
+        #{labseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="departmentseqno != null" >
+        #{departmentseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="labname != null" >
+        #{labname,jdbcType=VARCHAR},
+      </if>
+      <if test="labno != null" >
+        #{labno,jdbcType=VARCHAR},
+      </if>
+      <if test="labmajor != null" >
+        #{labmajor,jdbcType=VARCHAR},
+      </if>
+      <if test="majorphone != null" >
+        #{majorphone,jdbcType=VARCHAR},
+      </if>
+      <if test="majoremail != null" >
+        #{majoremail,jdbcType=VARCHAR},
+      </if>
+      <if test="manager != null" >
+        #{manager,jdbcType=VARCHAR},
+      </if>
+      <if test="managerphone != null" >
+        #{managerphone,jdbcType=VARCHAR},
+      </if>
+      <if test="manageremail != null" >
+        #{manageremail,jdbcType=VARCHAR},
+      </if>
+      <if test="labothername != null" >
+        #{labothername,jdbcType=VARCHAR},
+      </if>
+      <if test="labenglishname != null" >
+        #{labenglishname,jdbcType=VARCHAR},
+      </if>
+      <if test="englishiabbrname != null" >
+        #{englishiabbrname,jdbcType=VARCHAR},
+      </if>
+      <if test="jointdept != null" >
+        #{jointdept,jdbcType=VARCHAR},
+      </if>
+      <if test="lablocation != null" >
+        #{lablocation,jdbcType=VARCHAR},
+      </if>
+      <if test="labaddress != null" >
+        #{labaddress,jdbcType=VARCHAR},
+      </if>
+      <if test="postcode != null" >
+        #{postcode,jdbcType=VARCHAR},
+      </if>
+      <if test="httpaddress != null" >
+        #{httpaddress,jdbcType=VARCHAR},
+      </if>
+      <if test="relatedfields != null" >
+        #{relatedfields,jdbcType=VARCHAR},
+      </if>
+      <if test="isjoint != null" >
+        #{isjoint,jdbcType=VARCHAR},
+      </if>
+      <if test="leveloflab != null" >
+        #{leveloflab,jdbcType=VARCHAR},
+      </if>
+      <if test="typeoflab != null" >
+        #{typeoflab,jdbcType=VARCHAR},
+      </if>
+      <if test="approvaldept != null" >
+        #{approvaldept,jdbcType=VARCHAR},
+      </if>
+      <if test="approvaltime != null" >
+        #{approvaltime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="accepttime != null" >
+        #{accepttime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="relieddept != null" >
+        #{relieddept,jdbcType=VARCHAR},
+      </if>
+      <if test="approvalno != null" >
+        #{approvalno,jdbcType=VARCHAR},
+      </if>
+      <if test="registingtime != null" >
+        #{registingtime,jdbcType=VARCHAR},
+      </if>
+      <if test="lastassessedtime != null" >
+        #{lastassessedtime,jdbcType=VARCHAR},
+      </if>
+      <if test="classification1 != null" >
+        #{classification1,jdbcType=VARCHAR},
+      </if>
+      <if test="classification2 != null" >
+        #{classification2,jdbcType=VARCHAR},
+      </if>
+      <if test="researchfields != null" >
+        #{researchfields,jdbcType=VARCHAR},
+      </if>
+      <if test="researchinterests != null" >
+        #{researchinterests,jdbcType=VARCHAR},
+      </if>
+      <if test="researchcontents != null" >
+        #{researchcontents,jdbcType=VARCHAR},
+      </if>
+      <if test="laboutline != null" >
+        #{laboutline,jdbcType=VARCHAR},
+      </if>
+      <if test="labstate != null" >
+        #{labstate,jdbcType=VARCHAR},
+      </if>
+      <if test="labotherid != null" >
+        #{labotherid,jdbcType=DECIMAL},
+      </if>
+      <if test="classification3 != null" >
+        #{classification3,jdbcType=VARCHAR},
+      </if>
+      <if test="buildinfo != null" >
+        #{buildinfo,jdbcType=VARCHAR},
+      </if>
+      <if test="edittime != null" >
+        #{edittime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="labtype != null" >
+        #{labtype,jdbcType=VARCHAR},
+      </if>
+      <if test="basetype != null" >
+        #{basetype,jdbcType=VARCHAR},
+      </if>
+      <if test="basetypesub != null" >
+        #{basetypesub,jdbcType=VARCHAR},
+      </if>
+      <if test="allieddept != null" >
+        #{allieddept,jdbcType=VARCHAR},
+      </if>
+      <if test="regionname != null" >
+        #{regionname,jdbcType=VARCHAR},
+      </if>
+      <if test="govertype != null" >
+        #{govertype,jdbcType=VARCHAR},
+      </if>
+      <if test="fielddist != null" >
+        #{fielddist,jdbcType=VARCHAR},
+      </if>
+      <if test="fielddistsub != null" >
+        #{fielddistsub,jdbcType=VARCHAR},
+      </if>
+      <if test="subsattri != null" >
+        #{subsattri,jdbcType=VARCHAR},
+      </if>
+      <if test="ispostdoctor != null" >
+        #{ispostdoctor,jdbcType=VARCHAR},
+      </if>
+      <if test="deptattri != null" >
+        #{deptattri,jdbcType=VARCHAR},
+      </if>
+      <if test="incubident != null" >
+        #{incubident,jdbcType=VARCHAR},
+      </if>
+      <if test="isplatform != null" >
+        #{isplatform,jdbcType=VARCHAR},
+      </if>
+      <if test="photo != null" >
+        #{photo,jdbcType=VARCHAR},
+      </if>
+      <if test="superiordep != null" >
+        #{superiordep,jdbcType=VARCHAR},
+      </if>
+      <if test="jointsuperiordept != null" >
+        #{jointsuperiordept,jdbcType=VARCHAR},
+      </if>
+      <if test="areaoflab != null" >
+        #{areaoflab,jdbcType=VARCHAR},
+      </if>
+      <if test="areaofwork != null" >
+        #{areaofwork,jdbcType=VARCHAR},
+      </if>
+      <if test="latitude != null" >
+        #{latitude,jdbcType=VARCHAR},
+      </if>
+      <if test="longitude != null" >
+        #{longitude,jdbcType=VARCHAR},
+      </if>
+      <if test="issignmaps != null" >
+        #{issignmaps,jdbcType=VARCHAR},
+      </if>
+      <if test="formattedaddress != null" >
+        #{formattedaddress,jdbcType=VARCHAR},
+      </if>
+      <if test="isopenbase != null" >
+        #{isopenbase,jdbcType=VARCHAR},
+      </if>
+      <if test="locationnooflab != null" >
+        #{locationnooflab,jdbcType=VARCHAR},
+      </if>
+      <if test="orderbykcw != null" >
+        #{orderbykcw,jdbcType=VARCHAR},
+      </if>
+      <if test="leveloflabremark != null" >
+        #{leveloflabremark,jdbcType=VARCHAR},
+      </if>
+      <if test="orderbytype != null" >
+        #{orderbytype,jdbcType=DECIMAL},
+      </if>
+      <if test="prodempol != null" >
+        #{prodempol,jdbcType=VARCHAR},
+      </if>
+      <if test="labinfostate != null" >
+        #{labinfostate,jdbcType=VARCHAR},
+      </if>
+      <if test="relyondep != null" >
+        #{relyondep,jdbcType=VARCHAR},
+      </if>
+      <if test="istemporary != null" >
+        #{istemporary,jdbcType=VARCHAR},
+      </if>
+      <if test="isfull != null" >
+        #{isfull,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null" >
+        #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="labintro != null" >
+        #{labintro,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.coder520.POI.LabInfo.entity.LabInfo" >
+    update LAB_INFO
+    <set >
+      <if test="departmentseqno != null" >
+        DEPARTMENTSEQNO = #{departmentseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="labname != null" >
+        LABNAME = #{labname,jdbcType=VARCHAR},
+      </if>
+      <if test="labno != null" >
+        LABNO = #{labno,jdbcType=VARCHAR},
+      </if>
+      <if test="labmajor != null" >
+        LABMAJOR = #{labmajor,jdbcType=VARCHAR},
+      </if>
+      <if test="majorphone != null" >
+        MAJORPHONE = #{majorphone,jdbcType=VARCHAR},
+      </if>
+      <if test="majoremail != null" >
+        MAJOREMAIL = #{majoremail,jdbcType=VARCHAR},
+      </if>
+      <if test="manager != null" >
+        MANAGER = #{manager,jdbcType=VARCHAR},
+      </if>
+      <if test="managerphone != null" >
+        MANAGERPHONE = #{managerphone,jdbcType=VARCHAR},
+      </if>
+      <if test="manageremail != null" >
+        MANAGEREMAIL = #{manageremail,jdbcType=VARCHAR},
+      </if>
+      <if test="labothername != null" >
+        LABOTHERNAME = #{labothername,jdbcType=VARCHAR},
+      </if>
+      <if test="labenglishname != null" >
+        LABENGLISHNAME = #{labenglishname,jdbcType=VARCHAR},
+      </if>
+      <if test="englishiabbrname != null" >
+        ENGLISHIABBRNAME = #{englishiabbrname,jdbcType=VARCHAR},
+      </if>
+      <if test="jointdept != null" >
+        JOINTDEPT = #{jointdept,jdbcType=VARCHAR},
+      </if>
+      <if test="lablocation != null" >
+        LABLOCATION = #{lablocation,jdbcType=VARCHAR},
+      </if>
+      <if test="labaddress != null" >
+        LABADDRESS = #{labaddress,jdbcType=VARCHAR},
+      </if>
+      <if test="postcode != null" >
+        POSTCODE = #{postcode,jdbcType=VARCHAR},
+      </if>
+      <if test="httpaddress != null" >
+        HTTPADDRESS = #{httpaddress,jdbcType=VARCHAR},
+      </if>
+      <if test="relatedfields != null" >
+        RELATEDFIELDS = #{relatedfields,jdbcType=VARCHAR},
+      </if>
+      <if test="isjoint != null" >
+        ISJOINT = #{isjoint,jdbcType=VARCHAR},
+      </if>
+      <if test="leveloflab != null" >
+        LEVELOFLAB = #{leveloflab,jdbcType=VARCHAR},
+      </if>
+      <if test="typeoflab != null" >
+        TYPEOFLAB = #{typeoflab,jdbcType=VARCHAR},
+      </if>
+      <if test="approvaldept != null" >
+        APPROVALDEPT = #{approvaldept,jdbcType=VARCHAR},
+      </if>
+      <if test="approvaltime != null" >
+        APPROVALTIME = #{approvaltime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="accepttime != null" >
+        ACCEPTTIME = #{accepttime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="relieddept != null" >
+        RELIEDDEPT = #{relieddept,jdbcType=VARCHAR},
+      </if>
+      <if test="approvalno != null" >
+        APPROVALNO = #{approvalno,jdbcType=VARCHAR},
+      </if>
+      <if test="registingtime != null" >
+        REGISTINGTIME = #{registingtime,jdbcType=VARCHAR},
+      </if>
+      <if test="lastassessedtime != null" >
+        LASTASSESSEDTIME = #{lastassessedtime,jdbcType=VARCHAR},
+      </if>
+      <if test="classification1 != null" >
+        CLASSIFICATION1 = #{classification1,jdbcType=VARCHAR},
+      </if>
+      <if test="classification2 != null" >
+        CLASSIFICATION2 = #{classification2,jdbcType=VARCHAR},
+      </if>
+      <if test="researchfields != null" >
+        RESEARCHFIELDS = #{researchfields,jdbcType=VARCHAR},
+      </if>
+      <if test="researchinterests != null" >
+        RESEARCHINTERESTS = #{researchinterests,jdbcType=VARCHAR},
+      </if>
+      <if test="researchcontents != null" >
+        RESEARCHCONTENTS = #{researchcontents,jdbcType=VARCHAR},
+      </if>
+      <if test="laboutline != null" >
+        LABOUTLINE = #{laboutline,jdbcType=VARCHAR},
+      </if>
+      <if test="labstate != null" >
+        LABSTATE = #{labstate,jdbcType=VARCHAR},
+      </if>
+      <if test="labotherid != null" >
+        LABOTHERID = #{labotherid,jdbcType=DECIMAL},
+      </if>
+      <if test="classification3 != null" >
+        CLASSIFICATION3 = #{classification3,jdbcType=VARCHAR},
+      </if>
+      <if test="buildinfo != null" >
+        BUILDINFO = #{buildinfo,jdbcType=VARCHAR},
+      </if>
+      <if test="edittime != null" >
+        EDITTIME = #{edittime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="labtype != null" >
+        LABTYPE = #{labtype,jdbcType=VARCHAR},
+      </if>
+      <if test="basetype != null" >
+        BASETYPE = #{basetype,jdbcType=VARCHAR},
+      </if>
+      <if test="basetypesub != null" >
+        BASETYPESUB = #{basetypesub,jdbcType=VARCHAR},
+      </if>
+      <if test="allieddept != null" >
+        ALLIEDDEPT = #{allieddept,jdbcType=VARCHAR},
+      </if>
+      <if test="regionname != null" >
+        REGIONNAME = #{regionname,jdbcType=VARCHAR},
+      </if>
+      <if test="govertype != null" >
+        GOVERTYPE = #{govertype,jdbcType=VARCHAR},
+      </if>
+      <if test="fielddist != null" >
+        FIELDDIST = #{fielddist,jdbcType=VARCHAR},
+      </if>
+      <if test="fielddistsub != null" >
+        FIELDDISTSUB = #{fielddistsub,jdbcType=VARCHAR},
+      </if>
+      <if test="subsattri != null" >
+        SUBSATTRI = #{subsattri,jdbcType=VARCHAR},
+      </if>
+      <if test="ispostdoctor != null" >
+        ISPOSTDOCTOR = #{ispostdoctor,jdbcType=VARCHAR},
+      </if>
+      <if test="deptattri != null" >
+        DEPTATTRI = #{deptattri,jdbcType=VARCHAR},
+      </if>
+      <if test="incubident != null" >
+        INCUBIDENT = #{incubident,jdbcType=VARCHAR},
+      </if>
+      <if test="isplatform != null" >
+        ISPLATFORM = #{isplatform,jdbcType=VARCHAR},
+      </if>
+      <if test="photo != null" >
+        PHOTO = #{photo,jdbcType=VARCHAR},
+      </if>
+      <if test="superiordep != null" >
+        SUPERIORDEP = #{superiordep,jdbcType=VARCHAR},
+      </if>
+      <if test="jointsuperiordept != null" >
+        JOINTSUPERIORDEPT = #{jointsuperiordept,jdbcType=VARCHAR},
+      </if>
+      <if test="areaoflab != null" >
+        AREAOFLAB = #{areaoflab,jdbcType=VARCHAR},
+      </if>
+      <if test="areaofwork != null" >
+        AREAOFWORK = #{areaofwork,jdbcType=VARCHAR},
+      </if>
+      <if test="latitude != null" >
+        LATITUDE = #{latitude,jdbcType=VARCHAR},
+      </if>
+      <if test="longitude != null" >
+        LONGITUDE = #{longitude,jdbcType=VARCHAR},
+      </if>
+      <if test="issignmaps != null" >
+        ISSIGNMAPS = #{issignmaps,jdbcType=VARCHAR},
+      </if>
+      <if test="formattedaddress != null" >
+        FORMATTEDADDRESS = #{formattedaddress,jdbcType=VARCHAR},
+      </if>
+      <if test="isopenbase != null" >
+        ISOPENBASE = #{isopenbase,jdbcType=VARCHAR},
+      </if>
+      <if test="locationnooflab != null" >
+        LOCATIONNOOFLAB = #{locationnooflab,jdbcType=VARCHAR},
+      </if>
+      <if test="orderbykcw != null" >
+        ORDERBYKCW = #{orderbykcw,jdbcType=VARCHAR},
+      </if>
+      <if test="leveloflabremark != null" >
+        LEVELOFLABREMARK = #{leveloflabremark,jdbcType=VARCHAR},
+      </if>
+      <if test="orderbytype != null" >
+        ORDERBYTYPE = #{orderbytype,jdbcType=DECIMAL},
+      </if>
+      <if test="prodempol != null" >
+        PRODEMPOL = #{prodempol,jdbcType=VARCHAR},
+      </if>
+      <if test="labinfostate != null" >
+        LABINFOSTATE = #{labinfostate,jdbcType=VARCHAR},
+      </if>
+      <if test="relyondep != null" >
+        RELYONDEP = #{relyondep,jdbcType=VARCHAR},
+      </if>
+      <if test="istemporary != null" >
+        ISTEMPORARY = #{istemporary,jdbcType=VARCHAR},
+      </if>
+      <if test="isfull != null" >
+        ISFULL = #{isfull,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null" >
+        ADDRESS = #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="labintro != null" >
+        LABINTRO = #{labintro,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where LABSEQNO = #{labseqno,jdbcType=DECIMAL}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.coder520.POI.LabInfo.entity.LabInfo" >
+    update LAB_INFO
+    set DEPARTMENTSEQNO = #{departmentseqno,jdbcType=DECIMAL},
+      LABNAME = #{labname,jdbcType=VARCHAR},
+      LABNO = #{labno,jdbcType=VARCHAR},
+      LABMAJOR = #{labmajor,jdbcType=VARCHAR},
+      MAJORPHONE = #{majorphone,jdbcType=VARCHAR},
+      MAJOREMAIL = #{majoremail,jdbcType=VARCHAR},
+      MANAGER = #{manager,jdbcType=VARCHAR},
+      MANAGERPHONE = #{managerphone,jdbcType=VARCHAR},
+      MANAGEREMAIL = #{manageremail,jdbcType=VARCHAR},
+      LABOTHERNAME = #{labothername,jdbcType=VARCHAR},
+      LABENGLISHNAME = #{labenglishname,jdbcType=VARCHAR},
+      ENGLISHIABBRNAME = #{englishiabbrname,jdbcType=VARCHAR},
+      JOINTDEPT = #{jointdept,jdbcType=VARCHAR},
+      LABLOCATION = #{lablocation,jdbcType=VARCHAR},
+      LABADDRESS = #{labaddress,jdbcType=VARCHAR},
+      POSTCODE = #{postcode,jdbcType=VARCHAR},
+      HTTPADDRESS = #{httpaddress,jdbcType=VARCHAR},
+      RELATEDFIELDS = #{relatedfields,jdbcType=VARCHAR},
+      ISJOINT = #{isjoint,jdbcType=VARCHAR},
+      LEVELOFLAB = #{leveloflab,jdbcType=VARCHAR},
+      TYPEOFLAB = #{typeoflab,jdbcType=VARCHAR},
+      APPROVALDEPT = #{approvaldept,jdbcType=VARCHAR},
+      APPROVALTIME = #{approvaltime,jdbcType=TIMESTAMP},
+      ACCEPTTIME = #{accepttime,jdbcType=TIMESTAMP},
+      RELIEDDEPT = #{relieddept,jdbcType=VARCHAR},
+      APPROVALNO = #{approvalno,jdbcType=VARCHAR},
+      REGISTINGTIME = #{registingtime,jdbcType=VARCHAR},
+      LASTASSESSEDTIME = #{lastassessedtime,jdbcType=VARCHAR},
+      CLASSIFICATION1 = #{classification1,jdbcType=VARCHAR},
+      CLASSIFICATION2 = #{classification2,jdbcType=VARCHAR},
+      RESEARCHFIELDS = #{researchfields,jdbcType=VARCHAR},
+      RESEARCHINTERESTS = #{researchinterests,jdbcType=VARCHAR},
+      RESEARCHCONTENTS = #{researchcontents,jdbcType=VARCHAR},
+      LABOUTLINE = #{laboutline,jdbcType=VARCHAR},
+      LABSTATE = #{labstate,jdbcType=VARCHAR},
+      LABOTHERID = #{labotherid,jdbcType=DECIMAL},
+      CLASSIFICATION3 = #{classification3,jdbcType=VARCHAR},
+      BUILDINFO = #{buildinfo,jdbcType=VARCHAR},
+      EDITTIME = #{edittime,jdbcType=TIMESTAMP},
+      LABTYPE = #{labtype,jdbcType=VARCHAR},
+      BASETYPE = #{basetype,jdbcType=VARCHAR},
+      BASETYPESUB = #{basetypesub,jdbcType=VARCHAR},
+      ALLIEDDEPT = #{allieddept,jdbcType=VARCHAR},
+      REGIONNAME = #{regionname,jdbcType=VARCHAR},
+      GOVERTYPE = #{govertype,jdbcType=VARCHAR},
+      FIELDDIST = #{fielddist,jdbcType=VARCHAR},
+      FIELDDISTSUB = #{fielddistsub,jdbcType=VARCHAR},
+      SUBSATTRI = #{subsattri,jdbcType=VARCHAR},
+      ISPOSTDOCTOR = #{ispostdoctor,jdbcType=VARCHAR},
+      DEPTATTRI = #{deptattri,jdbcType=VARCHAR},
+      INCUBIDENT = #{incubident,jdbcType=VARCHAR},
+      ISPLATFORM = #{isplatform,jdbcType=VARCHAR},
+      PHOTO = #{photo,jdbcType=VARCHAR},
+      SUPERIORDEP = #{superiordep,jdbcType=VARCHAR},
+      JOINTSUPERIORDEPT = #{jointsuperiordept,jdbcType=VARCHAR},
+      AREAOFLAB = #{areaoflab,jdbcType=VARCHAR},
+      AREAOFWORK = #{areaofwork,jdbcType=VARCHAR},
+      LATITUDE = #{latitude,jdbcType=VARCHAR},
+      LONGITUDE = #{longitude,jdbcType=VARCHAR},
+      ISSIGNMAPS = #{issignmaps,jdbcType=VARCHAR},
+      FORMATTEDADDRESS = #{formattedaddress,jdbcType=VARCHAR},
+      ISOPENBASE = #{isopenbase,jdbcType=VARCHAR},
+      LOCATIONNOOFLAB = #{locationnooflab,jdbcType=VARCHAR},
+      ORDERBYKCW = #{orderbykcw,jdbcType=VARCHAR},
+      LEVELOFLABREMARK = #{leveloflabremark,jdbcType=VARCHAR},
+      ORDERBYTYPE = #{orderbytype,jdbcType=DECIMAL},
+      PRODEMPOL = #{prodempol,jdbcType=VARCHAR},
+      LABINFOSTATE = #{labinfostate,jdbcType=VARCHAR},
+      RELYONDEP = #{relyondep,jdbcType=VARCHAR},
+      ISTEMPORARY = #{istemporary,jdbcType=VARCHAR},
+      ISFULL = #{isfull,jdbcType=VARCHAR},
+      ADDRESS = #{address,jdbcType=VARCHAR},
+      LABINTRO = #{labintro,jdbcType=LONGVARCHAR}
+    where LABSEQNO = #{labseqno,jdbcType=DECIMAL}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.coder520.POI.LabInfo.entity.LabInfo" >
+    update LAB_INFO
+    set DEPARTMENTSEQNO = #{departmentseqno,jdbcType=DECIMAL},
+      LABNAME = #{labname,jdbcType=VARCHAR},
+      LABNO = #{labno,jdbcType=VARCHAR},
+      LABMAJOR = #{labmajor,jdbcType=VARCHAR},
+      MAJORPHONE = #{majorphone,jdbcType=VARCHAR},
+      MAJOREMAIL = #{majoremail,jdbcType=VARCHAR},
+      MANAGER = #{manager,jdbcType=VARCHAR},
+      MANAGERPHONE = #{managerphone,jdbcType=VARCHAR},
+      MANAGEREMAIL = #{manageremail,jdbcType=VARCHAR},
+      LABOTHERNAME = #{labothername,jdbcType=VARCHAR},
+      LABENGLISHNAME = #{labenglishname,jdbcType=VARCHAR},
+      ENGLISHIABBRNAME = #{englishiabbrname,jdbcType=VARCHAR},
+      JOINTDEPT = #{jointdept,jdbcType=VARCHAR},
+      LABLOCATION = #{lablocation,jdbcType=VARCHAR},
+      LABADDRESS = #{labaddress,jdbcType=VARCHAR},
+      POSTCODE = #{postcode,jdbcType=VARCHAR},
+      HTTPADDRESS = #{httpaddress,jdbcType=VARCHAR},
+      RELATEDFIELDS = #{relatedfields,jdbcType=VARCHAR},
+      ISJOINT = #{isjoint,jdbcType=VARCHAR},
+      LEVELOFLAB = #{leveloflab,jdbcType=VARCHAR},
+      TYPEOFLAB = #{typeoflab,jdbcType=VARCHAR},
+      APPROVALDEPT = #{approvaldept,jdbcType=VARCHAR},
+      APPROVALTIME = #{approvaltime,jdbcType=TIMESTAMP},
+      ACCEPTTIME = #{accepttime,jdbcType=TIMESTAMP},
+      RELIEDDEPT = #{relieddept,jdbcType=VARCHAR},
+      APPROVALNO = #{approvalno,jdbcType=VARCHAR},
+      REGISTINGTIME = #{registingtime,jdbcType=VARCHAR},
+      LASTASSESSEDTIME = #{lastassessedtime,jdbcType=VARCHAR},
+      CLASSIFICATION1 = #{classification1,jdbcType=VARCHAR},
+      CLASSIFICATION2 = #{classification2,jdbcType=VARCHAR},
+      RESEARCHFIELDS = #{researchfields,jdbcType=VARCHAR},
+      RESEARCHINTERESTS = #{researchinterests,jdbcType=VARCHAR},
+      RESEARCHCONTENTS = #{researchcontents,jdbcType=VARCHAR},
+      LABOUTLINE = #{laboutline,jdbcType=VARCHAR},
+      LABSTATE = #{labstate,jdbcType=VARCHAR},
+      LABOTHERID = #{labotherid,jdbcType=DECIMAL},
+      CLASSIFICATION3 = #{classification3,jdbcType=VARCHAR},
+      BUILDINFO = #{buildinfo,jdbcType=VARCHAR},
+      EDITTIME = #{edittime,jdbcType=TIMESTAMP},
+      LABTYPE = #{labtype,jdbcType=VARCHAR},
+      BASETYPE = #{basetype,jdbcType=VARCHAR},
+      BASETYPESUB = #{basetypesub,jdbcType=VARCHAR},
+      ALLIEDDEPT = #{allieddept,jdbcType=VARCHAR},
+      REGIONNAME = #{regionname,jdbcType=VARCHAR},
+      GOVERTYPE = #{govertype,jdbcType=VARCHAR},
+      FIELDDIST = #{fielddist,jdbcType=VARCHAR},
+      FIELDDISTSUB = #{fielddistsub,jdbcType=VARCHAR},
+      SUBSATTRI = #{subsattri,jdbcType=VARCHAR},
+      ISPOSTDOCTOR = #{ispostdoctor,jdbcType=VARCHAR},
+      DEPTATTRI = #{deptattri,jdbcType=VARCHAR},
+      INCUBIDENT = #{incubident,jdbcType=VARCHAR},
+      ISPLATFORM = #{isplatform,jdbcType=VARCHAR},
+      PHOTO = #{photo,jdbcType=VARCHAR},
+      SUPERIORDEP = #{superiordep,jdbcType=VARCHAR},
+      JOINTSUPERIORDEPT = #{jointsuperiordept,jdbcType=VARCHAR},
+      AREAOFLAB = #{areaoflab,jdbcType=VARCHAR},
+      AREAOFWORK = #{areaofwork,jdbcType=VARCHAR},
+      LATITUDE = #{latitude,jdbcType=VARCHAR},
+      LONGITUDE = #{longitude,jdbcType=VARCHAR},
+      ISSIGNMAPS = #{issignmaps,jdbcType=VARCHAR},
+      FORMATTEDADDRESS = #{formattedaddress,jdbcType=VARCHAR},
+      ISOPENBASE = #{isopenbase,jdbcType=VARCHAR},
+      LOCATIONNOOFLAB = #{locationnooflab,jdbcType=VARCHAR},
+      ORDERBYKCW = #{orderbykcw,jdbcType=VARCHAR},
+      LEVELOFLABREMARK = #{leveloflabremark,jdbcType=VARCHAR},
+      ORDERBYTYPE = #{orderbytype,jdbcType=DECIMAL},
+      PRODEMPOL = #{prodempol,jdbcType=VARCHAR},
+      LABINFOSTATE = #{labinfostate,jdbcType=VARCHAR},
+      RELYONDEP = #{relyondep,jdbcType=VARCHAR},
+      ISTEMPORARY = #{istemporary,jdbcType=VARCHAR},
+      ISFULL = #{isfull,jdbcType=VARCHAR},
+      ADDRESS = #{address,jdbcType=VARCHAR}
+    where LABSEQNO = #{labseqno,jdbcType=DECIMAL}
+  </update>
+
+  <insert id="insertSelectiveAddKey" parameterType="com.coder520.POI.LabInfo.entity.LabInfo" >
+    <selectKey keyProperty="labseqno" resultType="long" order="BEFORE">
+      select  nvl(max(LABSEQNO),0)+1 from LAB_INFO
+    </selectKey>
+    insert into LAB_INFO
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="labseqno != null" >
+        LABSEQNO,
+      </if>
+      <if test="departmentseqno != null" >
+        DEPARTMENTSEQNO,
+      </if>
+      <if test="labname != null" >
+        LABNAME,
+      </if>
+      <if test="labno != null" >
+        LABNO,
+      </if>
+      <if test="labmajor != null" >
+        LABMAJOR,
+      </if>
+      <if test="majorphone != null" >
+        MAJORPHONE,
+      </if>
+      <if test="majoremail != null" >
+        MAJOREMAIL,
+      </if>
+      <if test="manager != null" >
+        MANAGER,
+      </if>
+      <if test="managerphone != null" >
+        MANAGERPHONE,
+      </if>
+      <if test="manageremail != null" >
+        MANAGEREMAIL,
+      </if>
+      <if test="labothername != null" >
+        LABOTHERNAME,
+      </if>
+      <if test="labenglishname != null" >
+        LABENGLISHNAME,
+      </if>
+      <if test="englishiabbrname != null" >
+        ENGLISHIABBRNAME,
+      </if>
+      <if test="jointdept != null" >
+        JOINTDEPT,
+      </if>
+      <if test="lablocation != null" >
+        LABLOCATION,
+      </if>
+      <if test="labaddress != null" >
+        LABADDRESS,
+      </if>
+      <if test="postcode != null" >
+        POSTCODE,
+      </if>
+      <if test="httpaddress != null" >
+        HTTPADDRESS,
+      </if>
+      <if test="relatedfields != null" >
+        RELATEDFIELDS,
+      </if>
+      <if test="isjoint != null" >
+        ISJOINT,
+      </if>
+      <if test="leveloflab != null" >
+        LEVELOFLAB,
+      </if>
+      <if test="typeoflab != null" >
+        TYPEOFLAB,
+      </if>
+      <if test="approvaldept != null" >
+        APPROVALDEPT,
+      </if>
+      <if test="approvaltime != null" >
+        APPROVALTIME,
+      </if>
+      <if test="accepttime != null" >
+        ACCEPTTIME,
+      </if>
+      <if test="relieddept != null" >
+        RELIEDDEPT,
+      </if>
+      <if test="approvalno != null" >
+        APPROVALNO,
+      </if>
+      <if test="registingtime != null" >
+        REGISTINGTIME,
+      </if>
+      <if test="lastassessedtime != null" >
+        LASTASSESSEDTIME,
+      </if>
+      <if test="classification1 != null" >
+        CLASSIFICATION1,
+      </if>
+      <if test="classification2 != null" >
+        CLASSIFICATION2,
+      </if>
+      <if test="researchfields != null" >
+        RESEARCHFIELDS,
+      </if>
+      <if test="researchinterests != null" >
+        RESEARCHINTERESTS,
+      </if>
+      <if test="researchcontents != null" >
+        RESEARCHCONTENTS,
+      </if>
+      <if test="laboutline != null" >
+        LABOUTLINE,
+      </if>
+      <if test="labstate != null" >
+        LABSTATE,
+      </if>
+      <if test="labotherid != null" >
+        LABOTHERID,
+      </if>
+      <if test="classification3 != null" >
+        CLASSIFICATION3,
+      </if>
+      <if test="buildinfo != null" >
+        BUILDINFO,
+      </if>
+      <if test="edittime != null" >
+        EDITTIME,
+      </if>
+      <if test="labtype != null" >
+        LABTYPE,
+      </if>
+      <if test="basetype != null" >
+        BASETYPE,
+      </if>
+      <if test="basetypesub != null" >
+        BASETYPESUB,
+      </if>
+      <if test="allieddept != null" >
+        ALLIEDDEPT,
+      </if>
+      <if test="regionname != null" >
+        REGIONNAME,
+      </if>
+      <if test="govertype != null" >
+        GOVERTYPE,
+      </if>
+      <if test="fielddist != null" >
+        FIELDDIST,
+      </if>
+      <if test="fielddistsub != null" >
+        FIELDDISTSUB,
+      </if>
+      <if test="subsattri != null" >
+        SUBSATTRI,
+      </if>
+      <if test="ispostdoctor != null" >
+        ISPOSTDOCTOR,
+      </if>
+      <if test="deptattri != null" >
+        DEPTATTRI,
+      </if>
+      <if test="incubident != null" >
+        INCUBIDENT,
+      </if>
+      <if test="isplatform != null" >
+        ISPLATFORM,
+      </if>
+      <if test="photo != null" >
+        PHOTO,
+      </if>
+      <if test="superiordep != null" >
+        SUPERIORDEP,
+      </if>
+      <if test="jointsuperiordept != null" >
+        JOINTSUPERIORDEPT,
+      </if>
+      <if test="areaoflab != null" >
+        AREAOFLAB,
+      </if>
+      <if test="areaofwork != null" >
+        AREAOFWORK,
+      </if>
+      <if test="latitude != null" >
+        LATITUDE,
+      </if>
+      <if test="longitude != null" >
+        LONGITUDE,
+      </if>
+      <if test="issignmaps != null" >
+        ISSIGNMAPS,
+      </if>
+      <if test="formattedaddress != null" >
+        FORMATTEDADDRESS,
+      </if>
+      <if test="isopenbase != null" >
+        ISOPENBASE,
+      </if>
+      <if test="locationnooflab != null" >
+        LOCATIONNOOFLAB,
+      </if>
+      <if test="orderbykcw != null" >
+        ORDERBYKCW,
+      </if>
+      <if test="leveloflabremark != null" >
+        LEVELOFLABREMARK,
+      </if>
+      <if test="orderbytype != null" >
+        ORDERBYTYPE,
+      </if>
+      <if test="prodempol != null" >
+        PRODEMPOL,
+      </if>
+      <if test="labinfostate != null" >
+        LABINFOSTATE,
+      </if>
+      <if test="relyondep != null" >
+        RELYONDEP,
+      </if>
+      <if test="istemporary != null" >
+        ISTEMPORARY,
+      </if>
+      <if test="isfull != null" >
+        ISFULL,
+      </if>
+      <if test="address != null" >
+        ADDRESS,
+      </if>
+      <if test="labintro != null" >
+        LABINTRO,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="labseqno != null" >
+        #{labseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="departmentseqno != null" >
+        #{departmentseqno,jdbcType=DECIMAL},
+      </if>
+      <if test="labname != null" >
+        #{labname,jdbcType=VARCHAR},
+      </if>
+      <if test="labno != null" >
+        #{labno,jdbcType=VARCHAR},
+      </if>
+      <if test="labmajor != null" >
+        #{labmajor,jdbcType=VARCHAR},
+      </if>
+      <if test="majorphone != null" >
+        #{majorphone,jdbcType=VARCHAR},
+      </if>
+      <if test="majoremail != null" >
+        #{majoremail,jdbcType=VARCHAR},
+      </if>
+      <if test="manager != null" >
+        #{manager,jdbcType=VARCHAR},
+      </if>
+      <if test="managerphone != null" >
+        #{managerphone,jdbcType=VARCHAR},
+      </if>
+      <if test="manageremail != null" >
+        #{manageremail,jdbcType=VARCHAR},
+      </if>
+      <if test="labothername != null" >
+        #{labothername,jdbcType=VARCHAR},
+      </if>
+      <if test="labenglishname != null" >
+        #{labenglishname,jdbcType=VARCHAR},
+      </if>
+      <if test="englishiabbrname != null" >
+        #{englishiabbrname,jdbcType=VARCHAR},
+      </if>
+      <if test="jointdept != null" >
+        #{jointdept,jdbcType=VARCHAR},
+      </if>
+      <if test="lablocation != null" >
+        #{lablocation,jdbcType=VARCHAR},
+      </if>
+      <if test="labaddress != null" >
+        #{labaddress,jdbcType=VARCHAR},
+      </if>
+      <if test="postcode != null" >
+        #{postcode,jdbcType=VARCHAR},
+      </if>
+      <if test="httpaddress != null" >
+        #{httpaddress,jdbcType=VARCHAR},
+      </if>
+      <if test="relatedfields != null" >
+        #{relatedfields,jdbcType=VARCHAR},
+      </if>
+      <if test="isjoint != null" >
+        #{isjoint,jdbcType=VARCHAR},
+      </if>
+      <if test="leveloflab != null" >
+        #{leveloflab,jdbcType=VARCHAR},
+      </if>
+      <if test="typeoflab != null" >
+        #{typeoflab,jdbcType=VARCHAR},
+      </if>
+      <if test="approvaldept != null" >
+        #{approvaldept,jdbcType=VARCHAR},
+      </if>
+      <if test="approvaltime != null" >
+        #{approvaltime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="accepttime != null" >
+        #{accepttime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="relieddept != null" >
+        #{relieddept,jdbcType=VARCHAR},
+      </if>
+      <if test="approvalno != null" >
+        #{approvalno,jdbcType=VARCHAR},
+      </if>
+      <if test="registingtime != null" >
+        #{registingtime,jdbcType=VARCHAR},
+      </if>
+      <if test="lastassessedtime != null" >
+        #{lastassessedtime,jdbcType=VARCHAR},
+      </if>
+      <if test="classification1 != null" >
+        #{classification1,jdbcType=VARCHAR},
+      </if>
+      <if test="classification2 != null" >
+        #{classification2,jdbcType=VARCHAR},
+      </if>
+      <if test="researchfields != null" >
+        #{researchfields,jdbcType=VARCHAR},
+      </if>
+      <if test="researchinterests != null" >
+        #{researchinterests,jdbcType=VARCHAR},
+      </if>
+      <if test="researchcontents != null" >
+        #{researchcontents,jdbcType=VARCHAR},
+      </if>
+      <if test="laboutline != null" >
+        #{laboutline,jdbcType=VARCHAR},
+      </if>
+      <if test="labstate != null" >
+        #{labstate,jdbcType=VARCHAR},
+      </if>
+      <if test="labotherid != null" >
+        #{labotherid,jdbcType=DECIMAL},
+      </if>
+      <if test="classification3 != null" >
+        #{classification3,jdbcType=VARCHAR},
+      </if>
+      <if test="buildinfo != null" >
+        #{buildinfo,jdbcType=VARCHAR},
+      </if>
+      <if test="edittime != null" >
+        #{edittime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="labtype != null" >
+        #{labtype,jdbcType=VARCHAR},
+      </if>
+      <if test="basetype != null" >
+        #{basetype,jdbcType=VARCHAR},
+      </if>
+      <if test="basetypesub != null" >
+        #{basetypesub,jdbcType=VARCHAR},
+      </if>
+      <if test="allieddept != null" >
+        #{allieddept,jdbcType=VARCHAR},
+      </if>
+      <if test="regionname != null" >
+        #{regionname,jdbcType=VARCHAR},
+      </if>
+      <if test="govertype != null" >
+        #{govertype,jdbcType=VARCHAR},
+      </if>
+      <if test="fielddist != null" >
+        #{fielddist,jdbcType=VARCHAR},
+      </if>
+      <if test="fielddistsub != null" >
+        #{fielddistsub,jdbcType=VARCHAR},
+      </if>
+      <if test="subsattri != null" >
+        #{subsattri,jdbcType=VARCHAR},
+      </if>
+      <if test="ispostdoctor != null" >
+        #{ispostdoctor,jdbcType=VARCHAR},
+      </if>
+      <if test="deptattri != null" >
+        #{deptattri,jdbcType=VARCHAR},
+      </if>
+      <if test="incubident != null" >
+        #{incubident,jdbcType=VARCHAR},
+      </if>
+      <if test="isplatform != null" >
+        #{isplatform,jdbcType=VARCHAR},
+      </if>
+      <if test="photo != null" >
+        #{photo,jdbcType=VARCHAR},
+      </if>
+      <if test="superiordep != null" >
+        #{superiordep,jdbcType=VARCHAR},
+      </if>
+      <if test="jointsuperiordept != null" >
+        #{jointsuperiordept,jdbcType=VARCHAR},
+      </if>
+      <if test="areaoflab != null" >
+        #{areaoflab,jdbcType=VARCHAR},
+      </if>
+      <if test="areaofwork != null" >
+        #{areaofwork,jdbcType=VARCHAR},
+      </if>
+      <if test="latitude != null" >
+        #{latitude,jdbcType=VARCHAR},
+      </if>
+      <if test="longitude != null" >
+        #{longitude,jdbcType=VARCHAR},
+      </if>
+      <if test="issignmaps != null" >
+        #{issignmaps,jdbcType=VARCHAR},
+      </if>
+      <if test="formattedaddress != null" >
+        #{formattedaddress,jdbcType=VARCHAR},
+      </if>
+      <if test="isopenbase != null" >
+        #{isopenbase,jdbcType=VARCHAR},
+      </if>
+      <if test="locationnooflab != null" >
+        #{locationnooflab,jdbcType=VARCHAR},
+      </if>
+      <if test="orderbykcw != null" >
+        #{orderbykcw,jdbcType=VARCHAR},
+      </if>
+      <if test="leveloflabremark != null" >
+        #{leveloflabremark,jdbcType=VARCHAR},
+      </if>
+      <if test="orderbytype != null" >
+        #{orderbytype,jdbcType=DECIMAL},
+      </if>
+      <if test="prodempol != null" >
+        #{prodempol,jdbcType=VARCHAR},
+      </if>
+      <if test="labinfostate != null" >
+        #{labinfostate,jdbcType=VARCHAR},
+      </if>
+      <if test="relyondep != null" >
+        #{relyondep,jdbcType=VARCHAR},
+      </if>
+      <if test="istemporary != null" >
+        #{istemporary,jdbcType=VARCHAR},
+      </if>
+      <if test="isfull != null" >
+        #{isfull,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null" >
+        #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="labintro != null" >
+        #{labintro,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+</mapper>

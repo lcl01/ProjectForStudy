@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-on:按键修饰符</title>
+    <script src="js/vuejs-2.5.16.js"></script>
+</head>
+<body>
+<div id="app">
+    <!--当按下按键enter的时候，触发fun1事件-->
+    <input type="text" @keydown.enter="fun1">
+</div>
+</body>
+<script>
+    //view model
+    new Vue({
+        el: "#app",
+        methods: {
+            fun1:function(){
+                alert("hello");
+            }
+        }
+    });
+</script>
+</html>
