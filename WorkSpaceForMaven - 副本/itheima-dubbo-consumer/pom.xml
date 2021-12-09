@@ -23,7 +23,7 @@
     <zookeeper.version>3.4.7</zookeeper.version>
     <zkclient.version>0.1</zkclient.version>
     <servlet-api.version>2.5</servlet-api.version>
-    <jackson.version>2.9.8</jackson.version>
+    <jackson.version>2.9.10.8</jackson.version>
   </properties>
 
   <dependencies>
